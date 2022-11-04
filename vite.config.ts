@@ -1,9 +1,26 @@
 const path = require('path');
 const { defineConfig } = require('vite');
 import vue from '@vitejs/plugin-vue';
+import eslint from 'vite-plugin-eslint';
 
 module.exports = defineConfig({
-  plugins: [vue()], // to process SFC
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      '@components': `${__dirname}/src/components`,
+    },
+  },
+
+  plugins: [
+    vue(), // to process SFC
+    {
+        ...eslint({
+            failOnWarning: false,
+            failOnError: false,
+        }),
+        apply: 'build',
+    },
+  ],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
