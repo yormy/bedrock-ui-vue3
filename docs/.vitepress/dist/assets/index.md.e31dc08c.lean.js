@@ -1,0 +1,1 @@
+import{_ as e,o as r,a as t,d as o}from"./app.d8f8f191.js";const d='{"title":"What is My Lib?","description":"","frontmatter":{},"headers":[],"relativePath":"index.md"}',n={},a=o("",4),i=[a];function s(c,p,l,m,h,_){return r(),t("div",null,i)}var u=e(n,[["render",s]]);export{d as __pageData,u as default};

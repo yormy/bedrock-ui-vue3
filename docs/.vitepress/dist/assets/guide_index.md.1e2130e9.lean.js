@@ -1,0 +1,1 @@
+import{_ as n,o as s,a,d as t}from"./app.d8f8f191.js";const g='{"title":"Getting Started","description":"","frontmatter":{},"headers":[{"level":2,"title":"Setup","slug":"setup"}],"relativePath":"guide/index.md"}',e={},p=t("",13),o=[p];function c(r,u,i,l,k,d){return s(),a("div",null,o)}var h=n(e,[["render",c]]);export{g as __pageData,h as default};
