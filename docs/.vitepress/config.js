@@ -24,7 +24,7 @@ module.exports = {
   vite: {
     resolve: {
       alias: {
-        'my-lib': path.resolve(__dirname, '../../src'),
+        'bedrock-ui-vue3': path.resolve(__dirname, '../../src'),
       },
       dedupe: ['vue', /primevue\/.+/], // avoid error when using dependencies that also use Vue
     }

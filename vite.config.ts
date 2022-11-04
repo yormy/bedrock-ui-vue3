@@ -7,9 +7,9 @@ module.exports = defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'my-lib',
+      name: 'bedrock-ui-vue3',
       formats: ['es'], // adding 'umd' requires globals set to every external module
-      fileName: (format) => `my-lib.${format}.js`,
+      fileName: (format) => `bedrock-ui-vue3.${format}.js`,
     },
     rollupOptions: {
       // external modules won't be bundled into your library
