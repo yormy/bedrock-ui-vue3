@@ -2,7 +2,7 @@ const path = require('path');
 const { defineConfig } = require('vite');
 import vue from '@vitejs/plugin-vue';
 import eslint from 'vite-plugin-eslint';
-import { viteStaticCopy } from 'vite-plugin-static-copy'
+//import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 module.exports = defineConfig({
   resolve: {
@@ -22,14 +22,14 @@ module.exports = defineConfig({
         }),
         apply: 'build',
     },
-    viteStaticCopy({
-        targets: [
-            {
-              src: 'src/assets/test.css',
-              dest: 'resources'
-            }
-        ]
-    }),
+    // viteStaticCopy({
+    //     targets: [
+    //         {
+    //           src: 'src/assets/test.css',
+    //           dest: 'resources'
+    //         }
+    //     ]
+    // }),
   ],
   build: {
     lib: {
