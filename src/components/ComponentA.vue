@@ -8,5 +8,5 @@ defineProps({
 </script>
 
 <template>
-    hello {{ msg }}
+    <div>hello {{ msg }}</div>
 </template>
