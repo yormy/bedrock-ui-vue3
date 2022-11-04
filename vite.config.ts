@@ -5,7 +5,8 @@ import eslint from 'vite-plugin-eslint';
 
 module.exports = defineConfig({
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.ts', '.vue', '.json'],
+
     alias: {
       '@components': `${__dirname}/src/components`,
     },
@@ -26,7 +27,7 @@ module.exports = defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'bedrock-ui-vue3',
       formats: ['es'], // adding 'umd' requires globals set to every external module
-      fileName: (format) => `bedrock-ui-vue3.${format}.js`,
+      fileName: (format: string) => `bedrock-ui-vue3.${format}.js`,
     },
     rollupOptions: {
       // external modules won't be bundled into your library

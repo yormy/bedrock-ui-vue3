@@ -1,17 +1,21 @@
-import { App } from 'vue'
-import * as components from './components'
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { App } from 'vue';
+import './assets/main.scss';
 
-function install (app: App) {
-  for (const key in components) {
-    // @ts-expect-error
-    app.component(key, components[key])
-  }
+// @ts-ignore
+import * as components from './components/index.ts';
+
+function install(app: App) {
+    Object.keys(components).forEach(function fn(key) {
+        app.component(key, components[key]);
+    });
 }
 
-import './assets/main.scss'
+export default { install };
 
-export default { install }
-
-export * from './components'
-export * from './constants'
-export * from './utils'
+// @ts-ignore
+export * from './components/index.ts';
+// @ts-ignore
+export * from './constants/index.ts';
+// @ts-ignore
+export * from './utils/index.ts';

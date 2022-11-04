@@ -1,9 +1,10 @@
 <script setup lang="ts">
 defineProps({
-    msg: String,
+    msg: {
+        type: String,
+        default: '',
+    },
 });
 </script>
 
-<template>
-    ccccccc {{msg}}
-</template>
+<template>ccccccc {{ msg }}</template>
