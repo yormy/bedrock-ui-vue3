@@ -25,7 +25,7 @@ module.exports = defineConfig({
     viteStaticCopy({
         targets: [
             {
-              src: 'src/assets/test.scss',
+              src: 'src/assets/test.css',
               dest: 'resources'
             }
         ]
