@@ -7,4 +7,8 @@ defineProps({
 });
 </script>
 
-<template>ccccccc {{ msg }}</template>
+<template>
+    <div class="y-test">
+        ccccccc {{ msg }}
+    </div>
+</template>

@@ -7,4 +7,6 @@ defineProps({
 });
 </script>
 
-<template>hello {{ msg }}</template>
+<template>
+    hello {{ msg }}
+</template>
