@@ -54,8 +54,12 @@
     },
     "./dist/style.css": "./dist/style.css",
     "./dist/resources/default/test.css": {
-      "import": "./dist/resources/default/test.css",
-      "require": "./dist/resources/default/test.css"
+        "import": "./dist/resources/default/test.css",
+        "require": "./dist/resources/default/test.css"
+    },
+    "./dist/resources/css/vendor/flags/css/flag-icon.min.css": {
+        "import": "./dist/resources/css/vendor/flags/css/flag-icon.min.css",
+        "require": "./dist/resources/css/vendor/flags/css/flag-icon.min.css"
     }
   },
   "dependencies": {
