@@ -8,52 +8,43 @@
  * Required: npm install DOMPurify
  */
 
-import { computed } from 'vue'
+/* eslint-disable  vue/no-v-html */
+import { computed } from 'vue';
 // @ts-ignore
 import DOMPurify from 'dompurify';
 
 const props = defineProps({
     /**
-    * The HTML string that needs to be purified and displayed
-    */
+     * The HTML string that needs to be purified and displayed
+     */
     value: {
-      type: String,
-      default: '',
-      required: true,
+        type: String,
+        default: '',
+        required: true,
     },
 
     /**
-    * The allowed tags to be displayed (default: b, i, strong, a , ul , ol, li ,'br')
-    */
+     * The allowed tags to be displayed (default: b, i, strong, a , ul , ol, li ,'br')
+     */
     allowedTags: {
-      type: Array,
-      default: () => [
-        'b',
-        'i', 'strong',
-        'a',
-        'ul', 'ol', 'li',
-        'br'
-      ],
+        type: Array,
+        default: () => ['b', 'i', 'strong', 'a', 'ul', 'ol', 'li', 'br'],
     },
 
     /**
-    * The allowed attributes to be displayed (default: nothing)
-    */
+     * The allowed attributes to be displayed (default: nothing)
+     */
     allowedAttributes: {
-      type: Array,
-      default: () => [
-        'href',
-        'target',
-        'class'
-      ],
+        type: Array,
+        default: () => ['href', 'target', 'class'],
     },
 });
 
 const purifiedHtml = computed<string>(() => {
-      return DOMPurify.sanitize(props.value, {
+    return DOMPurify.sanitize(props.value, {
         ALLOWED_TAGS: props.allowedTags,
-        ALLOWED_ATTR: props.allowedAttributes
-      });
+        ALLOWED_ATTR: props.allowedAttributes,
+    });
 });
 </script>
 
