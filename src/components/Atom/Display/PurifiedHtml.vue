@@ -1,6 +1,4 @@
-<script>
-import DOMPurify from 'dompurify';
-
+<script setup lang="ts">
 /**
  * Display HTML after purification
  *
@@ -9,14 +7,15 @@ import DOMPurify from 'dompurify';
  *
  * Required: npm install DOMPurify
  */
-export default {
 
-  inheritAttrs: false,
+import { computed } from 'vue'
+// @ts-ignore
+import DOMPurify from 'dompurify';
 
-  props: {
+const props = defineProps({
     /**
-     * The HTML string that needs to be purified and displayed
-     */
+    * The HTML string that needs to be purified and displayed
+    */
     value: {
       type: String,
       default: '',
@@ -24,8 +23,8 @@ export default {
     },
 
     /**
-     * The allowed tags to be displayed (default: b, i, strong, a , ul , ol, li ,'br')
-     */
+    * The allowed tags to be displayed (default: b, i, strong, a , ul , ol, li ,'br')
+    */
     allowedTags: {
       type: Array,
       default: () => [
@@ -38,8 +37,8 @@ export default {
     },
 
     /**
-     * The allowed attributes to be displayed (default: nothing)
-     */
+    * The allowed attributes to be displayed (default: nothing)
+    */
     allowedAttributes: {
       type: Array,
       default: () => [
@@ -48,27 +47,18 @@ export default {
         'class'
       ],
     },
-  },
+});
 
-  data() {
-    return {
-      prop: {
-        value: this.value,
-      }
-    };
-  },
-
-  computed: {
-    purifiedHtml() {
-      return DOMPurify.sanitize(this.value, {
-        ALLOWED_TAGS: this.allowedTags,
-        ALLOWED_ATTR: this.allowedAttributes
+const purifiedHtml = computed<string>(() => {
+      return DOMPurify.sanitize(props.value, {
+        ALLOWED_TAGS: props.allowedTags,
+        ALLOWED_ATTR: props.allowedAttributes
       });
-    }
-  }
-}
+});
 </script>
 
 <template>
-    <div v-html="purifiedHtml"></div>
+    <div>
+        <div v-html="purifiedHtml"></div>
+    </div>
 </template>
