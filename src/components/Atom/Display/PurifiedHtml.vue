@@ -9,8 +9,7 @@
  */
 
 /* eslint-disable  vue/no-v-html */
-import { computed } from 'vue';
-// @ts-ignore
+import { computed, PropType } from 'vue';
 import DOMPurify from 'dompurify';
 
 const props = defineProps({
@@ -27,7 +26,7 @@ const props = defineProps({
      * The allowed tags to be displayed (default: b, i, strong, a , ul , ol, li ,'br')
      */
     allowedTags: {
-        type: Array,
+        type: Array as PropType<string[]>,
         default: () => ['b', 'i', 'strong', 'a', 'ul', 'ol', 'li', 'br'],
     },
 
@@ -35,7 +34,7 @@ const props = defineProps({
      * The allowed attributes to be displayed (default: nothing)
      */
     allowedAttributes: {
-        type: Array,
+        type: Array as PropType<string[]>,
         default: () => ['href', 'target', 'class'],
     },
 });
