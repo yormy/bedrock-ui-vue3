@@ -41,9 +41,7 @@ const styleClass = computed<string>(() => {
 </script>
 
 <template>
-    <div>
-        <div v-if="message" :class="styleClass" role="alert">
-            <YPurifiedHtml :value="message"></YPurifiedHtml>
-        </div>
+    <div v-if="message" :class="styleClass" role="alert">
+        <YPurifiedHtml :value="message"></YPurifiedHtml>
     </div>
 </template>

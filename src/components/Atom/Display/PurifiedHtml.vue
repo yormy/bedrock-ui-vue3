@@ -48,7 +48,5 @@ const purifiedHtml = computed<string>(() => {
 </script>
 
 <template>
-    <div>
-        <div v-html="purifiedHtml"></div>
-    </div>
+    <div v-html="purifiedHtml"></div>
 </template>

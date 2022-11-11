@@ -1,4 +1,4 @@
 import PurifiedHtml from './PurifiedHtml.vue';
+import CleanDiv from './CleanDiv.vue';
 
-/* eslint-disable import/prefer-default-export */
-export { PurifiedHtml };
+export { PurifiedHtml, CleanDiv };
