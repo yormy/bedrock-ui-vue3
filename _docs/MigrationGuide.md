@@ -6,7 +6,9 @@
 
 =>
 
-```<script setup lang="ts">```
+```
+<script setup lang="ts">
+```
 
 
 ### Props
