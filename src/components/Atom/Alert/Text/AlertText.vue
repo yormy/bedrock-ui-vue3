@@ -5,8 +5,8 @@
  * Cases:
  *  - error messages, success messages
  */
+import { computed } from 'vue';
 import YPurifiedHtml from '../../Display/PurifiedHtml.vue';
-import {computed} from "vue";
 
 const props = defineProps({
     /**
@@ -23,7 +23,7 @@ const props = defineProps({
      */
     styling: {
         type: String,
-        default: 'is-danger'
+        default: '',
     },
 
     /**
@@ -31,15 +31,13 @@ const props = defineProps({
      */
     alertBorder: {
         type: String,
-        default: 'is-danger'
-    }
+        default: '',
+    },
 });
-
 
 const styleClass = computed<string>(() => {
-    return props.alertBorder + ' ' + props.styling;
+    return `${props.alertBorder} ${props.styling}`;
 });
-
 </script>
 
 <template>

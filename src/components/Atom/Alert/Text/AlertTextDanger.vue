@@ -1,18 +1,7 @@
-<script>
-import YAlertText from './AlertText.vue'
-
-export default {
-    components: {
-        YAlertText,
-    },
-}
+<script setup lang="ts">
+import YAlertText from './AlertText.vue';
 </script>
 
 <template>
-    <y-alert-text
-        class="is-danger"
-        v-bind="{...$props, ...$attrs}"
-        v-on="$listeners"
-    >
-    </y-alert-text>
+    <YAlertText class="is-danger" v-bind="{ ...$props, ...$attrs }"> </YAlertText>
 </template>
