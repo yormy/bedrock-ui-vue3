@@ -10,27 +10,34 @@
         "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src/components",
         "format": "prettier src/components  --write",
         "sass:dev": "sass --watch --update --style=expanded src/assets/scss:dist/resources",
-        "sass:prod": "sass --no-source-map --style=compressed src/assets/scss:dist/resources"
+        "sass:prod": "sass --no-source-map --style=compressed src/assets/scss:dist/resources",
+        "security:check": "npm audit --production --audit-level high",
+        "test:unit": "jest"
     },
-
     "dependencies": {
+        "@babel/core": "^7.20.5",
+        "@babel/preset-env": "^7.20.2",
         "@types/dompurify": "^2.3.4",
+        "@types/jest": "^29.2.4",
+        "@vue/test-utils": "^2.2.6",
+        "@vue/vue3-jest": "^29.2.1",
+        "babel-jest": "^29.3.1",
         "compile-sass": "^2.0.0",
         "dompurify": "^2.4.0",
         "express": "^4.18.2",
-        "vite-plugin-static-copy": "^0.11.1",
+        "jest-environment-jsdom": "^29.3.1",
         "primeflex": "^3.2.1",
         "primeicons": "^6.0.1",
-        "primevue": "^3.18.1"
+        "primevue": "^3.18.1",
+        "ts-jest": "^29.0.3",
+        "vite-plugin-static-copy": "^0.11.1"
     },
-
     "peerDependencies": {
         "primeflex": "^3.2.1",
         "primeicons": "^6.0.1",
         "primevue": "^3.18.1",
         "vue": "^3.2.41"
     },
-
     "devDependencies": {
         "@rushstack/eslint-patch": "^1.2.0",
         "@types/node": "^18.11.9",
@@ -50,13 +57,11 @@
         "vitepress": "^0.22.4",
         "vue-tsc": "^1.0.9"
     },
-
     "files": [
         "src",
         "dist",
         "dist/resources/test.css"
     ],
-
     "types": "./dist/types/index.d.ts",
     "module": "./dist/bedrock-ui-vue3.es.js",
     "exports": {
