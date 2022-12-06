@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export function useBadgeTypes(type) {
+export default function useBadgeTypes(type) {
     let classNames = '';
 
     const mapping = {

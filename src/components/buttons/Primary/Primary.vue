@@ -4,11 +4,9 @@
 
 <script setup lang="ts">
 import Button from 'primevue/button';
-// @ts-ignore
 import { defineProps, watch } from 'vue';
-import { useButtonTypes } from '../useButtonTypes.js';
-// @ts-ignore
-import { useBadgeTypes } from '../useBadgeTypes.js';
+import useButtonTypes from '../useButtonTypes';
+import useBadgeTypes from '../useBadgeTypes';
 
 const props = defineProps({
     type: {

@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export function useButtonTypes(type) {
+export default function useButtonTypes(type) {
     let classNames = '';
 
     const mapping = {
