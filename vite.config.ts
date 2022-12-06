@@ -3,6 +3,7 @@ const { defineConfig } = require('vite');
 import vue from '@vitejs/plugin-vue';
 import eslint from 'vite-plugin-eslint';
 import { viteStaticCopy } from 'vite-plugin-static-copy'
+import { splitVendorChunkPlugin } from 'vite'
 
 module.exports = defineConfig({
   resolve: {
@@ -34,6 +35,7 @@ module.exports = defineConfig({
             }
         ]
     }),
+    splitVendorChunkPlugin(),
   ],
   build: {
     lib: {
