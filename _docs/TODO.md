@@ -1,5 +1,11 @@
-enforce script above or below template?
 async loading of components
+
+# Naming convention
+components
+ - Button <singular / camelcase>
+
+
+
 
 # GULP to compile styles
 "build:package" ??

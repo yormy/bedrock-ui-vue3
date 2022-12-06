@@ -11,6 +11,6 @@ import ComponentC from './ComponentC.vue';
 // export * from './Atom/Display/exports.js';
 
 // @ts-ignore
-export * from './buttons/exports.js';
+export * from './Buttons/exports.js';
 
 export { ComponentA, ComponentB, ComponentC };
