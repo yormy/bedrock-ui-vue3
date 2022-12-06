@@ -1,39 +1,7 @@
 <template>
-    <Button class="p-button-raised p-button-primary" :class="buttonClass" :badge-class="badgeClass"><slot></slot></Button>
+    <base-button class="p-button-raised" :class="buttonClass" :badge-class="badgeClass"><slot></slot></base-button>
 </template>
 
 <script setup lang="ts">
-import Button from 'primevue/button';
-import { defineProps, watch } from 'vue';
-import useButtonTypes from '../useButtonTypes';
-import useBadgeTypes from '../useBadgeTypes';
-
-const props = defineProps({
-    type: {
-        type: String,
-        default: '',
-    },
-    badgeType: {
-        type: String,
-        default: '',
-    },
-});
-
-let buttonClass = useButtonTypes(props.type);
-
-watch(
-    () => props.type,
-    (newValue) => {
-        buttonClass = useButtonTypes(newValue);
-    }
-);
-
-let badgeClass = useBadgeTypes(props.badgeType);
-
-watch(
-    () => props.badgeType,
-    (newValue) => {
-        badgeClass = useBadgeTypes(newValue);
-    }
-);
+import BaseButton from '../Base/Base.vue';
 </script>
