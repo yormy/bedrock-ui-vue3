@@ -1,3 +1,7 @@
+<template>
+    <div class="y-test">ccccccc {{ msg }}</div>
+</template>
+
 <script setup lang="ts">
 defineProps({
     msg: {
@@ -6,7 +10,3 @@ defineProps({
     },
 });
 </script>
-
-<template>
-    <div class="y-test">ccccccc {{ msg }}</div>
-</template>

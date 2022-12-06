@@ -1,3 +1,8 @@
+<!--eslint-disable  vue/no-v-html-->
+<template>
+    <div v-html="purifiedHtml"></div>
+</template>
+
 <script setup lang="ts">
 /**
  * Display HTML after purification
@@ -8,7 +13,6 @@
  * Required: npm install DOMPurify
  */
 
-/* eslint-disable  vue/no-v-html */
 import { computed, PropType } from 'vue';
 import DOMPurify from 'dompurify';
 
@@ -46,7 +50,3 @@ const purifiedHtml = computed<string>(() => {
     });
 });
 </script>
-
-<template>
-    <div v-html="purifiedHtml"></div>
-</template>

@@ -1,3 +1,9 @@
+<template>
+    <div v-if="message" :class="styleClass" role="alert">
+        <YPurifiedHtml :value="message"></YPurifiedHtml>
+    </div>
+</template>
+
 <script setup lang="ts">
 /**
  * Show an alertbox
@@ -39,9 +45,3 @@ const styleClass = computed<string>(() => {
     return `${props.alertBorder} ${props.styling}`;
 });
 </script>
-
-<template>
-    <div v-if="message" :class="styleClass" role="alert">
-        <YPurifiedHtml :value="message"></YPurifiedHtml>
-    </div>
-</template>

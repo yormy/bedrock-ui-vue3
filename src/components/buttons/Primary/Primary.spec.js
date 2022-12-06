@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { mount } from '@vue/test-utils';
 import { h } from 'vue';
 import Button from './Primary.vue';
