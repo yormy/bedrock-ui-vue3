@@ -5,10 +5,10 @@
 <script setup lang="ts">
 import Button from 'primevue/button';
 // @ts-ignore
-import { useButtonTypes } from '../useButtonTypes.js'
+import { defineProps, watch } from 'vue';
+import { useButtonTypes } from '../useButtonTypes.js';
 // @ts-ignore
-import { useBadgeTypes } from '../useBadgeTypes.js'
-import {defineProps, watch} from "vue";
+import { useBadgeTypes } from '../useBadgeTypes.js';
 
 const props = defineProps({
     type: {
@@ -23,16 +23,19 @@ const props = defineProps({
 
 let buttonClass = useButtonTypes(props.type);
 
-watch(() => props.type, (newValue) => {
-    buttonClass = useButtonTypes(newValue);
-});
+watch(
+    () => props.type,
+    (newValue) => {
+        buttonClass = useButtonTypes(newValue);
+    }
+);
 
 let badgeClass = useBadgeTypes(props.badgeType);
 
-watch(() => props.badgeType, (newValue) => {
-    badgeClass = useBadgeTypes(newValue);
-});
-
+watch(
+    () => props.badgeType,
+    (newValue) => {
+        badgeClass = useBadgeTypes(newValue);
+    }
+);
 </script>
-
-
