@@ -1,10 +1,5 @@
 <template>
-    <Button class="p-button-raised p-button-primary"  badge-class="" />
+    <Button class="p-button-raised p-button-primary" badge-class="" />
 </template>
 
-
-<script setup lang="ts">
-
-</script>
-
-
+<script setup lang="ts"></script>
