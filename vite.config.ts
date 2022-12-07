@@ -10,7 +10,7 @@ module.exports = defineConfig({
     extensions: ['.js', '.ts', '.vue', '.json'],
 
     alias: {
-      '@components': `${__dirname}/src/components`,
+        '@components': `${__dirname}/src/components`,
     },
   },
 

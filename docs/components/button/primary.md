@@ -1,17 +1,24 @@
 <script setup>
-import Basic from '../demo/ComponentA/Basic.vue'
+import {YButtonPrimary} from 'bedrock-ui-vue3'
 </script>
 
-# Component A
+# Primary Button
 
-This is a simple Hello Word component with a prop and use icon <span class="icon-heart" style="color:tomato"></span> from a font file.
-
-## Example Usage
-
-You may show demo below with the code snippet.
+The default button to press
 
 <DemoContainer>
-  <Basic/>
+  <YButtonPrimary label="hellso"/>
 </DemoContainer>
 
-<<< @/components/demo/ComponentA/Basic.vue
+### Usage
+The primary button on a page or form. 
+
+### Code
+::: details Code
+```js
+<YButtonPrimary label="hellso"/>
+```
+:::
+
+
+

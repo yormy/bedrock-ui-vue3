@@ -11,6 +11,7 @@ module.exports = {
             children: [
                 { text: 'What is My Lib?', link: '/' },
                 { text: 'Getting Started', link: '/guide/' },
+                { text: 'template', link: '/guide/template' },
             ],
         },
         {
