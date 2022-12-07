@@ -1,6 +1,6 @@
-# What is My Lib?
+# Bedrock UI Vue3 Components
 
-This library is a starter to create your own Vue 3 component library in TypeScript.
+This is an internal package with basic components
 
 There are two example components included for you to get started with creating your own components:
 

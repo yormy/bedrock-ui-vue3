@@ -1,5 +1,11 @@
 async loading of components
 
+# Buttons
+- loading
+- disabled
+- etc
+
+
 # Naming convention
 components
  - Button <singular / camelcase>
