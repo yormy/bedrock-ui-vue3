@@ -7,7 +7,7 @@ import {YButtonPrimary} from 'bedrock-ui-vue3'
 The default button to press
 
 <DemoContainer>
-  <YButtonPrimary label="hellso"/>
+  <YButtonPrimary label="hellso" badge="2" badgeType="danger"/>
 </DemoContainer>
 
 ### Usage

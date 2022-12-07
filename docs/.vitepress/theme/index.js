@@ -10,10 +10,16 @@ import 'primeflex/primeflex.css'
 
 import './custom.css'
 
-import '../../../dist/resources/themes/bedrock-indigo/dark.css';
+import Layout from '../components/Layout.vue'
+import DarkTheme from './dark-theme.css'
+
+import '../../../dist/resources/themes/bedrock-indigo/theme.css';
+
+export { DarkTheme }
 
 export default {
   ...DefaultTheme,
+    Layout: Layout,
   enhanceApp({ app }) {
     app.use(PrimeVue)
     app.use(BedrockUiVue3)
