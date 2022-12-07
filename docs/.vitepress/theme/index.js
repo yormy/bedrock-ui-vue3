@@ -10,6 +10,8 @@ import 'primeflex/primeflex.css'
 
 import './custom.css'
 
+import '../../../dist/resources/themes/bedrock-indigo/dark.css';
+
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
