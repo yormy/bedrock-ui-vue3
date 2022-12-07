@@ -81,6 +81,8 @@
         "./dist/style.css": "./dist/style.css",
         "./resources/themes/bedrock-indigo/dark.css": "./dist/resources/themes/bedrock-indigo/dark.css",
         "./resources/themes/bedrock-indigo/light.css": "./dist/resources/themes/bedrock-indigo/light.css",
+        "./resources/themes/bedrock-indigo/theme.css": "./dist/resources/themes/bedrock-indigo/theme.css",
+        "./resources/themes/bedrock.min.css": "./dist/resources/themes/bedrock.min.css",
         "./dist/resources/default/test.css": {
             "import": "./dist/resources/default/test.css",
             "require": "./dist/resources/default/test.css"
