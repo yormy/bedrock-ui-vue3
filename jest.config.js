@@ -1,4 +1,5 @@
 module.exports = {
+    bail: 1,                                         // stop after 3 failed tests
     preset: 'ts-jest',
     testEnvironment: 'jsdom',
     transform: {

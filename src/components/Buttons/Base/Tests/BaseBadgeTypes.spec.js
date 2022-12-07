@@ -7,7 +7,7 @@ describe('Button.vue', () => {
     it('is badgeType info working', async () => {
         const wrapper = mount(Button, {
             props: {
-                badge: 99,
+                badge: '99',
                 "badge-type" : 'info',
             },
         });
@@ -22,7 +22,7 @@ describe('Button.vue', () => {
     it('is badgeType success working', async () => {
         const wrapper = mount(Button, {
             props: {
-                badge: 99,
+                badge: '99',
                 "badge-type" : 'success',
             },
         });
@@ -37,7 +37,7 @@ describe('Button.vue', () => {
     it('is badgeType warning working', async () => {
         const wrapper = mount(Button, {
             props: {
-                badge: 99,
+                badge: '99',
                 "badge-type" : 'warning',
             },
         });
@@ -52,7 +52,7 @@ describe('Button.vue', () => {
     it('is badgeType danger working', async () => {
         const wrapper = mount(Button, {
             props: {
-                badge: 99,
+                badge: '99',
                 "badge-type" : 'danger',
             },
         });
