@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { mount } from '@vue/test-utils';
 import { h } from 'vue';
-import Button from './Primary.vue';
+import Button from '../Base.vue';
 
 describe('Button.vue', () => {
     it('is Button element exist', () => {
@@ -76,12 +76,13 @@ describe('Button.vue', () => {
     it('should render default slot', () => {
         const wrapper = mount(Button, {
             slots: {
-                default: h('span', { class: 'ml-2 font-bold' }, 'Default PrimeStrip Button'),
+                default: h('span', { class: 'ml-2 font-bold' }, 'Default Button'),
             },
         });
 
         expect(wrapper.html()).toBe(
-            '<button class="p-button p-component p-button-raised p-button-primary p-button-info" type="button"><span class="ml-2 font-bold">Default PrimeStrip Button</span></button>'
+            '<button class="p-button p-component p-button-info" type="button"><span class="ml-2 font-bold">Default Button</span></button>'
         );
     });
 });
+
