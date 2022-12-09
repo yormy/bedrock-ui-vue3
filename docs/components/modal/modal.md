@@ -1,13 +1,18 @@
 <script setup>
-import {YModalHelp} from 'bedrock-ui-vue3'
+import ModalWrapper from '../../.vitepress/wrappers/modal/ModalWrapper.vue'
 </script>
 
 # Modal Info
 
 The default button to press
 
+todo:
+- why no backdrop?
+- buttons still clickable outside of modal
+sss
+
 <DemoContainer>
-   <YModalHelp :visible="true">hello worls</YModalHelp>
+  <ModalWrapper></ModalWrapper>
 </DemoContainer>
 
 ### Usage

@@ -1,7 +1,7 @@
 <template>
     <div class="field">
         <div label="Show" icon="pi pi-external-link" @click="handleHelpClicked" >xxxx</div>
-        <YModalHelp :visible="showHelpModal"/>
+        <YModalHelp header="aereware" v-model:visible="showHelpModal"/>
 
         <span class="p-float-label">
             <prime-input-text :id="fieldId" type="text" v-model="value" :disabled="disabledState"/>
