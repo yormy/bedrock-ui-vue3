@@ -1,8 +1,12 @@
 <template>
     <div class="field">
+
         <div label="Show" icon="pi pi-external-link" @click="handleHelpClicked" >xxxx</div>
         <y-modal-help header="aereware" v-model:visible="showHelpModal"/>
 
+        <div class="flex justify-content-end">
+            <small v-if="helpTextLabel">{{ helpTextLabel }}</small>
+        </div>
         <span class="p-float-label">
             <prime-input-text
                 :id="fieldId"
@@ -15,7 +19,7 @@
             <label :for="fieldId">{{ label }}</label>
         </span>
 
-        <small v-if="helpText" :id="fieldId +'-help'" class="p-info">{{ helpText }}</small>
+        <small v-if="hintText" :id="fieldId +'-hint'" class="p-info">{{ hintText }}</small>
 
         <div v-for="error in errors" :key="error.$message">
             <small :id="fieldId + '-error'" class="p-error">{{ error.$message }}</small>
@@ -71,7 +75,12 @@ const props = defineProps({
         default: []
     },
 
-    helpText: {
+    hintText: {
+        type: String,
+        default: ''
+    },
+
+    helpTextLabel: {
         type: String,
         default: ''
     }

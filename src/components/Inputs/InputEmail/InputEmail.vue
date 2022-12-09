@@ -1,4 +1,6 @@
 <template>
+    <div class="p-fluid grid">
+    <div class="field col-12 md:col-8">
     <y-input-text
         v-model="v$.name.$model"
         :errors="v$.name.$errors"
@@ -7,6 +9,8 @@
         @blur="handleInputBlur"
         v-bind="$attrs"
     ></y-input-text>
+    </div>
+    </div>
 </template>
 
 <script setup lang="ts">

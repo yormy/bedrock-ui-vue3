@@ -1,5 +1,14 @@
 async loading of components
 
+input:
+required state (* + rule added)
+show password
+click to show description modal
+"forgot password"
+
+
+
+
 # Buttons
 - with font-awesome predefined icon + pos + abstraction
 - dropdown
