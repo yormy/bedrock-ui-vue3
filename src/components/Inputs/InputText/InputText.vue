@@ -1,9 +1,9 @@
 <template>
-    <base-input-text></base-input-text>
+    <input-base></input-base>
 </template>
 
 <script setup lang="ts">
-import BaseInputText from '../Base/Base.vue';
+import InputBase from '../Base/InputBase.vue';
 const badgeClass = '';
 const buttonClass = '';
 </script>
