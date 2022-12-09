@@ -7,8 +7,13 @@ import {YButtonPrimary} from 'bedrock-ui-vue3'
 The default button to press
 
 <DemoContainer>
-  <YButtonPrimary label="hellso" badge="2" badgeType="danger"/>
+  <span class="p-buttonset">
+    <YButtonPrimary label="Save"/>
+    <YButtonPrimary label="Delete"/>
+    <YButtonPrimary label="Action"/>
+  </span>
 </DemoContainer>
+
 
 ### Usage
 The primary button on a page or form. 

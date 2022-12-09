@@ -17,7 +17,11 @@ module.exports = {
         {
             text: 'Button',
             children: [
-                { text: 'Primary A', link: '/components/button/primary' },
+                { text: 'Buttons', link: '/components/button/buttons' },
+                { text: 'Colors', link: '/components/button/colors' },
+                { text: 'States', link: '/components/button/states' },
+                { text: 'New', link: '/components/button/new' },
+                { text: 'Set', link: '/components/button/set' },
             ],
         },
         {

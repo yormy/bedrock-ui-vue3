@@ -9,8 +9,6 @@ F
 src/constants/index.ts,c/4/c474d60acef81c229fcc1ee87758ef546a37ea82
 Q
 !src/assets/scss/default/test.scss,a/8/a83ecb38c4f7313b575c0311a13dbbad8e1f1a3f
-=
-.editorconfig,6/2/626a747c8694eaae66f2afb3d1a745b045782c70
 \
 ,src/components/Atom/Alert/Text/AlertText.vue,1/9/198893ce72ef9672a8b7c96f59248aabcadceef5
 <

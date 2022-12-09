@@ -1,5 +1,5 @@
 <template>
-    <base-button class="p-button-raised p-button-text" :class="buttonClass" :badge-class="badgeClass"><slot></slot></base-button>
+    <base-button class="p-button-text" :class="buttonClass" :badge-class="badgeClass"><slot></slot></base-button>
 </template>
 
 <script setup lang="ts">

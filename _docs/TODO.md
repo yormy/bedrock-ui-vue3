@@ -1,9 +1,9 @@
 async loading of components
 
 # Buttons
-- loading
-- disabled
-- etc
+- with font-awesome predefined icon + pos + abstraction
+- dropdown
+- selectable change color (fill color)
 
 
 # Naming convention
