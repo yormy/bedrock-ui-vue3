@@ -15,6 +15,12 @@ module.exports = {
             ],
         },
         {
+            text: 'Input',
+            children: [
+                { text: 'Text', link: '/components/input/text' },
+            ],
+        },
+        {
             text: 'Button',
             children: [
                 { text: 'Buttons', link: '/components/button/buttons' },

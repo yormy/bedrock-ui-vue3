@@ -12,5 +12,7 @@ import ComponentC from './ComponentC.vue';
 
 // @ts-ignore
 export * from './Buttons/exports.js';
+// @ts-ignore
+export * from './Inputs/exports.js';
 
 export { ComponentA, ComponentB, ComponentC };
