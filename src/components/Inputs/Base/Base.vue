@@ -1,5 +1,8 @@
 <template>
     <div class="field">
+        <div label="Show" icon="pi pi-external-link" @click="handleHelpClicked" >xxxx</div>
+        <YModalHelp :visible="showHelpModal"/>
+
         <span class="p-float-label">
             <prime-input-text :id="fieldId" type="text" v-model="value" :disabled="disabledState"/>
             <label :for="fieldId">{{ label }}</label>
@@ -11,10 +14,12 @@
 
 <script setup lang="ts">
 import PrimeInputText from 'primevue/inputtext';
+import YModalHelp from '../../Modals/Help/ModalHelp.vue';
 import { defineProps, ref, onMounted, watch } from 'vue';
 
 const fieldId = ref();
 const value = ref();
+const showHelpModal = ref();
 
 // import useButtonTypes from '../useButtonTypes';
 // import useBadgeTypes from '../useBadgeTypes';
@@ -39,6 +44,10 @@ onMounted(async () => {
         fieldId.value = Math.ceil(Math.random()*1000000);
     }
 })
+
+const handleHelpClicked = () => {
+    showHelpModal.value = true;
+};
 
 let disabledState = props.disabled;
 watch(

@@ -8,8 +8,7 @@ The default button to press
 
 <DemoContainer>
   <div class="py-5">
-    <YInputText label="Primary" :disabled="true"/>
-<YInputText label="Primary" :disabled="false"/>
+<YInputText label="Primary"/>
   </div>
 </DemoContainer>
 
@@ -22,7 +21,6 @@ disabled view is not clear that it is disabled
         <y-input-text
             class=''
             v-model="modelValue"
-            :disabled="args.disabled"
             :error-text="args.errorText"
             :hide-label="args.hideLabel"
             :hint-text="args.hintText"
@@ -58,7 +56,9 @@ disabled view is not clear that it is disabled
 
 ### Properties
 
-| Name  | Type   | Default | Description                  |
-|-------| ------ | ------- |------------------------------|
-| id    | string | null    | optional to set the input id |
-| label | string | null    | the visible label            |
+| Name     | Type    | Default | Description                  |
+|----------|---------|---------|------------------------------|
+| id       | string  | null    | optional to set the input id |
+| label    | string  | null    | the visible label            |
+| disabled | boolean | false   | disabled                     |
+

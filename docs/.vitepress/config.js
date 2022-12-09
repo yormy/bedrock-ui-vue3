@@ -15,6 +15,12 @@ module.exports = {
             ],
         },
         {
+            text: 'Modal',
+            children: [
+                { text: 'Modal', link: '/components/modal/modal' },
+            ],
+        },
+        {
             text: 'Input',
             children: [
                 { text: 'Text', link: '/components/input/text' },

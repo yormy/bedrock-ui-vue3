@@ -14,5 +14,7 @@ import ComponentC from './ComponentC.vue';
 export * from './Buttons/exports.js';
 // @ts-ignore
 export * from './Inputs/exports.js';
+// @ts-ignore
+export * from './Modals/exports.js';
 
 export { ComponentA, ComponentB, ComponentC };
