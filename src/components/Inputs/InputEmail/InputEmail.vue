@@ -8,6 +8,8 @@
         :successes="successes"
         @blur="handleInputBlur"
         v-bind="$attrs"
+        @secondary-label-clicked="handleSecondaryLabelClicked"
+        :is-required="true"
     ></y-input-text>
     </div>
     </div>
@@ -36,6 +38,10 @@ const successes = [
     { message: "a success 1" },
     { message: "a success 2" }
 ]
+
+const handleSecondaryLabelClicked = () => {
+    console.log('handle click secondary label');
+}
 
 const v$ = useVuelidate(rules, state);
 v$.value.name.$touch(); // just for now test invalid

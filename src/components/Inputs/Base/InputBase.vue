@@ -1,11 +1,12 @@
 <template>
     <div class="field">
 
-        <div label="Show" icon="pi pi-external-link" @click="handleHelpClicked" >xxxx</div>
-        <y-modal-help header="aereware" v-model:visible="showHelpModal"/>
+        <y-modal-help :header="label" v-model:visible="showHelpModal">{{moreHelpDescription}}</y-modal-help>
 
         <div class="flex justify-content-end">
-            <small v-if="helpTextLabel">{{ helpTextLabel }}</small>
+            <small v-if="moreHelpDescription" @click="handleMoreHelpClicked" >{{ moreHelpLabel }}</small>
+            <small v-if="secondaryLabel" @click="handleSecondaryHelpClicked">{{secondaryLabel}}</small>
+            <small v-if="isRequired"><div class="p-error">*</div></small>
         </div>
         <span class="p-float-label">
             <prime-input-text
@@ -40,11 +41,13 @@
 <script setup lang="ts">
 import PrimeInputText from 'primevue/inputtext';
 import YModalHelp from '../../Modals/Help/ModalHelp.vue';
-import { defineProps, ref, onMounted, watch } from 'vue';
+import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
 
 const fieldId = ref();
 const value = ref();
 const showHelpModal = ref();
+
+const emit = defineEmits(['secondaryLabelClicked']);
 
 const props = defineProps({
     id: {
@@ -80,9 +83,24 @@ const props = defineProps({
         default: ''
     },
 
-    helpTextLabel: {
+    moreHelpLabel: {
+        type: String,
+        default: '?'
+    },
+
+    moreHelpDescription: {
         type: String,
         default: ''
+    },
+
+    secondaryLabel: {
+        type: String,
+        default: ''
+    },
+
+    isRequired: {
+        type: Boolean,
+        default: false
     }
 });
 
@@ -95,9 +113,13 @@ onMounted(async () => {
     value.value = props.modelValue;
 })
 
-const handleHelpClicked = () => {
+const handleMoreHelpClicked = () => {
     showHelpModal.value = true;
 };
+
+const handleSecondaryHelpClicked = () => {
+    emit('secondaryLabelClicked');
+}
 
 let disabledState = props.disabled;
 watch(

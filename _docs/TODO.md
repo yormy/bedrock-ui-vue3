@@ -1,10 +1,8 @@
 async loading of components
 
 input:
-required state (* + rule added)
 show password
-click to show description modal
-"forgot password"
+more help icon => need fas
 
 
 
