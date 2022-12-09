@@ -1,8 +1,8 @@
 <template>
     <div class="field">
         <div label="Show" icon="pi pi-external-link" @click="handleHelpClicked" >xxxx</div>
-        <YModalHelp header="aereware" v-model:visible="showHelpModal"/>
-        base value ; {{modelValue}}
+        <y-modal-help header="aereware" v-model:visible="showHelpModal"/>
+
         <span class="p-float-label">
             <prime-input-text
                 :id="fieldId"
@@ -14,11 +14,22 @@
             />
             <label :for="fieldId">{{ label }}</label>
         </span>
-        {{errors}}
-        <small id="username1-help">Enter your username to reset your password.</small>
+
+        <small v-if="helpText" :id="fieldId +'-help'" class="p-info">{{ helpText }}</small>
+
         <div v-for="error in errors" :key="error.$message">
-        <small id="username2-help" class="p-error">{{ error.$message }}</small>
+            <small :id="fieldId + '-error'" class="p-error">{{ error.$message }}</small>
         </div>
+
+        <div v-for="warning in warnings" :key="warning.message">
+            <small :id="fieldId + '-warning'" class="p-warning">{{ warning.message }}</small>
+        </div>
+
+        <div v-for="success in successes" :key="success.message">
+            <small :id="fieldId + '-success'" class="p-success">{{ success.message }}</small>
+        </div>
+
+        {{errors}}
     </div>
 </template>
 
@@ -48,6 +59,21 @@ const props = defineProps({
     errors: {
         type: Array,
         default: []
+    },
+
+    warnings: {
+        type: Array,
+        default: []
+    },
+
+    successes: {
+        type: Array,
+        default: []
+    },
+
+    helpText: {
+        type: String,
+        default: ''
     }
 });
 

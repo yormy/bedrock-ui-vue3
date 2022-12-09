@@ -1,9 +1,11 @@
 <template>
-    state.email compie: {{state.name}}==<br>
     <y-input-text
         v-model="v$.name.$model"
         :errors="v$.name.$errors"
+        :warnings="warnings"
+        :successes="successes"
         @blur="handleInputBlur"
+        v-bind="$attrs"
     ></y-input-text>
 </template>
 
@@ -20,6 +22,17 @@ const state = reactive({
 const rules = {
     name: { required, email, minLength:minLength(100) },
 };
+
+const warnings = [
+    { message: "a warning 1" },
+    { message: "a warning 2" }
+]
+
+const successes = [
+    { message: "a success 1" },
+    { message: "a success 2" }
+]
+
 const v$ = useVuelidate(rules, state);
 v$.value.name.$touch(); // just for now test invalid
 const handleInputBlur = () => {

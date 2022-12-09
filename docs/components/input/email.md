@@ -7,7 +7,7 @@ import {YInputEmail} from 'bedrock-ui-vue3'
 The default button to press
 
 <DemoContainer>
-  <YInputEmail label="Email"/>
+  <y-input-email label="Email" help-text="some help text here"/>
 </DemoContainer>
 
 ### Usage

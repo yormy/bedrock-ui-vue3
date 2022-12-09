@@ -5627,6 +5627,15 @@
 .light .p-datatable .p-datatable-tbody > tr.p-datatable-dragpoint-bottom > td {
   box-shadow: inset 0 -2px 0 0 #FFC107;
 }
+.light .p-warning {
+  color: orange;
+}
+.light .p-info {
+  color: blue;
+}
+.light .p-success {
+  color: green;
+}
 
 .dark {
   --surface-a:#071426;
@@ -11236,6 +11245,9 @@
 }
 .dark .p-datatable .p-datatable-tbody > tr.p-datatable-dragpoint-bottom > td {
   box-shadow: inset 0 -2px 0 0 #A5B4FC;
+}
+.dark .p-warning {
+  color: orange;
 }
 
 /*# sourceMappingURL=theme.css.map */

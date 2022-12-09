@@ -45,6 +45,7 @@
         color-scheme: light;
 
     @import './light.scss';
+    @import './light-addon.scss';
 }
 
     .dark {
@@ -94,6 +95,8 @@
         color-scheme: dark;
 
         @import './dark.scss';
+        @import './dark-addon.scss';
     }
+
 
 
