@@ -24,6 +24,7 @@ module.exports = {
             text: 'Input',
             children: [
                 { text: 'Text', link: '/components/input/text' },
+                { text: 'Email', link: '/components/input/email' },
             ],
         },
         {

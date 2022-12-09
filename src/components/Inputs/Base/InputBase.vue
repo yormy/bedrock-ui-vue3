@@ -2,13 +2,23 @@
     <div class="field">
         <div label="Show" icon="pi pi-external-link" @click="handleHelpClicked" >xxxx</div>
         <YModalHelp header="aereware" v-model:visible="showHelpModal"/>
-
+        base value ; {{modelValue}}
         <span class="p-float-label">
-            <prime-input-text :id="fieldId" type="text" v-model="value" :disabled="disabledState"/>
+            <prime-input-text
+                :id="fieldId"
+                type="text"
+                v-model="value"
+                :disabled="disabledState"
+                @input="$emit('update:modelValue', $event.target.value)"
+                v-bind="$attrs"
+            />
             <label :for="fieldId">{{ label }}</label>
         </span>
+        {{errors}}
         <small id="username1-help">Enter your username to reset your password.</small>
-        <small id="username2-help" class="p-error">Username is not available.</small>
+        <div v-for="error in errors" :key="error.$message">
+        <small id="username2-help" class="p-error">{{ error.$message }}</small>
+        </div>
     </div>
 </template>
 
@@ -21,9 +31,6 @@ const fieldId = ref();
 const value = ref();
 const showHelpModal = ref();
 
-// import useButtonTypes from '../useButtonTypes';
-// import useBadgeTypes from '../useBadgeTypes';
-//
 const props = defineProps({
     id: {
         type: String,
@@ -36,6 +43,12 @@ const props = defineProps({
     disabled: {
         // can be true, false, or null
     },
+    modelValue: {},
+
+    errors: {
+        type: Array,
+        default: []
+    }
 });
 
 onMounted(async () => {
@@ -43,6 +56,8 @@ onMounted(async () => {
     if (!props.id) {
         fieldId.value = Math.ceil(Math.random()*1000000);
     }
+
+    value.value = props.modelValue;
 })
 
 const handleHelpClicked = () => {
