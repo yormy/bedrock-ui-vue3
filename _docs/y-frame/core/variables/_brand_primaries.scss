@@ -1,0 +1,35 @@
+:root {
+    --brand-color-primary-lighter-100: #539368;
+    --brand-color-primary-lighter-200: #8dbf9d;
+    --brand-color-primary-lighter-300: #deede3;
+    --brand-color-primary-darker-100: #122117;
+    --brand-color-primary-darker-200: #09100c;
+    --brand-color-primary-darker-300: #000000;
+
+    --brand-color-primary-lighter-100-contrast: var(--brand-color-fifth);
+    --brand-color-primary-lighter-100-contrast-hover: var(--brand-color-primary-contrast-hover);
+    --brand-color-primary-lighter-100-contrast-disabled: var(--brand-color-primary-contrast-disabled);
+
+    --brand-color-primary-lighter-200-contrast: var(--brand-color-primary);
+    --brand-color-primary-lighter-200-contrast-hover: var(--brand-color-primary-darker-300);
+    --brand-color-primary-lighter-200-contrast-disabled: #d9d6dc;
+
+    --brand-color-primary-lighter-300-contrast: var(--brand-color-primary);
+    --brand-color-primary-lighter-300-contrast-hover: var(--brand-color-primary-darker-300);
+    --brand-color-primary-lighter-300-contrast-disabled: var(--brand-color-primary-contrast-disabled);
+
+
+
+
+    --brand-color-primary-darker-100-contrast: var(--brand-color-fifth);
+    --brand-color-primary-darker-100-contrast-hover: var(--brand-color-primary-contrast-hover);
+    --brand-color-primary-darker-100-contrast-disabled: var(--brand-color-primary-contrast-disabled);
+
+    --brand-color-primary-darker-200-contrast: var(--brand-color-fifth);
+    --brand-color-primary-darker-200-contrast-hover: var(--brand-color-primary-contrast-hover);
+    --brand-color-primary-darker-200-contrast-disabled: var(--brand-color-primary-contrast-disabled);
+
+    --brand-color-primary-darker-300-contrast: var(--brand-color-fifth);
+    --brand-color-primary-darker-300-contrast-hover: var(--brand-color-primary-contrast-hover);
+    --brand-color-primary-darker-300-contrast-disabled: var(--brand-color-primary-contrast-disabled);
+}

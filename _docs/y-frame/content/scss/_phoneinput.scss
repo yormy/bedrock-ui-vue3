@@ -1,0 +1,57 @@
+
+.maz-input__input {
+    background-color: var(--light-input-background-color) !important;
+    color:var(--light-input-text-color) !important;
+    border-width:1px !important;
+    border-style:solid !important;
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+
+    &:active, &:focus {
+        background-color: transparent !important;
+        border-color:transparent !important;
+    }
+
+}
+
+
+.maz-text-white {
+    color:red !important;
+}
+
+.maz-phone-number-input__country-flag  {
+    bottom: 0.8rem !important;
+}
+
+
+.maz-phone-number-input {
+    .is-focused {
+        border-color:transparent !important;
+    }
+    .is-valid {
+        border-width:0 !important;
+        .maz-input__input {
+            border-width:2px !important;
+        }
+    }
+}
+
+
+.maz-phone-number-input {
+    .is-valid {
+        .maz-input__input {
+            border-color: var(--light-color-success) !important;
+        }
+    }
+}
+
+
+.dark {
+    .maz-phone-number-input {
+        .is-valid {
+            .maz-input__input {
+                border-color: var(--dark-color-success) !important;
+            }
+        }
+    }
+}

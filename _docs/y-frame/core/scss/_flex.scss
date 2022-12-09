@@ -1,0 +1,124 @@
+
+.flex-row{
+    flex-direction: row !important;
+}
+
+.flex-row-reverse{
+    flex-direction: row-reverse !important;
+}
+
+.flex-col{
+    flex-direction: column !important;
+}
+
+.flex-wrap{
+    flex-wrap: wrap !important;
+}
+
+
+
+.place-items-center{
+    place-items: center !important;
+}
+
+.content-around{
+    align-content: space-around !important;
+}
+
+.items-start{
+    align-items: flex-start !important;
+}
+
+.items-center{
+    align-items: center !important;
+}
+
+.items-stretch{
+    align-items: stretch !important;
+}
+
+/* ---------- Justify --------- */
+.justify-start      {justify-content: flex-start !important;}
+.justify-end        {justify-content: flex-end !important;}
+.justify-center     {justify-content: center !important;}
+.justify-between    {justify-content: space-between !important;}
+.justify-around     {justify-content: space-around !important;}
+.justify-evenly     {justify-content: space-evenly !important;}
+
+
+/* ---------- flex --------- */
+.flex{
+    display: flex !important;
+}
+
+.inline-flex{
+    display: inline-flex !important;
+}
+
+
+.flex-auto{
+    flex: 1 1 auto !important;
+}
+
+.flex-initial{
+    flex: 0 1 auto !important;
+}
+
+.flex-1{
+    flex: 1 1 0% !important;
+}
+
+.flex-none{
+    flex: none !important;
+}
+
+.flex-shrink-0{
+    flex-shrink: 0 !important;
+}
+
+.shrink-0{
+    flex-shrink: 0 !important;
+}
+
+.flex-grow{
+    flex-grow: 1 !important;
+}
+
+.self-stretch{
+    align-self: stretch !important;
+}
+
+@media (min-width: 640px) {
+    .sm\:flex{
+        display: flex !important;
+    }
+
+    .sm\:shrink-0{
+        flex-shrink: 0 !important;
+    }
+
+    .sm\:flex-row{
+        flex-direction: row !important;
+    }
+
+    .sm\:flex-row-reverse{
+        flex-direction: row-reverse !important;
+    }
+
+    .sm\:place-content-center{
+        place-content: center !important;
+    }
+
+    .sm\:items-start{
+        align-items: flex-start !important;
+    }
+
+    .sm\:items-center{
+        align-items: center !important;
+    }
+
+    .sm\:justify-between{
+        justify-content: space-between !important;
+    }
+}
+

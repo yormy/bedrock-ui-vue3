@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@import "./variables/__main_content.scss";
+
+@import "./scss/__main_content.scss";
+
+@import "../vendor/maz/_maz.scss";
+
+
+.is-greyed {
+    color: var(--light-color-disabled);
+}
+
+.is-info {
+    color: var(--light-color-info);
+}
+
+.is-success {
+    color: var(--light-color-success);
+}
+
+.is-warning {
+    color: var(--light-color-warning);
+}
+
+.is-danger {
+    color: var(--light-color-danger);
+}
+
+.is-disabled {
+    color: var(--light-color-disabled);
+}
+
+
+.dark {
+    .is-greyed {
+        color: var(--dark-color-disabled);
+    }
+
+    .is-info {
+        color: var(--dark-color-info);
+    }
+
+    .is-success {
+        color: var(--dark-color-success);
+    }
+
+    .is-warning {
+        color: var(--dark-color-warning);
+    }
+
+    .is-danger {
+        color: var(--dark-color-danger);
+    }
+
+    .is-disabled {
+        color: var(--dark-color-disabled);
+    }
+}
+

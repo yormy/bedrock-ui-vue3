@@ -1,0 +1,164 @@
+
+/*=================== LIGHT THEME ===================*/
+ .y-menu-left-footer {
+    color: var(--light-menu-side-text-color);
+    border-color: var(--light-menu-side-text-color);
+
+     a {
+         color: var(--light-menu-side-text-color);
+         border-color: var(--light-menu-side-text-color);
+
+         &:hover {
+             color: var(--light-menu-side-text-hover-color);
+         }
+     }
+}
+ .y-menu-left .menu-header a {
+    color: var(--light-menu-side-user-text-color);
+}
+
+  .y-menu-left .menu-items  .link {
+    color: var(--light-menu-side-menuitem-color);
+}
+
+ .y-menu-left .menu-detail a {
+    color: var(--light-menu-side-menuitem-color);
+}
+
+ .y-menu-left .menu-detail {
+    a span {
+        color: var(--link-menu-side-text-color);
+    }
+}
+
+/*=================== LIGHT THEME ===================*/
+.y-menu-left {
+    .menu-items {
+        background-color: var(--light-menu-side-background-color);
+        color: var(--light-menu-side-menuitem-color);
+
+        .link:hover {
+            color: var(--light-menu-side-text-hover-color);
+        }
+        .link.is-active {
+            color: var(--light-menu-side-text-hover-color);
+        }
+    }
+    .group {
+        &.level1 {
+            color: var(--light-menu-side-text-group-color);
+        }
+    }
+}
+
+.y-menu-left .menu-detail.open
+{
+    background-color: var(--light-menu-side-background-color);
+    color: var(--light-menu-side-menuitem-color);
+
+    a.link {
+        color: var(--light-menu-side-menuitem-color);
+    }
+}
+
+.y-menu-left .menu-header {
+    .avatar {
+        border-color: var(--light-menu-side-user-text-color);
+        color: var(--light-menu-side-user-text-color);
+    }
+
+    .username {
+        color: var(--light-menu-side-user-text-color);
+        padding-bottom:5px;
+    }
+
+    .tagline {
+        color: var(--light-menu-side-user-text-color);
+    }
+}
+
+.y-menu-left .menu-detail {
+    a.is-active, .y-menu-left .menu-detail a:hover {
+        color: var(--light-menu-side-text-hover-color);
+
+        span, .y-menu-left .menu-detail a:hover span {
+            color: var(--light-menu-side-text-hover-color);
+        }
+    }
+}
+
+.y-menu-workspace .overlay {
+    background-color: var(--light-overlay-background-color);
+}
+
+/*=================== DARK THEME ===================*/
+/*=================== DARK THEME ===================*/
+.dark .y-menu-left-footer {
+    color: var(--dark-menu-side-text-color);
+    border-color: var(--dark-menu-side-text-color);
+}
+.dark .y-menu-left .menu-header a {
+    color: var(--dark-text-color-normal);
+}
+
+.dark  .y-menu-left .menu-items  .link {
+    color: var(--dark-menu-side-menuitem-color);
+}
+
+.dark .y-menu-left .menu-detail a {
+    color: var(--dark-menu-side-menuitem-color);
+}
+
+.dark .y-menu-left .menu-detail {
+    a span {
+        color: var(--dark-menu-side-menuitem-color);
+    }
+}
+.dark {
+    .y-menu-left {
+        .menu-items {
+            background-color: var(--dark-menu-side-background-color);
+            color: var(--dark-menu-side-menuitem-color);
+
+
+            .link:hover {
+                color: var(--dark-menu-side-text-hover-color);
+            }
+            .link.is-active {
+                color: var(--dark-menu-side-text-hover-color);
+            }
+        }
+        .group {
+            &.level1 {
+                color: var(--dark-menu-side-text-group-color);
+            }
+        }
+    }
+
+    .y-menu-left .menu-detail.open
+    {
+        background-color: var(--dark-menu-side-background-color);
+        color: var(--dark-menu-side-menuitem-color);
+        overflow-y:hidden;
+
+        a.link {
+            color: var(--dark-menu-side-menuitem-color);
+        }
+    }
+
+    .y-menu-left .menu-header {
+        .avatar {
+            border-color: var(--dark-text-color-normal);
+            color: var(--dark-text-color-normal);
+        }
+
+        .username {
+            color: var(--dark-text-color-normal);
+            padding-bottom:5px;
+        }
+
+        .tagline {
+            color: var(--dark-text-color-normal);
+        }
+    }
+}

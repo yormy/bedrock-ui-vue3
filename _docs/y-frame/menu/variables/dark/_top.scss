@@ -1,0 +1,24 @@
+:root {
+    --dark-menu-top-background-color: black; /*var(--dark-color);*/
+    --dark-menu-top-text-color: white; /*var(--dark-color-contrast);*/
+    --dark-menu-top-text-hover-color: var(--color-primary);
+    --dark-menu-top-brand-text-color: var(--dark-color-contrast);;
+
+    --dark-menu-side-background-color: var(--dark-color);
+    --dark-menu-side-text-color: var(--dark-color-contrast);
+    --dark-menu-side-menuitem-color: var(--dark-color-contrast);
+
+    --dark-menu-top-dropdown-header-text-color : var(--dark-color-contrast);
+    --dark-menu-top-dropdown-header-background-color : red;/*var(--color-gray-900);*/
+
+    --dark-menu-top-dropdown-content-text-color : var(--dark-color-contrast);
+    --dark-menu-top-dropdown-content-background-color : red;/*var(--color-gray-800);*/
+
+    --dark-menu-top-dropdown-content-item-hover-text-color : var(--color-primary);
+    --dark-menu-top-dropdown-content-item-hover-background-color : rgba(0,0,0,0);
+
+    --dark-menu-top-dropdown-footer-background-color : red;/*var(--color-gray-900);*/
+    --dark-menu-top-dropdown-footer-text-color : var(--dark-color-contrast);
+    --dark-menu-top-dropdown-footer-item-hover-text-color : var(--color-primary);
+    --dark-menu-top-dropdown-footer-item-hover-background-color : rgba(0,0,0,0);
+}

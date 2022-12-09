@@ -1,0 +1,32 @@
+
+.y-menu-left-footer {
+    position: fixed;
+    bottom: 0;
+
+    padding-left:5px;
+    padding-right:5px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    margin-top: 0;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    border:0;
+    border-top-width: 1px;
+    font-family: var(--menu-left-font);
+    font-size: var(--menu-footer-font-size);
+    line-height: 1;
+    border-style: solid;
+    overflow:hidden;
+
+    & nav {
+        margin-left: auto;
+        display:flex;
+    }
+
+    .divider {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+}

@@ -1,0 +1,23 @@
+:root {
+    --light-menu-top-background-color: var(--brand-color-primary);
+    --light-menu-top-text-color: var(--brand-color-primary-contrast);
+
+    --light-menu-top-text-hover-color: var(--brand-color-tertiary);
+    --light-menu-top-brand-text-color: var(--brand-color-primary-contrast);
+
+
+    --light-menu-top-dropdown-header-background-color: var(--brand-color-primary);
+    --light-menu-top-dropdown-header-text-color: var(--brand-color-primary-contrast);
+
+    --light-menu-top-dropdown-content-background-color: var(--light-color-background);
+    --light-menu-top-dropdown-content-text-color: var(--light-color-text);
+
+    --light-menu-top-dropdown-content-item-hover-text-color: var(--light-color-text-hover);
+    --light-menu-top-dropdown-content-item-hover-background-color: transparent;
+
+    --light-menu-top-dropdown-footer-background-color: var(--brand-color-primary);
+    --light-menu-top-dropdown-footer-text-color: var(--brand-color-primary-contrast);
+
+    --light-menu-top-dropdown-footer-item-hover-text-color: var(--brand-color-tertiary);
+    --light-menu-top-dropdown-footer-item-hover-background-color: transparent;
+}

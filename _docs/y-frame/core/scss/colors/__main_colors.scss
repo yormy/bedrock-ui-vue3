@@ -1,0 +1,41 @@
+
+@import "./_colors_primary.scss";
+@import "./_colors_secondary.scss";
+
+
+.color-box {
+    text-align: center;
+    height:150px;
+    padding:30px;
+}
+
+.dark {
+    .hover {
+        color: var(--dark-color-text-hover);
+    }
+
+    .disabled {
+        color: var(--dark-color-text-disabled);
+    }
+
+    .hoverme:hover {
+        color: var(--dark-color-text-hover);
+    }
+}
+
+/*
+background-color: var(--light-color-background);
+color: var(--light-color-text);
+*/
+
+.hover {
+    color: var(--light-color-text-hover);
+}
+
+.disabled {
+    color: var(--light-color-text-disabled);
+}
+
+.hoverme:hover {
+    color: var(--light-color-text-hover);
+}

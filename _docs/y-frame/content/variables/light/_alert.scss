@@ -1,0 +1,26 @@
+:root {
+    --light-alert-success-color: var(--light-color-success);
+    --light-alert-success-color-light: var(--light-color-success-light);
+    --light-alert-success-text-color: var(--light-color-success);
+    --light-alert-success-banner-color: var(--light-color-success);
+    --light-alert-success-banner-text-color: var(--light-color-success-contrast);
+
+
+    --light-alert-info-color: var(--light-color-info);
+    --light-alert-info-color-light: var(--light-color-info-light);
+    --light-alert-info-text-color: var(--light-color-info);
+    --light-alert-info-banner-color: var(--light-color-info);
+    --light-alert-info-banner-text-color: var(--light-color-info-contrast);;
+
+    --light-alert-warning-color: var(--light-color-warning);
+    --light-alert-warning-color-light: var(--light-color-warning-light);
+    --light-alert-warning-text-color: var(--light-color-warning);
+    --light-alert-warning-banner-color: var(--light-color-warning);
+    --light-alert-warning-banner-text-color: var(--light-color-warning-contrast);;
+
+    --light-alert-danger-color: var(--light-color-danger);
+    --light-alert-danger-color-light: var(--light-color-danger-light);
+    --light-alert-danger-text-color: var(--light-color-danger);
+    --light-alert-danger-banner-color: var(--light-color-danger);
+    --light-alert-danger-banner-text-color: var(--light-color-danger-contrast);;
+}

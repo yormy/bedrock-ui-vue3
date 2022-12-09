@@ -1,0 +1,13 @@
+:root {
+    --light-screen-notification-info-background-color: var(--light-color-info);
+    --light-screen-notification-info-text-color: var(--brand-color-primary-contrast);
+
+    --light-screen-notification-success-background-color: var(--light-color-success);
+    --light-screen-notification-success-text-color: var(--brand-color-primary-contrast);
+
+    --light-screen-notification-warning-background-color: var(--light-color-warning);
+    --light-screen-notification-warning-text-color: var(--brand-color-primary-contrast);
+
+    --light-screen-notification-danger-background-color: var(--light-color-danger);
+    --light-screen-notification-danger-text-color: var(--brand-color-primary-contrast);
+}

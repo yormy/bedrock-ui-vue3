@@ -1,0 +1,19 @@
+.y-content {
+    .y-ghost-hover--content {
+        display:none;
+    }
+
+    .y-ghost-hover:hover {
+        .y-ghost-hover--content {
+            display: block
+        }
+        .y-ghost-hover--button {
+            display: none;
+        }
+    }
+}
+
+
+.y-ghost-hover:hover .y-ghost-hover--content {
+    display:block
+}

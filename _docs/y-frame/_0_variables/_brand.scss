@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap);
+
+:root {
+    --brand-color-primary: #1B3022; /* when this is used as background, uses -contrast as text color*/
+    --brand-color-secondary: #B9314F;
+    --brand-color-tertiary: #D5A18E;
+    --brand-color-fourth: #DEC3BE;
+    --brand-color-fifth: #E1DEE3;
+
+    --brand-color-primary-contrast: var(--brand-color-fifth);
+    --brand-color-secondary-contrast: var(--brand-color-fifth);
+
+
+
+
+
+    --brand-color-primary-lighter-100: #5ca374;
+    --brand-color-primary-lighter-300: #deede3;
+
+
+    --brand-color-secondary-lighter-100: #df8699;
+    --brand-color-secondary-lighter-300: #faebee;
+
+
+    --brand-color-tertiary-50: #ead1c7;
+    --brand-color-tertiary-10: #f8f0ec;
+
+    --brand-font : 'Rubik Marker Hatch', cursive;
+
+}

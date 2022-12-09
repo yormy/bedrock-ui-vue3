@@ -1,0 +1,26 @@
+:root {
+
+    --modal-backdrop-background-color: rgba(156, 163, 175, 0.7);
+
+    --light-modal-content-background-color: white;
+    --light-modal-content-text-color: black;
+
+    --light-modal-background-color: grey;
+    --light-modal-text-color: white;
+
+    --light-modal-info-background-color: var(--light-color-info);
+    --light-modal-info-text-color: white;
+
+    --light-modal-success-background-color: var(--light-color-success);
+    --light-modal-success-text-color: white;
+
+    --light-modal-warning-background-color: var(--light-color-warning);
+    --light-modal-warning-text-color: white;
+
+    --light-modal-danger-background-color: var(--light-color-danger);
+    --light-modal-danger-text-color: white;
+
+    --modal-header-font-size: 1.3rem;
+
+    --modal-content-font-size: 0.8rem;
+}

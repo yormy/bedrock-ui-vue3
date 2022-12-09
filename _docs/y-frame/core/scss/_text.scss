@@ -1,0 +1,170 @@
+small {
+    font-size: 80%;
+}
+
+.truncate{
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+.whitespace-normal{
+    white-space: normal !important;
+}
+
+.whitespace-nowrap{
+    white-space: nowrap !important;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.align-middle{
+    vertical-align: middle !important;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+
+.text-xs{
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
+}
+
+.text-sm{
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+}
+
+.text-2xl{
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+}
+
+.text-lg{
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+}
+
+.text-5xl{
+    font-size: 3rem !important;
+    line-height: 1 !important;
+}
+
+.text-4xl{
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+}
+
+.text-\[10px\]{
+    font-size: 10px !important;
+}
+
+.text-xl{
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+}
+
+.text-base{
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+}
+
+.text-6xl{
+    font-size: 3.75rem !important;
+    line-height: 1 !important;
+}
+
+.text-3xl{
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+}
+
+@media (min-width: 640px) {
+    .sm\:text-xl{
+        font-size: 1.25rem !important;
+        line-height: 1.75rem !important;
+    }
+
+    .sm\:text-lg{
+        font-size: 1.125rem !important;
+        line-height: 1.75rem !important;
+    }
+
+    .sm\:text-xs{
+        font-size: 0.75rem !important;
+        line-height: 1rem !important;
+    }
+
+    .sm\:text-sm{
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
+    }
+
+    .sm\:text-4xl{
+        font-size: 2.25rem !important;
+        line-height: 2.5rem !important;
+    }
+}
+
+@media (min-width: 768px){
+    .md\:text-5xl{
+        font-size: 3rem !important;
+        line-height: 1 !important;
+    }
+}
+
+@media (min-width: 1024px){
+    .lg\:text-5xl{
+        font-size: 3rem !important;
+        line-height: 1 !important;
+    }
+}
+
