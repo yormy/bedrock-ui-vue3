@@ -12,19 +12,18 @@
 
             <small v-if="isRequired"><div class="p-error">*</div></small>
         </div>
-        <div class="field col-12">
-            <span class="p-float-label p-input-icon-right">
-                <i :class="inlineIcon" @click="handleInlineIconClicked"/>
-                <prime-input-text
+        <div class="field col-12 mb-0">
+            <span class="p-float-label">
+                <prime-password
                     :id="fieldId"
-                    type="text"
                     v-model="value"
                     :disabled="disabledState"
                     @input="$emit('update:modelValue', $event.target.value)"
                     v-bind="$attrs"
+                    toggleMask
                 />
-                <label :for="fieldId">{{ label }}</label>
-            </span>
+            <label :for="fieldId">{{ label }}</label>
+        </span>
         </div>
 
         <small v-if="hintText" :id="fieldId +'-hint'" class="p-info">{{ hintText }}</small>
@@ -40,13 +39,11 @@
         <div v-for="success in successes" :key="success.message">
             <small :id="fieldId + '-success'" class="p-success">{{ success.message }}</small>
         </div>
-
-        {{errors}}
     </div>
 </template>
 
 <script setup lang="ts">
-import PrimeInputText from 'primevue/inputtext';
+import PrimePassword from 'primevue/password';
 import YModalHelp from '../../Modals/Help/ModalHelp.vue';
 import {defineProps, defineEmits, ref, onMounted, watch, computed} from 'vue';
 
@@ -153,13 +150,4 @@ watch(
     }
 );
 
-//
-// let badgeClass = useBadgeTypes(props.badgeType);
-//
-// watch(
-//     () => props.badgeType,
-//     (newValue) => {
-//         badgeClass = useBadgeTypes(newValue);
-//     }
-// );
 </script>
