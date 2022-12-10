@@ -1,7 +1,4 @@
 async loading of components
-
-? icon
-oogje
 vertalingen
 
 input:
