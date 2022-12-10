@@ -35532,7 +35532,7 @@ readers do not read off random characters that represent icons */
   vertical-align: super;
 }
 .y-icon.icon-small::before {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   vertical-align: middle;
 }
 .y-icon.icon-large::before {

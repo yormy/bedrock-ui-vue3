@@ -1,10 +1,15 @@
 async loading of components
 
+? icon
+oogje
+vertalingen
+
 input:
 show password
 more help icon => need fas
 
-
+input float label not working in app
+input in container to make right working and label
 
 
 # Buttons

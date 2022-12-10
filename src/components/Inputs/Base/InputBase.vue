@@ -2,10 +2,14 @@
     <div class="field">
 
         <y-modal-help :header="label" v-model:visible="showHelpModal">{{moreHelpDescription}}</y-modal-help>
-
         <div class="flex justify-content-end">
-            <small v-if="moreHelpDescription" @click="handleMoreHelpClicked" >{{ moreHelpLabel }}</small>
             <small v-if="secondaryLabel" @click="handleSecondaryHelpClicked">{{secondaryLabel}}</small>
+
+            <small v-if="moreHelpDescription" @click="handleMoreHelpClicked" >
+                <span v-if="moreHelpIcon" :class="moreHelpIcon"></span>
+                <span v-else>{{moreHelpLabel}}></span>
+            </small>
+
             <small v-if="isRequired"><div class="p-error">*</div></small>
         </div>
         <span class="p-float-label">
@@ -41,7 +45,7 @@
 <script setup lang="ts">
 import PrimeInputText from 'primevue/inputtext';
 import YModalHelp from '../../Modals/Help/ModalHelp.vue';
-import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
+import {defineProps, defineEmits, ref, onMounted, watch, computed} from 'vue';
 
 const fieldId = ref();
 const value = ref();
@@ -88,6 +92,11 @@ const props = defineProps({
         default: '?'
     },
 
+    moreHelpIcon: {
+        type: String,
+        default: 'y-icon icon icon-help icon-small'
+    },
+
     moreHelpDescription: {
         type: String,
         default: ''
@@ -120,6 +129,7 @@ const handleMoreHelpClicked = () => {
 const handleSecondaryHelpClicked = () => {
     emit('secondaryLabelClicked');
 }
+
 
 let disabledState = props.disabled;
 watch(
