@@ -35501,6 +35501,10 @@ readers do not read off random characters that represent icons */
   --icon-administrators: ""; /* fa-users */
 }
 
+.field .p-input-icon-left .y-icon, .field .p-input-icon-right .y-icon {
+  top: 35%;
+}
+
 .y-icon { /* todo ?? */
   /* todo ?? */
   /*&.icon-administrators:before {color:red;content: var(--icon-administrators); font: var(--icon-font); font-size:1rem;}*/

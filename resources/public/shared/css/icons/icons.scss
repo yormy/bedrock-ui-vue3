@@ -1,7 +1,16 @@
 @use "../vendor/icons/fa/css/all.css";
 @import '_variables.scss';
 
+.field {
+    .p-input-icon-left, .p-input-icon-right {
+        .y-icon {
+            top: 35%;
+        }
+    }
+}
+
 .y-icon {
+
     &.icon::before {
         display: inline-block;
         text-rendering: auto;
