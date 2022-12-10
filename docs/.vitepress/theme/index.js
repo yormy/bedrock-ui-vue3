@@ -15,6 +15,9 @@ import DarkTheme from './dark-theme.css'
 
 import '../../../dist/resources/themes/bedrock-indigo/theme.css';
 
+import '../../../resources/icons/fontawesome-pro6/css/all.css';
+import '../../../resources/public/shared/css/icons/icons.css';
+
 export { DarkTheme }
 
 export default {

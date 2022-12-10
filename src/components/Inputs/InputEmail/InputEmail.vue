@@ -1,6 +1,11 @@
 <template>
     <div class="p-fluid grid">
-    <div class="field col-12 md:col-8">
+    <div class="field col-12 md:col-8 ">
+
+    <span class="y-icon icon icon-best-answer solid"></span>
+    <i class="fal fa-user"></i> $$$
+
+
     <y-input-text
         v-model="v$.name.$model"
         :errors="v$.name.$errors"
