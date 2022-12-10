@@ -15,3 +15,18 @@ to your app at
 
 ## Blade setup
 ```<link href="shared/css/vendor/icons/fa/css/all.min.css" rel="stylesheet">```
+
+# Setup custom icon definitions
+Copy ``public/shared/css/icons`` 
+to your app
+```public/shared/css/icons```
+
+### Load stylesheet
+add to your blade
+```<link href="shared/css/icons/icon.css" rel="stylesheet">```
+
+### Customize or add custom icon definitions
+edit ```public/shared/css/icons/_variables```
+and recompile icons.scss to icons.css
+This is also where you can set another default fonticon set
+
