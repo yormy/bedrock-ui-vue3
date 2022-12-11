@@ -21,8 +21,7 @@
 <script setup lang="ts">
 import {reactive, ref} from "vue";
 import YInputText from '../InputText/InputText.vue';
-//import { email, required, minLength } from "@vuelidate/validators";
-import { email, required, minLength } from "../../../validators/i18n-validators";
+import { email, required, minLength } from "@vuelidate/validators";
 import { useVuelidate } from "@vuelidate/core";
 
 const state = reactive({

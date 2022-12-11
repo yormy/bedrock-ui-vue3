@@ -31,6 +31,8 @@
 
         <div v-for="error in errors" :key="error.$message">
             <small :id="fieldId + '-error'" class="p-error">{{ error.$message }}</small>
+            ==>> <small>{{errormsg(error)}}</small>
+            ==>{{$t('message.package')}}
         </div>
 
         <div v-for="warning in warnings" :key="warning.message">
@@ -48,7 +50,10 @@
 <script setup lang="ts">
 import PrimeInputText from 'primevue/inputtext';
 import YModalHelp from '../../Modals/Help/ModalHelp.vue';
-import {defineProps, defineEmits, ref, onMounted, watch, computed} from 'vue';
+import {defineProps, defineEmits, ref, onMounted, inject, watch, computed} from 'vue';
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+console.log(t('message.package'));
 
 const fieldId = ref();
 const value = ref();
@@ -140,6 +145,11 @@ const handleSecondaryHelpClicked = () => {
 
 const handleInlineIconClicked= () => {
     emit('inlineIconClicked');
+}
+
+const errormsg = (error : object) => {
+    // return $tct('validations.' + error.$validator)
+    return t('message.package');
 }
 
 let disabledState = props.disabled;

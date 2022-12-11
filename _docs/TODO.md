@@ -1,6 +1,10 @@
 async loading of components
 vertalingen
 
+cleanup console errors
+cleanup lint errors (package and app)
+
+
 input:
 show password
 more help icon => need fas
