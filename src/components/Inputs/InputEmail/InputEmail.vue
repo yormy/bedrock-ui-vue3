@@ -2,6 +2,8 @@
     <div class="p-fluid grid">
     <div class="field col-12 md:col-8 ">
 
+
+
     <y-input-text
         v-model="v$.name.$model"
         :errors="v$.name.$errors"
@@ -19,11 +21,12 @@
 <script setup lang="ts">
 import {reactive, ref} from "vue";
 import YInputText from '../InputText/InputText.vue';
-import { email, required, minLength } from "@vuelidate/validators";
+//import { email, required, minLength } from "@vuelidate/validators";
+import { email, required, minLength } from "../../../validators/i18n-validators";
 import { useVuelidate } from "@vuelidate/core";
 
 const state = reactive({
-    name: 'test@robco',
+    name: '',
 });
 
 const rules = {
