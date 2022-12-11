@@ -2,8 +2,6 @@
     <div class="p-fluid grid">
     <div class="field col-12 md:col-8 ">
 
-
-
     <y-input-text
         v-model="v$.name.$model"
         :errors="v$.name.$errors"
@@ -29,7 +27,7 @@ const state = reactive({
 });
 
 const rules = {
-    name: { required, email, minLength:minLength(100) },
+    name: { minLength:minLength(100) },
 };
 
 const warnings = [
