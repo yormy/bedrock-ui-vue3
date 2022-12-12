@@ -39,7 +39,7 @@ const handleSecondaryLabelClicked = () => {
 
 const v$ = useVuelidate(rules, state);
 
-v$.value.name.$touch(); // just for now test invalid
+//v$.value.name.$touch(); // validate on loading
 
 const handleInputBlur = () => {
     v$.value.name.$touch();
