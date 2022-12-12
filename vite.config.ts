@@ -54,6 +54,7 @@ module.exports = defineConfig({
         // for externalized deps (not useful if 'umd' is not in lib.formats)
         globals: {
           vue: 'Vue',
+          i18ntc: 'i18ntc'
         },
       },
     },

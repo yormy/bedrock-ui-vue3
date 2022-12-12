@@ -22,6 +22,11 @@ const props = defineProps({
             return {};
         },
     },
+
+    fieldId: {
+        type: String,
+        default: ''
+    },
 });
 
 const errorMsg = (error: { $property: string; $params: object; $validator: string }) => {

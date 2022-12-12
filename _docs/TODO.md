@@ -3,7 +3,6 @@
 
 async loading of components
 
-normalize baseText and basePassword
 tests that components render
 
 input:

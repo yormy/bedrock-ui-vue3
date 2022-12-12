@@ -80,10 +80,8 @@ const props = defineProps({
     },
 
     modelValue: {
-        type: Object,
-        default() {
-            return {};
-        },
+        type: String,
+        default: ''
     },
 
     errors: {
