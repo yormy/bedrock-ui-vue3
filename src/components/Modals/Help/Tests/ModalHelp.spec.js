@@ -18,7 +18,9 @@ import ModalHelp from '../ModalHelp.vue';
 // });
 
 describe('Button.vue', () => {
-    test.skip('ddd', () => {});
+    test.skip('ddd', () => {
+        // ..
+    });
     // it('should render ModalHelp', async () => {
     //     const wrapper = mount(ModalHelp, {
     //         props: {

@@ -2,8 +2,8 @@
     <div class="p-fluid grid">
         <div class="field col-12">
             <input-base
-                :is-password="true"
                 v-model="v$.name.$model"
+                :is-password="true"
                 :errors="v$.name.$errors"
                 :warnings="warnings"
                 :successes="successes"

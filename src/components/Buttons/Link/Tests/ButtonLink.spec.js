@@ -5,8 +5,7 @@ import ButtonLink from '../ButtonLink.vue';
 
 describe('ButtonLink.vue', () => {
     it('should render ButtonLink button', () => {
-        const wrapper = mount(ButtonLink, {
-        });
+        const wrapper = mount(ButtonLink, {});
 
         expect(wrapper.html()).toContain('p-button-text');
     });

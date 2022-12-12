@@ -4,7 +4,9 @@ import { h } from 'vue';
 import InputEmail from '../InputPassword.vue';
 
 describe('InputEmail.vue', () => {
-    test.skip('ddd', () => {});
+    test.skip('ddd', () => {
+        // ...
+    });
     // it('should render InputEmail', () => {
     //     const wrapper = mount(InputEmail, {
     //         provide: () => ({

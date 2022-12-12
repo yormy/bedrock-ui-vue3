@@ -37,19 +37,6 @@ module.exports = {
                 { text: 'New', link: '/components/button/new' },
                 { text: 'Set', link: '/components/button/set' },
             ],
-        },
-        {
-            text: 'Components',
-            children: [
-                {
-                    text: 'Button',
-                    children: [
-                        { text: 'Primary A', link: '/components/button/primary' },
-                    ],
-                },
-              { text: 'Component A', link: '/components/component-a' },
-              { text: 'Component B', link: '/components/component-b' },
-            ],
         }
     ],
     },

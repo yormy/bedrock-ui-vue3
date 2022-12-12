@@ -21,7 +21,7 @@ const props = defineProps({
 
     fieldId: {
         type: String,
-        default: ''
+        default: '',
     },
 });
 </script>

@@ -1,16 +1,17 @@
--
+fix failed tests:
+- inputPassword
+- modalHelp
+
+import translations from package into app
+overwerite in app
+set common branding
 
 
-async loading of components
-
-tests that components render
-
-input:
-show password
-more help icon => need fas
+docs:build failed
 
 input float label not working in app
 input in container to make right working and label
+
 
 
 # Buttons

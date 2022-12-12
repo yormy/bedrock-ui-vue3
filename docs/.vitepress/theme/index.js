@@ -3,9 +3,8 @@ import PrimeVue from 'primevue/config'
 import DemoContainer from '../components/DemoContainer.vue'
 import BedrockUiVue3 from 'bedrock-ui-vue3'
 
-import 'primevue/resources/themes/saga-blue/theme.css'       //theme
-import 'primevue/resources/primevue.min.css'                 //core css
-import 'primeicons/primeicons.css'
+//import 'primevue/resources/primevue.min.css'                 //core css
+import '../../../src/assets/themes/core/core.min.css';
 import 'primeflex/primeflex.css'
 
 import './custom.css'

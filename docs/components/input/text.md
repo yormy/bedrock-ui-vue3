@@ -17,7 +17,7 @@ The primary button on a page or form.
 todo : helptext, 
 help modal
 disabled view is not clear that it is disabled
-```angular2html
+```
         <y-input-text
             class=''
             v-model="modelValue"

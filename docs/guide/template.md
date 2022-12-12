@@ -64,4 +64,4 @@ You may show props, slots, events, methods, etc. using Markdown.
 
 
 
-<<< @/../src/components/Buttons/Primary/Primary.vue
+<<< @/../src/components/Buttons/Primary/ButtonPrimary.vue
