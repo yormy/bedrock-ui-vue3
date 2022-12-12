@@ -22,7 +22,8 @@
         "docs:serve": "vitepress serve docs",
         "---MISC---": "-------------------------------------------------------",
         "security:check": "npm audit --production --audit-level high",
-        "test:unit": "jest --verbose"
+        "test": "jest",
+        "test:verbose": "jest --verbose"
     },
     "dependencies": {
         "@babel/core": "^7.20.5",
