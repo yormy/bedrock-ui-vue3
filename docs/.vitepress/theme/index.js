@@ -13,7 +13,7 @@ import './custom.css'
 import Layout from '../components/Layout.vue'
 import DarkTheme from './dark-theme.css'
 
-import '../../../dist/resources/themes/bedrock-indigo/theme.css';
+import '../../../src/assets/themes/bedrock-indigo/theme.css';
 
 import '../../../resources/icons/fontawesome-pro6/css/all.css';
 import '../../../resources/public/shared/css/icons/icons.css';

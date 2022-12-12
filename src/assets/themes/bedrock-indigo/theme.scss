@@ -46,6 +46,7 @@
 
     @import './light.scss';
     @import './light-addon.scss';
+    @import './theme-addon.scss';
 }
 
     .dark {
@@ -96,6 +97,7 @@
 
         @import './dark.scss';
         @import './dark-addon.scss';
+        @import './theme-addon.scss';
     }
 
 

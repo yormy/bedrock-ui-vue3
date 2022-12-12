@@ -5636,6 +5636,9 @@
 .light .p-success {
   color: green;
 }
+.light .field {
+  margin-bottom: 0;
+}
 
 .dark {
   --surface-a:#071426;
@@ -11248,6 +11251,9 @@
 }
 .dark .p-warning {
   color: orange;
+}
+.dark .field {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=theme.css.map */
