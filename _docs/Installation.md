@@ -13,6 +13,12 @@ copy all files from ```public/shared/css/vendor/icons/fa```
 to your app at
 ```public/shared/css/vendor/icons/fa```
 
+## Copy webfonts
+copy
+```public/shared/css/webfonts```
+to
+```public/shared/css/webfonts```
+
 ## Blade setup
 ```<link href="shared/css/vendor/icons/fa/css/all.min.css" rel="stylesheet">```
 
