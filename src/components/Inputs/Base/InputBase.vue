@@ -14,14 +14,24 @@
         <div class="field col-12">
             <span class="p-float-label p-input-icon-right">
                 <i :class="inlineIcon" @click="handleInlineIconClicked" @KeyDown="handleInlineIconClicked" />
-                <prime-input-text
-                    :id="fieldId"
-                    v-model="value"
-                    type="text"
-                    :disabled="disabledState"
-                    @input="$emit('update:modelValue', $event.target.value)"
-                    v-bind="$attrs"
-                />
+                    <prime-input-text
+                        v-if="!isPassword"
+                        :id="fieldId"
+                        v-model="value"
+                        type="text"
+                        :disabled="disabledState"
+                        @input="$emit('update:modelValue', $event.target.value)"
+                        v-bind="$attrs"
+                    />
+                    <prime-password
+                        v-else
+                        :id="fieldId"
+                        v-model="value"
+                        :disabled="disabledState"
+                        @input="$emit('update:modelValue', $event.target.value)"
+                        v-bind="$attrs"
+                        toggle-mask
+                    />
                 <label :for="fieldId">{{ label }}</label>
             </span>
         </div>
@@ -39,6 +49,7 @@ import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
 import PrimeInputText from 'primevue/inputtext';
 import YModalHelp from '../../Modals/Help/ModalHelp.vue';
 import Validations from '../Partials/Validations.vue';
+import PrimePassword from 'primevue/password';
 
 const fieldId = ref();
 const value = ref();
@@ -50,6 +61,11 @@ const props = defineProps({
     id: {
         type: String,
         default: '',
+    },
+
+    isPassword: {
+        type: Boolean,
+        default: false,
     },
 
     label: {

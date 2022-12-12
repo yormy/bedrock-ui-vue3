@@ -1,7 +1,8 @@
 <template>
     <div class="p-fluid grid">
         <div class="field col-12">
-            <base-password
+            <input-base
+                :is-password="true"
                 v-model="v$.name.$model"
                 :errors="v$.name.$errors"
                 :warnings="warnings"
@@ -10,7 +11,7 @@
                 v-bind="$attrs"
                 @secondary-label-clicked="handleSecondaryLabelClicked"
                 :is-required="true"
-            ></base-password>
+            ></input-base>
         </div>
     </div>
 </template>
@@ -19,7 +20,7 @@
 import { reactive, ref } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
 import { email, required, minLength } from '@vuelidate/validators';
-import BasePassword from '../BasePassword/BasePassword.vue';
+import InputBase from '../Base/InputBase.vue';
 
 const state = reactive({
     name: 'test@robco',
