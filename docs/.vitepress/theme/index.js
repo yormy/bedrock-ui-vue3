@@ -20,12 +20,15 @@ import '../../../resources/public/shared/css/icons/icons.css';
 
 export { DarkTheme }
 
+import i18ntc from './i18ntc';
+
 export default {
   ...DefaultTheme,
     Layout: Layout,
   enhanceApp({ app }) {
     app.use(PrimeVue)
     app.use(BedrockUiVue3)
+    app.use(i18ntc)
     app.component('DemoContainer', DemoContainer)
   }
 }
