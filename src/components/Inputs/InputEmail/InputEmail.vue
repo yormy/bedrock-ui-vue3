@@ -26,7 +26,7 @@ const state = reactive({
 });
 
 const rules = {
-    name: { minLength: minLength(100) },
+    name: { required, email, minLength: minLength(100) },
 };
 
 const warnings = [{ message: 'a warning 1' }, { message: 'a warning 2' }];

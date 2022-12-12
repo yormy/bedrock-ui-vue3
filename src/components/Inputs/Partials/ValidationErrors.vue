@@ -2,7 +2,6 @@
     <div v-for="error in errors" :key="error.$message">
         <small :id="fieldId + '-error'" class="p-error">
             {{ errorMsg(error) }}
-            {{ $t('message.hello') }}
         </small>
     </div>
 </template>
@@ -36,6 +35,6 @@ const errorMsg = (error: { $property: string; $params: object; $validator: strin
 
     const rule = error.$validator;
 
-    return i18ntc.t(`'validator. ${rule}`, params);
+    return i18ntc.t(`validator. ${rule}`, params);
 };
 </script>

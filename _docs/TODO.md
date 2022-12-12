@@ -1,3 +1,6 @@
+- email validation
+
+
 async loading of components
 cleanup lint errors (package and app)
 normalize baseText and basePassword
