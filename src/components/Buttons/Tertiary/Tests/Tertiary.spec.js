@@ -11,9 +11,6 @@ describe('Button.vue', () => {
             },
         });
 
-        expect(wrapper.html()).toContain(
-            'p-button-text'
-        );
+        expect(wrapper.html()).toContain('p-button-text');
     });
 });
-

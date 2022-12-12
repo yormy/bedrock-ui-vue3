@@ -4,6 +4,7 @@
 
 <script setup lang="ts">
 import ButtonBase from '../Base/ButtonBase.vue';
+
 const badgeClass = '';
 const buttonClass = '';
 </script>

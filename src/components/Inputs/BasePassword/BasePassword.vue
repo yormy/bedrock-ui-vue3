@@ -1,13 +1,12 @@
 <template>
     <div class="field">
-
-        <y-modal-help :header="label" v-model:visible="showHelpModal">{{moreHelpDescription}}</y-modal-help>
+        <y-modal-help v-model:visible="showHelpModal" :header="label">{{ moreHelpDescription }}</y-modal-help>
         <div class="flex justify-content-end">
-            <small v-if="secondaryLabel" @click="handleSecondaryHelpClicked">{{secondaryLabel}}</small>
+            <small v-if="secondaryLabel" @click="handleSecondaryHelpClicked" @KeyDown="handleSecondaryHelpClicked">{{ secondaryLabel }}</small>
 
-            <small v-if="moreHelpDescription" @click="handleMoreHelpClicked" >
+            <small v-if="moreHelpDescription" @click="handleMoreHelpClicked" @KeyDown="handleMoreHelpClicked">
                 <span v-if="moreHelpIcon" :class="moreHelpIcon"></span>
-                <span v-else>{{moreHelpLabel}}></span>
+                <span v-else>{{ moreHelpLabel }}></span>
             </small>
 
             <small v-if="isRequired"><div class="p-error">*</div></small>
@@ -20,13 +19,13 @@
                     :disabled="disabledState"
                     @input="$emit('update:modelValue', $event.target.value)"
                     v-bind="$attrs"
-                    toggleMask
+                    toggle-mask
                 />
-            <label :for="fieldId">{{ label }}</label>
-        </span>
+                <label :for="fieldId">{{ label }}</label>
+            </span>
         </div>
 
-        <small v-if="hintText" :id="fieldId +'-hint'" class="p-info">{{ hintText }}</small>
+        <small v-if="hintText" :id="fieldId + '-hint'" class="p-info">{{ hintText }}</small>
 
         <div v-for="error in errors" :key="error.$message">
             <small :id="fieldId + '-error'" class="p-error">{{ error.$message }}</small>
@@ -43,89 +42,106 @@
 </template>
 
 <script setup lang="ts">
+import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
 import PrimePassword from 'primevue/password';
 import YModalHelp from '../../Modals/Help/ModalHelp.vue';
-import {defineProps, defineEmits, ref, onMounted, watch, computed} from 'vue';
 
 const fieldId = ref();
 const value = ref();
 const showHelpModal = ref();
 
-const emit = defineEmits(['secondaryLabelClicked', 'inlineIconClicked']);
+const emit = defineEmits(['secondaryLabelClicked', 'inlineIconClicked', 'update:modelValue']);
 
 const props = defineProps({
     id: {
         type: String,
         default: '',
     },
+
     label: {
         type: String,
         default: '',
     },
+
     disabled: {
         // can be true, false, or null
+        type: Boolean,
+        default: null,
     },
-    modelValue: {},
+
+    modelValue: {
+        type: Object,
+        default() {
+            return {};
+        },
+    },
 
     errors: {
         type: Array,
-        default: []
+        default() {
+            return [];
+        },
     },
 
     warnings: {
         type: Array,
-        default: []
+        default() {
+            return [];
+        },
     },
 
     successes: {
         type: Array,
-        default: []
+        default() {
+            return [];
+        },
     },
 
     hintText: {
         type: String,
-        default: ''
+        default: '',
     },
 
     moreHelpLabel: {
         type: String,
-        default: '?'
+        default: '?',
     },
 
     moreHelpIcon: {
         type: String,
-        default: 'y-icon icon icon-help icon-small'
+        default: 'y-icon icon icon-help icon-small',
     },
 
     inlineIcon: {
         type: String,
-        default: ''
+        default: '',
     },
 
     moreHelpDescription: {
         type: String,
-        default: ''
+        default: '',
     },
 
     secondaryLabel: {
         type: String,
-        default: ''
+        default: '',
     },
 
     isRequired: {
         type: Boolean,
-        default: false
-    }
+        default: false,
+    },
 });
 
 onMounted(async () => {
     fieldId.value = props.id;
+
     if (!props.id) {
-        fieldId.value = Math.ceil(Math.random()*1000000);
+        fieldId.value = Math.ceil(Math.random() * 1000000);
     }
 
     value.value = props.modelValue;
-})
+});
 
 const handleMoreHelpClicked = () => {
     showHelpModal.value = true;
@@ -133,21 +149,22 @@ const handleMoreHelpClicked = () => {
 
 const handleSecondaryHelpClicked = () => {
     emit('secondaryLabelClicked');
-}
+};
 
-const handleInlineIconClicked= () => {
+const handleInlineIconClicked = () => {
     emit('inlineIconClicked');
-}
+};
 
-let disabledState = props.disabled;
+const disabledState = ref(props.disabled);
+
 watch(
     () => props.disabled,
     (newValue) => {
-        disabledState = true;
+        disabledState.value = true;
+
         if (!newValue) {
-            disabledState = undefined;
+            disabledState.value = undefined;
         }
     }
 );
-
 </script>

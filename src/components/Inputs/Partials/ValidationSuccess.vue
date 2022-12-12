@@ -5,14 +5,14 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps} from 'vue';
+import { defineProps } from 'vue';
 
 const props = defineProps({
     successes: {
         type: Object,
-        default: {},
+        default() {
+            return {};
+        },
     },
 });
-
 </script>
-

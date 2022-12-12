@@ -8,13 +8,11 @@ describe('Button.vue', () => {
         const wrapper = mount(Button, {
             props: {
                 badge: '99',
-                "badge-type" : 'info',
+                'badge-type': 'info',
             },
         });
 
-        expect(wrapper.html()).toContain(
-            '<span class="p-badge p-component p-badge-info">99</span>'
-        );
+        expect(wrapper.html()).toContain('<span class="p-badge p-component p-badge-info">99</span>');
     });
 });
 
@@ -23,13 +21,11 @@ describe('Button.vue', () => {
         const wrapper = mount(Button, {
             props: {
                 badge: '99',
-                "badge-type" : 'success',
+                'badge-type': 'success',
             },
         });
 
-        expect(wrapper.html()).toContain(
-            '<span class="p-badge p-component p-badge-success">99</span>'
-        );
+        expect(wrapper.html()).toContain('<span class="p-badge p-component p-badge-success">99</span>');
     });
 });
 
@@ -38,13 +34,11 @@ describe('Button.vue', () => {
         const wrapper = mount(Button, {
             props: {
                 badge: '99',
-                "badge-type" : 'warning',
+                'badge-type': 'warning',
             },
         });
 
-        expect(wrapper.html()).toContain(
-            '<span class="p-badge p-component p-badge-warning">99</span>'
-        );
+        expect(wrapper.html()).toContain('<span class="p-badge p-component p-badge-warning">99</span>');
     });
 });
 
@@ -53,12 +47,10 @@ describe('Button.vue', () => {
         const wrapper = mount(Button, {
             props: {
                 badge: '99',
-                "badge-type" : 'danger',
+                'badge-type': 'danger',
             },
         });
 
-        expect(wrapper.html()).toContain(
-            '<span class="p-badge p-component p-badge-danger">99</span>'
-        );
+        expect(wrapper.html()).toContain('<span class="p-badge p-component p-badge-danger">99</span>');
     });
 });

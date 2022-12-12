@@ -7,9 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import ValidationErrors from '../Partials/ValidationErrors.vue';
-import ValidationWarnings from '../Partials/ValidationWarnings.vue';
-import ValidationSuccess from '../Partials/ValidationSuccess.vue';
+import ValidationErrors from './ValidationErrors.vue';
+import ValidationWarnings from './ValidationWarnings.vue';
+import ValidationSuccess from './ValidationSuccess.vue';
 
 const props = defineProps({
     attributeName: {
@@ -18,17 +18,21 @@ const props = defineProps({
     },
     successes: {
         type: Object,
-        default: {},
+        default() {
+            return {};
+        },
     },
     warnings: {
         type: Object,
-        default: {},
+        default() {
+            return {};
+        },
     },
     errors: {
         type: Object,
-        default: {},
+        default() {
+            return {};
+        },
     },
 });
-
 </script>
-

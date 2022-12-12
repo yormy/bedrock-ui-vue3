@@ -1,7 +1,4 @@
 async loading of components
-vertalingen
-
-cleanup console errors
 cleanup lint errors (package and app)
 normalize baseText and basePassword
 

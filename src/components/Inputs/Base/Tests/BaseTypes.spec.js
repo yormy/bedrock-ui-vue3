@@ -7,16 +7,14 @@ describe('Button.vue', () => {
     it('is type info working', async () => {
         const wrapper = mount(Button, {
             props: {
-                type : 'info',
+                type: 'info',
             },
             slots: {
                 default: h('span', { class: '' }, ''),
             },
         });
 
-        expect(wrapper.html()).toBe(
-            '<button class="p-button p-component p-button-info" type="button"><span class=""></span></button>'
-        );
+        expect(wrapper.html()).toBe('<button class="p-button p-component p-button-info" type="button"><span class=""></span></button>');
     });
 });
 
@@ -24,16 +22,14 @@ describe('Button.vue', () => {
     it('is type warning working', async () => {
         const wrapper = mount(Button, {
             props: {
-                type : 'warning',
+                type: 'warning',
             },
             slots: {
                 default: h('span', { class: '' }, ''),
             },
         });
 
-        expect(wrapper.html()).toBe(
-            '<button class="p-button p-component p-button-warning" type="button"><span class=""></span></button>'
-        );
+        expect(wrapper.html()).toBe('<button class="p-button p-component p-button-warning" type="button"><span class=""></span></button>');
     });
 });
 
@@ -41,16 +37,14 @@ describe('Button.vue', () => {
     it('is type success working', async () => {
         const wrapper = mount(Button, {
             props: {
-                type : 'success',
+                type: 'success',
             },
             slots: {
                 default: h('span', { class: '' }, ''),
             },
         });
 
-        expect(wrapper.html()).toBe(
-            '<button class="p-button p-component p-button-success" type="button"><span class=""></span></button>'
-        );
+        expect(wrapper.html()).toBe('<button class="p-button p-component p-button-success" type="button"><span class=""></span></button>');
     });
 });
 
@@ -58,16 +52,13 @@ describe('Button.vue', () => {
     it('is type danger working', async () => {
         const wrapper = mount(Button, {
             props: {
-                type : 'danger',
+                type: 'danger',
             },
             slots: {
                 default: h('span', { class: '' }, ''),
             },
         });
 
-        expect(wrapper.html()).toBe(
-            '<button class="p-button p-component p-button-danger" type="button"><span class=""></span></button>'
-        );
+        expect(wrapper.html()).toBe('<button class="p-button p-component p-button-danger" type="button"><span class=""></span></button>');
     });
 });
-

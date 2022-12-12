@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps} from 'vue';
+import { defineProps } from 'vue';
 
 const props = defineProps({
     attributeName: {
@@ -14,9 +14,9 @@ const props = defineProps({
     },
     warnings: {
         type: Object,
-        default: {},
+        default() {
+            return {};
+        },
     },
 });
-
 </script>
-

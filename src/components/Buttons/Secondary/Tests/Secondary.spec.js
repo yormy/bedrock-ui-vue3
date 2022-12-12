@@ -11,9 +11,6 @@ describe('Button.vue', () => {
             },
         });
 
-        expect(wrapper.html()).toContain(
-            'p-button-outlined'
-        );
+        expect(wrapper.html()).toContain('p-button-outlined');
     });
 });
-
