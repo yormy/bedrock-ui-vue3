@@ -5,7 +5,7 @@
             <small v-if="secondaryLabel" @click="handleSecondaryHelpClicked" @KeyDown="handleSecondaryHelpClicked">{{ secondaryLabel }}</small>
 
             <small v-if="moreHelpDescription" @click="handleMoreHelpClicked" @KeyDown="handleMoreHelpClicked">
-                <span v-if="moreHelpIcon" :class="moreHelpIcon"></span>
+                <span v-if="moreHelpIcon" class="p-link" :class="moreHelpIcon"></span>
                 <span v-else>{{ moreHelpLabel }}></span>
             </small>
 

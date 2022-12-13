@@ -1,18 +1,17 @@
-- modal icon disappeared (in app only, not in docs
-
-fix failed tests:
-- inputPassword
-- modalHelp
-
 import translations from package into app
 overwerite in app
 set common branding
 
 
+
+
+fix failed tests:
+- inputPassword
+- modalHelp
+
+
+
 docs:build failed
-
-- mouse over hover so I can see i can select on icon
-
 
 # Buttons
 - with font-awesome predefined icon + pos + abstraction
