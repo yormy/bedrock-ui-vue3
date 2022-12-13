@@ -36,3 +36,14 @@ edit ```public/shared/css/icons/_variables```
 and recompile icons.scss to icons.css
 This is also where you can set another default fonticon set
 
+# Ap.js
+###
+Import your config
+
+```
+import config from 'bedrock-ui-vue3/config/config.js';
+...
+VueApp.use(config)
+            
+```
+or create a new config and load that one. 
