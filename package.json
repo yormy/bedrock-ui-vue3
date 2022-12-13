@@ -83,6 +83,7 @@
             "import": "./dist/bedrock-ui-vue3.es.js"
         },
         "./dist/style.css": "./dist/style.css",
+        "./config/config.js": "./dist/config/config.js",
         "./resources/themes/core/core.min.css": "./dist/resources/themes/core/core.min.css",
         "./resources/themes/bedrock-indigo/dark.css": "./dist/resources/themes/bedrock-indigo/dark.css",
         "./resources/themes/bedrock-indigo/light.css": "./dist/resources/themes/bedrock-indigo/light.css",

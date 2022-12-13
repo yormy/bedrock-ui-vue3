@@ -32,6 +32,10 @@ module.exports = defineConfig({
             {
                 src: 'src/assets/themes/*',
                 dest: 'resources/themes'
+            },
+            {
+                src: 'src/config/*',
+                dest: 'config'
             }
         ]
     }),
