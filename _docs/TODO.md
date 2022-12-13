@@ -1,6 +1,17 @@
-import translations from package into app
-overwerite in app
+# TODO
 set common branding
+
+
+### Translation function
+Translation function template needs 
+```
+{{ i18ntc.t('validation.required') }} 
+const i18ntc: any = inject('i18ntc');
+```
+can it be reduced to just t()
+
+
+
 
 
 

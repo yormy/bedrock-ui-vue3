@@ -7,6 +7,8 @@
             <small v-if="moreHelpDescription" @click="handleMoreHelpClicked" @KeyDown="handleMoreHelpClicked">
                 <span v-if="moreHelpIcon" class="p-link" :class="moreHelpIcon"></span>
                 <span v-else>{{ moreHelpLabel }}></span>
+                {{ i18ntc.t('package::root/file.trans') }}
+                {{ i18ntc.t('branding.name') }}
             </small>
 
             <small v-if="isRequired"><div class="p-error">*</div></small>
@@ -46,11 +48,13 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
+import { defineProps, defineEmits, ref, onMounted, watch, inject } from 'vue';
 import PrimeInputText from 'primevue/inputtext';
 import PrimePassword from 'primevue/password';
 import YModalHelp from '../../Modals/Help/ModalHelp.vue';
 import Validations from '../Partials/Validations.vue';
+
+const i18ntc: any = inject('i18ntc');
 
 const fieldId = ref();
 const value = ref();
