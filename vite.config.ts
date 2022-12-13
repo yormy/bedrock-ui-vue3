@@ -36,6 +36,10 @@ module.exports = defineConfig({
             {
                 src: 'src/config/*',
                 dest: 'config'
+            },
+            {
+                src: 'src/lang/*',
+                dest: 'lang'
             }
         ]
     }),

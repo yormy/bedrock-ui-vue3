@@ -40,6 +40,6 @@ const errorMsg = (error: { $property: string; $params: object; $validator: strin
 
     const rule = error.$validator;
 
-    return i18ntc.t(`validator. ${rule}`, params);
+    return i18ntc.t(`validation.${rule}`, params);
 };
 </script>
