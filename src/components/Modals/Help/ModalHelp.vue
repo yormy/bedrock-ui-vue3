@@ -1,5 +1,5 @@
 <template>
-    <modal-base><slot></slot></modal-base>
+    <modal-base v-bind="$attrs"><slot></slot></modal-base>
 </template>
 
 <script setup lang="ts">

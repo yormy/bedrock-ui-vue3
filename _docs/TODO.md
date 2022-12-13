@@ -1,8 +1,4 @@
-- modal icon disappeared (prime icon thing,
-
-
-
-
+- modal icon disappeared (in app only, not in docs
 
 fix failed tests:
 - inputPassword
