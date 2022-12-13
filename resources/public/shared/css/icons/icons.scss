@@ -167,5 +167,6 @@
     &.icon-users                 {@extend .fa-users;}
     &.icon-view                  {@extend .fa-eye;}
     &.icon-warning               {@extend .fa-triangle-exclamation;}
+    &.icon-modal-close           {@extend .fa-xmark-large;}
     /*&.icon-administrators:before {color:red;content: var(--icon-administrators); font: var(--icon-font); font-size:1rem;}*/
 }

@@ -16925,7 +16925,7 @@ readers do not read off random characters that represent icons */
   content: "\f00d";
 }
 
-.fa-xmark-large::before {
+.fa-xmark-large::before, .y-icon.icon-modal-close::before {
   content: "\e59b";
 }
 
@@ -35321,7 +35321,7 @@ readers do not read off random characters that represent icons */
   content: "\f00d\f00d";
 }
 
-.fad.fa-xmark-large::after, .fa-duotone.fa-xmark-large::after {
+.fad.fa-xmark-large::after, .fad.y-icon.icon-modal-close::after, .fa-duotone.fa-xmark-large::after, .fa-duotone.y-icon.icon-modal-close::after {
   content: "\e59b\e59b";
 }
 

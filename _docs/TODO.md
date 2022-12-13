@@ -1,5 +1,8 @@
-- ,modal not workin in app (backdrop works, modal not) -  lijkt of de content er niet is => this.$primevue.config.inputStyle
-descripe config, or copy config or import ocnfig
+- modal icon disappeared (prime icon thing,
+
+
+
+
 
 fix failed tests:
 - inputPassword
@@ -12,10 +15,7 @@ set common branding
 
 docs:build failed
 
-
-- modal icon disappeared (prime icon thing,
 - mouse over hover so I can see i can select on icon
-- this.$primevue.config.inputStyle
 
 
 # Buttons

@@ -1,5 +1,5 @@
 <template>
-    <prime-dialog v-model:visible="display" :modal="true">
+    <prime-dialog v-model:visible="display" :modal="true" close-icon="y-icon icon icon-modal-close">
         <slot></slot>
     </prime-dialog>
 </template>
