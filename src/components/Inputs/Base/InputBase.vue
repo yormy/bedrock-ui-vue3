@@ -1,15 +1,16 @@
 <template>
     <div class="field">
-        <y-modal-help v-model:visible="showHelpModal" :header="label">{{ moreHelpDescription }}</y-modal-help>
         <div class="flex justify-content-end">
             <small v-if="secondaryLabel" @click="handleSecondaryHelpClicked" @KeyDown="handleSecondaryHelpClicked">{{ secondaryLabel }}</small>
 
-            <small v-if="moreHelpDescription" @click="handleMoreHelpClicked" @KeyDown="handleMoreHelpClicked">
-                <span v-if="moreHelpIcon" class="p-link" :class="moreHelpIcon"></span>
-                <span v-else>{{ moreHelpLabel }}></span>
-                {{ i18ntc.t('package::root/file.trans') }}
-                {{ i18ntc.t('branding.name') }}
-            </small>
+            <y-icon-help
+                v-if="moreHelpIcon"
+                :icon="moreHelpIcon"
+                :label="moreHelpLabel"
+                :header="label"
+                :description="moreHelpDescription"
+            >
+            </y-icon-help>
 
             <small v-if="isRequired"><div class="p-error">*</div></small>
         </div>
@@ -54,11 +55,13 @@ import PrimePassword from 'primevue/password';
 import YModalHelp from '../../Modals/Help/ModalHelp.vue';
 import Validations from '../Partials/Validations.vue';
 
+import YIconHelp from '../../Helpers/IconHelp.vue';
+
 const i18ntc: any = inject('i18ntc');
 
 const fieldId = ref();
 const value = ref();
-const showHelpModal = ref();
+
 
 const emit = defineEmits(['secondaryLabelClicked', 'inlineIconClicked', 'update:modelValue']);
 
@@ -155,10 +158,6 @@ onMounted(async () => {
 
     value.value = props.modelValue;
 });
-
-const handleMoreHelpClicked = () => {
-    showHelpModal.value = true;
-};
 
 const handleSecondaryHelpClicked = () => {
     emit('secondaryLabelClicked');

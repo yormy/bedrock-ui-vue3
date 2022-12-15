@@ -1,4 +1,5 @@
-import PurifiedHtml from './PurifiedHtml.vue';
-import CleanDiv from './CleanDiv.vue';
+import YPurifiedHtml from './PurifiedHtml.vue';
+import YCleanDiv from './CleanDiv.vue';
+import YIconHelp from './IconHelp.vue';
 
-export { PurifiedHtml, CleanDiv };
+export { YPurifiedHtml, YCleanDiv, YIconHelp };
