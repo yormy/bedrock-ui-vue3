@@ -4,23 +4,45 @@
             <input id="checkbox-125" type="checkbox" class="hidden y-dropdown--checkbox--input " >
             <label for="checkbox-125" class="flex" :class="labelClass" >
                 <div  class="y-dropdown--label">
-                    <span class="flag-icon flag-icon-de"></span>
+                    <span :class="currentLocale.icon"></span>
                 </div>
-                <div class="y-icon icon icon-dropdown "></div>
+                <div class="y-icon icon icon-dropdown"></div>
             </label>
 
             <!-- Dropdown card -->
             <div class="y-dropdown--card" :class="dropdownClass">
-                <a href="#" class="y-dropdown--item"> <span class="flag-icon flag-icon-nl"></span> Dutch  </a>
-                <a href="#" class="y-dropdown--item"> <span class="flag-icon flag-icon-us"></span> English </a>
+                <div v-for="locale in locales" :key="locale.key">
+                <a href="#" class="y-dropdown--item" @click="handleLanguageClicked(locale.key)"> <span :class="locale.icon" ></span> {{ locale.text }} </a>
+                </div>
             </div>
         </div>
 </template>
 
 <script setup lang="ts">
 import PrimeMenubar from 'primevue/menubar';
-import {defineProps, computed} from "vue";
-import useButtonTypes from "../../Buttons/useButtonTypes";
+import {defineProps, defineEmits, computed} from "vue";
+
+const emit = defineEmits(['languageChanged','update:modelValue']);
+
+const currentLocale = {
+    key: 'nl',
+    text: 'Nederlands',
+    icon: 'flag-icon flag-icon-nl'
+}
+
+const locales = [
+    {
+        key: 'nl',
+        text: 'Nederlands',
+        icon: 'flag-icon flag-icon-nl'
+    },
+    {
+        key: 'en',
+        text: 'English',
+        icon: 'flag-icon flag-icon-us'
+    }
+];
+
 
 const props = defineProps({
     rightAligned: {
@@ -40,5 +62,9 @@ const labelClass = computed(() => {
 const dropdownClass = computed(() => {
     return props.rightAligned ? 'right-aligned' : ''
 })
+
+const handleLanguageClicked = (value: string) => {
+    emit('languageChanged', value);
+};
 
 </script>
