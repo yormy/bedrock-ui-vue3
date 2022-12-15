@@ -1,5 +1,4 @@
 Build righitn singup
-- lang switcher
 - checkbox
 - links
 - double checkbox
@@ -18,6 +17,9 @@ fix failed tests:
 - modalHelp
 
 
+# TODO
+### Checkbox
+has fixed prime icon, cannot be changed 
 
 docs:build failed
 

@@ -18,6 +18,7 @@ module.exports = {
             text: 'Select',
             children: [
                 { text: 'Language', link: '/components/select/language' },
+                { text: 'Box', link: '/components/select/box' },
             ],
         },
         {

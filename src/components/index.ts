@@ -20,4 +20,7 @@ export * from './Modals/exports.js';
 // @ts-ignore
 export * from './Selects/exports.js';
 
+// @ts-ignore
+export * from './Helpers/exports.js';
+
 export { ComponentA, ComponentB, ComponentC };

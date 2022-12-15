@@ -1,4 +1,4 @@
 import YSelectLanguage from './Language/SelectLanguage.vue';
+import YSelectBox from './Box/SelectBox.vue';
 
-/* eslint-disable import/prefer-default-export */
-export { YSelectLanguage };
+export { YSelectLanguage, YSelectBox };
