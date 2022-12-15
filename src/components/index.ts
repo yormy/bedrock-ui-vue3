@@ -17,4 +17,7 @@ export * from './Inputs/exports.js';
 // @ts-ignore
 export * from './Modals/exports.js';
 
+// @ts-ignore
+export * from './Selects/exports.js';
+
 export { ComponentA, ComponentB, ComponentC };

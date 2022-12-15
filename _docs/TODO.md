@@ -1,6 +1,8 @@
-# TODO
-set common branding
-
+Build righitn singup
+- lang switcher
+- checkbox
+- links
+- double checkbox
 
 ### Translation function
 Translation function template needs 
@@ -9,11 +11,6 @@ Translation function template needs
 const i18ntc: any = inject('i18ntc');
 ```
 can it be reduced to just t()
-
-
-
-
-
 
 
 fix failed tests:
