@@ -1,5 +1,6 @@
 Build signup
 - links
+- password reveal disappeared
 
 
 ### Translation function

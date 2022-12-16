@@ -39,6 +39,8 @@
                     v-bind="$attrs"
                     style="width:100%"
                     toggle-mask
+                    hide-icon="y-icon icon icon-password-hide"
+                    show-icon="y-icon icon icon-password-show"
                 />
                 <label :for="fieldId">
                     {{ label }} <y-icon-required :required="required"></y-icon-required>

@@ -8,6 +8,7 @@ import '../../../src/assets/themes/addon.css';
 import '../../../src/assets/css/vendor/flags/css/flag-icon.min.css';
 
 import 'primeflex/primeflex.css'
+// import 'primeicons/primeicons.css'
 
 import './custom.css'
 

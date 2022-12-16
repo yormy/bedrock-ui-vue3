@@ -5,5 +5,6 @@
     "containsUppercase": "Must contain an uppercase (A-Z) character",
     "containsLowercase": "Must contain a lowercase (a-z) character",
     "containsNumber": "Must contain a number (0-9)",
-    "containsSpecial": "Must contain a special (!@#$%..) character"
+    "containsSpecial": "Must contain a special (!@#$%..) character",
+    "required": "The {attribute} field is required."
 }

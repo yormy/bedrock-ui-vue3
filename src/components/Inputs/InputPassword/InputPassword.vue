@@ -44,9 +44,8 @@ const rules = {
         }},
 };
 
-const warnings = [{ message: 'a warning 1' }, { message: 'a warning 2' }];
-
-const successes = [{ message: 'a success 1' }, { message: 'a success 2' }];
+// const warnings = [{ message: 'a warning 1' }, { message: 'a warning 2' }];
+// const successes = [{ message: 'a success 1' }, { message: 'a success 2' }];
 
 const handleSecondaryLabelClicked = () => {
     // ...
