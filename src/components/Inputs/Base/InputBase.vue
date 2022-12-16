@@ -1,7 +1,9 @@
 <template>
     <div class="field">
         <div class="flex justify-content-end">
-            <small v-if="secondaryLabel" @click="handleSecondaryHelpClicked" @KeyDown="handleSecondaryHelpClicked">{{ secondaryLabel }}</small>
+            <small v-if="secondaryLabel" @click="handleSecondaryHelpClicked" @KeyDown="handleSecondaryHelpClicked">
+                {{ secondaryLabel }}
+            </small>
 
             <y-icon-help
                 v-if="moreHelpIcon"
@@ -11,11 +13,10 @@
                 :description="moreHelpDescription"
             >
             </y-icon-help>
-
-            <y-icon-required :required="isRequired"></y-icon-required>
         </div>
         <div class="field col-12">
-            <span class="p-float-label p-input-icon-right">
+            <span class="p-float-label" :class="inlineIcon ? 'p-input-icon-right': ''">
+
                 <i :class="inlineIcon" @click="handleInlineIconClicked" @KeyDown="handleInlineIconClicked" />
                 <prime-input-text
                     v-if="!isPassword"
@@ -36,7 +37,9 @@
                     v-bind="$attrs"
                     toggle-mask
                 />
-                <label :for="fieldId">{{ label }}</label>
+                <label :for="fieldId">
+                    {{ label }} <y-icon-required :required="required"></y-icon-required>
+                </label>
             </span>
         </div>
 
@@ -143,7 +146,7 @@ const props = defineProps({
         default: '',
     },
 
-    isRequired: {
+    required: {
         type: Boolean,
         default: false,
     },

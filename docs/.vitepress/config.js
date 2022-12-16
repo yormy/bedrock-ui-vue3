@@ -50,6 +50,17 @@ module.exports = {
                 { text: 'New', link: '/components/button/new' },
                 { text: 'Set', link: '/components/button/set' },
             ],
+        },
+        {
+            text: 'Blocks',
+            children: [
+                {
+                    text: 'Auth',
+                    children: [
+                        {text: 'Login', link: '/blocks/auth/login'},
+                    ]
+                }
+            ],
         }
     ],
     },

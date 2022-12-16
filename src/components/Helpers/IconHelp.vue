@@ -1,12 +1,12 @@
 <!--eslint-disable  vue/no-v-html-->
 <template>
-    <span>
+    <span v-if="description">
         <y-modal-help v-model:visible="showHelpModal" :header="header">
             <y-purified-html :value="description"></y-purified-html>
         </y-modal-help>
 
         <span @click="handleHelpClicked" class="p-link">
-            <span v-if="icon"  :class="icon" ></span>
+            <span v-if="icon" :class="icon" ></span>
             <span v-else>
                 <small>{{ label }} </small>
             </span>
