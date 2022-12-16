@@ -1,6 +1,6 @@
 <template>
     <div class="field-checkbox">
-        MUST AGREE {{v$.checkedValue.$model}}
+        MOTIVATED AGREE {{v$.checkedValue.$model}}
         <checkbox
             inputId="binary"
             v-model="v$.checkedValue.$model"
@@ -23,8 +23,8 @@ import {useVuelidate} from "@vuelidate/core";
 const i18ntc: any = inject('i18ntc');
 
 let errors = [];
-const warnings = [];
-const successes = [];
+// const warnings = [{ message: 'a success 1' }, { message: 'a success 2' }];
+// const successes = [{ message: 'a success 1' }, { message: 'a success 2' }];
 
 const state = reactive({
     checkedValue: false,
@@ -45,7 +45,12 @@ watch(
     (newValue) => {
         errors = [];
         if (v$.value.checkedValue.$errors.length > 0) {
+            tries += 1;
+            if (tries > 2) {
+                errors = [];
+            } else {
                 errors = [{message: 'validation.must_agree'}];
+            }
         }
     }
     ,{immediate:true}

@@ -22,6 +22,7 @@ module.exports = {
                     children: [
                         { text: 'Normal', link: '/components/select/checkbox/checkbox' },
                         { text: 'Agree', link: '/components/select/checkbox/checkbox-must-agree' },
+                        { text: 'Motivated', link: '/components/select/checkbox/checkbox-motivated-agree' },
                     ]
                 },
             ],
