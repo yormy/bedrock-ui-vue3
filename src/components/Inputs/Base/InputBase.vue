@@ -26,6 +26,7 @@
                     :disabled="disabledState"
                     @input="handleInputChanged"
                     v-bind="$attrs"
+                    :class="getClass()"
                 />
 
                 <prime-password
@@ -41,11 +42,11 @@
                     {{ label }} <y-icon-required :required="required"></y-icon-required>
                 </label>
             </span>
+
+            <small v-if="hintText" :id="fieldId + '-hint'" class="p-info">{{ hintText }}</small>
+
+            <validations :error-objects="errors" :warnings="warnings" :successes="successes" :attribute-name="attributeName"></validations>
         </div>
-
-        <small v-if="hintText" :id="fieldId + '-hint'" class="p-info">{{ hintText }}</small>
-
-        <validations :error-objects="errors" :warnings="warnings" :successes="successes"></validations>
 
         {{ errors }}
     </div>
@@ -150,6 +151,11 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
+
+    attributeName: {
+        type: String,
+        default: '',
+    },
 });
 
 onMounted(async () => {
@@ -172,6 +178,14 @@ const handleInlineIconClicked = () => {
 
 const handleInputChanged = (e: Event) => {
     emit('update:modelValue', (e.target as HTMLInputElement).value);
+};
+
+const getClass = () => {
+    if (props.errors.length > 0 ) {
+        return 'p-invalid';
+    }
+
+    return '';
 };
 
 const disabledState = ref(props.disabled);

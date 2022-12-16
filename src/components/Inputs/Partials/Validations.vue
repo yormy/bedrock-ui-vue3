@@ -1,6 +1,6 @@
 <template>
     <div>
-        <validation-errors :errors="errors" :error-objects="errorObjects" attribute-name="voornmameie"></validation-errors>
+        <validation-errors :errors="errors" :error-objects="errorObjects" :attribute-name="attributeName"></validation-errors>
         <validation-warnings :warnings="warnings"></validation-warnings>
         <validation-success :successes="successes"></validation-success>
     </div>
