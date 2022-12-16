@@ -35539,6 +35539,10 @@ readers do not read off random characters that represent icons */
   font-size: 0.6rem;
   vertical-align: middle;
 }
+.y-icon.icon-small-bottom::before {
+  font-size: 0.6rem;
+  vertical-align: bottom;
+}
 .y-icon.icon-large::before {
   font-size: 1.3rem;
 }

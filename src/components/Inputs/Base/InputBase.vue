@@ -131,7 +131,7 @@ const props = defineProps({
 
     moreHelpIcon: {
         type: String,
-        default: 'y-icon icon icon-help icon-small',
+        default: 'y-icon icon icon-help icon-small-bottom',
     },
 
     inlineIcon: {

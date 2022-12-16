@@ -48,6 +48,12 @@
         vertical-align: middle;
     }
 
+    &.icon-small-bottom::before {
+        font-size:0.6rem;
+        vertical-align: bottom;
+    }
+
+
     &.icon-large::before {
         font-size:1.3rem;
     }
