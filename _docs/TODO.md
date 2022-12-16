@@ -1,12 +1,6 @@
-Build righitn singup
-- checkbox
-- -- validation errors
-- old checkbox
-
-
-
+Build signup
 - links
-- double checkbox
+
 
 ### Translation function
 Translation function template needs 
@@ -26,6 +20,7 @@ fix failed tests:
 ### Checkbox
 * has fixed prime icon, cannot be changed
 * Color cannot be changed
+* Old for checkmark and colors
 
 
 docs:build failed

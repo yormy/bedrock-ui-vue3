@@ -165,5 +165,9 @@
         "title": "title",
         "username": "username",
         "year": "year"
-    }
+    },
+
+
+
+    "must_agree" : "You must agree to continue"
 }

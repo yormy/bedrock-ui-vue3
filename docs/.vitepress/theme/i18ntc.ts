@@ -1,24 +1,6 @@
 import {createI18n} from "vue-i18n";
 
-const messages = {
-    en: {
-        message: {
-            hello: 'hello world',
-            package: 'hello package'
-        },
-        validator: {
-            minLength: "Field '{attribute}' should be minimal {min} chars",
-        }
-    },
-    nl: {
-        message: {
-            hello: 'Houdoe he'
-        },
-        validator: {
-            minLength: "Veld '{attribute}' moet minmaal {min} tekens zijn",
-        }
-    }
-}
+import messages from '../../../src/lang/translations.js'
 
 const i18n = createI18n({
     allowComposition: true,
@@ -33,6 +15,7 @@ export default {
     install: (app, options) => {
         function t(key, params) {
 
+            // @ts-ignore
             const translated = i18n.global.t(key, params);
 
             return translated;
