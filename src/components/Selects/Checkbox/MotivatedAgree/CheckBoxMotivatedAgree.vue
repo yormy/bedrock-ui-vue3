@@ -49,7 +49,7 @@ watch(
             if (tries > 2) {
                 errors = [];
             } else {
-                errors = [{message: 'validation.must_agree'}];
+                errors = [{message: 'validation.mustAgree'}];
             }
         }
     }

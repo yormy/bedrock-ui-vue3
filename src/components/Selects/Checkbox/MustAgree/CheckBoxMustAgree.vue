@@ -45,7 +45,7 @@ watch(
     (newValue) => {
         errors = [];
         if (v$.value.checkedValue.$errors.length > 0) {
-                errors = [{message: 'validation.must_agree'}];
+                errors = [{message: 'validation.mustAgree'}];
         }
     }
     ,{immediate:true}

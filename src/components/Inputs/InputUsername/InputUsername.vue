@@ -4,14 +4,13 @@
         v-model="v$.username.$model"
         :errors="v$.username.$errors"
         v-bind="$attrs"
-        attribute-name="'usernasssssmie'"
     ></input-text>
     </div>
 </template>
 
 <script setup lang="ts">
 import {reactive} from "vue";
-import { email, required, minLength } from '@vuelidate/validators';
+import { required, minLength } from '@vuelidate/validators';
 import { useVuelidate } from '@vuelidate/core';
 
 import InputText from '../InputText/InputText.vue';
@@ -21,7 +20,7 @@ const state = reactive({
 });
 
 const rules = {
-    username: { required, email, minLength: minLength(100) },
+    username: { required, minLength: minLength(5) },
 };
 
 const v$ = useVuelidate(rules, state);

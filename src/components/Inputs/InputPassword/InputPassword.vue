@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
-import { email, required, minLength } from '@vuelidate/validators';
+import { required, minLength } from '@vuelidate/validators';
 import InputBase from '../Base/InputBase.vue';
 
 const state = reactive({
@@ -27,7 +27,21 @@ const state = reactive({
 });
 
 const rules = {
-    name: { required, email, minLength: minLength(100) },
+    name: {
+        required,
+        // minLength: minLength(8)  // I assume you'd want something like this too
+        containsUppercase: function(value) {
+            return /[A-Z]/.test(value)
+        },
+        containsLowercase: function(value) {
+            return /[a-z]/.test(value)
+        },
+        containsNumber: function(value) {
+            return /[0-9]/.test(value)
+        },
+        containsSpecial: function(value) {
+            return /[#?!@$%^&*-]/.test(value)
+        }},
 };
 
 const warnings = [{ message: 'a warning 1' }, { message: 'a warning 2' }];

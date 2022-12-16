@@ -47,7 +47,7 @@
 
             <small v-if="hintText" :id="fieldId + '-hint'" class="p-info">{{ hintText }}</small>
 
-            <validations :error-objects="errors" :warnings="warnings" :successes="successes" :attribute-name="attributeName"></validations>
+            <validations :error-objects="errors" :warnings="warnings" :successes="successes" :attribute-name="attributeLabel"></validations>
         </div>
     </div>
 </template>
@@ -158,11 +158,17 @@ const props = defineProps({
     },
 });
 
+let attributeLabel = props.attributeName;
+
 onMounted(async () => {
     fieldId.value = props.id;
 
     if (!props.id) {
         fieldId.value = Math.ceil(Math.random() * 1000000);
+    }
+
+    if (!props.attributeName) {
+        attributeLabel = props.label
     }
 
     value.value = props.modelValue;
