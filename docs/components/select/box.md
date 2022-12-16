@@ -5,5 +5,5 @@ import {YSelectBox} from 'bedrock-ui-vue3'
 # Select Language
 
 <DemoContainer>
-  <YSelectBox :model-value='true' input-style="p-error"></YSelectBox>
+  <YSelectBox :model-value='true' :required="true"></YSelectBox>
 </DemoContainer>

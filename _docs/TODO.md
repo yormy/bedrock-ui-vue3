@@ -1,5 +1,12 @@
 Build righitn singup
 - checkbox
+- -- validation errors
+- change event
+
+
+
+
+
 - links
 - double checkbox
 
@@ -19,7 +26,9 @@ fix failed tests:
 
 # TODO
 ### Checkbox
-has fixed prime icon, cannot be changed 
+* has fixed prime icon, cannot be changed
+* Color cannot be changed
+
 
 docs:build failed
 

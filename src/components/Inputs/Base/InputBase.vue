@@ -12,7 +12,7 @@
             >
             </y-icon-help>
 
-            <small v-if="isRequired"><div class="p-error">*</div></small>
+            <y-icon-required :required="isRequired"></y-icon-required>
         </div>
         <div class="field col-12">
             <span class="p-float-label p-input-icon-right">
@@ -52,10 +52,10 @@
 import { defineProps, defineEmits, ref, onMounted, watch, inject } from 'vue';
 import PrimeInputText from 'primevue/inputtext';
 import PrimePassword from 'primevue/password';
-import YModalHelp from '../../Modals/Help/ModalHelp.vue';
 import Validations from '../Partials/Validations.vue';
 
 import YIconHelp from '../../Helpers/IconHelp.vue';
+import YIconRequired from '../../Helpers/IconRequired.vue';
 
 const i18ntc: any = inject('i18ntc');
 

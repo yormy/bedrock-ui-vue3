@@ -1,6 +1,6 @@
 <!--eslint-disable  vue/no-v-html-->
 <template>
-    <div v-html="purifiedHtml"></div>
+    <span v-html="purifiedHtml"></span>
 </template>
 
 <script setup lang="ts">
