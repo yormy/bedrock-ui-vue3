@@ -2,15 +2,15 @@
     <div class="p-fluid grid">
         <div class="field col-12">
             <input-base
-                v-model="v$.name.$model"
-                :is-password="true"
                 :errors="v$.name.$errors"
-                :warnings="warnings"
-                :successes="successes"
-                @blur="handleInputBlur"
-                v-bind="$attrs"
-                @secondary-label-clicked="handleSecondaryLabelClicked"
+                :is-password="true"
                 :is-required="true"
+                :successes="successes"
+                :warnings="warnings"
+                @blur="handleInputBlur"
+                @secondary-label-clicked="handleSecondaryLabelClicked"
+                v-bind="$attrs"
+                v-model="v$.name.$model"
             ></input-base>
         </div>
     </div>

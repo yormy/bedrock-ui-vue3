@@ -1,9 +1,10 @@
 <template>
     <div>
     <input-text
-        v-model="v$.username.$model"
         :errors="v$.username.$errors"
+        @blur="handleInputBlur"
         v-bind="$attrs"
+        v-model="v$.username.$model"
     ></input-text>
     </div>
 </template>
@@ -27,5 +28,6 @@ const v$ = useVuelidate(rules, state);
 
 const handleInputBlur = () => {
     v$.value.username.$touch();
+    console.log('blur');
 };
 </script>
