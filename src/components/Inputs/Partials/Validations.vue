@@ -1,6 +1,6 @@
 <template>
     <div>
-        <validation-errors :errors="errors" attribute-name="voornmameie"></validation-errors>
+        <validation-errors :errors="errors" :error-objects="errorObjects" attribute-name="voornmameie"></validation-errors>
         <validation-warnings :warnings="warnings"></validation-warnings>
         <validation-success :successes="successes"></validation-success>
     </div>
@@ -16,19 +16,29 @@ const props = defineProps({
         type: String,
         default: '',
     },
+
     successes: {
         type: Object,
         default() {
             return {};
         },
     },
+
     warnings: {
         type: Object,
         default() {
             return {};
         },
     },
+
     errors: {
+        type: Object,
+        default() {
+            return {};
+        },
+    },
+
+    errorObjects: {
         type: Object,
         default() {
             return {};

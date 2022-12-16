@@ -42,7 +42,7 @@
 
         <small v-if="hintText" :id="fieldId + '-hint'" class="p-info">{{ hintText }}</small>
 
-        <validations :errors="errors" :warnings="warnings" :successes="successes"></validations>
+        <validations :error-objects="errors" :warnings="warnings" :successes="successes"></validations>
 
         {{ errors }}
     </div>

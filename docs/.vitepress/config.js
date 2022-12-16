@@ -18,7 +18,12 @@ module.exports = {
             text: 'Select',
             children: [
                 { text: 'Language', link: '/components/select/language' },
-                { text: 'Box', link: '/components/select/box' },
+                { text: 'Checkbox',
+                    children: [
+                        { text: 'Normal', link: '/components/select/checkbox/checkbox' },
+                        { text: 'Agree', link: '/components/select/checkbox/checkbox-must-agree' },
+                    ]
+                },
             ],
         },
         {

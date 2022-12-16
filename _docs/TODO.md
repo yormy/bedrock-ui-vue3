@@ -1,9 +1,7 @@
 Build righitn singup
 - checkbox
 - -- validation errors
-- change event
-
-
+- old checkbox
 
 
 
