@@ -1,8 +1,10 @@
 <template>
     <div class="field-checkbox">
-        {{ v$.checkedValue.$model}}
         <prime-select-box inputId="binary" v-model="v$.checkedValue.$model" v-bind="$attrs" :binary="true" @click="handleInputChanged"/>
-{{v$.checkedValue.$errors}}
+
+<!--        <div v-if="hasErrors">{{v$.checkedValue.$errors}}</div>-->
+
+        {{errors}}
         <y-icon-required :required="required"></y-icon-required>
         <label for="binary">
             <y-purified-html :value="moreHelpDescription"></y-purified-html>
@@ -36,11 +38,11 @@ const state = reactive({
     checkedValue: false,
 });
 
+let tries = 0;
 
 const rules = {
-    checkedValue: {required, sameAs: sameAs(true) },
+    checkedValue: { required, sameAs: sameAs(true)},
 };
-
 
 const props = defineProps({
     modelValue: {
@@ -65,6 +67,7 @@ const props = defineProps({
 });
 
 let checked = ref(props.modelValue);
+let errors = {};
 
 watch(
     () => checked.value,
@@ -75,23 +78,25 @@ watch(
         if (!newValue) {
             emit('isOff');
         }
+
+
     }
 );
 
-
 async function handleInputChanged(e: Event) {
     await nextTick()
+    tries += 1;
+    console.log('update', tries);
+    if (tries > 4) {
+        errors = {};
+    } else {
+        errors = v$.value.checkedValue.$errors;
+    }
     emit('update:modelValue', checked.value);
-    handleInputBlur();
 };
 
 const v$ = useVuelidate(rules, state);
 
 v$.value.checkedValue.$touch(); // validate on loading
-
-const handleInputBlur = () => {
-    console.log('touch');
-    v$.value.checkedValue.$touch();
-};
 
 </script>
