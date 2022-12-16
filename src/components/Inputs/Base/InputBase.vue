@@ -27,6 +27,7 @@
                     @input="handleInputChanged"
                     v-bind="$attrs"
                     :class="getClass()"
+                    style="width:100%"
                 />
 
                 <prime-password
@@ -36,6 +37,7 @@
                     :disabled="disabledState"
                     @input="handleInputChanged"
                     v-bind="$attrs"
+                    style="width:100%"
                     toggle-mask
                 />
                 <label :for="fieldId">
@@ -47,8 +49,6 @@
 
             <validations :error-objects="errors" :warnings="warnings" :successes="successes" :attribute-name="attributeName"></validations>
         </div>
-
-        {{ errors }}
     </div>
 </template>
 
