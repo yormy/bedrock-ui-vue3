@@ -23,7 +23,7 @@ import { required, minLength } from '@vuelidate/validators';
 import InputBase from '../Base/InputBase.vue';
 
 const state = reactive({
-    name: 'test@robco',
+    name: '',
 });
 
 const rules = {
@@ -52,8 +52,6 @@ const handleSecondaryLabelClicked = () => {
 };
 
 const v$ = useVuelidate(rules, state);
-
-v$.value.name.$touch(); // just for now test invalid
 
 const handleInputBlur = () => {
     v$.value.name.$touch();
