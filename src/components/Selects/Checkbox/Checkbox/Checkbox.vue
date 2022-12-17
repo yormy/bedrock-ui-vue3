@@ -1,20 +1,26 @@
 <template>
     <div class="field-checkbox">
-        ={{checked}}=
         <checkbox-base inputId="binary" v-model="checked" v-bind="$attrs" :binary="true" @click="handleInputChanged"/>
 
         <y-icon-required :required="required"></y-icon-required>
 
         <label for="binary">
-            <y-purified-html :value="moreHelpDescription"></y-purified-html>
-            <y-icon-help
-                v-if="moreHelpLabel"
-                :label="moreHelpLabel"
-                :header="moreHelpHeader"
-                :description="moreHelpDescription"
-            >
-            </y-icon-help>
-            <y-validations :successes="successes" :warnings="warnings" :errors="errors"></y-validations>
+            <div class="flex flex-column">
+                <div>
+                    <y-purified-html :value="label"></y-purified-html>
+                    <y-icon-help
+                        class="ml-1"
+                        v-if="moreHelpDescription"
+                        :label="moreHelpLabel"
+                        :header="moreHelpHeader"
+                        :description="moreHelpDescription"
+                    >
+                    </y-icon-help>
+                </div>
+
+                <y-purified-html :value="labelExtended"></y-purified-html>
+                <y-validations :successes="successes" :warnings="warnings" :errors="errors"></y-validations>
+        </div>
 
     </label>
     </div>
@@ -28,9 +34,6 @@ import YIconRequired from '../../../Helpers/IconRequired.vue';
 import YPurifiedHtml from '../../../Helpers/PurifiedHtml.vue';
 import YValidations from '../../../Inputs/Partials/Validations.vue'
 
-const moreHelpHeader = "heading of modal";
-const moreHelpDescription = "Hello<strong>kkk</strong> sss<a href='#'>link</a> normla <br>dsfsfsd <br>dsfsfsd"
-
 const emit = defineEmits(['isOn', 'isOff', 'update:modelValue']);
 
 const props = defineProps({
@@ -39,14 +42,28 @@ const props = defineProps({
         default: false,
     },
 
+    label: {
+        type: String,
+        default: '',
+    },
+    labelExtended: {
+        type: String,
+        default: '',
+    },
+
     moreHelpLabel: {
         type: String,
-        default: 'kkkk',
+        default: '',
+    },
+
+    moreHelpHeader: {
+        type: String,
+        default: '',
     },
 
     moreHelpDescription: {
         type: String,
-        default: 'in modal',
+        default: '',
     },
 
     required: {
