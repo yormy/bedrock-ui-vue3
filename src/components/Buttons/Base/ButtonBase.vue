@@ -4,9 +4,10 @@
 
 <script setup lang="ts">
 import PrimeButton from 'primevue/button';
-import { defineProps, watch } from 'vue';
+import {computed, defineProps, watch} from 'vue';
 import useButtonTypes from '../useButtonTypes';
 import useBadgeTypes from '../useBadgeTypes';
+import useButtonSizes from '../useButtonSizes';
 
 const props = defineProps({
     type: {
@@ -17,14 +18,19 @@ const props = defineProps({
         type: String,
         default: '',
     },
+
+    size: {
+        type: String,
+        default: '',
+    },
 });
 
-let buttonClass = useButtonTypes(props.type);
+let buttonTypeClass = useButtonTypes(props.type);
 
 watch(
     () => props.type,
     (newValue) => {
-        buttonClass = useButtonTypes(newValue);
+        buttonTypeClass = useButtonTypes(newValue);
     }
 );
 
@@ -36,4 +42,17 @@ watch(
         badgeClass = useBadgeTypes(newValue);
     }
 );
+
+let buttonSizeClass = useButtonSizes(props.size);
+
+watch(
+    () => props.size,
+    (newValue) => {
+        buttonSizeClass = useButtonSizes(newValue);
+    }
+);
+
+const buttonClass = computed(() => {
+    return `${buttonSizeClass} ${buttonTypeClass}`;
+})
 </script>

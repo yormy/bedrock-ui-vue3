@@ -48,7 +48,7 @@ module.exports = {
                 { text: 'Icons & Badges', link: '/components/button/icons' },
                 { text: 'Colors', link: '/components/button/colors' },
                 { text: 'States', link: '/components/button/states' },
-                { text: 'New', link: '/components/button/new' },
+                { text: 'Sizes', link: '/components/button/sizes' },
                 { text: 'Set', link: '/components/button/set' },
             ],
         },
