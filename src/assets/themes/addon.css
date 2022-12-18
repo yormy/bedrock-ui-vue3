@@ -6,6 +6,13 @@
   color: blue;
 }
 
+.y-button-row {
+  padding-left: 8px;
+}
+.y-button-row .p-component {
+  margin-right: 1rem;
+}
+
 .y-dropdown--container {
   position: relative;
 }

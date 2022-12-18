@@ -64,6 +64,17 @@ module.exports = {
                     ]
                 }
             ],
+        },
+        {
+            text: 'Layouts',
+            children: [
+                {
+                    text: 'Buttons',
+                    children: [
+                        {text: 'Reset Password', link: '/layouts/buttons/row'},
+                    ]
+                }
+            ],
         }
     ],
     },

@@ -20,10 +20,13 @@
             :confirm-with="password"
         ></y-input-password>
 
-        <div class="flex justify-content-between">
+
+        <y-button-row>
             <y-button-primary label="reset"></y-button-primary>
-            <y-button-link label="login"></y-button-link>
-        </div>
+            <y-button-secondary label="reset"></y-button-secondary>
+            <y-button-link label="reset"></y-button-link>
+        </y-button-row>
+
     </div>
 </template>
 
@@ -36,6 +39,8 @@ import YButtonPrimary from '../../../Buttons/Primary/ButtonPrimary.vue';
 import YButtonLink from '../../../Buttons/Link/ButtonLink.vue';
 
 import YAuthTitle from '../Helpers/Title.vue'
+
+import YButtonRow from '../../../Layouts/ButtonRow/ButtonRow.vue';
 
 import {defineProps, reactive, watch} from 'vue';
 
