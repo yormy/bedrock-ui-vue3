@@ -14,6 +14,22 @@ import {YButtonRow, YButtonPrimary} from 'bedrock-ui-vue3'
 </div>
 </DemoContainer>
 
+### With alternative button
+<DemoContainer>
+<div>
+  <y-button-row>
+  <template v-slot:main>
+      <y-button-primary label="Primary"/>
+      <y-button-secondary label="Primary"/>
+  </template>
+  <template v-slot:alternative>
+      <y-button-link label="Primary"/>
+  </template>
+  </y-button-row>
+</div>
+</DemoContainer>
+
+
 # Steps or Wizard form button row
 
 <DemoContainer>
@@ -25,6 +41,21 @@ import {YButtonRow, YButtonPrimary} from 'bedrock-ui-vue3'
 </div>
 </DemoContainer>
 
+### With alternative button
+<DemoContainer>
+<div>
+  <y-button-row-steps>
+  <template v-slot:main>
+      <y-button-primary label="Primary"/>
+      <y-button-secondary label="Primary"/>
+  </template>
+
+  <template v-slot:alternative>
+      <y-button-link label="Primary"/>
+  </template>
+  </y-button-row-steps>
+</div>
+</DemoContainer>
 
 # Modals button row
 
@@ -37,6 +68,22 @@ import {YButtonRow, YButtonPrimary} from 'bedrock-ui-vue3'
 </div>
 </DemoContainer>
 
+### With alternative button
+<DemoContainer>
+<div>
+  <y-button-row-modal>
+  <template v-slot:main>
+      <y-button-primary label="Primary"/>
+      <y-button-secondary label="Primary"/>
+  </template>
+
+  <template v-slot:alternative>
+      <y-button-link label="Primary"/>
+  </template>
+  </y-button-row-modal>
+</div>
+</DemoContainer>
+
 # Multi Column button row
 
 <DemoContainer>
@@ -45,6 +92,24 @@ import {YButtonRow, YButtonPrimary} from 'bedrock-ui-vue3'
     <y-button-primary label="Primary"/>
     <y-button-secondary label="Primary"/>
     <y-button-link label="Primary"/>
+  </y-button-row-multi-column>
+</div>
+</DemoContainer>
+
+
+### With alternative button
+
+<DemoContainer>
+<div>
+  <y-button-row-multi-column>
+  <template v-slot:main>
+      <y-button-primary label="Primary"/>
+      <y-button-secondary label="Primary"/>
+  </template>
+  
+  <template v-slot:alternative>
+      <y-button-link label="Primary"/>
+  </template>
   </y-button-row-multi-column>
 </div>
 </DemoContainer>
