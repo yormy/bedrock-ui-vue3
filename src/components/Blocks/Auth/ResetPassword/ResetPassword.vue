@@ -20,11 +20,14 @@
             :confirm-with="password"
         ></y-input-password>
 
-
         <y-button-row>
-            <y-button-primary label="reset"></y-button-primary>
-            <y-button-secondary label="reset"></y-button-secondary>
-            <y-button-link label="reset"></y-button-link>
+            <template v-slot:main>
+                <y-button-primary label="Reset"/>
+            </template>
+
+            <template v-slot:alternative>
+                <y-button-link label="login"/>
+            </template>
         </y-button-row>
 
     </div>

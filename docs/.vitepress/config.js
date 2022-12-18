@@ -39,6 +39,8 @@ module.exports = {
                 { text: 'Text', link: '/components/input/text' },
                 { text: 'Email', link: '/components/input/email' },
                 { text: 'Password', link: '/components/input/password' },
+                { text: 'Username', link: '/components/input/username' },
+                { text: 'Code', link: '/components/input/code' },
             ],
         },
         {
@@ -71,7 +73,7 @@ module.exports = {
                 {
                     text: 'Buttons',
                     children: [
-                        {text: 'Reset Password', link: '/layouts/buttons/row'},
+                        {text: 'Button Rows', link: '/layouts/buttons/row'},
                     ]
                 }
             ],
