@@ -22,6 +22,9 @@ fix failed tests:
 * Color cannot be changed
 * Old for checkmark and colors
 
+### Password
+Cannot make 100% - bugreport
+
 
 docs:build failed
 

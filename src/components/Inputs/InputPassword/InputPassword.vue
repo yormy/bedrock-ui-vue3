@@ -1,6 +1,6 @@
 <template>
     <div class="p-fluid grid">
-        <div class="field col-12">
+        <div class="col-12">
             <input-base
                 :errors="v$.password.$errors"
                 :is-password="true"
