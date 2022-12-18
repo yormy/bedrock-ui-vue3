@@ -37,7 +37,7 @@
                     :disabled="disabledState"
                     @input="handleInputChanged"
                     v-bind="$attrs"
-                    style="width:100%"
+                    input-style="width:100%"
                     toggle-mask
                     hide-icon="y-icon icon icon-password-hide"
                     show-icon="y-icon icon icon-password-show"

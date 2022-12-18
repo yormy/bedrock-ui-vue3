@@ -1,12 +1,10 @@
 <template>
-    <div>
     <input-text
         :errors="v$.username.$errors"
         @blur="handleInputBlur"
         v-bind="$attrs"
         v-model="v$.username.$model"
     ></input-text>
-    </div>
 </template>
 
 <script setup lang="ts">

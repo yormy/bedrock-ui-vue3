@@ -9,6 +9,7 @@
         ></y-input-username>
 
         <y-input-password
+            v-model="password"
             label="Password"
             :required="true"
         ></y-input-password>
@@ -16,6 +17,7 @@
         <y-input-password
             label="Retype passwword"
             :required="true"
+            :confirm-with="password"
         ></y-input-password>
 
         <div class="flex justify-content-between">
@@ -26,6 +28,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import YInputUsername from '../../../Inputs/InputUsername/InputUsername.vue';
 import YInputPassword from '../../../Inputs/InputPassword/InputPassword.vue';
 
@@ -34,24 +37,17 @@ import YButtonLink from '../../../Buttons/Link/ButtonLink.vue';
 
 import YAuthTitle from '../Helpers/Title.vue'
 
-import { defineProps, watch } from 'vue';
+import {defineProps, reactive, watch} from 'vue';
+
+const password = ref();
+
 
 const props = defineProps({
-    type: {
-        type: String,
-        default: '',
-    },
-    badgeType: {
+    newPassword: {
         type: String,
         default: '',
     },
 });
-//
-// watch(
-//     () => props.badgeType,
-//     (newValue) => {
-//         badgeClass = useBadgeTypes(newValue);
-//     }
-// );
+
 </script>
 

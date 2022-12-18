@@ -2,7 +2,7 @@
     <div class="p-fluid grid">
         <div class="field col-12">
             <input-base
-                :errors="v$.name.$errors"
+                :errors="v$.password.$errors"
                 :is-password="true"
                 :is-required="true"
                 :successes="successes"
@@ -10,26 +10,37 @@
                 @blur="handleInputBlur"
                 @secondary-label-clicked="handleSecondaryLabelClicked"
                 v-bind="$attrs"
-                v-model="v$.name.$model"
+                v-model="v$.password.$model"
+                :feedback="false"
             ></input-base>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
+import {reactive, ref, defineEmits, watch, defineProps} from 'vue';
 import { useVuelidate } from '@vuelidate/core';
-import { required, minLength } from '@vuelidate/validators';
+import { required, minLength, sameAs } from '@vuelidate/validators';
 import InputBase from '../Base/InputBase.vue';
 
+const emit = defineEmits(['update:modelValue']);
+
 const state = reactive({
-    name: '',
+    password: '',
+});
+
+
+const props = defineProps({
+    confirmWith: {
+        type: String,
+        default: '',
+    },
 });
 
 const rules = {
-    name: {
+    password: {
         required,
-        // minLength: minLength(8)  // I assume you'd want something like this too
+        minLength: minLength(8),
         containsUppercase: function(value) {
             return /[A-Z]/.test(value)
         },
@@ -41,8 +52,17 @@ const rules = {
         },
         containsSpecial: function(value) {
             return /[#?!@$%^&*-]/.test(value)
-        }},
+        },
+        confirmPassword: function(value) {
+            if (props.confirmWith.length === 0) {
+                return true;
+            }
+            return value === props.confirmWith
+        },
+    }
 };
+
+
 
 // const warnings = [{ message: 'a warning 1' }, { message: 'a warning 2' }];
 // const successes = [{ message: 'a success 1' }, { message: 'a success 2' }];
@@ -54,6 +74,14 @@ const handleSecondaryLabelClicked = () => {
 const v$ = useVuelidate(rules, state);
 
 const handleInputBlur = () => {
-    v$.value.name.$touch();
+    v$.value.password.$touch();
 };
+
+watch(
+    () => state.password,
+    (newValue) => {
+        emit('update:modelValue', state.password);
+    }
+);
+
 </script>
