@@ -58,6 +58,7 @@ module.exports = {
                     text: 'Auth',
                     children: [
                         {text: 'Login', link: '/blocks/auth/login'},
+                        {text: 'Reset Password', link: '/blocks/auth/resetpassword'},
                     ]
                 }
             ],
