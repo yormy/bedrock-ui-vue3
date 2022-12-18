@@ -1,9 +1,11 @@
 <template>
-    <prime-button :class="buttonClass" :badge-class="badgeClass"><slot></slot></prime-button>
+    <prime-split-button v-if="dropdown" :class="buttonClass" :badge-class="badgeClass" ><slot></slot></prime-split-button>
+    <prime-button v-else :class="buttonClass" :badge-class="badgeClass"><slot></slot></prime-button>
 </template>
 
 <script setup lang="ts">
 import PrimeButton from 'primevue/button';
+import PrimeSplitButton from 'primevue/splitbutton';
 import {computed, defineProps, watch} from 'vue';
 import useButtonTypes from '../useButtonTypes';
 import useBadgeTypes from '../useBadgeTypes';
@@ -22,6 +24,11 @@ const props = defineProps({
     size: {
         type: String,
         default: '',
+    },
+
+    dropdown: {
+        type: Boolean,
+        default: false,
     },
 });
 

@@ -28,6 +28,10 @@ fix failed tests:
 ### Password
 Cannot make 100% - bugreport
 
+### Dropdown button
+cannot change dropdown icon from chevron to something else - bugreport
+when this is fixed, create more alternative dropdown buttons
+
 
 docs:build failed
 
