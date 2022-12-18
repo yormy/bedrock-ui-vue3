@@ -9,7 +9,7 @@ export default function useBadgeTypes(type) {
     };
 
     if (mapping[type] === undefined) {
-        classNames = 'p-button-info';
+        classNames = '';
     } else {
         classNames = mapping[type];
     }

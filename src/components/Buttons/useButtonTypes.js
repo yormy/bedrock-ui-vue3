@@ -6,10 +6,11 @@ export default function useButtonTypes(type) {
         info: 'p-button-info',
         warning: 'p-button-warning',
         danger: 'p-button-danger',
+        help: 'p-button-help',
     };
 
     if (mapping[type] === undefined) {
-        classNames = 'p-button-info';
+        classNames = '';
     } else {
         classNames = mapping[type];
     }

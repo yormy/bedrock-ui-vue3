@@ -45,6 +45,7 @@ module.exports = {
             text: 'Button',
             children: [
                 { text: 'Buttons', link: '/components/button/buttons' },
+                { text: 'Icons & Badges', link: '/components/button/icons' },
                 { text: 'Colors', link: '/components/button/colors' },
                 { text: 'States', link: '/components/button/states' },
                 { text: 'New', link: '/components/button/new' },

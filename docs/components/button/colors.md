@@ -6,16 +6,19 @@ import {YButtonPrimary} from 'bedrock-ui-vue3'
 <DemoContainer>
   <div class="flex justify-content-between">
     <div class="">
-      <YButtonPrimary label="Primary" type="info"/>
+      <YButtonPrimary label="Info" type="info"/>
     </div>
     <div>
-      <YButtonPrimary label="Primary" type="success"/>
+      <YButtonPrimary label="Success" type="success"/>
     </div>
     <div>
-      <YButtonPrimary label="Primary" type="warning"/>
+      <YButtonPrimary label="Warning" type="warning"/>
     </div>
     <div>
-      <YButtonPrimary label="Primary" type="danger"/>
+      <YButtonPrimary label="Danger" type="danger"/>
+    </div>
+    <div>
+      <YButtonPrimary label="Help" type="help"/>
     </div>
   </div>
 </DemoContainer>

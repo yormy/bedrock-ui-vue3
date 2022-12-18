@@ -15,6 +15,9 @@ fix failed tests:
 - inputPassword
 - modalHelp
 
+## COMPONENTS TO CREATE
+- Table
+- 
 
 # TODO
 ### Checkbox
