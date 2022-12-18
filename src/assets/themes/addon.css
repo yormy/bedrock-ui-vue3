@@ -1,3 +1,11 @@
+.y-auth-subtitle {
+  margin-top: 0.2rem;
+}
+
+.p-link {
+  color: blue;
+}
+
 .y-dropdown--container {
   position: relative;
 }

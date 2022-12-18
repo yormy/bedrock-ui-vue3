@@ -1,5 +1,12 @@
 <template>
     <div>
+        <div class="flex justify-content-between">
+            <div>Not a member? <span class="p-link">sign up</span></div>
+            <y-select-language></y-select-language>
+        </div>
+
+        <y-auth-title :title="'Login'" :subtitle="'subtitle here'"></y-auth-title>
+
         <y-input-username
             label="username"
             moreHelpDescription="Can be but does not have to be your email"
@@ -13,17 +20,19 @@
         ></y-input-password>
 
         <div class="flex justify-content-between">
-        <y-checkbox
-            :label ="'remember'"
-            :labelExtended ="'we will remember for x days'"
-            :more-help-header="'Remember'"
-            :more-help-description="'dsadsadasadsasd'"
-        >
-        </y-checkbox>
-            <div>
+            <y-checkbox
+                :label ="'remember'"
+                :labelExtended ="'we will remember for x days'"
+                :more-help-header="'Remember'"
+                :more-help-description="'dsadsadasadsasd'"
+            >
+            </y-checkbox>
+            <div class="p-link">
                 forgot
             </div>
         </div>
+
+        <y-button-primary label="login"></y-button-primary>
     </div>
 </template>
 
@@ -31,6 +40,9 @@
 import YInputUsername from '../../../Inputs/InputUsername/InputUsername.vue';
 import YInputPassword from '../../../Inputs/InputPassword/InputPassword.vue';
 import YCheckbox from '../../../Selects/Checkbox/Checkbox/Checkbox.vue';
+import YButtonPrimary from '../../../Buttons/Primary/ButtonPrimary.vue';
+import YSelectLanguage from '../../../Selects/Language/SelectLanguage.vue';
+import YAuthTitle from '../Helpers/Title.vue'
 
 import { defineProps, watch } from 'vue';
 
