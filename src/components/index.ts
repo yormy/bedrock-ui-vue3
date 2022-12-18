@@ -29,4 +29,7 @@ export * from './Blocks/exports.js';
 // @ts-ignore
 export * from './Layouts/exports.js';
 
+// @ts-ignore
+export * from './Tags/exports.js';
+
 export { ComponentA, ComponentB, ComponentC };

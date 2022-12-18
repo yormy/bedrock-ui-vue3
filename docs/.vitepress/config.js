@@ -7,6 +7,12 @@ module.exports = {
     repo: '...repo-here....',
     sidebar: [
         {
+            text: 'Tags',
+            children: [
+                { text: 'Tags', link: '/components/tags/tags' },
+            ],
+        },
+        {
             text: 'Introduction',
             children: [
                 { text: 'What is My Lib?', link: '/' },
