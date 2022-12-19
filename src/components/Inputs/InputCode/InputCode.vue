@@ -8,7 +8,7 @@
             <template v-for="index in fields" :key="`${index}`">
                 <input
                     :id="index-1"
-                    :autoFocus="autoFocus && !isLoading && index-1 === autoFocusIndex"
+                    :autoFocus="autoFocus && !isLoading && index-1 === 0"
                     :class="hasErrors() ? 'is-error' : ''"
                     :data-id="index-1"
                     :disabled="isDisabled"
