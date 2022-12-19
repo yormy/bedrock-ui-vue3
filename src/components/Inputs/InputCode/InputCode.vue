@@ -3,7 +3,6 @@
         <div v-if="isLoading" class="is-loading">
             <div class="loading-text">LOADING...</div>
         </div>
-        {{items}} {{fields}} {{modelValue}}==
         <div :class="isLoading ? 'blurred' : ''" class="code">
             <template v-for="index in fields" :key="`${index}`">
                 <input
