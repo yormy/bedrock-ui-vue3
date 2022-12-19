@@ -3,7 +3,7 @@
         <div v-if="isLoading" class="is-loading">
             <div class="loading-text">LOADING...</div>
         </div>
-        {{values}} {{fields}} {{modelValue}}==
+        {{items}} {{fields}} {{modelValue}}==
         <div :class="isLoading ? 'blurred' : ''" class="code">
             <template v-for="index in fields" :key="`${index}`">
                 <input
@@ -19,7 +19,7 @@
                         height: `${fieldHeight}px`,
                       }"
                     :type="type === 'number' ? 'tel' : type"
-                    :value="values[index-1]"
+                    :value="items[index-1]"
                     maxlength="1"
                     v-on:focus="onFocus"
                     v-on:input="onValueChange"
@@ -146,7 +146,7 @@ const onKeyDown = (e) => {
     switch (e.keyCode) {
         case KEY_CODE.enter: {
             e.preventDefault();
-            const val = values.value.join('');
+            const val = items.value.join('');
             if (val.length >= props.fields) {
                 emit('enter', val);
                 console.log('enter event');
@@ -162,7 +162,7 @@ const onKeyDown = (e) => {
         case KEY_CODE.delete:
         case KEY_CODE.backspace: {
             e.preventDefault();
-            values.value[index] = '';
+            items.value[index] = '';
             triggerChange();
             break;
         }
@@ -188,7 +188,7 @@ const onKeyDown = (e) => {
 };
 
 const triggerChange = () => {
-    const concatValue = values.value.join('');
+    const concatValue = items.value.join('');
     if (concatValue.length === props.fields) {
         emit('complete', concatValue);
         emit('update:modelValue', concatValue)
@@ -203,7 +203,7 @@ const setFocusTo = (id: any) => {
 
 const setFocusToNext = (index: number) => {
     let next = index
-    if (values.value.length >= (index + 1)) {
+    if (items.value.length >= (index + 1)) {
         next = index + 1;
     }
     setFocusTo(next);
@@ -234,7 +234,7 @@ const onValueChange = (e) => {
         return;
     }
 
-    values.value[index] = e.target.value;
+    items.value[index] = e.target.value;
 
     setFocusToNext(index);
     triggerChange();
@@ -250,7 +250,7 @@ const onPaste = (event: any) => {
 
 const setCode = (input) => {
     for (let i = 0; i < props.fields; i += 1) {
-        values.value[i] = input[i];
+        items.value[i] = input[i];
     }
 };
 
@@ -263,7 +263,7 @@ const buildCode = (input) => {
     return fullCode;
 };
 
-const values = ref(buildCode(props.modelValue));
+const items = ref(buildCode(props.modelValue));
 
 
 </script>
