@@ -13,7 +13,6 @@
                     :data-id="index-1"
                     :disabled="isDisabled"
                     :pattern="pattern"
-                    :required="isRequired"
                     :style="{
                         width: `${fieldWidthCalc}px`,
                         height: `${fieldHeight}px`,
@@ -32,16 +31,14 @@
 </template>
 
 <script setup lang="ts">
-import {computed, ref, defineEmits, defineProps, onMounted} from "vue";
+import {computed, ref, defineEmits, defineProps} from "vue";
 
 const emit = defineEmits([
-    'complete',
-    'enter',
+    'onComplete',
+    'onEsc',
+    'onEnter',
     'onChange',
-    'onFocus',
-    'onValueChange',
-    'onKeyDown',
-    'onPaste',
+    'onKeyUp',
     'update:modelValue'
 ]);
 
@@ -96,18 +93,21 @@ const props = defineProps({
     modelValue : {
         type: String,
         default: ''
+    },
+
+    isLoading : {
+        type: Boolean,
+        default: false
+    },
+
+    isDisabled : {
+        type: Boolean,
+        default: false
     }
 });
 
-
-
-const value ='';
-const isLoading = false;
-const isDisabled = false;
-const isRequired = false;
-
 const hasErrors = () => {
-    return false;
+    return true;
 };
 
 const pattern = computed<string>(() => {
@@ -121,20 +121,16 @@ const pattern = computed<string>(() => {
 
 //===============================================
 const onChange = () => {
-    emit("input", value);
+    emit("onChange",  buildCode(items.value));
 };
 
 const onKeyUp = () => {
-    emit("input", value);
-    emit('onKeyUp', value);
-};
-
-const onEnter = () => {
-    emit('onEnter', value);
+    emit("onChange", buildCode(items.value));
+    emit('onKeyUp', buildCode(items.value));
 };
 
 const onEsc = () => {
-    emit('onEsc', value);
+    emit('onEsc', buildCode(items.value));
 };
 
 const onFocus = (e) => {
@@ -148,8 +144,7 @@ const onKeyDown = (e) => {
             e.preventDefault();
             const val = items.value.join('');
             if (val.length >= props.fields) {
-                emit('enter', val);
-                console.log('enter event');
+                emit('onEnter', val);
             }
             break;
         }
@@ -190,7 +185,7 @@ const onKeyDown = (e) => {
 const triggerChange = () => {
     const concatValue = items.value.join('');
     if (concatValue.length === props.fields) {
-        emit('complete', concatValue);
+        emit('onComplete', concatValue);
         emit('update:modelValue', concatValue)
     }
 };
@@ -219,8 +214,6 @@ const setFocusToPrevious = (index: number) => {
 
 const onValueChange = (e) => {
     const index = parseInt(e.target.id, 10);
-    console.log('valuevahnge' + index);
-
 
     if (props.type === 'number') {
         e.target.value = e.target.value.replace(/[^\d]/gi, '');
@@ -248,13 +241,13 @@ const onPaste = (event: any) => {
     triggerChange();
 };
 
-const setCode = (input) => {
+const setCode = (input : string) => {
     for (let i = 0; i < props.fields; i += 1) {
         items.value[i] = input[i];
     }
 };
 
-const buildCode = (input) => {
+const buildCode = (input: any) => {
     const fullCode = [];
     for (let i = 0; i < props.fields; i += 1) {
         fullCode[i] = input[i];
@@ -264,6 +257,5 @@ const buildCode = (input) => {
 };
 
 const items = ref(buildCode(props.modelValue));
-
 
 </script>
