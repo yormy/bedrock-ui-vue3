@@ -118,6 +118,19 @@ const pattern = computed<string>(() => {
     return pattern;
 });
 
+// computed
+// fieldWidthCalc() {
+//     if (screen
+//         .width < 700) {
+//         return 30;
+//     }
+//     return this.fieldWidth;
+// },
+//
+// totalCodeWidth() {
+//     return this.fields * this.fieldWidthCalc + this.fieldSpace + 20;
+// },
+
 //===============================================
 const onChange = () => {
     emit("onChange",  buildCode(items.value));
@@ -257,4 +270,9 @@ const buildCode = (input: any) => {
 
 const items = ref(buildCode(props.modelValue));
 
+const clear = () => {
+    for (let i = 0; i < props.fields; i += 1) {
+        items.value[i] = '';
+    }
+};
 </script>
