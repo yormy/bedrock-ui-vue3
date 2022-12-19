@@ -139,6 +139,7 @@ const onEsc = () => {
 
 const onKeyDown = (e) => {
     const index = parseInt(e.target.id, 10);
+    console.log('cleanindex:' + index);
     switch (e.keyCode) {
         case KEY_CODE.enter: {
             e.preventDefault();
@@ -207,7 +208,7 @@ const setFocusToNext = (index: number) => {
 
 const setFocusToPrevious = (index: number) => {
     let next = index
-    if (0 >= (index - 1)) {
+    if (0 <= (index - 1)) {
         next = index - 1;
     }
     setFocusTo(next);
