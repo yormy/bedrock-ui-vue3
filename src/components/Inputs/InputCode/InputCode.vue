@@ -3,15 +3,14 @@
         <div v-if="isLoading" class="is-loading">
             <div class="loading-text">LOADING...</div>
         </div>
-        {{values}}
+        {{values}} {{fields}} {{modelValue}}==
         <div :class="isLoading ? 'blurred' : ''" class="code">
-            <template v-for="(v, index) in values" :key="`${id}-${index}`">
-
+            <template v-for="index in fields" :key="`${index}`">
                 <input
-                    :id="index"
-                    :autoFocus="autoFocus && !isLoading && index === autoFocusIndex"
+                    :id="index-1"
+                    :autoFocus="autoFocus && !isLoading && index-1 === autoFocusIndex"
                     :class="hasErrors() ? 'is-error' : ''"
-                    :data-id="index"
+                    :data-id="index-1"
                     :disabled="isDisabled"
                     :pattern="pattern"
                     :required="isRequired"
@@ -20,7 +19,7 @@
                         height: `${fieldHeight}px`,
                       }"
                     :type="type === 'number' ? 'tel' : type"
-                    :value="v"
+                    :value="values[index-1]"
                     maxlength="1"
                     v-on:focus="onFocus"
                     v-on:input="onValueChange"
@@ -33,9 +32,18 @@
 </template>
 
 <script setup lang="ts">
-import {computed, ref, defineEmits, defineProps} from "vue";
+import {computed, ref, defineEmits, defineProps, onMounted} from "vue";
 
-const emit = defineEmits(['enter', 'onChange', 'onFocus', 'onValueChange', 'onKeyDown', 'onPaste', 'update:modelValue']);
+const emit = defineEmits([
+    'complete',
+    'enter',
+    'onChange',
+    'onFocus',
+    'onValueChange',
+    'onKeyDown',
+    'onPaste',
+    'update:modelValue'
+]);
 
 const KEY_CODE = {
     backspace: 8,
@@ -84,12 +92,14 @@ const props = defineProps({
         type: Boolean,
         default: true,
     },
+
+    modelValue : {
+        type: String,
+        default: ''
+    }
 });
 
-const values = ref(['1','1','1','1','1','1']);
-const iRefs = ['1','2','3','4','5','6'];
 
-const char4 = ref(null);
 
 const value ='';
 const isLoading = false;
@@ -99,11 +109,6 @@ const isRequired = false;
 const hasErrors = () => {
     return false;
 };
-
-document.getElementById('4')?.focus()
-//
-// char4.value.focus();
-// char4.value.select();
 
 const pattern = computed<string>(() => {
     let pattern = '[0-9a-zA-Z]';
@@ -133,11 +138,7 @@ const onEsc = () => {
 };
 
 const onKeyDown = (e) => {
-    const index = parseInt(e.target.dataset.id, 10);
-    const prevIndex = index - 1;
-    const nextIndex = index + 1;
-    const prev = iRefs[prevIndex];
-    const next = iRefs[nextIndex];
+    const index = parseInt(e.target.id, 10);
     switch (e.keyCode) {
         case KEY_CODE.enter: {
             e.preventDefault();
@@ -153,59 +154,41 @@ const onKeyDown = (e) => {
             break;
         }
 
-        case KEY_CODE.delete: {
+        case KEY_CODE.delete:
+        case KEY_CODE.backspace: {
             e.preventDefault();
-            const vals = [...values];
-            vals[index] = '';
-            values = vals;
-            triggerChange(vals);
+            values.value[index] = '';
+            triggerChange();
             break;
         }
 
-        case KEY_CODE.backspace: {
-            e.preventDefault();
-            const vals = [...values];
-            if (values[index]) {
-                vals[index] = '';
-                values = vals;
-                triggerChange(vals);
-            } else if (prev) {
-                vals[prevIndex] = '';
-                $refs[prev][0].focus();
-                values = vals;
-                triggerChange(vals);
-            }
-            break;
-        }
         case KEY_CODE.left:
             e.preventDefault();
-            if (prev) {
-                $refs[prev][0].focus();
-            }
+            setFocusToPrevious(index);
             break;
+
         case KEY_CODE.right:
             e.preventDefault();
-            if (next) {
-                $refs[next][0].focus();
-            }
+            setFocusToNext(index);
             break;
+
         case KEY_CODE.up:
         case KEY_CODE.down:
             e.preventDefault();
             break;
+
         default:
             // this.handleKeys[index] = true
             break;
     }
 };
 
-const triggerChange = (values = values) => {
-    // const {fields} = this;
-    // const val = values.join('');
-    // this.$emit('change', val);
-    // if (val.length >= fields) {
-    //     this.$emit('complete', val);
-    // }
+const triggerChange = () => {
+    const concatValue = values.value.join('');
+    if (concatValue.length === props.fields) {
+        emit('complete', concatValue);
+        emit('update:modelValue', concatValue)
+    }
 };
 
 const setFocusTo = (id: any) => {
@@ -218,6 +201,14 @@ const setFocusToNext = (index: number) => {
     let next = index
     if (values.value.length >= (index + 1)) {
         next = index + 1;
+    }
+    setFocusTo(next);
+}
+
+const setFocusToPrevious = (index: number) => {
+    let next = index
+    if (0 >= (index - 1)) {
+        next = index - 1;
     }
     setFocusTo(next);
 }
@@ -241,8 +232,33 @@ const onValueChange = (e) => {
     values.value[index] = e.target.value;
 
     setFocusToNext(index);
-    return;
-
-    triggerChange(values);
+    triggerChange();
 };
+
+
+const onPaste = (event: any) => {
+    event.preventDefault();
+    const pastedValue = event.clipboardData.getData('Text');
+    setCode(pastedValue);
+    triggerChange();
+};
+
+const setCode = (input) => {
+    for (let i = 0; i < props.fields; i += 1) {
+        values.value[i] = input[i];
+    }
+};
+
+const buildCode = (input) => {
+    const fullCode = [];
+    for (let i = 0; i < props.fields; i += 1) {
+        fullCode[i] = input[i];
+    }
+
+    return fullCode;
+};
+
+const values = ref(buildCode(props.modelValue));
+
+
 </script>
