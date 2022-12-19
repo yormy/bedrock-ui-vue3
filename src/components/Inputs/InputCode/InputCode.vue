@@ -143,13 +143,13 @@ const onFocus = (e) => {
 
 const onKeyDown = (e) => {
     const index = parseInt(e.target.id, 10);
-    console.log('cleanindex:' + index);
     switch (e.keyCode) {
         case KEY_CODE.enter: {
             e.preventDefault();
-            const val = values.join('');
+            const val = values.value.join('');
             if (val.length >= props.fields) {
                 emit('enter', val);
+                console.log('enter event');
             }
             break;
         }
