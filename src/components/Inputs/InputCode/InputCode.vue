@@ -8,8 +8,7 @@
             <template v-for="(v, index) in values" :key="`${id}-${index}`">
 
                 <input
-
-                    :ref="iRefs[index]"
+                    :id="index"
                     :autoFocus="autoFocus && !isLoading && index === autoFocusIndex"
                     :class="hasErrors() ? 'is-error' : ''"
                     :data-id="index"
@@ -34,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import {computed, ref, defineEmits, defineProps, reactive} from "vue";
+import {computed, ref, defineEmits, defineProps} from "vue";
 
 const emit = defineEmits(['enter', 'onChange', 'onFocus', 'onValueChange', 'onKeyDown', 'onPaste', 'update:modelValue']);
 
@@ -90,6 +89,7 @@ const props = defineProps({
 const values = ref(['1','1','1','1','1','1']);
 const iRefs = ['1','2','3','4','5','6'];
 
+const char4 = ref(null);
 
 const value ='';
 const isLoading = false;
@@ -99,6 +99,11 @@ const isRequired = false;
 const hasErrors = () => {
     return false;
 };
+
+document.getElementById('4')?.focus()
+//
+// char4.value.focus();
+// char4.value.select();
 
 const pattern = computed<string>(() => {
     let pattern = '[0-9a-zA-Z]';
@@ -203,9 +208,23 @@ const triggerChange = (values = values) => {
     // }
 };
 
+const setFocusTo = (id: any) => {
+    const element = document.getElementById(id) as HTMLInputElement;
+    element?.focus()
+    element?.select()
+}
+
+const setFocusToNext = (index: number) => {
+    let next = index
+    if (values.value.length >= (index + 1)) {
+        next = index + 1;
+    }
+    setFocusTo(next);
+}
+
 const onValueChange = (e) => {
-    const index = parseInt(e.target.dataset.id, 10);
-    // const {type, fields} = this;
+    const index = parseInt(e.target.id, 10);
+
 
     if (props.type === 'number') {
         e.target.value = e.target.value.replace(/[^\d]/gi, '');
@@ -219,45 +238,10 @@ const onValueChange = (e) => {
         return;
     }
 
-    const enteredValue = e.target.value;
+    values.value[index] = e.target.value;
 
-    let next = 0;
-    const {value} = e.target;
-    //let {values} = this;
-
-
-    console.log(value);
-    values.value = Object.assign([], values);
-    if (value.length > 1) {
-        let nextIndex = value.length + index - 1;
-        if (nextIndex >= props.fields) {
-            nextIndex = props.fields - 1;
-        }
-        next = iRefs[nextIndex];
-        const split = value.split('');
-
-        let i = 0;
-        for (let item of split) {
-            const cursor = index + i;
-            if (cursor < props.fields) {
-                values.value[cursor] = item;
-            }
-            i++;
-        }
-
-        console.log(values.value);
-        values.value = values;
-    } else {
-        next = iRefs[index + 1];
-        values[index] = value;
-        values = values;
-    }
-
-    if (next) {
-        const element = $refs[next][0];
-        element.focus();
-        element.select();
-    }
+    setFocusToNext(index);
+    return;
 
     triggerChange(values);
 };
