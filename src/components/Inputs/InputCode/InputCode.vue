@@ -137,6 +137,10 @@ const onEsc = () => {
     emit('onEsc', value);
 };
 
+const onFocus = (e) => {
+    setFocusTo(e.target.id);
+};
+
 const onKeyDown = (e) => {
     const index = parseInt(e.target.id, 10);
     console.log('cleanindex:' + index);
@@ -179,7 +183,6 @@ const onKeyDown = (e) => {
             break;
 
         default:
-            // this.handleKeys[index] = true
             break;
     }
 };
@@ -216,6 +219,7 @@ const setFocusToPrevious = (index: number) => {
 
 const onValueChange = (e) => {
     const index = parseInt(e.target.id, 10);
+    console.log('valuevahnge' + index);
 
 
     if (props.type === 'number') {
