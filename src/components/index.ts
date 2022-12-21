@@ -32,4 +32,8 @@ export * from './Layouts/exports.js';
 // @ts-ignore
 export * from './Tags/exports.js';
 
+// @ts-ignore
+export * from './Misc/exports.js';
+
+
 export { ComponentA, ComponentB, ComponentC };
