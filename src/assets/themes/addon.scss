@@ -2,6 +2,7 @@
 @import './_dropdown.scss';
 @import './_tag_label.scss';
 @import './_tag_chip.scss';
+@import './_button.scss';
 
 :root {
     --light-color-info: #3777FF;
@@ -31,6 +32,34 @@
     --font-size-large : 1.2rem;
     --font-size-extra-large : 1.4rem;
 }
+
+:root {
+    --color-success: #00cc00;
+    --color-danger: #ff3300;
+    --color-warning: #ff9900;
+    --color-info: #0099cc;
+    --color-disabled: #d9d9d9;
+    --color-muted: #d9d9d9;
+    --color-blue: #0099cc;
+
+    --light-background-color: #f2f2f2;
+    --light-button-primary-background-color: var(--brand-color-secondary);
+    --light-button-primary-text-color: white;
+    --light-button-success-text-color: white;
+    --light-button-success-background-color: var(--color-success);
+    --light-button-info-text-color: white;
+    --light-button-info-background-color: var(--color-info);
+    --light-warning-danger-text-color: white;
+    --light-warning-danger-background-color: var(--color-warning);
+    --light-button-danger-text-color: white;
+    --light-button-danger-background-color: var(--color-danger);
+    --light-button-disabled-text-color: white;
+    --light-button-disabled-background-color: var(--color-disabled);
+    --light-button-shadow-color: rgba(0,0, 0, 0.2);
+    --light-link-text-color: navy;
+}
+
+
 .y-auth-title {
 
 }

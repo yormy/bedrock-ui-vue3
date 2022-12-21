@@ -59,6 +59,7 @@ module.exports = {
                 { text: 'Sizes', link: '/components/button/sizes' },
                 { text: 'Set', link: '/components/button/set' },
                 { text: 'Dropdown', link: '/components/button/dropdown' },
+                { text: 'Misc', link: '/components/button/misc' },
             ],
         },
         {
