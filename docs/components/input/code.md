@@ -8,7 +8,7 @@ The default button to press
 
 <DemoContainer>
   <div class="py-5">
-    <input-code-wrapper></input-code-wrapper>
+    <input-code-wrapper :is-loading="false"></input-code-wrapper>
   </div>
 </DemoContainer>
 

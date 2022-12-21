@@ -3,12 +3,11 @@
         wrap={{defaultValue}}=endwrap
         <y-input-code
             :fields=6
-            :is-disabled='false'
-            :is-required='false'
             type="number"
             fieldId="9978"
             fieldName="code"
             v-model="defaultValue"
+            v-bind="$attrs"
         />
     </div>
 </template>

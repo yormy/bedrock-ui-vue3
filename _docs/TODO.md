@@ -1,12 +1,7 @@
-# code
-- loading state
-
--tags
-dynamically change color
+# tags lables
 
 -password help icon not aligned well single password field
 
-- waarom krijg ik de tags niet rond ? rounded heeft lagere css prio dan tag ????
 
 
 ### Translation function
