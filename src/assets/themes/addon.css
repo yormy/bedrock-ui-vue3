@@ -697,6 +697,30 @@
   color: var(--dark-button-primary-text-color);
 }
 
+.y-button-banner {
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.25rem;
+}
+.y-button-banner .ribbon {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 22px;
+  margin-right: -50px;
+  margin-top: 15px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari prior 9.0 */
+  transform: rotate(45deg); /* Standard syntax */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #EF4444;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 :root {
   --light-color-info: #3777FF;
   --light-color-info-light: #e6e6ff;

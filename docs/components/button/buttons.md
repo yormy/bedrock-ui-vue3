@@ -9,7 +9,7 @@ The default button to press
 <DemoContainer>
   <div class="flex justify-content-between">
       <YButtonPrimary label="Primary"/>
-      <YButtonSecondary label="Secondary"/>
+      <YButtonSecondary label="Secondary" with-banner="true" banner-text="h"/>
       <YButtonTertiary label="Tertiary"/>
       <YButtonLink label="Link"/>
   </div>
