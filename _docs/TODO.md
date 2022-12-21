@@ -1,9 +1,5 @@
 # tags lables
 
--password help icon not aligned well single password field
-
-
-
 ### Translation function
 Translation function template needs 
 ```

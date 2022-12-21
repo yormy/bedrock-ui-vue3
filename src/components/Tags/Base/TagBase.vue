@@ -47,15 +47,15 @@ const props = defineProps({
         validator(value: string) {
             return [
                 'is-info-open',
-                'is-info-closed',
+                'is-info-solid',
                 'is-success-open',
-                'is-success-closed',
+                'is-success-solid',
                 'is-warning-open',
-                'is-warning-closed',
+                'is-warning-solid',
                 'is-danger-open',
-                'is-danger-closed',
+                'is-danger-solid',
                 'is-disabled-open',
-                'is-disabled-closed'
+                'is-disabled-solid'
             ].includes(value)
         }
     },
