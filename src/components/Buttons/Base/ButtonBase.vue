@@ -1,65 +1,36 @@
 <template>
-    <prime-split-button v-if="dropdown" :class="buttonClass" :badge-class="badgeClass" ><slot></slot></prime-split-button>
-    <prime-button v-else :class="buttonClass" :badge-class="badgeClass"><slot></slot></prime-button>
+    <div>
+        <button-root class="p-button-raised" v-bind="$attrs"
+                     @mouseover="hoverButton = true"
+                     @mouseleave="hoverButton = false"
+        >
+            <slot></slot>
+        </button-root>
+        <div v-if="slots.dropdown" v-show="displayDropdown"
+             @mouseover="hoverDropdown = true"
+             @mouseleave="hoverDropdown = false"
+        >
+            <div class="dropdown-content">
+                <slot name="dropdown"></slot>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
-import PrimeButton from 'primevue/button';
-import PrimeSplitButton from 'primevue/splitbutton';
-import {computed, defineProps, watch} from 'vue';
-import useButtonTypes from '../useButtonTypes';
-import useBadgeTypes from '../useBadgeTypes';
-import useButtonSizes from '../useButtonSizes';
+import ButtonRoot from '../Root/ButtonRoot.vue';
+import {computed, ref, useSlots} from "vue";
 
-const props = defineProps({
-    type: {
-        type: String,
-        default: '',
-    },
-    badgeType: {
-        type: String,
-        default: '',
-    },
+const hoverButton = ref(false);
+const hoverDropdown = ref(false);
 
-    size: {
-        type: String,
-        default: '',
-    },
+const slots = useSlots()
 
-    dropdown: {
-        type: Boolean,
-        default: false,
-    },
-});
-
-let buttonTypeClass = useButtonTypes(props.type);
-
-watch(
-    () => props.type,
-    (newValue) => {
-        buttonTypeClass = useButtonTypes(newValue);
+const displayDropdown = computed(() => {
+    if (!slots.dropdown) {
+        return false;
     }
-);
-
-let badgeClass = useBadgeTypes(props.badgeType);
-
-watch(
-    () => props.badgeType,
-    (newValue) => {
-        badgeClass = useBadgeTypes(newValue);
-    }
-);
-
-let buttonSizeClass = useButtonSizes(props.size);
-
-watch(
-    () => props.size,
-    (newValue) => {
-        buttonSizeClass = useButtonSizes(newValue);
-    }
-);
-
-const buttonClass = computed(() => {
-    return `${buttonSizeClass} ${buttonTypeClass}`;
+    return hoverButton.value || hoverDropdown.value
 })
 </script>
+
