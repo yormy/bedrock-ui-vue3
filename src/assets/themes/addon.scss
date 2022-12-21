@@ -1,9 +1,29 @@
 @import './_input_code.scss';
 @import './_dropdown.scss';
+@import './_tag_label.scss';
+@import './_tag_chip.scss';
 
 :root {
-    --light-color-danger: red;
-    --light-color-danger-light: transparent;
+    --light-color-info: #3777FF;
+    --light-color-info-light: #e6e6ff;
+    --light-color-info-contrast: white;
+
+    --light-color-success : #0C7C59;
+    --light-color-success-light: #ccffcc;
+    --light-color-success-contrast: white;
+
+    --light-color-warning: #FFBF46;
+    --light-color-warning-light: #fff2e6;
+    --light-color-warning-contrast: white;
+
+    --light-color-danger: #D81159;
+    --light-color-danger-light: #ffe6e6;
+    --light-color-danger-contrast: white;
+
+    --font-size-normal : 1rem;
+    --font-size-tiny : 0.6rem;
+    --font-size-small : 0.8rem;
+    --font-size-large : 1.2rem;
 }
 .y-auth-title {
 
