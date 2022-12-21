@@ -7,6 +7,5 @@ Under construction
 
 <DemoContainer>
   <div class="flex justify-content-between">
-      <YButtonBanner label="Primary"/>
   </div>
 </DemoContainer>
