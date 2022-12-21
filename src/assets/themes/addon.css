@@ -74,6 +74,11 @@
   display: block;
 }
 
+:root {
+  --light-color-danger: red;
+  --light-color-danger-light: transparent;
+}
+
 .y-auth-subtitle {
   margin-top: 0.2rem;
 }

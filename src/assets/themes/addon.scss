@@ -1,6 +1,10 @@
 @import './_input_code.scss';
 @import './_dropdown.scss';
 
+:root {
+    --light-color-danger: red;
+    --light-color-danger-light: transparent;
+}
 .y-auth-title {
 
 }

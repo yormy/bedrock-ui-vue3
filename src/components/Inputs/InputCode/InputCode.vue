@@ -106,7 +106,7 @@ const props = defineProps({
 });
 
 const hasErrors = () => {
-    return true;
+    return false;
 };
 
 const pattern = computed<string>(() => {
