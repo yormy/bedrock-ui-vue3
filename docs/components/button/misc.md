@@ -9,11 +9,4 @@ Under construction
   <div class="flex justify-content-between">
       <YButtonBanner label="Primary"/>
   </div>
-  <div class="flex justify-content-between">
-    <YButtonPrimary label="Primary">
-      <template v-slot:dropdown>
-                xx
-      </template>
-    </YButtonPrimary>
-  </div>
 </DemoContainer>
