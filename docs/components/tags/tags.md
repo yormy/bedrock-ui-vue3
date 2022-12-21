@@ -43,10 +43,20 @@ import TagWrapper from '../../.vitepress/wrappers/tag/TagWrapper.vue'
   </div>
 </DemoContainer>
 
-## Shapes
+## Alternatives
 <DemoContainer>
   <div class="flex justify-content-between">
-    <YTag label="square" icon="y-icon icon icon-file-download" type="is-info-solid" shape="square"/>
-    <YTag label="rounded" icon="y-icon icon icon-file-download" type="is-info-solid" shape="rounded"/>
+    <div>
+        <YTagLabel label="open" size="tiny" type="is-info-open"/>
+    </div>
+    <div>
+        <YTagLabel label="solid" type="is-info-solid"/>
+    </div>
+    <div>
+        <YTagLabel :rotate="true" label="rotate" size="tiny" type="is-success-open"/>
+    </div>
+    <div>
+      <YTagLabel :rotate="true" label="rotate" type="is-success-solid"/>
+    </div>
   </div>
 </DemoContainer>

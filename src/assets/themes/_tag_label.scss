@@ -98,6 +98,7 @@
             border-width:2px;
             border-color: var(--light-color-info);
             background-color: white;
+            border-style:solid;
         }
 
         .y-tag-label--text {
@@ -126,6 +127,7 @@
             border-width:2px;
             border-color: var(--light-color-success);
             background-color: white;
+            border-style:solid;
         }
 
         .y-tag-label--text {
@@ -147,6 +149,9 @@
     }
 
     &.is-warning-open {
+        border-style:solid;
+        border-width:3px;
+        border-left-style: none;
         .y-tag-label--pointer {
             color:var(--light-color-warning);
         }
@@ -154,6 +159,7 @@
             border-width:2px;
             border-color: var(--light-color-warning);
             background-color: white;
+            border-style:solid;
         }
 
         .y-tag-label--text {
@@ -182,6 +188,7 @@
             border-width:2px;
             border-color: var(--light-color-danger);
             background-color: white;
+            border-style:solid;
         }
 
         .y-tag-label--text {
