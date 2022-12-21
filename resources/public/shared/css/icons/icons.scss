@@ -80,6 +80,7 @@
         }
     }
 
+    &.icon-spin                  {@extend .fa-spin;}
     &.icon-add                   {@extend .fa-plus;}
     &.icon-administrators        {@extend .fa-people-roof;}
     &.icon-attach                {@extend .fa-paperclip;}
@@ -130,7 +131,7 @@
     &.icon-lightmode             {@extend .fa-sun;}
     &.icon-like                  {@extend .fa-thumbs-up;}
     &.icon-link                  {@extend .fa-link;}
-    &.icon-loading               {@extend .fa-circle-notch;}
+    &.icon-loading               {@extend .fa-spinner-third;}
     &.icon-locked                {@extend .fa-lock;}
     &.icon-login                 {@extend .fa-arrow-right-to-bracket;}
     &.icon-logout                {@extend .fa-arrow-right-from-bracket;}

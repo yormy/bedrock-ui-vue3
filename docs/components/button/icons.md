@@ -8,7 +8,7 @@ The default button to press
 
 <DemoContainer>
   <div class="flex justify-content-between">
-      <y-button-primary icon="y-icon icon icon-file-download" label="Button" badge="9" badge-type="info"/>
+      <y-button-primary icon="y-icon icon icon-loading icon-spin" label="Button" badge="9" badge-type="info"/>
       <y-button-secondary icon="y-icon icon icon-file-download" label="Button" badge="9" badge-type="success"/>
       <y-button-tertiary icon="y-icon icon icon-file-download" label="Button" badge="9" badge-type="warning"/>
       <y-button-link icon="y-icon icon icon-file-download" label="Button" badge="9" badge-type="danger"/>

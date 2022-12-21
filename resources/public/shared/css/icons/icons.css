@@ -238,7 +238,7 @@
   animation-timing-function: var(--fa-animation-timing, linear);
 }
 
-.fa-spin {
+.fa-spin, .y-icon.icon-spin {
   -webkit-animation-name: fa-spin;
   animation-name: fa-spin;
   -webkit-animation-delay: var(--fa-animation-delay, 0);
@@ -280,6 +280,7 @@
   .fa-pulse,
   .fa-shake,
   .fa-spin,
+  .y-icon.icon-spin,
   .fa-spin-pulse {
     -webkit-animation-delay: -1ms;
     animation-delay: -1ms;
@@ -4289,7 +4290,7 @@ readers do not read off random characters that represent icons */
   content: "\e4e2";
 }
 
-.fa-circle-notch::before, .y-icon.icon-loading::before {
+.fa-circle-notch::before {
   content: "\f1ce";
 }
 
@@ -13737,7 +13738,7 @@ readers do not read off random characters that represent icons */
   content: "\f110";
 }
 
-.fa-spinner-third::before {
+.fa-spinner-third::before, .y-icon.icon-loading::before {
   content: "\f3f4";
 }
 
@@ -22685,7 +22686,7 @@ readers do not read off random characters that represent icons */
   content: "\e4e2\e4e2";
 }
 
-.fad.fa-circle-notch::after, .fad.y-icon.icon-loading::after, .fa-duotone.fa-circle-notch::after, .fa-duotone.y-icon.icon-loading::after {
+.fad.fa-circle-notch::after, .fa-duotone.fa-circle-notch::after {
   content: "\f1ce\f1ce";
 }
 
@@ -32133,7 +32134,7 @@ readers do not read off random characters that represent icons */
   content: "\f110\f110";
 }
 
-.fad.fa-spinner-third::after, .fa-duotone.fa-spinner-third::after {
+.fad.fa-spinner-third::after, .fad.y-icon.icon-loading::after, .fa-duotone.fa-spinner-third::after, .fa-duotone.y-icon.icon-loading::after {
   content: "\f3f4\f3f4";
 }
 
