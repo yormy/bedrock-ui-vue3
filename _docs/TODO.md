@@ -1,8 +1,3 @@
-# MouseOVer
-position relative to mouse
-http://jsfiddle.net/JVDFc/
-
-
 ### Translation function
 Translation function template needs 
 ```

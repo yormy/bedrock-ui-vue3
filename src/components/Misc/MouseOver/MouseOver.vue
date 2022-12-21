@@ -1,19 +1,14 @@
 <template>
     <span class="y-btn-dropdown">
-        <span
-            @mouseover="hoverButton = true"
-            @mouseleave="hoverButton = false"
-        >
+        <span class="hover-trigger">
             <slot name="trigger"></slot>
-        </span>
-        <div v-if="slots.dropdown" v-show="displayDropdown"
-             @mouseover="hoverDropdown = true"
-             @mouseleave="hoverDropdown = false"
-        >
-            <div class="dropdown-content">
+
+            <span class="dropdown-content2">
                 <slot name="dropdown"></slot>
-            </div>
-        </div>
+            </span>
+        </span>
+
+
     </span>
 </template>
 

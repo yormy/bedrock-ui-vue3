@@ -90,7 +90,6 @@
  */
 
 .dropdown-content {
-
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -107,3 +106,39 @@
         &:hover {background-color: #f1f1f1}
     }
 }
+
+.hover-trigger:hover{
+    color:red;
+}
+
+.hover-trigger:hover > span{
+    position: relative;
+    top:-3px;
+    right:0px;
+    display:block;
+    padding:6px;
+}
+
+.dropdown-content2 {
+    display:none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+
+    &:hover {
+        position: relative;
+    }
+
+    a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {background-color: #f1f1f1}
+    }
+}
+
