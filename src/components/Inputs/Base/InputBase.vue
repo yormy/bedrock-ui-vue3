@@ -1,6 +1,6 @@
 <template>
     <div class="field">
-        <div class="flex justify-content-end">
+        <div class="flex justify-content-end y-content-input-label-float-secondary">
             <small v-if="secondaryLabel" @click="handleSecondaryHelpClicked" @KeyDown="handleSecondaryHelpClicked">
                 {{ secondaryLabel }}
             </small>
@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits, ref, onMounted, watch, inject } from 'vue';
+import {defineProps, defineEmits, ref, onMounted, watch, inject, computed} from 'vue';
 import PrimeInputText from 'primevue/inputtext';
 import PrimePassword from 'primevue/password';
 import Validations from '../Partials/Validations.vue';
@@ -131,7 +131,7 @@ const props = defineProps({
 
     moreHelpIcon: {
         type: String,
-        default: 'y-icon icon icon-help icon-small-bottom',
+        default: 'y-icon icon icon-help icon-small',
     },
 
     inlineIcon: {
@@ -175,6 +175,7 @@ onMounted(async () => {
 
     value.value = props.modelValue;
 });
+
 
 const handleSecondaryHelpClicked = () => {
     emit('secondaryLabelClicked');

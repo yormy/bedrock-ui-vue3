@@ -413,4 +413,10 @@
   margin-right: 1rem;
 }
 
+.y-content-input-label-float-secondary {
+  position: relative;
+  top: 10px;
+  font-size: 0.9rem;
+}
+
 /*# sourceMappingURL=addon.css.map */
