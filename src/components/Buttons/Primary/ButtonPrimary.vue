@@ -1,5 +1,7 @@
 <template>
-    <button-base class="p-button-raised" v-bind="$attrs">
+    <button-base
+        class="p-button-raised"
+        v-bind="$attrs">
         <slot></slot>
         <template v-if="slots.dropdown" v-slot:dropdown>
             <slot name="dropdown"></slot>

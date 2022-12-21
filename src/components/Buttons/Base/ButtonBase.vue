@@ -1,14 +1,19 @@
 <template>
     <div v-if="isDropdown">
-        <button-root class="p-button-raised" iconPos="right" icon="y-icon icon icon-dropdown" v-bind="$attrs"
-                     @mouseover="hoverButton = true"
-                     @mouseleave="hoverButton = false"
+        <button-root
+            class="p-button-raised"
+            iconPos="right"
+            icon="y-icon icon icon-dropdown"
+            v-bind="$attrs"
+            @mouseover="hoverButton = true"
+            @mouseleave="hoverButton = false"
         >
             <slot></slot>
         </button-root>
         <div v-if="slots.dropdown" v-show="displayDropdown"
              @mouseover="hoverDropdown = true"
              @mouseleave="hoverDropdown = false"
+
         >
             <div class="dropdown-content">
                 <slot name="dropdown"></slot>
@@ -76,5 +81,6 @@ const displayDropdown = computed(() => {
     }
     return hoverButton.value || hoverDropdown.value
 })
+
 </script>
 
