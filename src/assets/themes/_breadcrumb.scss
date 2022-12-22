@@ -14,6 +14,11 @@
 
         a {
             text-decoration: none;
+
+        }
+
+        .title:hover {
+                font-weight:bold !important;
         }
 
         .breadcrumb--separator {
@@ -21,6 +26,8 @@
             margin-right: 1rem;
             color: var(--text-muted);
         }
+
+
     }
 
     .y-breadcrumb--boxed {
@@ -52,6 +59,10 @@
             position: relative !important;
             align-items: center;
             color:inherit;
+
+            :hover {
+                font-weight:bold !important;
+            }
         }
 
         .spacer {

@@ -534,6 +534,9 @@
 .y-breadcrumb a {
   text-decoration: none;
 }
+.y-breadcrumb .title:hover {
+  font-weight: bold !important;
+}
 .y-breadcrumb .breadcrumb--separator {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -566,6 +569,9 @@
   position: relative !important;
   align-items: center;
   color: inherit;
+}
+.y-breadcrumb--boxed ol.breadcrumb--list li.breadcrumb--item :hover {
+  font-weight: bold !important;
 }
 .y-breadcrumb--boxed ol.breadcrumb--list .spacer {
   position: absolute;
