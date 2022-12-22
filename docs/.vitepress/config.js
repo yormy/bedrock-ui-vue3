@@ -18,6 +18,7 @@ module.exports = {
             text: 'Misc',
             children: [
                 { text: 'MouseOver', link: '/components/misc/mouseover' },
+                { text: 'Breadcrumb', link: '/components/misc/breadcrumb' },
             ],
         },
         {
