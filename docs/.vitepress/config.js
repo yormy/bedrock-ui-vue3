@@ -11,6 +11,7 @@ module.exports = {
             children: [
                 { text: 'Message', link: '/components/message/message' },
                 { text: 'toast', link: '/components/message/toast' },
+                { text: 'Message Alternatives', link: '/components/message/message-alt' },
             ],
         },
         {

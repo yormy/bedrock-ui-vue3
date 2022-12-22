@@ -412,6 +412,113 @@
   line-height: 1.25rem;
 }
 
+.y-alert {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.y-alert .icon {
+  padding-top: 0.5rem;
+}
+.y-alert .header {
+  font-weight: bold;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+.y-alert .description {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+.y-alert .description a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.y-alert .description ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.y-alert {
+  border-style: solid;
+  border-radius: 0;
+  border-left-width: 0;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.y-alert.left {
+  border-width: 0;
+  border-style: solid;
+  border-left-width: 8px;
+  border-radius: 5px;
+  padding-left: 0;
+  padding-top: 0;
+}
+.y-alert.left.with-header .header {
+  border-radius: 0 5px 0 0;
+  padding-bottom: 0.5rem;
+}
+.y-alert.left.with-header .description {
+  padding-top: 1rem;
+}
+.y-alert.top {
+  border-style: solid;
+  border-radius: 0;
+  border-width: 0;
+  border-top-width: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.y-alert.top .header {
+  padding-top: 0;
+}
+
+.y-alert {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.y-alert.is-info {
+  color: var(--light-color-info);
+  background-color: var(--light-color-info-light);
+  border-color: var(--light-color-info);
+}
+.y-alert.is-info.with-header .header {
+  color: var(--light-color-info-light);
+  background-color: var(--light-color-info);
+}
+.y-alert.is-success {
+  color: var(--light-alert-success-text-color);
+  background-color: var(--light-alert-success-color-light);
+  border-color: var(--light-alert-success-color);
+}
+.y-alert.is-success.with-header .header {
+  color: var(--light-alert-success-banner-text-color);
+  background-color: var(--light-alert-success-banner-color);
+}
+.y-alert.is-warning {
+  color: var(--light-alert-warning-text-color);
+  background-color: var(--light-alert-warning-color-light);
+  border-color: var(--light-alert-warning-color);
+}
+.y-alert.is-warning.with-header .header {
+  color: var(--light-alert-warning-banner-text-color);
+  background-color: var(--light-alert-warning-banner-color);
+}
+.y-alert.is-danger {
+  color: var(--light-alert-danger-text-color);
+  background-color: var(--light-alert-danger-color-light);
+  border-color: var(--light-alert-danger-color);
+}
+.y-alert.is-danger.with-header .header {
+  color: var(--light-alert-warning-banner-text-color);
+  background-color: var(--light-alert-danger-banner-color);
+}
+
 :root {
   --light-color-info: #3777FF;
   --light-color-info-light: #e6e6ff;
@@ -458,6 +565,29 @@
   --light-button-disabled-background-color: var(--color-disabled);
   --light-button-shadow-color: rgba(0,0, 0, 0.2);
   --light-link-text-color: navy;
+}
+
+:root {
+  --light-alert-success-color: var(--light-color-success);
+  --light-alert-success-color-light: var(--light-color-success-light);
+  --light-alert-success-text-color: var(--light-color-success);
+  --light-alert-success-banner-color: var(--light-color-success);
+  --light-alert-success-banner-text-color: var(--light-color-success-contrast);
+  --light-alert-info-color: var(--light-color-info);
+  --light-alert-info-color-light: var(--light-color-info-light);
+  --light-alert-info-text-color: var(--light-color-info);
+  --light-alert-info-banner-color: var(--light-color-info);
+  --light-alert-info-banner-text-color: var(--light-color-info-contrast);
+  --light-alert-warning-color: var(--light-color-warning);
+  --light-alert-warning-color-light: var(--light-color-warning-light);
+  --light-alert-warning-text-color: var(--light-color-warning);
+  --light-alert-warning-banner-color: var(--light-color-warning);
+  --light-alert-warning-banner-text-color: var(--light-color-warning-contrast);
+  --light-alert-danger-color: var(--light-color-danger);
+  --light-alert-danger-color-light: var(--light-color-danger-light);
+  --light-alert-danger-text-color: var(--light-color-danger);
+  --light-alert-danger-banner-color: var(--light-color-danger);
+  --light-alert-danger-banner-text-color: var(--light-color-danger-contrast);
 }
 
 .y-auth-subtitle {
