@@ -11,19 +11,3 @@ The default button to press
     <input-code-wrapper :is-loading="false"></input-code-wrapper>
   </div>
 </DemoContainer>
-
-
-#ss
-    
-        :api-errors="args.apiErrors"
-        :fields="args.fields"
-        :hint-text="args.hintText"
-        :is-disabled="args.isDisabled"
-        :is-loading="args.isLoading"
-        :is-required="args.isRequired"
-        :label-help-description="args.description"
-        :label="args.label"
-        :type="args.type"
-        fieldId="9978"
-        fieldName="code"
-    

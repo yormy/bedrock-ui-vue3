@@ -175,5 +175,7 @@
     &.icon-view                  {@extend .fa-eye;}
     &.icon-warning               {@extend .fa-triangle-exclamation;}
     &.icon-modal-close           {@extend .fa-xmark-large;}
+    &.icon-success               {@extend .fa-check;}
+    &.icon-close                 {@extend .fa-xmark;}
     /*&.icon-administrators:before {color:red;content: var(--icon-administrators); font: var(--icon-font); font-size:1rem;}*/
 }

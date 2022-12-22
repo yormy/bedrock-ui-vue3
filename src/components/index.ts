@@ -35,5 +35,7 @@ export * from './Tags/exports.js';
 // @ts-ignore
 export * from './Misc/exports.js';
 
+// @ts-ignore
+export * from './Messages/exports.js';
 
 export { ComponentA, ComponentB, ComponentC };

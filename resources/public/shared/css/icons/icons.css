@@ -3670,7 +3670,7 @@ readers do not read off random characters that represent icons */
   content: "\e0eb";
 }
 
-.fa-check::before, .y-icon.icon-checked::before {
+.fa-check::before, .y-icon.icon-checked::before, .y-icon.icon-success::before {
   content: "\f00c";
 }
 
@@ -16906,7 +16906,7 @@ readers do not read off random characters that represent icons */
   content: "\f497";
 }
 
-.fa-xmark::before {
+.fa-xmark::before, .y-icon.icon-close::before {
   content: "\f00d";
 }
 
@@ -22066,7 +22066,7 @@ readers do not read off random characters that represent icons */
   content: "\e0eb\e0eb";
 }
 
-.fad.fa-check::after, .fad.y-icon.icon-checked::after, .fa-duotone.fa-check::after, .fa-duotone.y-icon.icon-checked::after {
+.fad.fa-check::after, .fad.y-icon.icon-checked::after, .fad.y-icon.icon-success::after, .fa-duotone.fa-check::after, .fa-duotone.y-icon.icon-checked::after, .fa-duotone.y-icon.icon-success::after {
   content: "\f00c\f00c";
 }
 
@@ -35302,7 +35302,7 @@ readers do not read off random characters that represent icons */
   content: "\f497\f497";
 }
 
-.fad.fa-xmark::after, .fa-duotone.fa-xmark::after {
+.fad.fa-xmark::after, .fad.y-icon.icon-close::after, .fa-duotone.fa-xmark::after, .fa-duotone.y-icon.icon-close::after {
   content: "\f00d\f00d";
 }
 
