@@ -24,11 +24,14 @@ export { DarkTheme }
 
 import i18ntc from './i18ntc';
 
+import ToastService from 'primevue/toastservice';
+
 export default {
   ...DefaultTheme,
     Layout: Layout,
   enhanceApp({ app }) {
     app.use(PrimeVue)
+    app.use(ToastService)
     app.use(BedrockUiVue3)
     app.use(i18ntc)
     app.component('DemoContainer', DemoContainer)

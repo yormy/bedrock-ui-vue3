@@ -53,7 +53,5 @@ const mainIcon = computed(() => {
     }
 })
 
-
 const closeIcon = 'y-icon icon icon-close';
-const icon = 'y-icon icon icon-users';
 </script>

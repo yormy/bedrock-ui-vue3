@@ -38,4 +38,7 @@ export * from './Misc/exports.js';
 // @ts-ignore
 export * from './Messages/exports.js';
 
+// @ts-ignore
+export * from './Toasts/exports.js';
+
 export { ComponentA, ComponentB, ComponentC };
