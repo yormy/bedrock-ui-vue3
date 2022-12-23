@@ -16,6 +16,7 @@ module.exports = {
             text: 'Style',
             children: [
                 { text: 'Icons', link: '/components/style/icons' },
+                { text: 'Typography', link: '/components/style/typography' },
             ],
         },
         {

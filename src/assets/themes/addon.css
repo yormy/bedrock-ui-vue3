@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .y-input-code .is-loading {
   position: absolute;
   z-index: 10;
@@ -619,6 +620,177 @@
   line-height: 2rem;
   font-weight: 700;
   letter-spacing: -0.025em;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: var(--font-size);
+  line-height: calc(var(--font-size) * 1.5);
+}
+
+.y-content p {
+  margin-top: 0.5rem;
+}
+.y-content h1 {
+  font-weight: 800;
+  font-size: 4rem;
+}
+.y-content .pre-h1 {
+  position: relative;
+  top: 0.8rem;
+  font-size: 2rem;
+}
+.y-content .post-h1 {
+  position: relative;
+  top: -0.8rem;
+  font-size: 2rem;
+}
+.y-content h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.y-content h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.y-content h4 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.y-content .quote {
+  font-weight: 500;
+  font-style: italic;
+}
+.y-content .quote-caption {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.y-content a {
+  text-decoration: underline;
+}
+.y-content a:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.y-content a.greyed {
+  color: var(--light-color-disabled);
+  cursor: not-allowed;
+}
+.y-content a.disabled {
+  color: var(--light-color-disabled);
+  cursor: not-allowed;
+}
+.y-content .text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.y-content .text-small {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.y-content .text-large {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.y-content .text-extralarge {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.y-content .text-info {
+  color: var(--light-color-info);
+}
+.y-content .text-success {
+  color: var(--light-color-success);
+}
+.y-content .text-warning {
+  color: var(--light-color-warning);
+}
+.y-content .text-danger {
+  color: var(--light-color-danger);
+}
+.y-content .text-muted {
+  color: var(--light-color-disabled);
+}
+
+/* ========== DARK THEME ========== */
+.dark .y-content .text-info {
+  color: var(--dark-color-info);
+}
+.dark .y-content .text-success {
+  color: var(--dark-color-success);
+}
+.dark .y-content .text-warning {
+  color: var(--dark-color-warning);
+}
+.dark .y-content .text-danger {
+  color: var(--dark-color-danger);
+}
+.dark .y-content .text-muted {
+  color: var(--dark-color-disabled);
+}
+
+.y-content ul {
+  list-style-type: disc;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 20px;
+}
+.y-content ul.checkmark {
+  padding-left: 0px;
+}
+.y-content ol {
+  list-style-type: decimal;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 20px;
+}
+.y-content li {
+  padding-left: 5px;
+}
+.y-content li.checkmark {
+  list-style-type: none;
+}
+.y-content li.checkmark::before {
+  content: "✔ ";
+}
+.y-content li.checkmark.is-info::before {
+  color: var(--light-color-info);
+}
+.y-content li.checkmark.is-success::before {
+  color: var(--light-color-success);
+}
+.y-content li.checkmark.is-warning::before {
+  color: var(--light-color-warning);
+}
+.y-content li.checkmark.is-danger::before {
+  color: var(--light-color-danger);
+}
+.y-content li.roman {
+  list-style-type: upper-roman;
+  padding-left: 5px;
+}
+.y-content ol.checkmark li {
+  padding-left: 5px;
+}
+.y-content ol.checkmark li.is-info::marker {
+  color: var(--light-color-info);
+}
+.y-content ol.checkmark li.is-success::marker {
+  color: var(--light-color-success);
+}
+.y-content ol.checkmark li.is-warning::marker {
+  color: var(--light-color-warning);
+}
+.y-content ol.checkmark li.is-danger::marker {
+  color: var(--light-color-danger);
 }
 
 :root {
