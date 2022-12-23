@@ -7,6 +7,12 @@ module.exports = {
     repo: '...repo-here....',
     sidebar: [
         {
+            text: 'Cards',
+            children: [
+                { text: 'Simple', link: '/components/card/cards' },
+            ],
+        },
+        {
             text: 'Style',
             children: [
                 { text: 'Icons', link: '/components/style/icons' },

@@ -41,4 +41,7 @@ export * from './Messages/exports.js';
 // @ts-ignore
 export * from './Toasts/exports.js';
 
+// @ts-ignore
+export * from './Cards/exports.js';
+
 export { ComponentA, ComponentB, ComponentC };
