@@ -3670,7 +3670,7 @@ readers do not read off random characters that represent icons */
   content: "\e0eb";
 }
 
-.fa-check::before, .y-icon.icon-checked::before, .y-icon.icon-success::before {
+.fa-check::before, .y-icon.icon-success::before, .y-icon.icon-checked::before {
   content: "\f00c";
 }
 
@@ -4742,7 +4742,7 @@ readers do not read off random characters that represent icons */
   content: "\f0ed";
 }
 
-.fa-cloud-arrow-up::before, .y-icon.icon-upload::before {
+.fa-cloud-arrow-up::before, .y-icon.icon-file-upload::before {
   content: "\f0ee";
 }
 
@@ -6906,7 +6906,7 @@ readers do not read off random characters that represent icons */
   content: "\f56d";
 }
 
-.fa-file-arrow-up::before, .y-icon.icon-file-upload::before {
+.fa-file-arrow-up::before {
   content: "\f574";
 }
 
@@ -7294,7 +7294,7 @@ readers do not read off random characters that represent icons */
   content: "\f024";
 }
 
-.fa-flag-checkered::before {
+.fa-flag-checkered::before, .y-icon.icon-completed::before {
   content: "\f11e";
 }
 
@@ -14450,7 +14450,7 @@ readers do not read off random characters that represent icons */
   content: "\e28a";
 }
 
-.fa-star::before, .y-icon.icon-star::before {
+.fa-star::before, .y-icon.icon-new::before, .y-icon.icon-star::before {
   content: "\f005";
 }
 
@@ -16274,7 +16274,7 @@ readers do not read off random characters that represent icons */
   content: "\f235";
 }
 
-.fa-users::before, .y-icon.icon-completed::before, .y-icon.icon-new::before, .y-icon.icon-users::before {
+.fa-users::before, .y-icon.icon-users::before {
   content: "\f0c0";
 }
 
@@ -22066,7 +22066,7 @@ readers do not read off random characters that represent icons */
   content: "\e0eb\e0eb";
 }
 
-.fad.fa-check::after, .fad.y-icon.icon-checked::after, .fad.y-icon.icon-success::after, .fa-duotone.fa-check::after, .fa-duotone.y-icon.icon-checked::after, .fa-duotone.y-icon.icon-success::after {
+.fad.fa-check::after, .fad.y-icon.icon-success::after, .fad.y-icon.icon-checked::after, .fa-duotone.fa-check::after, .fa-duotone.y-icon.icon-success::after, .fa-duotone.y-icon.icon-checked::after {
   content: "\f00c\f00c";
 }
 
@@ -23138,7 +23138,7 @@ readers do not read off random characters that represent icons */
   content: "\f0ed\f0ed";
 }
 
-.fad.fa-cloud-arrow-up::after, .fad.y-icon.icon-upload::after, .fa-duotone.fa-cloud-arrow-up::after, .fa-duotone.y-icon.icon-upload::after {
+.fad.fa-cloud-arrow-up::after, .fad.y-icon.icon-file-upload::after, .fa-duotone.fa-cloud-arrow-up::after, .fa-duotone.y-icon.icon-file-upload::after {
   content: "\f0ee\f0ee";
 }
 
@@ -25302,7 +25302,7 @@ readers do not read off random characters that represent icons */
   content: "\f56d\f56d";
 }
 
-.fad.fa-file-arrow-up::after, .fad.y-icon.icon-file-upload::after, .fa-duotone.fa-file-arrow-up::after, .fa-duotone.y-icon.icon-file-upload::after {
+.fad.fa-file-arrow-up::after, .fa-duotone.fa-file-arrow-up::after {
   content: "\f574\f574";
 }
 
@@ -25690,7 +25690,7 @@ readers do not read off random characters that represent icons */
   content: "\f024\f024";
 }
 
-.fad.fa-flag-checkered::after, .fa-duotone.fa-flag-checkered::after {
+.fad.fa-flag-checkered::after, .fad.y-icon.icon-completed::after, .fa-duotone.fa-flag-checkered::after, .fa-duotone.y-icon.icon-completed::after {
   content: "\f11e\f11e";
 }
 
@@ -32846,7 +32846,7 @@ readers do not read off random characters that represent icons */
   content: "\e28a\e28a";
 }
 
-.fad.fa-star::after, .fad.y-icon.icon-star::after, .fa-duotone.fa-star::after, .fa-duotone.y-icon.icon-star::after {
+.fad.fa-star::after, .fad.y-icon.icon-new::after, .fad.y-icon.icon-star::after, .fa-duotone.fa-star::after, .fa-duotone.y-icon.icon-new::after, .fa-duotone.y-icon.icon-star::after {
   content: "\f005\f005";
 }
 
@@ -34670,7 +34670,7 @@ readers do not read off random characters that represent icons */
   content: "\f235\f235";
 }
 
-.fad.fa-users::after, .fad.y-icon.icon-completed::after, .fad.y-icon.icon-new::after, .fad.y-icon.icon-users::after, .fa-duotone.fa-users::after, .fa-duotone.y-icon.icon-completed::after, .fa-duotone.y-icon.icon-new::after, .fa-duotone.y-icon.icon-users::after {
+.fad.fa-users::after, .fad.y-icon.icon-users::after, .fa-duotone.fa-users::after, .fa-duotone.y-icon.icon-users::after {
   content: "\f0c0\f0c0";
 }
 
@@ -35506,9 +35506,27 @@ readers do not read off random characters that represent icons */
   top: 35%;
 }
 
-.y-icon { /* todo ?? */
-  /* todo ?? */
+.y-icon {
+  /*---------- Field ----------*/
+  /*---------- Collapse ----------*/
+  /*---------- Action ----------*/
+  /*---------- Process ----------*/
+  /*---------- Reactions ----------*/
+  /*..*/
+  /*---------- File ----------*/
+  /*---------- Misc ----------*/
+  /*---------- Severity ----------*/
+  /*---------- Menu ----------*/
+  /*---------- Link ----------*/
+  /*---------- Check ----------*/
+  /*---------- Navigation ----------*/
+  /*---------- User ----------*/
   /*&.icon-administrators:before {color:red;content: var(--icon-administrators); font: var(--icon-font); font-size:1rem;}*/
+  /*---------- Crud ----------*/
+  /*---------- New ----------*/
+  /*
+      ...
+  */
 }
 .y-icon.icon::before {
   display: inline-block;
