@@ -12,6 +12,8 @@ import YToggleSelect from './Toggle/ToggleSelect/ToggleSelect.vue';
 
 import YToggleSection from './Toggle/ToggleSection/ToggleSection.vue';
 
+import YRadio from './Radio/Radio/Radio.vue';
+
 export {
     YSelectLanguage,
     YCheckbox,
@@ -21,5 +23,6 @@ export {
     YToggle,
     YToggleFaded,
     YToggleSelect,
-    YToggleSection
+    YToggleSection,
+    YRadio
 };

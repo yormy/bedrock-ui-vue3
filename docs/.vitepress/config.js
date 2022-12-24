@@ -72,6 +72,11 @@ module.exports = {
                         { text: 'Checkbox YFrame (wip)', link: '/components/select/checkbox/checkbox-alt' },
                     ]
                 },
+                { text: 'Radio',
+                    children: [
+                        { text: 'Radio', link: '/components/select/radio/radio' },
+                    ]
+                }
             ],
         },
         {
