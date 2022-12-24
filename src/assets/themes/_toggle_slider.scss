@@ -112,7 +112,7 @@
 
             .checkbox-input ~span {
                 &.is-on, &.is-off{
-                    background-color: red ; /*var(--light-toggle-slider-on-background-color);*/
+                    background-color: var(--light-toggle-slider-off-background-color);
                     color: var(--light-toggle-slider-on-text-color);
                 }
 
@@ -127,7 +127,7 @@
 
             .checkbox-input:checked ~span {
                 &.is-on, &.is-off{
-                    background-color: orange ; /*var(--light-toggle-slider-on-background-color);*/
+                    background-color: var(--light-toggle-slider-on-background-color);
                     color: var(--light-toggle-slider-on-text-color);
                 }
 

@@ -1,5 +1,5 @@
 # Toggle
 
 <DemoContainer>
-  <y-toggle label="hello" :model-value='true' :required="true"></y-toggle>
+  <y-toggle label-on="ON" label-off="OFF"></y-toggle>
 </DemoContainer>

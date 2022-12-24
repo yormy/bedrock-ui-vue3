@@ -1052,7 +1052,7 @@ body {
   --slider-width: 30px !important;
 }
 .y-content .y-toggle-slider.round .checkbox-input ~ span.is-on, .y-content .y-toggle-slider.round .checkbox-input ~ span.is-off {
-  background-color: red; /*var(--light-toggle-slider-on-background-color);*/
+  background-color: var(--light-toggle-slider-off-background-color);
   color: var(--light-toggle-slider-on-text-color);
 }
 .y-content .y-toggle-slider.round .checkbox-input ~ span.slider {
@@ -1063,7 +1063,7 @@ body {
   transform: translateX(calc(-1 * var(--slider-width) + 5px));
 }
 .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.is-on, .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.is-off {
-  background-color: orange; /*var(--light-toggle-slider-on-background-color);*/
+  background-color: var(--light-toggle-slider-on-background-color);
   color: var(--light-toggle-slider-on-text-color);
 }
 .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.slider {
@@ -1151,6 +1151,46 @@ body {
 .y-content .y-toggle-select .checkbox-input:checked ~ .right {
   color: var(--toggle-select-right-text-color);
   background-color: var(--toggle-select-right-background-color);
+}
+
+.y-content .y-checkable {
+  display: flex;
+}
+.y-content .y-checkable .checkbox-input {
+  display: none;
+}
+.y-content .y-checkable .checkbox-input ~ label .is-on {
+  display: none;
+}
+.y-content .y-checkable .checkbox-input ~ label .is-off {
+  display: block;
+}
+.y-content .y-checkable .checkbox-input:checked ~ label .is-on {
+  display: block;
+}
+.y-content .y-checkable .checkbox-input:checked ~ label .is-off {
+  display: none;
+}
+.y-content .y-checkable .y-chip--help {
+  margin-top: 0;
+  margin-bottom: 3px;
+  margin-left: auto;
+  padding: 0;
+  line-height: 0;
+  font-size: var(--font-size-extra-small);
+  align-items: flex-end;
+  /*.icon {
+      transform: translateY(2px);
+  }*/
+}
+.y-content .y-checkable .y-chip--help.above {
+  margin-top: 0;
+}
+.y-content .y-checkable .y-chip--help.below {
+  margin-top: 5px;
+}
+.y-content .y-checkable .y-chip--help .text {
+  margin-bottom: 3px;
 }
 
 :root {
