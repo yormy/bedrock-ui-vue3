@@ -25,6 +25,13 @@
                         </span>
                     </label>
 
+                    <y-icon-help
+                        v-if="option.moreHelpContent"
+                        :header="option.moreHelpTitle"
+                        :description="option.moreHelpContent"
+                    >
+                    </y-icon-help>
+
                 </div>
 
             </div>
