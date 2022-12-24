@@ -1070,12 +1070,8 @@ body {
   transform: translateX(calc(-2 * var(--slider-width) + 5px));
 }
 
-.y-content .y-toggle-dark {
-  font-size: 0.6rem;
+.y-content .y-toggle-section {
   display: inline-flex;
-  padding: 0.5rem;
-  color: var(--light-toggle-slider-text-color);
-  align-items: center;
   cursor: pointer;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -1084,16 +1080,21 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
-.y-content .y-toggle-dark .checkbox-input ~ span.is-on {
+.y-content .y-faded-small {
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  color: var(--light-toggle-slider-text-color);
+}
+.y-content .y-toggle-section .checkbox-input ~ span.is-on {
   display: none;
 }
-.y-content .y-toggle-dark .checkbox-input ~ span.is-off {
+.y-content .y-toggle-section .checkbox-input ~ span.is-off {
   display: block;
 }
-.y-content .y-toggle-dark .checkbox-input:checked ~ span.is-on {
+.y-content .y-toggle-section .checkbox-input:checked ~ span.is-on {
   display: block;
 }
-.y-content .y-toggle-dark .checkbox-input:checked ~ span.is-off {
+.y-content .y-toggle-section .checkbox-input:checked ~ span.is-off {
   display: none;
 }
 
