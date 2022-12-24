@@ -1,7 +1,7 @@
 <template>
-    <prime-checkbox inputId="binary" v-bind="$attrs" :binary="true"/>
+    <checkbox-root inputId="binary" v-bind="$attrs" :binary="true"/>
 </template>
 
 <script setup lang="ts">
-import PrimeCheckbox from 'primevue/checkbox';
+import CheckboxRoot from '../Root/CheckboxRoot.vue';
 </script>
