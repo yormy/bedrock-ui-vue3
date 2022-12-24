@@ -963,6 +963,140 @@ body {
   display: block;
 }
 
+.y-content .wide-slider {
+  --slider-width: 50px;
+}
+.y-content .y-toggle-slider {
+  font-size: 0.6rem;
+  line-height: 1rem;
+  display: inline-flex;
+  padding: 0.5rem;
+  color: var(--light-toggle-slider-text-color);
+  align-items: center;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+.y-content .y-toggle-slider .slider {
+  width: var(--slider-width);
+}
+.y-content .y-toggle-slider .checkbox-input ~ span {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.y-content .y-toggle-slider .checkbox-input ~ span.is-on {
+  background-color: var(--light-toggle-slider-on-background-color);
+  color: var(--light-toggle-slider-on-text-color);
+  width: var(--slider-width);
+  border-top-right-radius: var(--toggle-slider-radius);
+  border-bottom-right-radius: var(--toggle-slider-radius);
+  line-height: inherit;
+}
+.y-content .y-toggle-slider .checkbox-input ~ span.is-off {
+  background-color: var(--light-toggle-slider-off-background-color);
+  color: var(--light-toggle-slider-off-text-color);
+  width: var(--slider-width);
+  border-top-left-radius: var(--toggle-slider-radius);
+  border-bottom-left-radius: var(--toggle-slider-radius);
+  line-height: inherit;
+}
+.y-content .y-toggle-slider .checkbox-input ~ span.slider {
+  transform: translateX(calc(-1 * var(--slider-width)));
+  transition: 0.5s;
+  background-color: var(--light-toggle-slider-background-color);
+  border-radius: 0;
+  border-top-right-radius: calc(var(--toggle-slider-radius) - 2px);
+  border-bottom-right-radius: calc(var(--toggle-slider-radius) - 2px);
+  height: 100%;
+}
+.y-content .y-toggle-slider .checkbox-input ~ span.is-off.green, .y-content .y-toggle-slider .checkbox-input ~ span.is-on.green, .y-content .y-toggle-slider .checkbox-input ~ span.slider.green {
+  background-color: green;
+  --light-toggle-slider-background-color: green;
+}
+.y-content .y-toggle-slider .checkbox-input ~ span.is-off.red, .y-content .y-toggle-slider .checkbox-input ~ span.is-on.red, .y-content .y-toggle-slider .checkbox-input ~ span.slider.red {
+  background-color: red;
+  --light-toggle-slider-background-color: red;
+}
+.y-content .y-toggle-slider .checkbox-input ~ span.is-off.purple, .y-content .y-toggle-slider .checkbox-input ~ span.is-on.purple, .y-content .y-toggle-slider .checkbox-input ~ span.slider.purple {
+  background-color: purple;
+  --light-toggle-slider-background-color: purple;
+}
+.y-content .y-toggle-slider .checkbox-input ~ span.is-off.yellow, .y-content .y-toggle-slider .checkbox-input ~ span.is-on.yellow, .y-content .y-toggle-slider .checkbox-input ~ span.slider.yellow {
+  --light-toggle-slider-background-color: yellow;
+}
+.y-content .y-toggle-slider .checkbox-input:checked ~ span.is-on {
+  /*background-color: var(--light-toggle-slider-on-background-color);*/
+  /*color:white;*/
+}
+.y-content .y-toggle-slider .checkbox-input:checked ~ span.is-off {
+  /*background-color: var(--light-toggle-slider-off-color);*/
+  /*color: var(--light-toggle-slider-off-color);*/
+}
+.y-content .y-toggle-slider .checkbox-input:checked ~ span.slider {
+  transform: translateX(calc(-2 * var(--slider-width)));
+  transition: 0.5s;
+  background-color: var(--light-toggle-slider-background-color);
+  border-radius: 0;
+  border-top-left-radius: calc(var(--toggle-slider-radius) - 2px);
+  border-bottom-left-radius: calc(var(--toggle-slider-radius) - 2px);
+}
+
+.y-content .y-toggle-slider.round {
+  --toggle-slider-radius: 30px;
+  --slider-width: 30px !important;
+}
+.y-content .y-toggle-slider.round .checkbox-input ~ span.is-on, .y-content .y-toggle-slider.round .checkbox-input ~ span.is-off {
+  background-color: red; /*var(--light-toggle-slider-on-background-color);*/
+  color: var(--light-toggle-slider-on-text-color);
+}
+.y-content .y-toggle-slider.round .checkbox-input ~ span.slider {
+  border-radius: var(--toggle-slider-radius) !important;
+  width: 20px;
+  height: 20px;
+  transition: 0.1s;
+  transform: translateX(calc(-1 * var(--slider-width) + 5px));
+}
+.y-content .y-toggle-slider.round .checkbox-input:checked ~ span.is-on, .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.is-off {
+  background-color: orange; /*var(--light-toggle-slider-on-background-color);*/
+  color: var(--light-toggle-slider-on-text-color);
+}
+.y-content .y-toggle-slider.round .checkbox-input:checked ~ span.slider {
+  transform: translateX(calc(-2 * var(--slider-width) + 5px));
+}
+
+.y-content .y-toggle-dark {
+  font-size: 0.6rem;
+  display: inline-flex;
+  padding: 0.5rem;
+  color: var(--light-toggle-slider-text-color);
+  align-items: center;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+.y-content .y-toggle-dark .checkbox-input ~ span.is-on {
+  display: none;
+}
+.y-content .y-toggle-dark .checkbox-input ~ span.is-off {
+  display: block;
+}
+.y-content .y-toggle-dark .checkbox-input:checked ~ span.is-on {
+  display: block;
+}
+.y-content .y-toggle-dark .checkbox-input:checked ~ span.is-off {
+  display: none;
+}
+
 :root {
   --light-color-info: #3777FF;
   --light-color-info-light: #e6e6ff;
@@ -1032,6 +1166,26 @@ body {
   --light-alert-danger-text-color: var(--light-color-danger);
   --light-alert-danger-banner-color: var(--light-color-danger);
   --light-alert-danger-banner-text-color: var(--light-color-danger-contrast);
+}
+
+:root {
+  --light-toggle-slider-background-color: lightgray;
+  --light-toggle-slider-text-color: lightgray;
+  --light-toggle-slider-on-background-color: green;
+  --light-toggle-slider-on-text-color: white;
+  --light-toggle-slider-off-background-color: red;
+  --light-toggle-slider-off-text-color: white;
+  --toggle-select-disabled-background-color: gray;
+  --toggle-select-disabled-text-color: white;
+  --toggle-select-left-text-color: lime;
+  --toggle-select-left-background-color: red;
+  --toggle-select-right-text-color: purple;
+  --toggle-select-right-background-color: orange;
+}
+
+:root {
+  --slider-width: 60px;
+  --toggle-slider-radius: 5px;
 }
 
 .y-auth-subtitle {

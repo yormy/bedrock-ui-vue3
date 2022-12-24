@@ -6,10 +6,13 @@ import YCheckboxMotivatedAgree from './Checkbox/MotivatedAgree/CheckBoxMotivated
 
 import YCheckboxAlt from './Checkbox/CheckboxAlt/CheckboxAlt.vue';
 
+import YToggle from './Toggle/Toggle/Toggle.vue';
+
 export {
     YSelectLanguage,
     YCheckbox,
     YCheckboxMustAgree,
     YCheckboxMotivatedAgree,
-    YCheckboxAlt
+    YCheckboxAlt,
+    YToggle
 };

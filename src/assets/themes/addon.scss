@@ -10,6 +10,7 @@
 @import './_list.scss';
 @import './_table.scss';
 @import './_checkbox_normal.scss';
+@import './_toggle_slider.scss';
 
 :root {
     --light-color-info: #3777FF;
@@ -87,6 +88,31 @@
     --light-alert-danger-text-color: var(--light-color-danger);
     --light-alert-danger-banner-color: var(--light-color-danger);
     --light-alert-danger-banner-text-color: var(--light-color-danger-contrast);
+}
+
+:root {
+    --light-toggle-slider-background-color: lightgray;
+    --light-toggle-slider-text-color: lightgray;
+
+    --light-toggle-slider-on-background-color: green;
+    --light-toggle-slider-on-text-color: white;
+
+    --light-toggle-slider-off-background-color: red;
+    --light-toggle-slider-off-text-color: white;
+
+    --toggle-select-disabled-background-color: gray;
+    --toggle-select-disabled-text-color: white;
+
+    --toggle-select-left-text-color : lime;
+    --toggle-select-left-background-color: red;
+
+    --toggle-select-right-text-color : purple;
+    --toggle-select-right-background-color: orange;
+}
+
+:root {
+    --slider-width: 60px;
+    --toggle-slider-radius: 5px;
 }
 
 .y-auth-title {
