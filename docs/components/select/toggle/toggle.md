@@ -1,28 +1,5 @@
 # Toggle
 
-### Toggle checkable
-<DemoContainer>
-  <y-toggle-test
-more-help-description="Dsffdsfsdfsdfsdfsdsfd"
-more-help-header="details"
-label-on="????" 
-label-off="OFF" 
-shape="s"
-></y-toggle-test>
-</DemoContainer>
-
-### Toggle section
-<DemoContainer>
-  <y-toggle-section>
-  <template v-slot:on>
-    <div>onnie</div>
-  </template>
-  <template v-slot:off>
-    <div>offie</div>
-  </template>
-  </y-toggle-section>
-</DemoContainer>
-
 ### round
 <DemoContainer>
   <y-toggle label-on="ON" label-off="OFF" shape="round"></y-toggle>
@@ -43,5 +20,16 @@ shape="s"
   <y-toggle-select label-on="ON" label-off="OFF" shape="s"></y-toggle-select>
 </DemoContainer>
 
+### Toggle section
+<DemoContainer>
+  <y-toggle-section name="section1">
+  <template v-slot:on>
+    <span class="y-icon icon icon-like solid is-success"/>
+  </template>
+  <template v-slot:off>
+    <span class="y-icon icon icon-like is-danger"/>
+  </template>
+  </y-toggle-section>
+</DemoContainer>
 
 
