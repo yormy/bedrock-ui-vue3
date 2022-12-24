@@ -25,6 +25,9 @@ fix failed tests:
 * Color cannot be changed
 * Old for checkmark and colors
 
+# Draggable ?
+Waar is dit component gebleven
+
 ### Password
 Cannot make 100% - bugreport
 

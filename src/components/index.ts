@@ -47,4 +47,5 @@ export * from './Cards/exports.js';
 // @ts-ignore
 export * from './Tables/exports.js';
 
-export { ComponentA, ComponentB, ComponentC };
+// @ts-ignore
+export * from './Tabs/exports.js';
