@@ -1,31 +1,30 @@
 <template>
     <div class="y-content">
-        <div class="flex">
+        <div class="flex justify-content-between">
 
             <div v-for="(option, index) in options" :key="option.label">
 
                 <div class="y-checkable">
-                    <div class="flex flex-col">
-                        <input
-                            class="checkbox-input"
-                            type="radio"
-                            name="shippingOption"
-                            :value="option.value"
-                            v-model="selection"
-                            :id="'radio-' + index" checked />
 
-                        <label class="label" :for="'radio-' + index" :title="option.mouseOver">
-                            <span class="is-on">
-                                <span class="y-icon icon icon-like solid"></span>
-                                {{option.label}}
-                            </span>
-                                <span class="is-off">
-                                    <span class="y-icon icon icon-dislike"></span>
-                                {{option.label}}
-                            </span>
-                        </label>
+                    <input
+                        class="checkbox-input"
+                        type="radio"
+                        name="shippingOption"
+                        :value="option.value"
+                        v-model="selection"
+                        :id="'radio-' + index" checked />
 
-                    </div>
+                    <label class="label" :for="'radio-' + index" :title="option.mouseOver">
+                        <span class="is-on">
+                            <span class="y-icon icon icon-like solid"></span>
+                            {{option.label}}
+                        </span>
+                            <span class="is-off">
+                                <span class="y-icon icon icon-dislike"></span>
+                            {{option.label}}
+                        </span>
+                    </label>
+
                 </div>
 
             </div>
