@@ -10,6 +10,9 @@ import YToggle from './Toggle/Toggle/Toggle.vue';
 import YToggleFaded from './Toggle/ToggleFaded/ToggleFaded.vue';
 import YToggleSelect from './Toggle/ToggleSelect/ToggleSelect.vue';
 
+import YToggleTest from './Toggle/ToggleTest/ToggleTest.vue';
+import YToggleSection from './Toggle/ToggleSection/ToggleSection.vue';
+
 export {
     YSelectLanguage,
     YCheckbox,
@@ -18,5 +21,7 @@ export {
     YCheckboxAlt,
     YToggle,
     YToggleFaded,
-    YToggleSelect
+    YToggleSelect,
+    YToggleTest,
+    YToggleSection
 };

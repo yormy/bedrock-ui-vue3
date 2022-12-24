@@ -124,6 +124,7 @@ const props = defineProps({
         default: '',
     },
 
+    /**--------- More Help ---------- */
     moreHelpLabel: {
         type: String,
         default: '?',
@@ -134,12 +135,12 @@ const props = defineProps({
         default: 'y-icon icon icon-help icon-small',
     },
 
-    inlineIcon: {
+    moreHelpDescription: {
         type: String,
         default: '',
     },
 
-    moreHelpDescription: {
+    inlineIcon: {
         type: String,
         default: '',
     },

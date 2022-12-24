@@ -1,12 +1,5 @@
 <template>
     <div class="y-content">
-<!--        <br>&#45;&#45;<br>-->
-<!--        <label  class="y-toggle-select" for="Toggle3">-->
-<!--            <input id="Toggle3" type="checkbox" class="hidden checkbox-input">-->
-<!--            <span class="left green ">Monthly 123</span>-->
-<!--            <span class="right green ">Annually</span>-->
-<!--        </label>-->
-
 
         <div class="y-checkable">
             <div class="flex flex-col">
