@@ -22,6 +22,7 @@ module.exports = {
             text: 'Cards',
             children: [
                 { text: 'Simple', link: '/components/card/cards' },
+                { text: 'Card Button (wip)', link: '/components/card/card-button' },
             ],
         },
         {
