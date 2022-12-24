@@ -31,7 +31,7 @@ const props = defineProps({
      */
     allowedTags: {
         type: Array as PropType<string[]>,
-        default: () => ['b', 'i', 'strong', 'a', 'ul', 'ol', 'li', 'br'],
+        default: () => ['b', 'i', 'strong', 'a', 'ul', 'ol', 'li', 'br', 'span'],
     },
 
     /**

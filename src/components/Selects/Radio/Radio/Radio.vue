@@ -16,12 +16,10 @@
 
                     <label class="label" :for="'radio-' + index" :title="option.mouseOver">
                         <span class="is-on">
-                            <span class="y-icon icon icon-like solid"></span>
-                            {{option.label}}
+                            <y-purified-html :value="option.labelOn"></y-purified-html>
                         </span>
-                            <span class="is-off">
-                                <span class="y-icon icon icon-dislike"></span>
-                            {{option.label}}
+                        <span class="is-off">
+                            <y-purified-html :value="option.labelOff"></y-purified-html>
                         </span>
                     </label>
 
@@ -44,6 +42,7 @@
 <script setup lang="ts">
 import {computed, defineEmits, ref, watch} from "vue";
 const emit = defineEmits(['update:modelValue']);
+import YPurifiedHtml from '../../../Helpers/PurifiedHtml.vue';
 
 const props = defineProps({
     id: {
