@@ -6,10 +6,6 @@
 
                 <div class="y-checkable">
                     <div class="flex flex-col">
-                        <div class="flex y-chip--help">
-                            <div class="text">sss</div>
-                            <div class="icon icon-help icon-extra-small"></div>
-                        </div>
                         <input
                             class="checkbox-input"
                             type="radio"
@@ -17,16 +13,18 @@
                             :value="option.value"
                             v-model="selection"
                             :id="'radio-' + index" checked />
-                        <label class="label" :for="'radio-' + index">
 
-                    <span class="is-on">
-                        ON-1- {{option.label}}
-                    </span>
-                            <span class="is-off">
-                        OFF-1 - {{option.label}}
-                    </span>
-
+                        <label class="label" :for="'radio-' + index" :title="option.mouseOver">
+                            <span class="is-on">
+                                <span class="y-icon icon icon-like solid"></span>
+                                {{option.label}}
+                            </span>
+                                <span class="is-off">
+                                    <span class="y-icon icon icon-dislike"></span>
+                                {{option.label}}
+                            </span>
                         </label>
+
                     </div>
                 </div>
 

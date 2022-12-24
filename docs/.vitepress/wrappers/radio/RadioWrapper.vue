@@ -16,14 +16,14 @@ const options = [
     {
         label:'Renault',
         value : "ren",
-        description: 'mouseover description',
+        mouseOver: 'mouseover description',
         url:'https://xxxx',
         icon: 'y-icon icon icon-home'
     },
     {
         label:'BMW',
         value : "bm",
-        description: 'mouseover test',
+        mouseOver: 'mouseover test',
         url:'https://xxxx',
     },
 ]
