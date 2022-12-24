@@ -14,3 +14,8 @@
 <DemoContainer>
   <y-toggle-faded label-on="ON" label-off="OFF" shape="s"></y-toggle-faded>
 </DemoContainer>
+
+### Toggle Select
+<DemoContainer>
+  <y-toggle-select label-on="ON" label-off="OFF" shape="s"></y-toggle-select>
+</DemoContainer>

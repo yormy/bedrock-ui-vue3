@@ -1,22 +1,6 @@
 <template>
     <div class="y-content">
 <!--        <br>&#45;&#45;<br>-->
-<!--        <label class="y-toggle-section" for="toggle-125" >-->
-<!--            <span class="y-faded-small">-->
-<!--                <input id="toggle-125" type="checkbox" checked class="hidden checkbox-input">-->
-<!--                <span class="is-off"><span class="y-icon icon icon-darkmode"> *******</span></span>-->
-<!--                <span class="is-on"><span class="y-icon icon icon-lightmode"> ######</span></span>-->
-<!--            </span>-->
-<!--        </label>-->
-
-<!--        <br>&#45;&#45;<br>-->
-<!--        <label class="y-toggle-section" for="toggle-1251" >-->
-<!--            <input id="toggle-1251" type="checkbox" checked class="hidden checkbox-input">-->
-<!--            <span class="is-off"><span class="y-icon icon icon-darkmode"> *******</span></span>-->
-<!--            <span class="is-on"><span class="y-icon icon icon-lightmode"> ######</span></span>-->
-<!--        </label>-->
-
-<!--        <br>&#45;&#45;<br>-->
 <!--        <label  class="y-toggle-select" for="Toggle3">-->
 <!--            <input id="Toggle3" type="checkbox" class="hidden checkbox-input">-->
 <!--            <span class="left green ">Monthly 123</span>-->

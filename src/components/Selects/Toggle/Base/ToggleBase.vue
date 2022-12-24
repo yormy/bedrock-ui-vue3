@@ -1,7 +1,5 @@
 <template>
     <div class="y-content">
-<!--        todo: sqaure vs round round = yellow-->
-<!--        colors not correct...-->
         <label class="y-toggle-slider wide-slider" :class="shape" style="" for="toggle-123" >
             <input id="toggle-123" type="checkbox" checked class="hidden checkbox-input">
             <span class="is-off red">{{ labelOff }}</span>
@@ -12,14 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import ButtonRoot from '../Root/ButtonRoot.vue';
-import {computed, defineProps, ref, useSlots} from "vue";
-
-const hoverButton = ref(false);
-const hoverDropdown = ref(false);
-
-const slots = useSlots()
-
 const props = defineProps({
     shape: {
         type: String,
