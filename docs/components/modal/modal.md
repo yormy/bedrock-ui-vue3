@@ -4,35 +4,26 @@ import ModalWrapper from '../../.vitepress/wrappers/modal/ModalWrapper.vue'
 
 # Modal Info
 
-The default button to press
-
-todo:
-- why no backdrop?
-- buttons still clickable outside of modal
-sss
-
 <DemoContainer>
-  <ModalWrapper></ModalWrapper>
+  <ModalWrapper type="info"></ModalWrapper>
 </DemoContainer>
 
-### Usage
+# Modal Success
+
+<DemoContainer>
+  <ModalWrapper type="success"></ModalWrapper>
+</DemoContainer>
 
 
-### Code
-::: details Code
-```js
+# Modal Warning
+
+<DemoContainer>
+  <ModalWrapper type="warning"></ModalWrapper>
+</DemoContainer>
 
 
-```
-:::
+# Modal Danger
 
-
-
-### Properties
-
-| Name     | Type    | Default | Description                  |
-|----------|---------|---------|------------------------------|
-| id       | string  | null    | optional to set the input id |
-| label    | string  | null    | the visible label            |
-| disabled | boolean | false   | disabled                     |
-
+<DemoContainer>
+  <ModalWrapper type="danger"></ModalWrapper>
+</DemoContainer>

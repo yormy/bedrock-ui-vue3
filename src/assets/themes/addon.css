@@ -1359,4 +1359,31 @@ body {
   background-color: #f1f1f1;
 }
 
+/** ========================== */
+.p-dialog .p-dialog-header {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.y-modal-info .p-dialog-header {
+  background-color: var(--light-color-info) !important;
+  color: var(--light-color-info-light) !important;
+}
+
+.y-modal-success .p-dialog-header {
+  background-color: var(--light-color-success) !important;
+  color: var(--light-color-success-light) !important;
+}
+
+.y-modal-warning .p-dialog-header {
+  background-color: var(--light-color-warning) !important;
+  color: var(--light-color-warning-light) !important;
+}
+
+.y-modal-danger .p-dialog-header {
+  background-color: var(--light-color-danger) !important;
+  color: var(--light-color-danger-light) !important;
+}
+
 /*# sourceMappingURL=addon.css.map */

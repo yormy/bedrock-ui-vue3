@@ -1,4 +1,7 @@
 import YModalHelp from './Help/ModalHelp.vue';
+import YModal from './Modal/Modal.vue';
 
-/* eslint-disable import/prefer-default-export */
-export { YModalHelp };
+export {
+    YModal,
+    YModalHelp
+};
