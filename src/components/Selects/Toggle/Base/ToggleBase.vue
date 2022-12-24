@@ -26,6 +26,12 @@
             <span class="is-on"><span class="y-icon icon icon-lightmode"> ######</span></span>
         </label>
 
+        <br>--<br>
+        <label  class="y-toggle-select" for="Toggle3">
+            <input id="Toggle3" type="checkbox" class="hidden checkbox-input">
+            <span class="left green ">Monthly 123</span>
+            <span class="right green ">Annually</span>
+        </label>
     </div>
 
 
