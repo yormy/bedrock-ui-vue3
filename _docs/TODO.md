@@ -22,7 +22,6 @@ fix failed tests:
 
 # TODO
 ### Checkbox
-* has fixed prime icon, cannot be changed
 * Color cannot be changed
 * Old for checkmark and colors
 

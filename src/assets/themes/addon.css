@@ -887,6 +887,82 @@ body {
   background-color: var(--table-header-background-color);
 }
 
+.checkbox {
+  color: inherit;
+  border: 1px;
+  border-style: solid;
+  border-color: inherit;
+  height: 1rem;
+  width: 1rem;
+  box-sizing: border-box;
+}
+
+.y-checkbox--normal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  /*--checkbox-check-color: inherit;*/
+  /*color: inherit;*/
+}
+.y-checkbox--normal.is-info {
+  --checkbox-check-color: var(--light-color-info);
+  color: var(--light-color-info);
+}
+.y-checkbox--normal.is-success {
+  --checkbox-check-color: var(--light-color-success);
+  color: var(--light-color-success);
+}
+.y-checkbox--normal.is-warning {
+  --checkbox-check-color: var(--light-color-warning);
+  color: var(--light-color-warning);
+}
+.y-checkbox--normal.is-danger {
+  --checkbox-check-color: var(--light-color-danger);
+  color: var(--light-color-danger);
+}
+.y-checkbox--normal.is-error {
+  --checkbox-check-color: var(--light-color-danger);
+  color: var(--light-color-danger);
+}
+.y-checkbox--normal label.checkbox--label {
+  font-weight: 500;
+}
+.y-checkbox--normal .checkbox-input {
+  display: none;
+}
+.y-checkbox--normal .checkbox--help {
+  color: var(--light-color-disabled);
+  font-size: var(--font-size-small);
+  line-height: var(--font-size-small-line-height);
+  font-weight: 400;
+}
+.y-checkbox--normal .checkbox--validation {
+  font-size: var(--font-size-small);
+  line-height: var(--font-size-small-line-height);
+  font-weight: normal;
+}
+.y-checkbox--normal .checkbox {
+  display: flex;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  border-width: 2px;
+}
+.y-checkbox--normal .checkbox svg.mark {
+  display: none;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  fill: var(--checkbox-check-color);
+}
+.y-checkbox--normal .checkbox .checkbox-input:checked ~ svg.mark {
+  display: block;
+}
+
 :root {
   --light-color-info: #3777FF;
   --light-color-info-light: #e6e6ff;
