@@ -3,4 +3,12 @@ import YButtonRowSteps from './ButtonRow/ButtonRowSteps.vue';
 import YButtonRowModal from './ButtonRow/ButtonRowModal.vue';
 import YButtonRowMultiColumn from './ButtonRow/ButtonRowMultiColumn.vue';
 
-export { YButtonRow, YButtonRowSteps, YButtonRowModal ,YButtonRowMultiColumn};
+import YFooterScreen from './FooterScreen/FooterScreen.vue';
+
+export {
+    YButtonRow,
+    YButtonRowSteps,
+    YButtonRowModal,
+    YButtonRowMultiColumn,
+    YFooterScreen
+};

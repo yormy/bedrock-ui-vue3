@@ -141,6 +141,7 @@ module.exports = {
                     text: 'Buttons',
                     children: [
                         {text: 'Button Rows', link: '/layouts/buttons/row'},
+                        {text: 'Footer Screen (wip)', link: '/layouts/footer/footer'},
                     ]
                 }
             ],
