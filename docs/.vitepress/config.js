@@ -7,6 +7,12 @@ module.exports = {
     repo: '...repo-here....',
     sidebar: [
         {
+            text: 'Banner',
+            children: [
+                { text: 'Banner (wip)', link: '/components/banner/banner' },
+            ],
+        },
+        {
             text: 'Dropdown',
             children: [
                 { text: 'Dropdown Styled (wip)', link: '/components/dropdown/dropdown' },
@@ -35,6 +41,8 @@ module.exports = {
             children: [
                 { text: 'Simple', link: '/components/card/cards' },
                 { text: 'Card Button (wip)', link: '/components/card/card-button' },
+                { text: 'Card Alt (wip)', link: '/components/card/card-alt' },
+                { text: 'Stats Alt (wip)', link: '/components/card/stats-alt' },
             ],
         },
         {
@@ -50,6 +58,7 @@ module.exports = {
                 { text: 'Message', link: '/components/message/message' },
                 { text: 'toast', link: '/components/toast/toast' },
                 { text: 'Message Alternatives', link: '/components/message/message-alt' },
+                { text: 'toast Alt (wip)', link: '/components/toast/toast-alt' },
             ],
         },
         {
@@ -132,6 +141,12 @@ module.exports = {
                         {text: 'Login', link: '/blocks/auth/login'},
                         {text: 'Reset Password', link: '/blocks/auth/resetpassword'},
                     ]
+                },
+                {
+                    text: 'Pricing',
+                    children: [
+                        {text: 'Pricing (wip)', link: '/blocks/pricing/pricing'},
+                    ]
                 }
             ],
         },
@@ -149,6 +164,12 @@ module.exports = {
                     children: [
                         {text: 'Footer Screen (wip)', link: '/layouts/footer/footer'},
                         {text: 'Loader Screen (wip)', link: '/layouts/loader/loader'},
+                    ]
+                },
+                {
+                    text: 'Content',
+                    children: [
+                        {text: 'No Content (wip)', link: '/layouts/content/no-content'},
                     ]
                 }
             ],
