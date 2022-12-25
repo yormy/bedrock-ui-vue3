@@ -8,7 +8,8 @@ The default button to press
 
 <DemoContainer>
   <div class="py-5">
-<YInputText label="Primary"/>
+    <y-input-text label="Primary"/>
+    <y-input-text label="help" inline-icon="y-icon icon icon-users"/>
   </div>
 </DemoContainer>
 
@@ -18,29 +19,7 @@ todo : helptext,
 help modal
 disabled view is not clear that it is disabled
 ```
-        <y-input-text
-            class=''
-            v-model="modelValue"
-            :error-text="args.errorText"
-            :hide-label="args.hideLabel"
-            :hint-text="args.hintText"
-            :is-password="true"
-            :label-help-description="args.description"
-            :label-help-text="'forgot ?'"
-            :label="args.label"
-            :placeholder="args.placeholder"
-            :rules="'required|min:3'"
-            :valid-text="args.validText"
-            :api-errors="args.apiErrors"
-
-            prefix-clicked="clicked"
-            prefix="<i class='icon icon-warning'></i>"
-        >
-<!--            @onAppendClicked="onAppendClicked"-->
-<!--            @onEnter="onEnter"-->
-<!--            @onEsc="onEsc"-->
-<!--            @onKeyUp="onKeyUp"-->
-      </y-input-text>
+.....
 ```
 
 

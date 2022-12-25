@@ -107,6 +107,7 @@ module.exports = {
                 { text: 'Password', link: '/components/input/password' },
                 { text: 'Username', link: '/components/input/username' },
                 { text: 'Code', link: '/components/input/code' },
+                { text: 'Search', link: '/components/input/search' },
             ],
         },
         {
