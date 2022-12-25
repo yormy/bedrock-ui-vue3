@@ -49,3 +49,6 @@ export * from './Tables/exports.js';
 
 // @ts-ignore
 export * from './Tabs/exports.js';
+
+// @ts-ignore
+export * from './Dropdowns/exports.js';

@@ -7,6 +7,12 @@ module.exports = {
     repo: '...repo-here....',
     sidebar: [
         {
+            text: 'Dropdown',
+            children: [
+                { text: 'Dropdown Styled (wip)', link: '/components/dropdown/dropdown' },
+            ],
+        },
+        {
             text: 'Tab',
             children: [
                 { text: 'Tab', link: '/components/tab/tab' },
