@@ -142,7 +142,13 @@ module.exports = {
                     text: 'Buttons',
                     children: [
                         {text: 'Button Rows', link: '/layouts/buttons/row'},
+                    ]
+                },
+                {
+                    text: 'Screen',
+                    children: [
                         {text: 'Footer Screen (wip)', link: '/layouts/footer/footer'},
+                        {text: 'Loader Screen (wip)', link: '/layouts/loader/loader'},
                     ]
                 }
             ],
