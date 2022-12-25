@@ -13,6 +13,7 @@ import YToggleSelect from './Toggle/ToggleSelect/ToggleSelect.vue';
 import YToggleSection from './Toggle/ToggleSection/ToggleSection.vue';
 
 import YRadio from './Radio/Radio/Radio.vue';
+import YRadioBlock from './Radio/RadioBlock/RadioBlock.vue';
 
 export {
     YSelectLanguage,
@@ -24,5 +25,6 @@ export {
     YToggleFaded,
     YToggleSelect,
     YToggleSection,
-    YRadio
+    YRadio,
+    YRadioBlock
 };

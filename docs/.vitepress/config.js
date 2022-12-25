@@ -88,6 +88,7 @@ module.exports = {
                 { text: 'Radio',
                     children: [
                         { text: 'Radio', link: '/components/select/radio/radio' },
+                        { text: 'Radio Block (wip)', link: '/components/select/radio/radio-block' },
                     ]
                 }
             ],

@@ -2,7 +2,7 @@
 import RadioWrapper from '../../../.vitepress/wrappers/radio/RadioWrapper.vue'
 </script>
 
-# Checkbox
+# Radio
 
 <DemoContainer>
   <radio-wrapper label="hello" :model-value='true' :required="true"></radio-wrapper>
