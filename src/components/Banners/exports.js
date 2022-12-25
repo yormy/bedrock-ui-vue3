@@ -1,5 +1,5 @@
-import YBanner from './Banner/Banner.vue';
+//import YBanner from './Banner/Banner.vue';
 
 export {
-    YBanner,
+
 };
