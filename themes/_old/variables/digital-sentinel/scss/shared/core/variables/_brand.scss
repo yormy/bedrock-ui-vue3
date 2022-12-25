@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;800;900&display=swap);
+
+:root {
+    --brand-font: 'Montserrat', sans-serif;
+
+    --brand-color-primary: #14a453;
+    --brand-color-secondary: #232c64;
+    --brand-color-tertiary: #FF3366;
+    --brand-color-fourth: #F7FFDD;
+    --brand-color-fifth: #20A4F3;
+
+    --brand-color-primary-hover : white;
+
+    --brand-color-primary-contrast: #232c64;
+    --brand-color-primary-contrast-hover: white;
+    --brand-color-primary-contrast-disabled: gray;
+}
