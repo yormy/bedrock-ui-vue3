@@ -1,5 +1,9 @@
+<script setup>
+import TabWip from '../../../src/components/Tabs/TabWip/Tab.vue'
+</script>
+
 # Tab
 
 <DemoContainer>
-  <y-tab :right-aligned="true"></y-tab>
+  <tab-wip :right-aligned="true"></tab-wip>
 </DemoContainer>

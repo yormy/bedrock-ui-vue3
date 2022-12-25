@@ -88,8 +88,6 @@
 
         </div>
 
-        <br><br><br><br><hr><br><br><br><br>
-
         <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
             <!-- Select (Mobile only) -->
             <div class="sm:hidden">
@@ -131,8 +129,12 @@
 .y-content {
     --tab-height : 100px;
 }
+.content .title {
+    font-size: 0.6rem !important;
+}
+
 .y-tab-container {
-    width:70%;
+    width:100%;
 
     .tab {
         display: flex;
