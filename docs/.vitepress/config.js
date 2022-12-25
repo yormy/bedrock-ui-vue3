@@ -5,12 +5,6 @@ module.exports = {
     description: 'Package with internal components',
     themeConfig: {
     repo: '...repo-here....',
-    head: [
-        [
-            'link',
-            { rel: 'stylesheet', href:'https://unpkg.com/tailwindcss@2.2.4/dist/tailwind.min.css', crossorigin: '' }
-        ]
-    ],
     sidebar: [
         {
             text: 'Banner',
@@ -49,7 +43,6 @@ module.exports = {
                 { text: 'Card Button (wip)', link: '/components/card/card-button' },
                 { text: 'Card Alt (wip)', link: '/components/card/card-alt' },
                 { text: 'Stats Alt (wip)', link: '/components/card/stats-alt' },
-                { text: '222 Alt (wip)', link: '../playground/stats.html' },
             ],
         },
         {
