@@ -12,6 +12,12 @@ The default button to press
     <YButtonPrimary label="Delete"/>
     <YButtonPrimary label="Action"/>
   </span>
+
+  <span class="p-buttonset ml-3">
+    <YButtonPrimary label="Save"/>
+    <YButtonPrimary label="Delete"/>
+    <YButtonPrimary label="Action"/>
+  </span>
 </DemoContainer>
 
 
