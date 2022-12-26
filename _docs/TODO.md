@@ -8,7 +8,9 @@ vue3:
 - input text with pre-icon => recode from primevue
 - phone number => recode from primevue
 
-
+# Loginwrapper
+- appearingbullets redirects on async completed
+- translations of messages
 
 ### Translation function
 Translation function template needs 

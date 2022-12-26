@@ -14,6 +14,8 @@ module.exports = {
                     children: [
                         {text: 'Login', link: '/blocks/auth/login'},
                         {text: 'Login Code', link: '/blocks/auth/login-code'},
+                        {text: 'Login Wait', link: '/blocks/auth/login-wait'},
+                        {text: 'Reset Selector', link: '/blocks/auth/reset-selector'},
                         {text: 'Reset Loginname', link: '/blocks/auth/resetloginname'},
                         {text: 'Reset Password', link: '/blocks/auth/resetpassword'},
                     ]
