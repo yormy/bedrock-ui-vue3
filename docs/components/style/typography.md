@@ -26,10 +26,12 @@
 ## Sizes text
 <DemoContainer>
   <div class="flex justify-content-between y-content">
+    <span class="text-info text-tiny"> tiny </span>
     <span class="text-info text-small"> small </span>
     <span class="text-info"> normal </span>
     <span class="text-info text-large"> large </span>
     <span class="text-info text-extralarge"> extra large </span>
+    <span class="text-info text-jumbo"> jumbo </span>
   </div>
 </DemoContainer>
 

@@ -83,6 +83,11 @@ body {
 }
 
 .y-content {
+    .text-tiny {
+        font-size: 0.6rem;
+        line-height: 0.8rem;
+    }
+
     .text-small {
         font-size: 0.875rem;
         line-height: 1.25rem;
@@ -96,6 +101,11 @@ body {
     .text-extralarge {
         font-size: 1.5rem;
         line-height: 2rem;
+    }
+
+    .text-jumbo {
+        font-size: 2rem;
+        line-height: 2.8rem;
     }
 }
 

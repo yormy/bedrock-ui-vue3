@@ -691,6 +691,10 @@ body {
   white-space: nowrap;
 }
 
+.y-content .text-tiny {
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+}
 .y-content .text-small {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -702,6 +706,10 @@ body {
 .y-content .text-extralarge {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.y-content .text-jumbo {
+  font-size: 2rem;
+  line-height: 2.8rem;
 }
 
 .y-content .text-info {
