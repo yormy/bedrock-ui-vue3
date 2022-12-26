@@ -7,6 +7,14 @@ module.exports = {
     repo: '...repo-here....',
     sidebar: [
         {
+            text: 'Introduction',
+            children: [
+                { text: 'What is My Lib?', link: '/' },
+                { text: 'Getting Started', link: '/guide/' },
+                { text: 'template', link: '/guide/template' },
+            ],
+        },
+        {
             text: 'Blocks',
             children: [
                 {
@@ -104,14 +112,7 @@ module.exports = {
                 { text: 'Tags', link: '/components/atoms/tags/tags' },
             ],
         },
-        {
-            text: 'Introduction',
-            children: [
-                { text: 'What is My Lib?', link: '/' },
-                { text: 'Getting Started', link: '/guide/' },
-                { text: 'template', link: '/guide/template' },
-            ],
-        },
+
         {
             text: 'Select',
             children: [
