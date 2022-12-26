@@ -15,7 +15,7 @@ import '../../../resources/icons/fontawesome-pro6/css/all.css';
 import '../../../resources/public/shared/css/icons/icons.css';
 
 
-import '../../../src/assets/themes/addon.css';
+// import '../../../src/assets/scss/vendor/yframe/themes/dark/theme.css';
 import '../../../src/assets/themes/ds-indigo/theme.css';
 
 export { ViteTheme }
