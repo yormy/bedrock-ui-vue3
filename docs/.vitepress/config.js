@@ -12,18 +12,18 @@ module.exports = {
                 {
                     text: 'Auth',
                     children: [
-                        {text: 'Login', link: '/blocks/auth/login'},
-                        {text: 'Login Code', link: '/blocks/auth/login-code'},
-                        {text: 'Login Wait', link: '/blocks/auth/login-wait'},
-                        {text: 'Reset Selector', link: '/blocks/auth/reset-selector'},
-                        {text: 'Reset Loginname', link: '/blocks/auth/resetloginname'},
-                        {text: 'Reset Password', link: '/blocks/auth/resetpassword'},
+                        {text: 'Login', link: '/components/blocks/auth/login'},
+                        {text: 'Login Code', link: '/components/blocks/auth/login-code'},
+                        {text: 'Login Wait', link: '/components/blocks/auth/login-wait'},
+                        {text: 'Reset Selector', link: '/components/blocks/auth/reset-selector'},
+                        {text: 'Reset Loginname', link: '/components/blocks/auth/resetloginname'},
+                        {text: 'Reset Password', link: '/components/blocks/auth/resetpassword'},
                     ]
                 },
                 {
                     text: 'Pricing',
                     children: [
-                        {text: 'Pricing (wip)', link: '/blocks/pricing/pricing'},
+                        {text: 'Pricing (wip)', link: '/components/blocks/pricing/pricing'},
                     ]
                 }
             ],
@@ -31,77 +31,77 @@ module.exports = {
         {
             text: 'Banner',
             children: [
-                { text: 'Banner (wip)', link: '/components/banner/banner' },
+                { text: 'Banner (wip)', link: '/components/atoms/banner/banner' },
             ],
         },
         {
             text: 'Dropdown',
             children: [
-                { text: 'Dropdown Styled (wip)', link: '/components/dropdown/dropdown' },
+                { text: 'Dropdown Styled (wip)', link: '/components/atoms/dropdown/dropdown' },
             ],
         },
         {
             text: 'Tab',
             children: [
-                { text: 'Tab', link: '/components/tab/tab' },
+                { text: 'Tab', link: '/components/atoms/tab/tab' },
             ],
         },
         {
             text: 'Toggle',
             children: [
-                { text: 'Toggle', link: '/components/select/toggle/toggle' },
+                { text: 'Toggle', link: '/components/atoms/select/toggle/toggle' },
             ],
         },
         {
             text: 'Table',
             children: [
-                { text: 'Simple', link: '/components/table/simple' },
+                { text: 'Simple', link: '/components/atoms/table/simple' },
             ],
         },
         {
             text: 'Cards',
             children: [
-                { text: 'Simple', link: '/components/card/cards' },
-                { text: 'Card Button (wip)', link: '/components/card/card-button' },
-                { text: 'Card Alt (wip)', link: '/components/card/card-alt' },
-                { text: 'Stats Alt (wip)', link: '/components/card/stats-alt' },
+                { text: 'Simple', link: '/components/atoms/card/cards' },
+                { text: 'Card Button (wip)', link: '/components/atoms/card/card-button' },
+                { text: 'Card Alt (wip)', link: '/components/atoms/card/card-alt' },
+                { text: 'Stats Alt (wip)', link: '/components/atoms/card/stats-alt' },
             ],
         },
         {
             text: 'Style',
             children: [
-                { text: 'Icons', link: '/components/style/icons' },
-                { text: 'Typography', link: '/components/style/typography' },
+                { text: 'Icons', link: '/components/atoms/style/icons' },
+                { text: 'Typography', link: '/components/atoms/style/typography' },
             ],
         },
         {
             text: 'Messages',
             children: [
-                { text: 'Message', link: '/components/message/message' },
-                { text: 'toast', link: '/components/toast/toast' },
-                { text: 'Message Alternatives', link: '/components/message/message-alt' },
-                { text: 'toast Alt (wip)', link: '/components/toast/toast-alt' },
+                { text: 'Message', link: '/components/atoms/message/message' },
+                { text: 'toast', link: '/components/atoms/toast/toast' },
+                { text: 'Message Alternatives', link: '/components/atoms/message/message-alt' },
+                { text: 'toast Alt (wip)', link: '/components/atoms/toast/toast-alt' },
             ],
         },
         {
             text: 'Misc',
             children: [
-                { text: 'MouseOver', link: '/components/misc/mouseover' },
-                { text: 'Breadcrumb', link: '/components/misc/breadcrumb' },
-                { text: 'Draggable (wip)', link: '/components/misc/draggable' },
+                { text: 'MouseOver', link: '/components/atoms/misc/mouseover' },
+                { text: 'Breadcrumb', link: '/components/atoms/misc/breadcrumb' },
+                { text: 'Draggable (wip)', link: '/components/atoms/misc/draggable' },
             ],
         },
         {
             text: 'Display',
             children: [
-                { text: 'Appearing Bullets', link: '/components/display/appearing-bullets' },
-                { text: 'Purified Html', link: '/components/display/purified' },
+                { text: 'Appearing Bullets', link: '/components/atoms/display/appearing-bullets' },
+                { text: 'Purified Html', link: '/components/atoms/display/purified' },
             ],
         },
         {
             text: 'Tags',
             children: [
-                { text: 'Tags', link: '/components/tags/tags' },
+                { text: 'Tags', link: '/components/atoms/tags/tags' },
             ],
         },
         {
@@ -115,19 +115,19 @@ module.exports = {
         {
             text: 'Select',
             children: [
-                { text: 'Language', link: '/components/select/language' },
+                { text: 'Language', link: '/components/atoms/select/language' },
                 { text: 'Checkbox',
                     children: [
-                        { text: 'Normal', link: '/components/select/checkbox/checkbox' },
-                        { text: 'Agree', link: '/components/select/checkbox/checkbox-must-agree' },
-                        { text: 'Motivated', link: '/components/select/checkbox/checkbox-motivated-agree' },
-                        { text: 'Checkbox YFrame (wip)', link: '/components/select/checkbox/checkbox-alt' },
+                        { text: 'Normal', link: '/components/atoms/select/checkbox/checkbox' },
+                        { text: 'Agree', link: '/components/atoms/select/checkbox/checkbox-must-agree' },
+                        { text: 'Motivated', link: '/components/atoms/select/checkbox/checkbox-motivated-agree' },
+                        { text: 'Checkbox YFrame (wip)', link: '/components/atoms/select/checkbox/checkbox-alt' },
                     ]
                 },
                 { text: 'Radio',
                     children: [
-                        { text: 'Radio', link: '/components/select/radio/radio' },
-                        { text: 'Radio Block (wip)', link: '/components/select/radio/radio-block' },
+                        { text: 'Radio', link: '/components/atoms/select/radio/radio' },
+                        { text: 'Radio Block (wip)', link: '/components/atoms/select/radio/radio-block' },
                     ]
                 }
             ],
@@ -135,32 +135,32 @@ module.exports = {
         {
             text: 'Modal',
             children: [
-                { text: 'Modal', link: '/components/modal/modal' },
+                { text: 'Modal', link: '/components/atoms/modal/modal' },
             ],
         },
         {
             text: 'Input',
             children: [
-                { text: 'Text', link: '/components/input/text' },
-                { text: 'Email', link: '/components/input/email' },
-                { text: 'Password', link: '/components/input/password' },
-                { text: 'Username', link: '/components/input/username' },
-                { text: 'Code', link: '/components/input/code' },
-                { text: 'Search', link: '/components/input/search' },
+                { text: 'Text', link: '/components/atoms/input/text' },
+                { text: 'Email', link: '/components/atoms/input/email' },
+                { text: 'Password', link: '/components/atoms/input/password' },
+                { text: 'Username', link: '/components/atoms/input/username' },
+                { text: 'Code', link: '/components/atoms/input/code' },
+                { text: 'Search', link: '/components/atoms/input/search' },
             ],
         },
         {
             text: 'Button',
             children: [
-                { text: 'Buttons', link: '/components/button/buttons' },
-                { text: 'Buttons External', link: '/components/button/buttons-external' },
-                { text: 'Icons & Badges', link: '/components/button/icons' },
-                { text: 'Colors', link: '/components/button/colors' },
-                { text: 'States', link: '/components/button/states' },
-                { text: 'Sizes', link: '/components/button/sizes' },
-                { text: 'Set', link: '/components/button/set' },
-                { text: 'Dropdown', link: '/components/button/dropdown' },
-                { text: 'Misc', link: '/components/button/misc' },
+                { text: 'Buttons', link: '/components/atoms/button/buttons' },
+                { text: 'Buttons External', link: '/components/atoms/button/buttons-external' },
+                { text: 'Icons & Badges', link: '/components/atoms/button/icons' },
+                { text: 'Colors', link: '/components/atoms/button/colors' },
+                { text: 'States', link: '/components/atoms/button/states' },
+                { text: 'Sizes', link: '/components/atoms/button/sizes' },
+                { text: 'Set', link: '/components/atoms/button/set' },
+                { text: 'Dropdown', link: '/components/atoms/button/dropdown' },
+                { text: 'Misc', link: '/components/atoms/button/misc' },
             ],
         },
 
@@ -170,20 +170,20 @@ module.exports = {
                 {
                     text: 'Buttons',
                     children: [
-                        {text: 'Button Rows', link: '/layouts/buttons/row'},
+                        {text: 'Button Rows', link: '/components/layouts/buttons/row'},
                     ]
                 },
                 {
                     text: 'Screen',
                     children: [
-                        {text: 'Footer Screen (wip)', link: '/layouts/footer/footer'},
-                        {text: 'Loader Screen (wip)', link: '/layouts/loader/loader'},
+                        {text: 'Footer Screen (wip)', link: '/components/layouts/footer/footer'},
+                        {text: 'Loader Screen (wip)', link: '/components/layouts/loader/loader'},
                     ]
                 },
                 {
                     text: 'Content',
                     children: [
-                        {text: 'No Content (wip)', link: '/layouts/content/no-content'},
+                        {text: 'No Content (wip)', link: '/components/layouts/content/no-content'},
                     ]
                 }
             ],
