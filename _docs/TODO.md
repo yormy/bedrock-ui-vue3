@@ -4,10 +4,8 @@ fix storybook zonder theme
 Storybook TODO
 - Login details
 vue3:
-- - link button is no link ? (optional with external link icon?)
 - - buttonset not correct
- - -check chip options
-
+ 
 - - draggable
 - input text with clickable icon?
 - input text with pre-icon

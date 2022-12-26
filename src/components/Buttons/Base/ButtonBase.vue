@@ -1,5 +1,5 @@
 <template>
-    <div v-if="isDropdown">
+    <span v-if="isDropdown">
         <button-root
             iconPos="right"
             icon="y-icon icon icon-dropdown"
@@ -9,7 +9,7 @@
         >
             <slot></slot>
         </button-root>
-        <div v-if="slots.dropdown" v-show="displayDropdown"
+        <span v-if="slots.dropdown" v-show="displayDropdown"
              @mouseover="hoverDropdown = true"
              @mouseleave="hoverDropdown = false"
 
@@ -17,24 +17,23 @@
             <div class="dropdown-content">
                 <slot name="dropdown"></slot>
             </div>
-        </div>
-    </div>
+        </span>
+    </span>
 
-    <div v-else>
+    <span v-else>
 
-        <div v-if="withBanner">
-            <div class='y-button-banner' >
+        <span v-if="withBanner">
+            <span class='y-button-banner' >
                 <button-root class="p-button-raised" v-bind="$attrs"><slot></slot></button-root>
                 <div class="ribbon" :style="`padding-left:${padding}px`">{{ bannerText }}</div>
-            </div>
-        </div>
+            </span>
+        </span>
 
-        <div v-else>
+        <span v-else>
             <button-root v-bind="$attrs"><slot></slot></button-root>
-        </div>
+        </span>
 
-
-    </div>
+    </span>
 
 </template>
 
