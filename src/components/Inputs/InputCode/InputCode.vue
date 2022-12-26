@@ -3,6 +3,19 @@
         <div v-if="isLoading" class="is-loading">
             <div class="loading-text">LOADING...</div>
         </div>
+        <span class="flex">
+            {{ label }}
+            <span class="ml-1">
+                <y-icon-help
+                    v-if="moreHelpIcon"
+                    :icon="moreHelpIcon"
+                    :label="moreHelpLabel"
+                    :header="label"
+                    :description="moreHelpDescription"
+                >
+                </y-icon-help>
+            </span>
+        </span>
         <div :class="isLoading ? 'blurred' : ''" class="code">
             <template v-for="index in fields" :key="`${index}`">
                 <input
@@ -26,11 +39,13 @@
                 />
             </template>
         </div>
+        <small v-if="hintText" :id="fieldId + '-hint'" class="p-info">{{ hintText }}</small>
     </div>
 </template>
 
 <script setup lang="ts">
-import {computed, ref, defineEmits, defineProps} from "vue";
+import YIconHelp from '../../Helpers/IconHelp.vue';
+import {computed, ref, defineEmits, defineProps, onMounted} from "vue";
 
 const emit = defineEmits([
     'onComplete',
@@ -53,12 +68,44 @@ const KEY_CODE = {
 };
 
 const props = defineProps({
+
+    id: {
+        type: String,
+        default: '',
+    },
+
     /**
      * allowed input number | string
      */
     type: {
         type: String,
         default: 'number',
+    },
+
+    label: {
+        type: String,
+        default: '',
+    },
+
+    hintText: {
+        type: String,
+        default: '',
+    },
+
+    /**--------- More Help ---------- */
+    moreHelpLabel: {
+        type: String,
+        default: '',
+    },
+
+    moreHelpIcon: {
+        type: String,
+        default: 'y-icon icon icon-help icon-small',
+    },
+
+    moreHelpDescription: {
+        type: String,
+        default: '',
     },
 
     /**
@@ -130,6 +177,14 @@ const pattern = computed<string>(() => {
 // totalCodeWidth() {
 //     return this.fields * this.fieldWidthCalc + this.fieldSpace + 20;
 // },
+
+const fieldId = computed(() => {
+    if (!props.id) {
+        return Math.ceil(Math.random() * 1000000);
+    }
+
+    return props.id;
+});
 
 //===============================================
 const onChange = () => {
