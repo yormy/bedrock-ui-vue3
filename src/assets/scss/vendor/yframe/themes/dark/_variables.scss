@@ -1,5 +1,5 @@
 
-:root {
+* {
     --light-color-info: #3777FF;
     --light-color-info-light: #e6e6ff;
     --light-color-info-contrast: white;
@@ -28,7 +28,7 @@
     --font-size-extra-large : 1.4rem;
 }
 
-:root {
+* {
     --color-success: #00cc00;
     --color-danger: #ff3300;
     --color-warning: #ff9900;
@@ -54,7 +54,7 @@
     --light-link-text-color: navy;
 }
 
-:root {
+* {
     --light-alert-success-color: var(--light-color-success);
     --light-alert-success-color-light: var(--light-color-success-light);
     --light-alert-success-text-color: var(--light-color-success);
@@ -77,7 +77,7 @@
     --light-alert-danger-banner-text-color: var(--light-color-danger-contrast);
 }
 
-:root {
+* {
     --light-toggle-slider-background-color: lightgray;
     --light-toggle-slider-text-color: lightgray;
 
@@ -97,7 +97,7 @@
     --toggle-select-right-background-color: orange;
 }
 
-:root {
+* {
     --slider-width: 60px;
     --toggle-slider-radius: 5px;
 }

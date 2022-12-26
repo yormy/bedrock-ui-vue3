@@ -1,5 +1,5 @@
 <script setup>
-import TagWrapper from '../../.vitepress/wrappers/tag/TagWrapper.vue'
+import TagWrapper from '../../../.vitepress/wrappers/tag/TagWrapper.vue'
 </script>
 
 # Tags

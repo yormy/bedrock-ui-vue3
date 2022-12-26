@@ -1,8 +1,6 @@
 @charset "UTF-8";
 .dark {
-  /* Vendor extensions to the designer enhanced bootstrap compatibility */ /* Customizations to the designer theme should be defined here */
-  /* ========== DARK THEME ========== */
-  /* Customizations to the designer theme should be defined here */
+  /* Vendor extensions to the designer enhanced bootstrap compatibility */ /* Customizations to the designer theme should be defined here */ /* Customizations to the designer theme should be defined here */
   /*====
    */
   /** ========================== */
@@ -5579,7 +5577,7 @@
 .dark .fc.fc-theme-standard .fc-highlight {
   background: #614c6c;
 }
-.dark :root {
+.dark * {
   --light-color-info: #3777FF;
   --light-color-info-light: #e6e6ff;
   --light-color-info-contrast: white;
@@ -5601,7 +5599,7 @@
   --font-size-large: 1.2rem;
   --font-size-extra-large: 1.4rem;
 }
-.dark :root {
+.dark * {
   --color-success: #00cc00;
   --color-danger: #ff3300;
   --color-warning: #ff9900;
@@ -5625,7 +5623,7 @@
   --light-button-shadow-color: rgba(0,0, 0, 0.2);
   --light-link-text-color: navy;
 }
-.dark :root {
+.dark * {
   --light-alert-success-color: var(--light-color-success);
   --light-alert-success-color-light: var(--light-color-success-light);
   --light-alert-success-text-color: var(--light-color-success);
@@ -5647,7 +5645,7 @@
   --light-alert-danger-banner-color: var(--light-color-danger);
   --light-alert-danger-banner-text-color: var(--light-color-danger-contrast);
 }
-.dark :root {
+.dark * {
   --light-toggle-slider-background-color: lightgray;
   --light-toggle-slider-text-color: lightgray;
   --light-toggle-slider-on-background-color: green;
@@ -5661,7 +5659,7 @@
   --toggle-select-right-text-color: purple;
   --toggle-select-right-background-color: orange;
 }
-.dark :root {
+.dark * {
   --slider-width: 60px;
   --toggle-slider-radius: 5px;
 }
@@ -6363,34 +6361,19 @@
   line-height: 2.8rem;
 }
 .dark .y-content .text-info {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .dark .y-content .text-success {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .dark .y-content .text-warning {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .dark .y-content .text-danger {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .dark .y-content .text-muted {
-  color: var(--light-color-disabled);
-}
-.dark .dark .y-content .text-info {
-  color: var(--dark-color-info);
-}
-.dark .dark .y-content .text-success {
-  color: var(--dark-color-success);
-}
-.dark .dark .y-content .text-warning {
-  color: var(--dark-color-warning);
-}
-.dark .dark .y-content .text-danger {
-  color: var(--dark-color-danger);
-}
-.dark .dark .y-content .text-muted {
-  color: var(--dark-color-disabled);
+  color: var(--color-disabled);
 }
 .dark .y-content ul {
   list-style-type: disc;
@@ -6927,9 +6910,7 @@
 }
 
 .light {
-  /* Vendor extensions to the designer enhanced bootstrap compatibility */ /* Customizations to the designer theme should be defined here */
-  /* ========== DARK THEME ========== */
-  /* Customizations to the designer theme should be defined here */
+  /* Vendor extensions to the designer enhanced bootstrap compatibility */ /* Customizations to the designer theme should be defined here */ /* Customizations to the designer theme should be defined here */
   /*====
    */
   /** ========================== */
@@ -12506,7 +12487,7 @@
 .light .fc.fc-theme-standard .fc-highlight {
   background: #e7d8ef;
 }
-.light :root {
+.light * {
   --light-color-info: #3777FF;
   --light-color-info-light: #e6e6ff;
   --light-color-info-contrast: white;
@@ -12528,7 +12509,7 @@
   --font-size-large: 1.2rem;
   --font-size-extra-large: 1.4rem;
 }
-.light :root {
+.light * {
   --color-success: #00cc00;
   --color-danger: #ff3300;
   --color-warning: #ff9900;
@@ -12552,7 +12533,7 @@
   --light-button-shadow-color: rgba(0,0, 0, 0.2);
   --light-link-text-color: navy;
 }
-.light :root {
+.light .light {
   --light-alert-success-color: var(--light-color-success);
   --light-alert-success-color-light: var(--light-color-success-light);
   --light-alert-success-text-color: var(--light-color-success);
@@ -12574,7 +12555,7 @@
   --light-alert-danger-banner-color: var(--light-color-danger);
   --light-alert-danger-banner-text-color: var(--light-color-danger-contrast);
 }
-.light :root {
+.light * {
   --light-toggle-slider-background-color: lightgray;
   --light-toggle-slider-text-color: lightgray;
   --light-toggle-slider-on-background-color: green;
@@ -12588,7 +12569,7 @@
   --toggle-select-right-text-color: purple;
   --toggle-select-right-background-color: orange;
 }
-.light :root {
+.light * {
   --slider-width: 60px;
   --toggle-slider-radius: 5px;
 }
@@ -13290,34 +13271,19 @@
   line-height: 2.8rem;
 }
 .light .y-content .text-info {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .light .y-content .text-success {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .light .y-content .text-warning {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .light .y-content .text-danger {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .light .y-content .text-muted {
-  color: var(--light-color-disabled);
-}
-.light .dark .y-content .text-info {
-  color: var(--dark-color-info);
-}
-.light .dark .y-content .text-success {
-  color: var(--dark-color-success);
-}
-.light .dark .y-content .text-warning {
-  color: var(--dark-color-warning);
-}
-.light .dark .y-content .text-danger {
-  color: var(--dark-color-danger);
-}
-.light .dark .y-content .text-muted {
-  color: var(--dark-color-disabled);
+  color: var(--color-disabled);
 }
 .light .y-content ul {
   list-style-type: disc;
