@@ -13,8 +13,6 @@
 import {computed} from "vue";
 import useIdentifier from "../../../Hooks/useIdentifier"
 
-const [identifier] = useIdentifier(props.id);
-
 const props = defineProps({
     id: {
         type: String,
@@ -52,17 +50,7 @@ const props = defineProps({
         default: 50,
     },
 });
-//
-// const identifier = computed(() => {
-//     if (props.id) {
-//         return props.id;
-//     }
-//
-//     if (props.name) {
-//         return props.name;
-//     }
-//
-//     return Math.random()
-// })
+
+const [identifier] = useIdentifier(props.id);
 
 </script>
