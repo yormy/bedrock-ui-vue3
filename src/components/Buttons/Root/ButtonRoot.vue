@@ -1,10 +1,11 @@
 <template>
     <prime-split-button v-if="dropdown" :class="buttonClass" :badge-class="badgeClass" ><slot></slot></prime-split-button>
     <prime-button v-else
-      :class="buttonClass"
-      :badge-class="badgeClass"
-      :icon="isExternal ? 'y-icon icon icon-link-external icon-small' : ''"
-      :iconPos="isExternal ? 'right': 'left'"
+        :class="buttonClass"
+        :badge-class="badgeClass"
+        :icon="isExternal ? 'y-icon icon icon-link-external icon-small' : ''"
+        :iconPos="isExternal ? 'right': 'left'"
+        @click.stop="''"
     >
         <slot></slot>
     </prime-button>

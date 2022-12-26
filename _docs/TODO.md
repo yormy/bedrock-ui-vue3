@@ -5,6 +5,10 @@ vue3:
 - input text with pre-icon => recode from primevue
 - phone number (see storybook)=> recode from primevue
 
+- check group
+a group of multi selectable checkboxes, values as array
+
+
 # Loginwrapper
 - appearingbullets redirects on async completed
 - translations of messages
