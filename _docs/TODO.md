@@ -6,10 +6,10 @@ Storybook TODO
 vue3:
 - - link button is no link ? (optional with external link icon?)
 - - buttonset not correct
- button sizes link ?
-- -check chip options
+ - -check chip options
 - - draggable
-- input code with hint and help
+- 
+- 
 - input text with clickable icon?
 - input text with pre-icon
 - phone number

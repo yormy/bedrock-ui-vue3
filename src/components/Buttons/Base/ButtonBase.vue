@@ -1,7 +1,6 @@
 <template>
     <div v-if="isDropdown">
         <button-root
-            class="p-button-raised"
             iconPos="right"
             icon="y-icon icon icon-dropdown"
             v-bind="$attrs"
@@ -31,7 +30,7 @@
         </div>
 
         <div v-else>
-            <button-root class="p-button-raised" v-bind="$attrs"><slot></slot></button-root>
+            <button-root v-bind="$attrs"><slot></slot></button-root>
         </div>
 
 
