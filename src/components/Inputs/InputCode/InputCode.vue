@@ -47,14 +47,14 @@
 import YIconHelp from '../../Helpers/IconHelp.vue';
 import {computed, ref, defineEmits, defineProps, onMounted} from "vue";
 
-const emit = defineEmits([
-    'onComplete',
-    'onEsc',
-    'onEnter',
-    'onChange',
-    'onKeyUp',
-    'update:modelValue'
-]);
+const emits = defineEmits<{
+    (eventName: 'onComplete', code: string): void
+    (eventName: 'onEsc', code: any): void
+    (eventName: 'onEnter', code: any): void
+    (eventName: 'onChange', code: any): void
+    (eventName: 'onKeyUp', code: any): void
+    (eventName: 'update:modelValue', value:string): void
+}>();
 
 const KEY_CODE = {
     backspace: 8,
@@ -188,16 +188,16 @@ const fieldId = computed(() => {
 
 //===============================================
 const onChange = () => {
-    emit("onChange",  buildCode(items.value));
+    emits("onChange",  buildCode(items.value));
 };
 
 const onKeyUp = () => {
-    emit("onChange", buildCode(items.value));
-    emit('onKeyUp', buildCode(items.value));
+    emits("onChange", buildCode(items.value));
+    emits('onKeyUp', buildCode(items.value));
 };
 
 const onEsc = () => {
-    emit('onEsc', buildCode(items.value));
+    emits('onEsc', buildCode(items.value));
 };
 
 const onFocus = (e) => {
@@ -211,7 +211,7 @@ const onKeyDown = (e) => {
             e.preventDefault();
             const val = items.value.join('');
             if (val.length >= props.fields) {
-                emit('onEnter', val);
+                emits('onEnter', val);
             }
             break;
         }
@@ -252,8 +252,8 @@ const onKeyDown = (e) => {
 const triggerChange = () => {
     const concatValue = items.value.join('');
     if (concatValue.length === props.fields) {
-        emit('onComplete', concatValue);
-        emit('update:modelValue', concatValue)
+        emits('onComplete', concatValue);
+        emits('update:modelValue', concatValue)
     }
 };
 
