@@ -13,6 +13,7 @@ module.exports = {
                     text: 'Auth',
                     children: [
                         {text: 'Login', link: '/blocks/auth/login'},
+                        {text: 'Reset Loginname', link: '/blocks/auth/resetloginname'},
                         {text: 'Reset Password', link: '/blocks/auth/resetpassword'},
                     ]
                 },
