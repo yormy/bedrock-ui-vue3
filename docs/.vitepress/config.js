@@ -69,6 +69,13 @@ module.exports = {
             ],
         },
         {
+            text: 'Display',
+            children: [
+                { text: 'Appearing Bullets', link: '/components/display/appearing-bullets' },
+                { text: 'Purified Html', link: '/components/display/purified' },
+            ],
+        },
+        {
             text: 'Tags',
             children: [
                 { text: 'Tags', link: '/components/tags/tags' },

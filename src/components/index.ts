@@ -52,3 +52,6 @@ export * from './Tabs/exports.js';
 
 // @ts-ignore
 export * from './Dropdowns/exports.js';
+
+// @ts-ignore
+export * from './Display/exports.js';
