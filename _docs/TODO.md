@@ -13,9 +13,7 @@ vue3:
 - input text with clickable icon?
 - input text with pre-icon
 - phone number
-- typography
-  - quote
-  
+
 
 
 ### Translation function

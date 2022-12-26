@@ -125,3 +125,12 @@
       </div>
   </div>
 </DemoContainer>
+
+## Quote
+<DemoContainer>
+  <div class="y-content">
+    <div class="quote">Ik heb het nog nooit gedaan, dus ik denk wel dat ik het kan</div>
+    <div class="quote-caption">Pipi Langkous - Worlds strongest girl</div>
+  </div>
+</DemoContainer>
+
