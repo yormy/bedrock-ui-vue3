@@ -1,5 +1,5 @@
-# wip components uit de export
 fix storybook zonder theme
+- set autofocus to loginname on login
 
 vue3:
 - input text with pre-icon => recode from primevue
