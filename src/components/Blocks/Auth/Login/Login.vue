@@ -35,15 +35,15 @@
 </template>
 
 <script setup lang="ts">
-import YInputUsername from '../../../Inputs/InputUsername/InputUsername.vue';
-import YInputPassword from '../../../Inputs/InputPassword/InputPassword.vue';
-import YCheckbox from '../../../Selects/Checkbox/Checkbox/Checkbox.vue';
-import YButtonPrimary from '../../../Buttons/Primary/ButtonPrimary.vue';
-import YSelectLanguage from '../../../Selects/Language/SelectLanguage.vue';
+import YInputUsername from '../../../Atoms/Inputs/InputUsername/InputUsername.vue';
+import YInputPassword from '../../../Atoms/Inputs/InputPassword/InputPassword.vue';
+import YCheckbox from '../../../Atoms/Selects/Checkbox/Checkbox/Checkbox.vue';
+import YButtonPrimary from '../../../Atoms/Buttons/Primary/ButtonPrimary.vue';
+import YSelectLanguage from '../../../Atoms/Selects/Language/SelectLanguage.vue';
 import YAuthTitle from '../Helpers/Title.vue'
+import YButtonLink from '../../../Atoms/Buttons/Link/ButtonLink.vue';
 
 import { defineProps, watch } from 'vue';
-import YButtonLink from '../../../Buttons/Link/ButtonLink.vue';
 
 const props = defineProps({
     type: {

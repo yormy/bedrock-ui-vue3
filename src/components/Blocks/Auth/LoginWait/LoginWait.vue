@@ -8,8 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import YAppearingBullets from '../../../Display/AppearingBullets/AppearingBullets.vue';
-
+import YAppearingBullets from '../../../Atoms/Display/AppearingBullets/AppearingBullets.vue';
 
 const messages = [
     {

@@ -19,15 +19,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import YInputUsername from '../../../Inputs/InputUsername/InputUsername.vue';
-import YInputPassword from '../../../Inputs/InputPassword/InputPassword.vue';
-
-import YButtonPrimary from '../../../Buttons/Primary/ButtonPrimary.vue';
-import YButtonLink from '../../../Buttons/Link/ButtonLink.vue';
-
+import YButtonPrimary from '../../../Atoms/Buttons/Primary/ButtonPrimary.vue';
 import YAuthTitle from '../Helpers/Title.vue'
-
-import YButtonRow from '../../../Layouts/ButtonRow/ButtonRow.vue';
 
 import {defineProps, reactive, watch} from 'vue';
 

@@ -14,11 +14,7 @@ export * from './Selects/exports.js';
 // @ts-ignore
 export * from './Helpers/exports.js';
 
-// @ts-ignore
-export * from './Blocks/exports.js';
 
-// @ts-ignore
-export * from './Layouts/exports.js';
 
 // @ts-ignore
 export * from './Tags/exports.js';
