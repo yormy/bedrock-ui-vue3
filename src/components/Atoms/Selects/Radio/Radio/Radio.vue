@@ -40,9 +40,10 @@
 </template>
 
 <script setup lang="ts">
-import {computed, defineEmits, ref, watch} from "vue";
+import { defineEmits, ref, watch} from "vue";
 const emit = defineEmits(['update:modelValue']);
 import YPurifiedHtml from '../../../Helpers/PurifiedHtml.vue';
+import useIdentifier from "../../../Hooks/useIdentifier";
 
 const props = defineProps({
     id: {
@@ -67,17 +68,7 @@ const props = defineProps({
 
 const selection = ref(props.modelValue);
 
-const identifier = computed(() => {
-    if (props.id) {
-        return props.id;
-    }
-
-    if (props.name) {
-        return props.name;
-    }
-
-    return Math.random()
-})
+const [identifier] = useIdentifier(props.id);
 
 watch(
     () => selection.value,

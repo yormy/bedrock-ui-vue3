@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import useIdentifier from "../../../Hooks/useIdentifier";
 
 const props = defineProps({
     id: {
@@ -24,18 +24,6 @@ const props = defineProps({
     },
 });
 
-
-const identifier = computed(() => {
-    if (props.id) {
-        return props.id;
-    }
-
-    if (props.name) {
-        return props.name;
-    }
-
-    return Math.random()
-})
-
+const [identifier] = useIdentifier(props.id);
 </script>
 
