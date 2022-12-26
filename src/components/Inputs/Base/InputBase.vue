@@ -16,12 +16,11 @@
         </div>
         <div class="field col-12">
             <span class="p-float-label" :class="inlineIcon ? 'p-input-icon-right': ''">
-
                 <i :class="inlineIcon" @click="handleInlineIconClicked" @KeyDown="handleInlineIconClicked" />
                 <prime-input-text
                     v-if="!isPassword"
                     :id="fieldId"
-                    v-model="value"
+                    v-model.trim="value"
                     type="text"
                     :disabled="disabledState"
                     @input="handleInputChanged"
