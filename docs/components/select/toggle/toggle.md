@@ -33,3 +33,14 @@
 </DemoContainer>
 
 
+### Toggle section
+<DemoContainer>
+  <y-toggle-section name="section2">
+  <template v-slot:on>
+    <YTag label="info" icon="y-icon icon icon-file-download" type="is-info-solid"/>
+  </template>
+  <template v-slot:off>
+    <YTag label="info" icon="y-icon icon icon-file-download" type="is-info"/>
+  </template>
+  </y-toggle-section>
+</DemoContainer>
