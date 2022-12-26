@@ -143,7 +143,7 @@ module.exports = {
             text: 'Input',
             children: [
                 { text: 'Text', link: '/components/atoms/input/text' },
-                { text: 'Phone', link: '/components/atoms/input/phone' },
+                { text: 'Phone (wip)', link: '/components/atoms/input/phone' },
                 { text: 'Email', link: '/components/atoms/input/email' },
                 { text: 'Password', link: '/components/atoms/input/password' },
                 { text: 'Username', link: '/components/atoms/input/username' },
