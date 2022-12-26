@@ -1,6 +1,13 @@
 <template>
     <prime-split-button v-if="dropdown" :class="buttonClass" :badge-class="badgeClass" ><slot></slot></prime-split-button>
-    <prime-button v-else :class="buttonClass" :badge-class="badgeClass"><slot></slot></prime-button>
+    <prime-button v-else
+      :class="buttonClass"
+      :badge-class="badgeClass"
+      :icon="isExternal ? 'y-icon icon icon-link-external icon-small' : ''"
+      :iconPos="isExternal ? 'right': 'left'"
+    >
+        <slot></slot>
+    </prime-button>
 </template>
 
 <script setup lang="ts">
@@ -27,6 +34,11 @@ const props = defineProps({
     },
 
     dropdown: {
+        type: Boolean,
+        default: false,
+    },
+
+    isExternal: {
         type: Boolean,
         default: false,
     },
