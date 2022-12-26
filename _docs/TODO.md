@@ -1,5 +1,6 @@
 fix storybook zonder theme
 - set autofocus to loginname on login
+- toggle select has hardcoded colors
 
 vue3:
 - input text with pre-icon => recode from primevue

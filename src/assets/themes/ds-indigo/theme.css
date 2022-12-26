@@ -6737,7 +6737,7 @@
 }
 .dark .y-content .y-toggle-select .left.green {
   --toggle-select-left-text-color: white;
-  --toggle-select-left-background-color: green;
+  --toggle-select-left-background-color: pink;
 }
 .dark .y-content .y-toggle-select .right {
   padding-top: 0.5rem;
@@ -6750,7 +6750,7 @@
 }
 .dark .y-content .y-toggle-select .right.green {
   --toggle-select-right-text-color: white;
-  --toggle-select-right-background-color: green;
+  --toggle-select-right-background-color: lime;
 }
 .dark .y-content .y-toggle-select .checkbox-input ~ .left {
   color: var(--toggle-select-left-text-color);
@@ -6895,7 +6895,11 @@
 }
 
 .light {
-  /* Vendor extensions to the designer enhanced bootstrap compatibility */ /* Customizations to the designer theme should be defined here */ /* Customizations to the designer theme should be defined here */
+  /* Vendor extensions to the designer enhanced bootstrap compatibility */ /* Customizations to the designer theme should be defined here */
+  /* ========= BRAND ========== */
+  /* ========= ALERT ========== */
+  /* ========= TOGGLE ========== */
+  /* Customizations to the designer theme should be defined here */
   /*====
    */
   /** ========================== */
@@ -12473,6 +12477,20 @@
   background: #e7d8ef;
 }
 .light * {
+  --font-size-normal: 1rem;
+  --font-size-extra-small: 0.6rem;
+  --font-size-small-line-height: 1rem;
+  --font-size-small: 0.8rem;
+  --font-size-large: 1.2rem;
+  --font-size-extra-large: 1.4rem;
+}
+.light * {
+  --slider-width: 60px;
+  --toggle-slider-radius: 5px;
+}
+.light * {
+  --brand-color-primary: red;
+  --brand-color-secondary: red;
   --light-color-info: #3777FF;
   --light-color-info-light: #e6e6ff;
   --light-color-info-contrast: white;
@@ -12485,55 +12503,34 @@
   --light-color-danger: #D81159;
   --light-color-danger-light: #ffe6e6;
   --light-color-danger-contrast: white;
-  --light-color-misc: #D7D0C8;
   --light-color-disabled: #d9d9d9;
-  --font-size-normal: 1rem;
-  --font-size-extra-small: 0.6rem;
-  --font-size-small-line-height: 1rem;
-  --font-size-small: 0.8rem;
-  --font-size-large: 1.2rem;
-  --font-size-extra-large: 1.4rem;
+  --light-color-muted: #d9d9d9;
+  --light-color-misc: #D7D0C8;
+  --light-color-switch-on: green;
+  --light-color-switch-off: red;
 }
 .light * {
-  --color-success: #00cc00;
-  --color-danger: #ff3300;
-  --color-warning: #ff9900;
-  --color-info: #0099cc;
-  --color-disabled: #d9d9d9;
-  --color-muted: #d9d9d9;
-  --color-blue: #0099cc;
-  --light-background-color: #f2f2f2;
-  --light-button-primary-background-color: var(--brand-color-secondary);
-  --light-button-primary-text-color: white;
-  --light-button-success-text-color: white;
-  --light-button-success-background-color: var(--color-success);
-  --light-button-info-text-color: white;
-  --light-button-info-background-color: var(--color-info);
-  --light-warning-danger-text-color: white;
-  --light-warning-danger-background-color: var(--color-warning);
-  --light-button-danger-text-color: white;
-  --light-button-danger-background-color: var(--color-danger);
-  --light-button-disabled-text-color: white;
-  --light-button-disabled-background-color: var(--color-disabled);
-  --light-button-shadow-color: rgba(0,0, 0, 0.2);
-  --light-link-text-color: navy;
-}
-.light .light {
   --light-alert-success-color: var(--light-color-success);
   --light-alert-success-color-light: var(--light-color-success-light);
   --light-alert-success-text-color: var(--light-color-success);
   --light-alert-success-banner-color: var(--light-color-success);
   --light-alert-success-banner-text-color: var(--light-color-success-contrast);
+}
+.light * {
   --light-alert-info-color: var(--light-color-info);
   --light-alert-info-color-light: var(--light-color-info-light);
   --light-alert-info-text-color: var(--light-color-info);
   --light-alert-info-banner-color: var(--light-color-info);
   --light-alert-info-banner-text-color: var(--light-color-info-contrast);
+}
+.light * {
   --light-alert-warning-color: var(--light-color-warning);
   --light-alert-warning-color-light: var(--light-color-warning-light);
   --light-alert-warning-text-color: var(--light-color-warning);
   --light-alert-warning-banner-color: var(--light-color-warning);
   --light-alert-warning-banner-text-color: var(--light-color-warning-contrast);
+}
+.light * {
   --light-alert-danger-color: var(--light-color-danger);
   --light-alert-danger-color-light: var(--light-color-danger-light);
   --light-alert-danger-text-color: var(--light-color-danger);
@@ -12543,20 +12540,18 @@
 .light * {
   --light-toggle-slider-background-color: lightgray;
   --light-toggle-slider-text-color: lightgray;
-  --light-toggle-slider-on-background-color: green;
+  --light-toggle-slider-on-background-color: var(--light-color-switch-on);
   --light-toggle-slider-on-text-color: white;
-  --light-toggle-slider-off-background-color: red;
+  --light-toggle-slider-off-background-color: var(--light-color-switch-off);
   --light-toggle-slider-off-text-color: white;
-  --toggle-select-disabled-background-color: gray;
+  --toggle-select-disabled-background-color: var(--light-color-disabled);
   --toggle-select-disabled-text-color: white;
+}
+.light * {
   --toggle-select-left-text-color: lime;
   --toggle-select-left-background-color: red;
   --toggle-select-right-text-color: purple;
   --toggle-select-right-background-color: orange;
-}
-.light * {
-  --slider-width: 60px;
-  --toggle-slider-radius: 5px;
 }
 .light .y-input-code .is-loading {
   position: absolute;
@@ -13637,7 +13632,7 @@
 }
 .light .y-content .y-toggle-select .left.green {
   --toggle-select-left-text-color: white;
-  --toggle-select-left-background-color: green;
+  --toggle-select-left-background-color: pink;
 }
 .light .y-content .y-toggle-select .right {
   padding-top: 0.5rem;
@@ -13650,7 +13645,7 @@
 }
 .light .y-content .y-toggle-select .right.green {
   --toggle-select-right-text-color: white;
-  --toggle-select-right-background-color: green;
+  --toggle-select-right-background-color: lime;
 }
 .light .y-content .y-toggle-select .checkbox-input ~ .left {
   color: var(--toggle-select-left-text-color);
