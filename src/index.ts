@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { App } from 'vue';
-import './assets/main.scss';
 
 // @ts-ignore
 import * as components from './components/index.ts';
