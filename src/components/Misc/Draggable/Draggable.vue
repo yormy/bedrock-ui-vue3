@@ -32,12 +32,63 @@
                 >
 
                     <template #item="{ element }">
-                        <div>{{element.name}}</div>
+                        <div>
+                              <span>
+                                <span v-if="!selectedElementLevel2 || !selectedElementLevel2.items">
+                                - {{ element.name }}
+                                </span>
+                            </span>
+                        </div>
                     </template>
 
                 </draggable>
             </div>
 
+            <!--            ========== level 2 ========== -->
+            <div
+                v-if="selectedElementLevel1"
+                class="md:w-1/4 pr-4 pl-4">
+                <draggable
+                    v-model="selectedElementLevel1.items"
+                    item-key="id"
+                    :move="onMove"
+                    class="flex flex-col pl-0 mb-0 border rounded border-gray-300"
+                    tag="ul"
+                    v-bind="dragOptions"
+                    @end="isDragging=false"
+                    @start="isDragging=true"
+                >
+                    <template #item="{ element }">
+                        - {{ element.name }}
+                    </template>
+                </draggable>
+            </div>
+
+<!--            &lt;!&ndash;            ========== level 3 ========== &ndash;&gt;-->
+<!--            <div-->
+<!--                v-if="selectedElementLevel1 && selectedElementLevel2"-->
+<!--                class="md:w-1/4 pr-4 pl-4">-->
+<!--                <draggable-->
+<!--                    v-model="selectedElementLevel2.items"-->
+<!--                    :move="onMove"-->
+<!--                    class="flex flex-col pl-0 mb-0 border rounded border-gray-300"-->
+<!--                    tag="ul"-->
+<!--                    v-bind="dragOptions"-->
+<!--                    @end="isDragging=false"-->
+<!--                    @start="isDragging=true"-->
+<!--                >-->
+<!--                    <li v-for="(element, index) in selectedElementLevel2.items"-->
+<!--                        :key="element.order"-->
+<!--                        class="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline"-->
+<!--                    >-->
+<!--            <span>-->
+<!--&lt;!&ndash;              <i :class="element.fixed? 'fa fa-anchor' : 'fas fa-arrows-alt-v'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>&ndash;&gt;-->
+<!--              {{ index + 1 }} - {{ element.name }}-->
+<!--              <i class="float-right fa fa-arrow-right" @click="clickedLevel3(element)"></i>-->
+<!--            </span>-->
+<!--                    </li>-->
+<!--                </draggable>-->
+<!--            </div>-->
         </div>
 
     </div>
