@@ -104,21 +104,6 @@
 
 
 .y-tag-chip{
-
-
-    &.blue-open {
-        color: var(--color-blue);
-        border-color: var(--color-blue);
-        background-color: transparent;
-    }
-
-    &.blue-solid {
-        background-color: var(--color-blue);
-        border-color: var(--color-blue);
-        color: white;
-    }
-
-
     &.is-info-open {
         color: var(--light-color-info);
         border-color: var(--light-color-info);

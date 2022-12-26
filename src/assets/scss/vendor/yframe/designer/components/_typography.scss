@@ -111,22 +111,22 @@ body {
 
 .y-content {
     .text-info {
-        color: var(--color-info);
+        color: var(--light-color-info);
     }
 
     .text-success {
-        color: var(--color-success);
+        color: var(--light-color-success);
     }
 
     .text-warning {
-        color: var(--color-warning);
+        color: var(--light-color-warning);
     }
 
     .text-danger {
-        color: var(--color-danger);
+        color: var(--light-color-danger);
     }
 
     .text-muted {
-        color: var(--color-disabled);
+        color: var(--light-color-disabled);
     }
 }
