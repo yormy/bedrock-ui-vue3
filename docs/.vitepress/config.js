@@ -66,6 +66,7 @@ module.exports = {
             children: [
                 { text: 'MouseOver', link: '/components/misc/mouseover' },
                 { text: 'Breadcrumb', link: '/components/misc/breadcrumb' },
+                { text: 'Draggable', link: '/components/misc/draggable' },
             ],
         },
         {
