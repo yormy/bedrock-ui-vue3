@@ -2,7 +2,7 @@
     <div class="y-content">
         <label  class="y-toggle-select" for="Toggle3">
             <input id="Toggle3" type="checkbox" class="hidden checkbox-input">
-            <span class="left green ">{{ labelOn }}</span>
+            <span class="left on ">{{ labelOn }}</span>
             <span class="right green ">{{ labelOff }}</span>
         </label>
     </div>

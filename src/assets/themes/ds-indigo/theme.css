@@ -6735,9 +6735,9 @@
   border-top-left-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
 }
-.dark .y-content .y-toggle-select .left.green {
+.dark .y-content .y-toggle-select .left.on {
   --toggle-select-left-text-color: white;
-  --toggle-select-left-background-color: pink;
+  --toggle-select-left-background-color: var(--light-color-switch-on);
 }
 .dark .y-content .y-toggle-select .right {
   padding-top: 0.5rem;
@@ -6748,9 +6748,9 @@
   border-top-right-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
 }
-.dark .y-content .y-toggle-select .right.green {
+.dark .y-content .y-toggle-select .right.on {
   --toggle-select-right-text-color: white;
-  --toggle-select-right-background-color: lime;
+  --toggle-select-left-background-color: var(--light-color-switch-on);
 }
 .dark .y-content .y-toggle-select .checkbox-input ~ .left {
   color: var(--toggle-select-left-text-color);
@@ -6765,8 +6765,8 @@
   background-color: var(--toggle-select-disabled-background-color);
 }
 .dark .y-content .y-toggle-select .checkbox-input:checked ~ .right {
-  color: var(--toggle-select-right-text-color);
-  background-color: var(--toggle-select-right-background-color);
+  color: white;
+  background-color: var(--light-color-switch-on);
 }
 .dark .y-content .y-checkable {
   display: flex;
@@ -13630,9 +13630,9 @@
   border-top-left-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
 }
-.light .y-content .y-toggle-select .left.green {
+.light .y-content .y-toggle-select .left.on {
   --toggle-select-left-text-color: white;
-  --toggle-select-left-background-color: pink;
+  --toggle-select-left-background-color: var(--light-color-switch-on);
 }
 .light .y-content .y-toggle-select .right {
   padding-top: 0.5rem;
@@ -13643,9 +13643,9 @@
   border-top-right-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
 }
-.light .y-content .y-toggle-select .right.green {
+.light .y-content .y-toggle-select .right.on {
   --toggle-select-right-text-color: white;
-  --toggle-select-right-background-color: lime;
+  --toggle-select-left-background-color: var(--light-color-switch-on);
 }
 .light .y-content .y-toggle-select .checkbox-input ~ .left {
   color: var(--toggle-select-left-text-color);
@@ -13660,8 +13660,8 @@
   background-color: var(--toggle-select-disabled-background-color);
 }
 .light .y-content .y-toggle-select .checkbox-input:checked ~ .right {
-  color: var(--toggle-select-right-text-color);
-  background-color: var(--toggle-select-right-background-color);
+  color: white;
+  background-color: var(--light-color-switch-on);
 }
 .light .y-content .y-checkable {
   display: flex;
