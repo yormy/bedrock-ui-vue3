@@ -15,9 +15,7 @@ vue3:
 - phone number
 - typography
   - quote
-  - text-muted color
-  - truncate
-
+  
 
 
 ### Translation function

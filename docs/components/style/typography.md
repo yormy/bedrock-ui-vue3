@@ -17,7 +17,7 @@
     <span class="text-success"> is-success text</span>
     <span class="text-warning"> is-warning text</span>
     <span class="text-danger"> is-danger text</span>
-    <span class="text-muted"> muted text</span>
+    <span class="text-muted"> text muted</span>
   </div>
 </DemoContainer>
 
@@ -114,6 +114,14 @@
                 <li class="roman is-success"> list item</li>
                 <li class="roman is-danger"> list item</li>
           </ol>
+      </div>
+  </div>
+</DemoContainer>
+
+## Truncate
+<DemoContainer>
+  <div class="y-content">
+      <div class="text-truncate" style="width:100px">sdfafdfadfdafdafddfsfdsfadfadfdd
       </div>
   </div>
 </DemoContainer>
