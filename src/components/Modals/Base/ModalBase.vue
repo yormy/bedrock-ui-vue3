@@ -1,9 +1,9 @@
 <template>
-    <div :class="typeClass">
+    <span :class="typeClass">
         <prime-dialog append-to="self" v-model:visible="display" :modal="true" close-icon="y-icon icon icon-close icon-large" v-bind="$attrs">
             <slot></slot>
         </prime-dialog>
-    </div>
+    </span>
 </template>
 
 <script setup lang="ts">

@@ -5,8 +5,8 @@
         <y-icon-required :required="required"></y-icon-required>
 
         <label for="binary">
-            <div class="flex flex-column">
-                <div>
+            <span class="flex flex-column">
+                <span>
                     <y-purified-html :value="label"></y-purified-html>
                     <y-icon-help
                         class="ml-1"
@@ -16,11 +16,11 @@
                         :description="moreHelpDescription"
                     >
                     </y-icon-help>
-                </div>
+                </span>
 
                 <y-purified-html :value="labelExtended"></y-purified-html>
                 <y-validations :successes="successes" :warnings="warnings" :errors="errors"></y-validations>
-        </div>
+        </span>
 
     </label>
     </div>

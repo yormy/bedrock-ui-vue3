@@ -7,6 +7,24 @@ module.exports = {
     repo: '...repo-here....',
     sidebar: [
         {
+            text: 'Blocks',
+            children: [
+                {
+                    text: 'Auth',
+                    children: [
+                        {text: 'Login', link: '/blocks/auth/login'},
+                        {text: 'Reset Password', link: '/blocks/auth/resetpassword'},
+                    ]
+                },
+                {
+                    text: 'Pricing',
+                    children: [
+                        {text: 'Pricing (wip)', link: '/blocks/pricing/pricing'},
+                    ]
+                }
+            ],
+        },
+        {
             text: 'Banner',
             children: [
                 { text: 'Banner (wip)', link: '/components/banner/banner' },
@@ -141,24 +159,7 @@ module.exports = {
                 { text: 'Misc', link: '/components/button/misc' },
             ],
         },
-        {
-            text: 'Blocks',
-            children: [
-                {
-                    text: 'Auth',
-                    children: [
-                        {text: 'Login', link: '/blocks/auth/login'},
-                        {text: 'Reset Password', link: '/blocks/auth/resetpassword'},
-                    ]
-                },
-                {
-                    text: 'Pricing',
-                    children: [
-                        {text: 'Pricing (wip)', link: '/blocks/pricing/pricing'},
-                    ]
-                }
-            ],
-        },
+
         {
             text: 'Layouts',
             children: [

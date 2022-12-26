@@ -5,10 +5,8 @@ Storybook TODO
 - Login details
 vue3:
 
-- - draggable
-- input text with clickable icon?
-- input text with pre-icon
-- phone number
+- input text with pre-icon => recode from primevue
+- phone number => recode from primevue
 
 
 
