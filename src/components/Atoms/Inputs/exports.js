@@ -4,6 +4,7 @@ import YInputPassword from './InputPassword/InputPassword.vue';
 import YInputUsername from './InputUsername/InputUsername.vue';
 import YInputCode from './InputCode/InputCode.vue';
 import YInputSearch from './InputSearch/InputSearch.vue';
+import YInputPhone from './InputPhone/InputPhone.vue';
 
 export {
     YInputText,
@@ -11,5 +12,6 @@ export {
     YInputPassword,
     YInputUsername,
     YInputCode,
-    YInputSearch
+    YInputSearch,
+    YInputPhone
 };
