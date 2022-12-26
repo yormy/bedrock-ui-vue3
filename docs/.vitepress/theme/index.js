@@ -13,7 +13,7 @@ import 'primeflex/primeflex.css'
 import './custom.css'
 
 import Layout from '../components/Layout.vue'
-// import DarkTheme from './dark-theme.css'
+import DarkTheme from './dark-theme.css'
 
 import '../../../src/assets/themes/ds-indigo/theme.css';
 //import '../../../src/assets/themes/bedrock-indigo/theme.css';
@@ -21,7 +21,7 @@ import '../../../src/assets/themes/ds-indigo/theme.css';
 import '../../../resources/icons/fontawesome-pro6/css/all.css';
 import '../../../resources/public/shared/css/icons/icons.css';
 //
-// export { DarkTheme }
+export { DarkTheme }
 
 import i18ntc from './i18ntc';
 

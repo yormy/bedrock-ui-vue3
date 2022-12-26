@@ -1,2 +1,7 @@
-@import '../../scss/vendor/prime/themes/bootstrap4/bootstrap4-light/purple/theme.scss';
+.dark {
+    @import '../../scss/vendor/prime/themes/bootstrap4/bootstrap4-dark/purple/theme.scss';
+}
 
+.light {
+    @import '../../scss/vendor/prime/themes/bootstrap4/bootstrap4-light/purple/theme.scss';
+}
