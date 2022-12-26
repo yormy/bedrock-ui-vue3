@@ -1,12 +1,9 @@
 # wip components uit de export
 fix storybook zonder theme
 
-Storybook TODO
-- Login details
 vue3:
-
 - input text with pre-icon => recode from primevue
-- phone number => recode from primevue
+- phone number (see storybook)=> recode from primevue
 
 # Loginwrapper
 - appearingbullets redirects on async completed
