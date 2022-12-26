@@ -4,19 +4,25 @@
             v-model="selectedCountry"
             :options="countries"
             optionLabel="name"
-            style="flex: 0 0 5rem"
+            style="flex: 0 0 10rem"
             class="border-right-none"
-            panelStyle="width: 16rem"
+            panelStyle="width: 36rem"
         >
             <template #value="slotProps">
                 <div v-if="slotProps.value" class="country-item country-item-value">
-                    <span :class="slotProps.icon"></span>
-                    <div>{{ slotProps.value.phone }}</div>
+                    <div class="flex">
+                        <span :class="slotProps.value.icon"></span>
+                        <span>{{ slotProps.value.phone }}</span>
+                    </div>
+                    <span class="y-content">
+                        <span class="text-tiny">{{slotProps.value.name}}</span>
+                    </span>
                 </div>
                 <span v-else>
                   {{ slotProps.placeholder }}
                 </span>
             </template>
+
             <template #option="slotProps">
                 <div class="country-item">
                     <div class="flex">
