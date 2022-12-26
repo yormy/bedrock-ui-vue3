@@ -5596,60 +5596,60 @@
 .dark * {
   --brand-color-primary: red;
   --brand-color-secondary: red;
-  --light-color-info: #3777FF;
-  --light-color-info-light: #e6e6ff;
-  --light-color-info-contrast: white;
-  --light-color-success: #0C7C59;
-  --light-color-success-light: #ccffcc;
-  --light-color-success-contrast: white;
-  --light-color-warning: #FFBF46;
-  --light-color-warning-light: #fff2e6;
-  --light-color-warning-contrast: white;
-  --light-color-danger: #D81159;
-  --light-color-danger-light: #ffe6e6;
-  --light-color-danger-contrast: white;
-  --light-color-disabled: #d9d9d9;
-  --light-color-muted: #d9d9d9;
-  --light-color-misc: #D7D0C8;
-  --light-color-switch-on: green;
-  --light-color-switch-off: red;
+  --color-info: #3777FF;
+  --color-info-light: #e6e6ff;
+  --color-info-contrast: white;
+  --color-success: #0C7C59;
+  --color-success-light: #ccffcc;
+  --color-success-contrast: white;
+  --color-warning: #FFBF46;
+  --color-warning-light: #fff2e6;
+  --color-warning-contrast: white;
+  --color-danger: #D81159;
+  --color-danger-light: #ffe6e6;
+  --color-danger-contrast: white;
+  --color-disabled: #d9d9d9;
+  --color-muted: #d9d9d9;
+  --color-misc: #D7D0C8;
+  --color-switch-on: green;
+  --color-switch-off: red;
 }
 .dark * {
-  --light-alert-success-color: var(--light-color-success);
-  --light-alert-success-color-light: var(--light-color-success-light);
-  --light-alert-success-text-color: var(--light-color-success);
-  --light-alert-success-banner-color: var(--light-color-success);
-  --light-alert-success-banner-text-color: var(--light-color-success-contrast);
+  --alert-success-color: var(--color-success);
+  --alert-success-color-light: var(--color-success-light);
+  --alert-success-text-color: var(--color-success);
+  --alert-success-banner-color: var(--color-success);
+  --alert-success-banner-text-color: var(--color-success-contrast);
 }
 .dark * {
-  --light-alert-info-color: var(--light-color-info);
-  --light-alert-info-color-light: var(--light-color-info-light);
-  --light-alert-info-text-color: var(--light-color-info);
-  --light-alert-info-banner-color: var(--light-color-info);
-  --light-alert-info-banner-text-color: var(--light-color-info-contrast);
+  --alert-info-color: var(--color-info);
+  --alert-info-color-light: var(--color-info-light);
+  --alert-info-text-color: var(--color-info);
+  --alert-info-banner-color: var(--color-info);
+  --alert-info-banner-text-color: var(--color-info-contrast);
 }
 .dark * {
-  --light-alert-warning-color: var(--light-color-warning);
-  --light-alert-warning-color-light: var(--light-color-warning-light);
-  --light-alert-warning-text-color: var(--light-color-warning);
-  --light-alert-warning-banner-color: var(--light-color-warning);
-  --light-alert-warning-banner-text-color: var(--light-color-warning-contrast);
+  --alert-warning-color: var(--color-warning);
+  --alert-warning-color-light: var(--color-warning-light);
+  --alert-warning-text-color: var(--color-warning);
+  --alert-warning-banner-color: var(--color-warning);
+  --alert-warning-banner-text-color: var(--color-warning-contrast);
 }
 .dark * {
-  --light-alert-danger-color: var(--light-color-danger);
-  --light-alert-danger-color-light: var(--light-color-danger-light);
-  --light-alert-danger-text-color: var(--light-color-danger);
-  --light-alert-danger-banner-color: var(--light-color-danger);
-  --light-alert-danger-banner-text-color: var(--light-color-danger-contrast);
+  --alert-danger-color: var(--color-danger);
+  --alert-danger-color-light: var(--color-danger-light);
+  --alert-danger-text-color: var(--color-danger);
+  --alert-danger-banner-color: var(--color-danger);
+  --alert-danger-banner-text-color: var(--color-danger-contrast);
 }
 .dark * {
-  --light-toggle-slider-background-color: lightgray;
-  --light-toggle-slider-text-color: lightgray;
-  --light-toggle-slider-on-background-color: var(--light-color-switch-on);
-  --light-toggle-slider-on-text-color: white;
-  --light-toggle-slider-off-background-color: var(--light-color-switch-off);
-  --light-toggle-slider-off-text-color: white;
-  --toggle-select-disabled-background-color: var(--light-color-disabled);
+  --toggle-slider-background-color: lightgray;
+  --toggle-slider-text-color: lightgray;
+  --toggle-slider-on-background-color: var(--color-switch-on);
+  --toggle-slider-on-text-color: white;
+  --toggle-slider-off-background-color: var(--color-switch-off);
+  --toggle-slider-off-text-color: white;
+  --toggle-select-disabled-background-color: var(--color-disabled);
   --toggle-select-disabled-text-color: white;
 }
 .dark * {
@@ -5692,8 +5692,8 @@
   border-width: 2px;
 }
 .dark .y-input-code .code input.is-error {
-  border-color: var(--light-color-danger);
-  background-color: var(--light-color-danger-light);
+  border-color: var(--color-danger);
+  background-color: var(--color-danger-light);
 }
 .dark .y-input-code .code.blurred input {
   opacity: 0.1;
@@ -5810,43 +5810,43 @@
   transform: rotate(20deg);
 }
 .dark .y-tag-label.is-info-open .y-tag-label--pointer {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .dark .y-tag-label.is-info-open .y-tag-label--content {
   border-width: 2px;
-  border-color: var(--light-color-info);
+  border-color: var(--color-info);
   background-color: white;
   border-style: solid;
 }
 .dark .y-tag-label.is-info-open .y-tag-label--text {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .dark .y-tag-label.is-info-solid .y-tag-label--pointer {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .dark .y-tag-label.is-info-solid .y-tag-label--content {
-  background-color: var(--light-color-info);
+  background-color: var(--color-info);
 }
 .dark .y-tag-label.is-info-solid .y-tag-label--text {
   color: white;
 }
 .dark .y-tag-label.is-success-open .y-tag-label--pointer {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .dark .y-tag-label.is-success-open .y-tag-label--content {
   border-width: 2px;
-  border-color: var(--light-color-success);
+  border-color: var(--color-success);
   background-color: white;
   border-style: solid;
 }
 .dark .y-tag-label.is-success-open .y-tag-label--text {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .dark .y-tag-label.is-success-solid .y-tag-label--pointer {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .dark .y-tag-label.is-success-solid .y-tag-label--content {
-  background-color: var(--light-color-success);
+  background-color: var(--color-success);
 }
 .dark .y-tag-label.is-success-solid .y-tag-label--text {
   color: white;
@@ -5857,43 +5857,43 @@
   border-left-style: none;
 }
 .dark .y-tag-label.is-warning-open .y-tag-label--pointer {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .dark .y-tag-label.is-warning-open .y-tag-label--content {
   border-width: 2px;
-  border-color: var(--light-color-warning);
+  border-color: var(--color-warning);
   background-color: white;
   border-style: solid;
 }
 .dark .y-tag-label.is-warning-open .y-tag-label--text {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .dark .y-tag-label.is-warning-solid .y-tag-label--pointer {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .dark .y-tag-label.is-warning-solid .y-tag-label--content {
-  background-color: var(--light-color-warning);
+  background-color: var(--color-warning);
 }
 .dark .y-tag-label.is-warning-solid .y-tag-label--text {
   color: white;
 }
 .dark .y-tag-label.is-danger-open .y-tag-label--pointer {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .dark .y-tag-label.is-danger-open .y-tag-label--content {
   border-width: 2px;
-  border-color: var(--light-color-danger);
+  border-color: var(--color-danger);
   background-color: white;
   border-style: solid;
 }
 .dark .y-tag-label.is-danger-open .y-tag-label--text {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .dark .y-tag-label.is-danger-solid .y-tag-label--pointer {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .dark .y-tag-label.is-danger-solid .y-tag-label--content {
-  background-color: var(--light-color-danger);
+  background-color: var(--color-danger);
 }
 .dark .y-tag-label.is-danger-solid .y-tag-label--text {
   color: white;
@@ -5983,53 +5983,53 @@
   border-radius: 5px;
 }
 .dark .y-tag-chip.is-info-open {
-  color: var(--light-color-info);
-  border-color: var(--light-color-info);
+  color: var(--color-info);
+  border-color: var(--color-info);
   background-color: transparent;
 }
 .dark .y-tag-chip.is-info-solid {
-  background-color: var(--light-color-info);
-  border-color: var(--light-color-info);
+  background-color: var(--color-info);
+  border-color: var(--color-info);
   color: white;
 }
 .dark .y-tag-chip.is-success-open {
-  color: var(--light-color-success);
-  border-color: var(--light-color-success);
+  color: var(--color-success);
+  border-color: var(--color-success);
   background-color: transparent;
 }
 .dark .y-tag-chip.is-success-solid {
-  background-color: var(--light-color-success);
-  border-color: var(--light-color-success);
+  background-color: var(--color-success);
+  border-color: var(--color-success);
   color: white;
 }
 .dark .y-tag-chip.is-warning-open {
-  color: var(--light-color-warning);
-  border-color: var(--light-color-warning);
+  color: var(--color-warning);
+  border-color: var(--color-warning);
   background-color: transparent;
 }
 .dark .y-tag-chip.is-warning-solid {
-  background-color: var(--light-color-warning);
-  border-color: var(--light-color-warning);
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
   color: white;
 }
 .dark .y-tag-chip.is-danger-open {
-  color: var(--light-color-danger);
-  border-color: var(--light-color-danger);
+  color: var(--color-danger);
+  border-color: var(--color-danger);
   background-color: transparent;
 }
 .dark .y-tag-chip.is-danger-solid {
-  background-color: var(--light-color-danger);
-  border-color: var(--light-color-danger);
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
   color: white;
 }
 .dark .y-tag-chip.is-disabled-open {
-  color: var(--light-color-disabled);
-  border-color: var(--light-color-disabled);
+  color: var(--color-disabled);
+  border-color: var(--color-disabled);
   background-color: transparent;
 }
 .dark .y-tag-chip.is-disabled-solid {
-  background-color: var(--light-color-disabled);
-  border-color: var(--light-color-disabled);
+  background-color: var(--color-disabled);
+  border-color: var(--color-disabled);
   color: white;
 }
 .dark .y-button-banner {
@@ -6124,40 +6124,40 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 .dark .y-alert.is-info {
-  color: var(--light-color-info);
-  background-color: var(--light-color-info-light);
-  border-color: var(--light-color-info);
+  color: var(--color-info);
+  background-color: var(--color-info-light);
+  border-color: var(--color-info);
 }
 .dark .y-alert.is-info.with-header .header {
-  color: var(--light-color-info-light);
-  background-color: var(--light-color-info);
+  color: var(--color-info-light);
+  background-color: var(--color-info);
 }
 .dark .y-alert.is-success {
-  color: var(--light-alert-success-text-color);
-  background-color: var(--light-alert-success-color-light);
-  border-color: var(--light-alert-success-color);
+  color: var(--alert-success-text-color);
+  background-color: var(--alert-success-color-light);
+  border-color: var(--alert-success-color);
 }
 .dark .y-alert.is-success.with-header .header {
-  color: var(--light-alert-success-banner-text-color);
-  background-color: var(--light-alert-success-banner-color);
+  color: var(--alert-success-banner-text-color);
+  background-color: var(--alert-success-banner-color);
 }
 .dark .y-alert.is-warning {
-  color: var(--light-alert-warning-text-color);
-  background-color: var(--light-alert-warning-color-light);
-  border-color: var(--light-alert-warning-color);
+  color: var(--alert-warning-text-color);
+  background-color: var(--alert-warning-color-light);
+  border-color: var(--alert-warning-color);
 }
 .dark .y-alert.is-warning.with-header .header {
-  color: var(--light-alert-warning-banner-text-color);
-  background-color: var(--light-alert-warning-banner-color);
+  color: var(--alert-warning-banner-text-color);
+  background-color: var(--alert-warning-banner-color);
 }
 .dark .y-alert.is-danger {
-  color: var(--light-alert-danger-text-color);
-  background-color: var(--light-alert-danger-color-light);
-  border-color: var(--light-alert-danger-color);
+  color: var(--alert-danger-text-color);
+  background-color: var(--alert-danger-color-light);
+  border-color: var(--alert-danger-color);
 }
 .dark .y-alert.is-danger.with-header .header {
-  color: var(--light-alert-warning-banner-text-color);
-  background-color: var(--light-alert-danger-banner-color);
+  color: var(--alert-warning-banner-text-color);
+  background-color: var(--alert-danger-banner-color);
 }
 .dark .y-breadcrumb {
   width: 100%;
@@ -6169,7 +6169,7 @@
   white-space: nowrap;
   align-items: center;
   font-size: var(--font-size-small);
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
 }
 .dark .y-breadcrumb a {
   text-decoration: none;
@@ -6191,11 +6191,11 @@
   border-radius: 0.5rem;
   border-style: solid;
   border-width: 1px;
-  border-color: var(--light-color-disabled);
+  border-color: var(--color-disabled);
   padding: 0;
   font-size: var(--font-size-small);
-  color: var(--light-color-disabled);
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
+  color: var(--color-disabled);
 }
 .dark .y-breadcrumb--boxed ol.breadcrumb--list a {
   text-decoration: none;
@@ -6217,7 +6217,7 @@
   top: 0;
   bottom: 0;
   left: -2px;
-  background-color: var(--light-color-disabled);
+  background-color: var(--color-disabled);
   width: 1rem;
   height: 2.5rem;
   clip-path: polygon(0 0, 0% 100%, 100% 50%);
@@ -6232,7 +6232,7 @@
   color: black;
 }
 .dark .y-breadcrumb--boxed ol.breadcrumb--list .breadcrumb--link.colored {
-  background-color: var(--light-color-disabled);
+  background-color: var(--color-disabled);
   padding-left: 1rem;
   color: white;
 }
@@ -6313,11 +6313,11 @@
   cursor: pointer;
 }
 .dark .y-content a.greyed {
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
   cursor: not-allowed;
 }
 .dark .y-content a.disabled {
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
   cursor: not-allowed;
 }
 .dark .y-content .text-truncate {
@@ -6346,19 +6346,19 @@
   line-height: 2.8rem;
 }
 .dark .y-content .text-info {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .dark .y-content .text-success {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .dark .y-content .text-warning {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .dark .y-content .text-danger {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .dark .y-content .text-muted {
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
 }
 .dark .y-content ul {
   list-style-type: disc;
@@ -6385,16 +6385,16 @@
   content: "✔ ";
 }
 .dark .y-content li.checkmark.is-info::before {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .dark .y-content li.checkmark.is-success::before {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .dark .y-content li.checkmark.is-warning::before {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .dark .y-content li.checkmark.is-danger::before {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .dark .y-content li.roman {
   list-style-type: upper-roman;
@@ -6404,16 +6404,16 @@
   padding-left: 5px;
 }
 .dark .y-content ol.checkmark li.is-info::marker {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .dark .y-content ol.checkmark li.is-success::marker {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .dark .y-content ol.checkmark li.is-warning::marker {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .dark .y-content ol.checkmark li.is-danger::marker {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .dark .y-content {
   --table-border-radius: 5px;
@@ -6525,24 +6525,24 @@
   /*color: inherit;*/
 }
 .dark .y-checkbox--normal.is-info {
-  --checkbox-check-color: var(--light-color-info);
-  color: var(--light-color-info);
+  --checkbox-check-color: var(--color-info);
+  color: var(--color-info);
 }
 .dark .y-checkbox--normal.is-success {
-  --checkbox-check-color: var(--light-color-success);
-  color: var(--light-color-success);
+  --checkbox-check-color: var(--color-success);
+  color: var(--color-success);
 }
 .dark .y-checkbox--normal.is-warning {
-  --checkbox-check-color: var(--light-color-warning);
-  color: var(--light-color-warning);
+  --checkbox-check-color: var(--color-warning);
+  color: var(--color-warning);
 }
 .dark .y-checkbox--normal.is-danger {
-  --checkbox-check-color: var(--light-color-danger);
-  color: var(--light-color-danger);
+  --checkbox-check-color: var(--color-danger);
+  color: var(--color-danger);
 }
 .dark .y-checkbox--normal.is-error {
-  --checkbox-check-color: var(--light-color-danger);
-  color: var(--light-color-danger);
+  --checkbox-check-color: var(--color-danger);
+  color: var(--color-danger);
 }
 .dark .y-checkbox--normal label.checkbox--label {
   font-weight: 500;
@@ -6551,7 +6551,7 @@
   display: none;
 }
 .dark .y-checkbox--normal .checkbox--help {
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
   font-size: var(--font-size-small);
   line-height: var(--font-size-small-line-height);
   font-weight: 400;
@@ -6590,7 +6590,7 @@
   line-height: 1rem;
   display: inline-flex;
   padding: 0.5rem;
-  color: var(--light-toggle-slider-text-color);
+  color: var(--toggle-slider-text-color);
   align-items: center;
   cursor: pointer;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -6610,16 +6610,16 @@
   padding-right: 0.5rem;
 }
 .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-on {
-  background-color: var(--light-toggle-slider-on-background-color);
-  color: var(--light-toggle-slider-on-text-color);
+  background-color: var(--toggle-slider-on-background-color);
+  color: var(--toggle-slider-on-text-color);
   width: var(--slider-width);
   border-top-right-radius: var(--toggle-slider-radius);
   border-bottom-right-radius: var(--toggle-slider-radius);
   line-height: inherit;
 }
 .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-off {
-  background-color: var(--light-toggle-slider-off-background-color);
-  color: var(--light-toggle-slider-off-text-color);
+  background-color: var(--toggle-slider-off-background-color);
+  color: var(--toggle-slider-off-text-color);
   width: var(--slider-width);
   border-top-left-radius: var(--toggle-slider-radius);
   border-bottom-left-radius: var(--toggle-slider-radius);
@@ -6628,7 +6628,7 @@
 .dark .y-content .y-toggle-slider .checkbox-input ~ span.slider {
   transform: translateX(calc(-1 * var(--slider-width)));
   transition: 0.5s;
-  background-color: var(--light-toggle-slider-background-color);
+  background-color: var(--toggle-slider-background-color);
   border-radius: 0;
   border-top-right-radius: calc(var(--toggle-slider-radius) - 2px);
   border-bottom-right-radius: calc(var(--toggle-slider-radius) - 2px);
@@ -6636,31 +6636,31 @@
 }
 .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-off.green, .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-on.green, .dark .y-content .y-toggle-slider .checkbox-input ~ span.slider.green {
   background-color: green;
-  --light-toggle-slider-background-color: green;
+  --toggle-slider-background-color: green;
 }
 .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-off.red, .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-on.red, .dark .y-content .y-toggle-slider .checkbox-input ~ span.slider.red {
   background-color: red;
-  --light-toggle-slider-background-color: red;
+  --toggle-slider-background-color: red;
 }
 .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-off.purple, .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-on.purple, .dark .y-content .y-toggle-slider .checkbox-input ~ span.slider.purple {
   background-color: purple;
-  --light-toggle-slider-background-color: purple;
+  --toggle-slider-background-color: purple;
 }
 .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-off.yellow, .dark .y-content .y-toggle-slider .checkbox-input ~ span.is-on.yellow, .dark .y-content .y-toggle-slider .checkbox-input ~ span.slider.yellow {
-  --light-toggle-slider-background-color: yellow;
+  --toggle-slider-background-color: yellow;
 }
 .dark .y-content .y-toggle-slider .checkbox-input:checked ~ span.is-on {
-  /*background-color: var(--light-toggle-slider-on-background-color);*/
+  /*background-color: var(--toggle-slider-on-background-color);*/
   /*color:white;*/
 }
 .dark .y-content .y-toggle-slider .checkbox-input:checked ~ span.is-off {
-  /*background-color: var(--light-toggle-slider-off-color);*/
-  /*color: var(--light-toggle-slider-off-color);*/
+  /*background-color: var(--toggle-slider-off-color);*/
+  /*color: var(--toggle-slider-off-color);*/
 }
 .dark .y-content .y-toggle-slider .checkbox-input:checked ~ span.slider {
   transform: translateX(calc(-2 * var(--slider-width)));
   transition: 0.5s;
-  background-color: var(--light-toggle-slider-background-color);
+  background-color: var(--toggle-slider-background-color);
   border-radius: 0;
   border-top-left-radius: calc(var(--toggle-slider-radius) - 2px);
   border-bottom-left-radius: calc(var(--toggle-slider-radius) - 2px);
@@ -6670,8 +6670,8 @@
   --slider-width: 30px !important;
 }
 .dark .y-content .y-toggle-slider.round .checkbox-input ~ span.is-on, .dark .y-content .y-toggle-slider.round .checkbox-input ~ span.is-off {
-  background-color: var(--light-toggle-slider-off-background-color);
-  color: var(--light-toggle-slider-on-text-color);
+  background-color: var(--toggle-slider-off-background-color);
+  color: var(--toggle-slider-on-text-color);
 }
 .dark .y-content .y-toggle-slider.round .checkbox-input ~ span.slider {
   border-radius: var(--toggle-slider-radius) !important;
@@ -6681,8 +6681,8 @@
   transform: translateX(calc(-1 * var(--slider-width) + 5px));
 }
 .dark .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.is-on, .dark .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.is-off {
-  background-color: var(--light-toggle-slider-on-background-color);
-  color: var(--light-toggle-slider-on-text-color);
+  background-color: var(--toggle-slider-on-background-color);
+  color: var(--toggle-slider-on-text-color);
 }
 .dark .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.slider {
   transform: translateX(calc(-2 * var(--slider-width) + 5px));
@@ -6700,7 +6700,7 @@
 .dark .y-content .y-faded-small {
   font-size: 0.6rem;
   padding: 0.5rem;
-  color: var(--light-toggle-slider-text-color);
+  color: var(--toggle-slider-text-color);
 }
 .dark .y-content .y-toggle-section .checkbox-input ~ span.is-on {
   display: none;
@@ -6737,7 +6737,7 @@
 }
 .dark .y-content .y-toggle-select .left.on {
   --toggle-select-left-text-color: white;
-  --toggle-select-left-background-color: var(--light-color-switch-on);
+  --toggle-select-left-background-color: var(--color-switch-on);
 }
 .dark .y-content .y-toggle-select .right {
   padding-top: 0.5rem;
@@ -6750,7 +6750,7 @@
 }
 .dark .y-content .y-toggle-select .right.on {
   --toggle-select-right-text-color: white;
-  --toggle-select-left-background-color: var(--light-color-switch-on);
+  --toggle-select-left-background-color: var(--color-switch-on);
 }
 .dark .y-content .y-toggle-select .checkbox-input ~ .left {
   color: var(--toggle-select-left-text-color);
@@ -6766,7 +6766,7 @@
 }
 .dark .y-content .y-toggle-select .checkbox-input:checked ~ .right {
   color: white;
-  background-color: var(--light-color-switch-on);
+  background-color: var(--color-switch-on);
 }
 .dark .y-content .y-checkable {
   display: flex;
@@ -6878,20 +6878,20 @@
   padding-right: 0.5rem !important;
 }
 .dark .y-modal-info .p-dialog-header {
-  background-color: var(--light-color-info) !important;
-  color: var(--light-color-info-light) !important;
+  background-color: var(--color-info) !important;
+  color: var(--color-info-light) !important;
 }
 .dark .y-modal-success .p-dialog-header {
-  background-color: var(--light-color-success) !important;
-  color: var(--light-color-success-light) !important;
+  background-color: var(--color-success) !important;
+  color: var(--color-success-light) !important;
 }
 .dark .y-modal-warning .p-dialog-header {
-  background-color: var(--light-color-warning) !important;
-  color: var(--light-color-warning-light) !important;
+  background-color: var(--color-warning) !important;
+  color: var(--color-warning-light) !important;
 }
 .dark .y-modal-danger .p-dialog-header {
-  background-color: var(--light-color-danger) !important;
-  color: var(--light-color-danger-light) !important;
+  background-color: var(--color-danger) !important;
+  color: var(--color-danger-light) !important;
 }
 
 .light {
@@ -12491,60 +12491,60 @@
 .light * {
   --brand-color-primary: red;
   --brand-color-secondary: red;
-  --light-color-info: #3777FF;
-  --light-color-info-light: #e6e6ff;
-  --light-color-info-contrast: white;
-  --light-color-success: #0C7C59;
-  --light-color-success-light: #ccffcc;
-  --light-color-success-contrast: white;
-  --light-color-warning: #FFBF46;
-  --light-color-warning-light: #fff2e6;
-  --light-color-warning-contrast: white;
-  --light-color-danger: #D81159;
-  --light-color-danger-light: #ffe6e6;
-  --light-color-danger-contrast: white;
-  --light-color-disabled: #d9d9d9;
-  --light-color-muted: #d9d9d9;
-  --light-color-misc: #D7D0C8;
-  --light-color-switch-on: green;
-  --light-color-switch-off: red;
+  --color-info: #3777FF;
+  --color-info-light: #e6e6ff;
+  --color-info-contrast: white;
+  --color-success: #0C7C59;
+  --color-success-light: #ccffcc;
+  --color-success-contrast: white;
+  --color-warning: #FFBF46;
+  --color-warning-light: #fff2e6;
+  --color-warning-contrast: white;
+  --color-danger: #D81159;
+  --color-danger-light: #ffe6e6;
+  --color-danger-contrast: white;
+  --color-disabled: #d9d9d9;
+  --color-muted: #d9d9d9;
+  --color-misc: #D7D0C8;
+  --color-switch-on: green;
+  --color-switch-off: red;
 }
 .light * {
-  --light-alert-success-color: var(--light-color-success);
-  --light-alert-success-color-light: var(--light-color-success-light);
-  --light-alert-success-text-color: var(--light-color-success);
-  --light-alert-success-banner-color: var(--light-color-success);
-  --light-alert-success-banner-text-color: var(--light-color-success-contrast);
+  --alert-success-color: var(--color-success);
+  --alert-success-color-light: var(--color-success-light);
+  --alert-success-text-color: var(--color-success);
+  --alert-success-banner-color: var(--color-success);
+  --alert-success-banner-text-color: var(--color-success-contrast);
 }
 .light * {
-  --light-alert-info-color: var(--light-color-info);
-  --light-alert-info-color-light: var(--light-color-info-light);
-  --light-alert-info-text-color: var(--light-color-info);
-  --light-alert-info-banner-color: var(--light-color-info);
-  --light-alert-info-banner-text-color: var(--light-color-info-contrast);
+  --alert-info-color: var(--color-info);
+  --alert-info-color-light: var(--color-info-light);
+  --alert-info-text-color: var(--color-info);
+  --alert-info-banner-color: var(--color-info);
+  --alert-info-banner-text-color: var(--color-info-contrast);
 }
 .light * {
-  --light-alert-warning-color: var(--light-color-warning);
-  --light-alert-warning-color-light: var(--light-color-warning-light);
-  --light-alert-warning-text-color: var(--light-color-warning);
-  --light-alert-warning-banner-color: var(--light-color-warning);
-  --light-alert-warning-banner-text-color: var(--light-color-warning-contrast);
+  --alert-warning-color: var(--color-warning);
+  --alert-warning-color-light: var(--color-warning-light);
+  --alert-warning-text-color: var(--color-warning);
+  --alert-warning-banner-color: var(--color-warning);
+  --alert-warning-banner-text-color: var(--color-warning-contrast);
 }
 .light * {
-  --light-alert-danger-color: var(--light-color-danger);
-  --light-alert-danger-color-light: var(--light-color-danger-light);
-  --light-alert-danger-text-color: var(--light-color-danger);
-  --light-alert-danger-banner-color: var(--light-color-danger);
-  --light-alert-danger-banner-text-color: var(--light-color-danger-contrast);
+  --alert-danger-color: var(--color-danger);
+  --alert-danger-color-light: var(--color-danger-light);
+  --alert-danger-text-color: var(--color-danger);
+  --alert-danger-banner-color: var(--color-danger);
+  --alert-danger-banner-text-color: var(--color-danger-contrast);
 }
 .light * {
-  --light-toggle-slider-background-color: lightgray;
-  --light-toggle-slider-text-color: lightgray;
-  --light-toggle-slider-on-background-color: var(--light-color-switch-on);
-  --light-toggle-slider-on-text-color: white;
-  --light-toggle-slider-off-background-color: var(--light-color-switch-off);
-  --light-toggle-slider-off-text-color: white;
-  --toggle-select-disabled-background-color: var(--light-color-disabled);
+  --toggle-slider-background-color: lightgray;
+  --toggle-slider-text-color: lightgray;
+  --toggle-slider-on-background-color: var(--color-switch-on);
+  --toggle-slider-on-text-color: white;
+  --toggle-slider-off-background-color: var(--color-switch-off);
+  --toggle-slider-off-text-color: white;
+  --toggle-select-disabled-background-color: var(--color-disabled);
   --toggle-select-disabled-text-color: white;
 }
 .light * {
@@ -12587,8 +12587,8 @@
   border-width: 2px;
 }
 .light .y-input-code .code input.is-error {
-  border-color: var(--light-color-danger);
-  background-color: var(--light-color-danger-light);
+  border-color: var(--color-danger);
+  background-color: var(--color-danger-light);
 }
 .light .y-input-code .code.blurred input {
   opacity: 0.1;
@@ -12705,43 +12705,43 @@
   transform: rotate(20deg);
 }
 .light .y-tag-label.is-info-open .y-tag-label--pointer {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .light .y-tag-label.is-info-open .y-tag-label--content {
   border-width: 2px;
-  border-color: var(--light-color-info);
+  border-color: var(--color-info);
   background-color: white;
   border-style: solid;
 }
 .light .y-tag-label.is-info-open .y-tag-label--text {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .light .y-tag-label.is-info-solid .y-tag-label--pointer {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .light .y-tag-label.is-info-solid .y-tag-label--content {
-  background-color: var(--light-color-info);
+  background-color: var(--color-info);
 }
 .light .y-tag-label.is-info-solid .y-tag-label--text {
   color: white;
 }
 .light .y-tag-label.is-success-open .y-tag-label--pointer {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .light .y-tag-label.is-success-open .y-tag-label--content {
   border-width: 2px;
-  border-color: var(--light-color-success);
+  border-color: var(--color-success);
   background-color: white;
   border-style: solid;
 }
 .light .y-tag-label.is-success-open .y-tag-label--text {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .light .y-tag-label.is-success-solid .y-tag-label--pointer {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .light .y-tag-label.is-success-solid .y-tag-label--content {
-  background-color: var(--light-color-success);
+  background-color: var(--color-success);
 }
 .light .y-tag-label.is-success-solid .y-tag-label--text {
   color: white;
@@ -12752,43 +12752,43 @@
   border-left-style: none;
 }
 .light .y-tag-label.is-warning-open .y-tag-label--pointer {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .light .y-tag-label.is-warning-open .y-tag-label--content {
   border-width: 2px;
-  border-color: var(--light-color-warning);
+  border-color: var(--color-warning);
   background-color: white;
   border-style: solid;
 }
 .light .y-tag-label.is-warning-open .y-tag-label--text {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .light .y-tag-label.is-warning-solid .y-tag-label--pointer {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .light .y-tag-label.is-warning-solid .y-tag-label--content {
-  background-color: var(--light-color-warning);
+  background-color: var(--color-warning);
 }
 .light .y-tag-label.is-warning-solid .y-tag-label--text {
   color: white;
 }
 .light .y-tag-label.is-danger-open .y-tag-label--pointer {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .light .y-tag-label.is-danger-open .y-tag-label--content {
   border-width: 2px;
-  border-color: var(--light-color-danger);
+  border-color: var(--color-danger);
   background-color: white;
   border-style: solid;
 }
 .light .y-tag-label.is-danger-open .y-tag-label--text {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .light .y-tag-label.is-danger-solid .y-tag-label--pointer {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .light .y-tag-label.is-danger-solid .y-tag-label--content {
-  background-color: var(--light-color-danger);
+  background-color: var(--color-danger);
 }
 .light .y-tag-label.is-danger-solid .y-tag-label--text {
   color: white;
@@ -12878,53 +12878,53 @@
   border-radius: 5px;
 }
 .light .y-tag-chip.is-info-open {
-  color: var(--light-color-info);
-  border-color: var(--light-color-info);
+  color: var(--color-info);
+  border-color: var(--color-info);
   background-color: transparent;
 }
 .light .y-tag-chip.is-info-solid {
-  background-color: var(--light-color-info);
-  border-color: var(--light-color-info);
+  background-color: var(--color-info);
+  border-color: var(--color-info);
   color: white;
 }
 .light .y-tag-chip.is-success-open {
-  color: var(--light-color-success);
-  border-color: var(--light-color-success);
+  color: var(--color-success);
+  border-color: var(--color-success);
   background-color: transparent;
 }
 .light .y-tag-chip.is-success-solid {
-  background-color: var(--light-color-success);
-  border-color: var(--light-color-success);
+  background-color: var(--color-success);
+  border-color: var(--color-success);
   color: white;
 }
 .light .y-tag-chip.is-warning-open {
-  color: var(--light-color-warning);
-  border-color: var(--light-color-warning);
+  color: var(--color-warning);
+  border-color: var(--color-warning);
   background-color: transparent;
 }
 .light .y-tag-chip.is-warning-solid {
-  background-color: var(--light-color-warning);
-  border-color: var(--light-color-warning);
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
   color: white;
 }
 .light .y-tag-chip.is-danger-open {
-  color: var(--light-color-danger);
-  border-color: var(--light-color-danger);
+  color: var(--color-danger);
+  border-color: var(--color-danger);
   background-color: transparent;
 }
 .light .y-tag-chip.is-danger-solid {
-  background-color: var(--light-color-danger);
-  border-color: var(--light-color-danger);
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
   color: white;
 }
 .light .y-tag-chip.is-disabled-open {
-  color: var(--light-color-disabled);
-  border-color: var(--light-color-disabled);
+  color: var(--color-disabled);
+  border-color: var(--color-disabled);
   background-color: transparent;
 }
 .light .y-tag-chip.is-disabled-solid {
-  background-color: var(--light-color-disabled);
-  border-color: var(--light-color-disabled);
+  background-color: var(--color-disabled);
+  border-color: var(--color-disabled);
   color: white;
 }
 .light .y-button-banner {
@@ -13019,40 +13019,40 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 .light .y-alert.is-info {
-  color: var(--light-color-info);
-  background-color: var(--light-color-info-light);
-  border-color: var(--light-color-info);
+  color: var(--color-info);
+  background-color: var(--color-info-light);
+  border-color: var(--color-info);
 }
 .light .y-alert.is-info.with-header .header {
-  color: var(--light-color-info-light);
-  background-color: var(--light-color-info);
+  color: var(--color-info-light);
+  background-color: var(--color-info);
 }
 .light .y-alert.is-success {
-  color: var(--light-alert-success-text-color);
-  background-color: var(--light-alert-success-color-light);
-  border-color: var(--light-alert-success-color);
+  color: var(--alert-success-text-color);
+  background-color: var(--alert-success-color-light);
+  border-color: var(--alert-success-color);
 }
 .light .y-alert.is-success.with-header .header {
-  color: var(--light-alert-success-banner-text-color);
-  background-color: var(--light-alert-success-banner-color);
+  color: var(--alert-success-banner-text-color);
+  background-color: var(--alert-success-banner-color);
 }
 .light .y-alert.is-warning {
-  color: var(--light-alert-warning-text-color);
-  background-color: var(--light-alert-warning-color-light);
-  border-color: var(--light-alert-warning-color);
+  color: var(--alert-warning-text-color);
+  background-color: var(--alert-warning-color-light);
+  border-color: var(--alert-warning-color);
 }
 .light .y-alert.is-warning.with-header .header {
-  color: var(--light-alert-warning-banner-text-color);
-  background-color: var(--light-alert-warning-banner-color);
+  color: var(--alert-warning-banner-text-color);
+  background-color: var(--alert-warning-banner-color);
 }
 .light .y-alert.is-danger {
-  color: var(--light-alert-danger-text-color);
-  background-color: var(--light-alert-danger-color-light);
-  border-color: var(--light-alert-danger-color);
+  color: var(--alert-danger-text-color);
+  background-color: var(--alert-danger-color-light);
+  border-color: var(--alert-danger-color);
 }
 .light .y-alert.is-danger.with-header .header {
-  color: var(--light-alert-warning-banner-text-color);
-  background-color: var(--light-alert-danger-banner-color);
+  color: var(--alert-warning-banner-text-color);
+  background-color: var(--alert-danger-banner-color);
 }
 .light .y-breadcrumb {
   width: 100%;
@@ -13064,7 +13064,7 @@
   white-space: nowrap;
   align-items: center;
   font-size: var(--font-size-small);
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
 }
 .light .y-breadcrumb a {
   text-decoration: none;
@@ -13086,11 +13086,11 @@
   border-radius: 0.5rem;
   border-style: solid;
   border-width: 1px;
-  border-color: var(--light-color-disabled);
+  border-color: var(--color-disabled);
   padding: 0;
   font-size: var(--font-size-small);
-  color: var(--light-color-disabled);
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
+  color: var(--color-disabled);
 }
 .light .y-breadcrumb--boxed ol.breadcrumb--list a {
   text-decoration: none;
@@ -13112,7 +13112,7 @@
   top: 0;
   bottom: 0;
   left: -2px;
-  background-color: var(--light-color-disabled);
+  background-color: var(--color-disabled);
   width: 1rem;
   height: 2.5rem;
   clip-path: polygon(0 0, 0% 100%, 100% 50%);
@@ -13127,7 +13127,7 @@
   color: black;
 }
 .light .y-breadcrumb--boxed ol.breadcrumb--list .breadcrumb--link.colored {
-  background-color: var(--light-color-disabled);
+  background-color: var(--color-disabled);
   padding-left: 1rem;
   color: white;
 }
@@ -13208,11 +13208,11 @@
   cursor: pointer;
 }
 .light .y-content a.greyed {
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
   cursor: not-allowed;
 }
 .light .y-content a.disabled {
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
   cursor: not-allowed;
 }
 .light .y-content .text-truncate {
@@ -13241,19 +13241,19 @@
   line-height: 2.8rem;
 }
 .light .y-content .text-info {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .light .y-content .text-success {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .light .y-content .text-warning {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .light .y-content .text-danger {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .light .y-content .text-muted {
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
 }
 .light .y-content ul {
   list-style-type: disc;
@@ -13280,16 +13280,16 @@
   content: "✔ ";
 }
 .light .y-content li.checkmark.is-info::before {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .light .y-content li.checkmark.is-success::before {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .light .y-content li.checkmark.is-warning::before {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .light .y-content li.checkmark.is-danger::before {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .light .y-content li.roman {
   list-style-type: upper-roman;
@@ -13299,16 +13299,16 @@
   padding-left: 5px;
 }
 .light .y-content ol.checkmark li.is-info::marker {
-  color: var(--light-color-info);
+  color: var(--color-info);
 }
 .light .y-content ol.checkmark li.is-success::marker {
-  color: var(--light-color-success);
+  color: var(--color-success);
 }
 .light .y-content ol.checkmark li.is-warning::marker {
-  color: var(--light-color-warning);
+  color: var(--color-warning);
 }
 .light .y-content ol.checkmark li.is-danger::marker {
-  color: var(--light-color-danger);
+  color: var(--color-danger);
 }
 .light .y-content {
   --table-border-radius: 5px;
@@ -13420,24 +13420,24 @@
   /*color: inherit;*/
 }
 .light .y-checkbox--normal.is-info {
-  --checkbox-check-color: var(--light-color-info);
-  color: var(--light-color-info);
+  --checkbox-check-color: var(--color-info);
+  color: var(--color-info);
 }
 .light .y-checkbox--normal.is-success {
-  --checkbox-check-color: var(--light-color-success);
-  color: var(--light-color-success);
+  --checkbox-check-color: var(--color-success);
+  color: var(--color-success);
 }
 .light .y-checkbox--normal.is-warning {
-  --checkbox-check-color: var(--light-color-warning);
-  color: var(--light-color-warning);
+  --checkbox-check-color: var(--color-warning);
+  color: var(--color-warning);
 }
 .light .y-checkbox--normal.is-danger {
-  --checkbox-check-color: var(--light-color-danger);
-  color: var(--light-color-danger);
+  --checkbox-check-color: var(--color-danger);
+  color: var(--color-danger);
 }
 .light .y-checkbox--normal.is-error {
-  --checkbox-check-color: var(--light-color-danger);
-  color: var(--light-color-danger);
+  --checkbox-check-color: var(--color-danger);
+  color: var(--color-danger);
 }
 .light .y-checkbox--normal label.checkbox--label {
   font-weight: 500;
@@ -13446,7 +13446,7 @@
   display: none;
 }
 .light .y-checkbox--normal .checkbox--help {
-  color: var(--light-color-disabled);
+  color: var(--color-disabled);
   font-size: var(--font-size-small);
   line-height: var(--font-size-small-line-height);
   font-weight: 400;
@@ -13485,7 +13485,7 @@
   line-height: 1rem;
   display: inline-flex;
   padding: 0.5rem;
-  color: var(--light-toggle-slider-text-color);
+  color: var(--toggle-slider-text-color);
   align-items: center;
   cursor: pointer;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -13505,16 +13505,16 @@
   padding-right: 0.5rem;
 }
 .light .y-content .y-toggle-slider .checkbox-input ~ span.is-on {
-  background-color: var(--light-toggle-slider-on-background-color);
-  color: var(--light-toggle-slider-on-text-color);
+  background-color: var(--toggle-slider-on-background-color);
+  color: var(--toggle-slider-on-text-color);
   width: var(--slider-width);
   border-top-right-radius: var(--toggle-slider-radius);
   border-bottom-right-radius: var(--toggle-slider-radius);
   line-height: inherit;
 }
 .light .y-content .y-toggle-slider .checkbox-input ~ span.is-off {
-  background-color: var(--light-toggle-slider-off-background-color);
-  color: var(--light-toggle-slider-off-text-color);
+  background-color: var(--toggle-slider-off-background-color);
+  color: var(--toggle-slider-off-text-color);
   width: var(--slider-width);
   border-top-left-radius: var(--toggle-slider-radius);
   border-bottom-left-radius: var(--toggle-slider-radius);
@@ -13523,7 +13523,7 @@
 .light .y-content .y-toggle-slider .checkbox-input ~ span.slider {
   transform: translateX(calc(-1 * var(--slider-width)));
   transition: 0.5s;
-  background-color: var(--light-toggle-slider-background-color);
+  background-color: var(--toggle-slider-background-color);
   border-radius: 0;
   border-top-right-radius: calc(var(--toggle-slider-radius) - 2px);
   border-bottom-right-radius: calc(var(--toggle-slider-radius) - 2px);
@@ -13531,31 +13531,31 @@
 }
 .light .y-content .y-toggle-slider .checkbox-input ~ span.is-off.green, .light .y-content .y-toggle-slider .checkbox-input ~ span.is-on.green, .light .y-content .y-toggle-slider .checkbox-input ~ span.slider.green {
   background-color: green;
-  --light-toggle-slider-background-color: green;
+  --toggle-slider-background-color: green;
 }
 .light .y-content .y-toggle-slider .checkbox-input ~ span.is-off.red, .light .y-content .y-toggle-slider .checkbox-input ~ span.is-on.red, .light .y-content .y-toggle-slider .checkbox-input ~ span.slider.red {
   background-color: red;
-  --light-toggle-slider-background-color: red;
+  --toggle-slider-background-color: red;
 }
 .light .y-content .y-toggle-slider .checkbox-input ~ span.is-off.purple, .light .y-content .y-toggle-slider .checkbox-input ~ span.is-on.purple, .light .y-content .y-toggle-slider .checkbox-input ~ span.slider.purple {
   background-color: purple;
-  --light-toggle-slider-background-color: purple;
+  --toggle-slider-background-color: purple;
 }
 .light .y-content .y-toggle-slider .checkbox-input ~ span.is-off.yellow, .light .y-content .y-toggle-slider .checkbox-input ~ span.is-on.yellow, .light .y-content .y-toggle-slider .checkbox-input ~ span.slider.yellow {
-  --light-toggle-slider-background-color: yellow;
+  --toggle-slider-background-color: yellow;
 }
 .light .y-content .y-toggle-slider .checkbox-input:checked ~ span.is-on {
-  /*background-color: var(--light-toggle-slider-on-background-color);*/
+  /*background-color: var(--toggle-slider-on-background-color);*/
   /*color:white;*/
 }
 .light .y-content .y-toggle-slider .checkbox-input:checked ~ span.is-off {
-  /*background-color: var(--light-toggle-slider-off-color);*/
-  /*color: var(--light-toggle-slider-off-color);*/
+  /*background-color: var(--toggle-slider-off-color);*/
+  /*color: var(--toggle-slider-off-color);*/
 }
 .light .y-content .y-toggle-slider .checkbox-input:checked ~ span.slider {
   transform: translateX(calc(-2 * var(--slider-width)));
   transition: 0.5s;
-  background-color: var(--light-toggle-slider-background-color);
+  background-color: var(--toggle-slider-background-color);
   border-radius: 0;
   border-top-left-radius: calc(var(--toggle-slider-radius) - 2px);
   border-bottom-left-radius: calc(var(--toggle-slider-radius) - 2px);
@@ -13565,8 +13565,8 @@
   --slider-width: 30px !important;
 }
 .light .y-content .y-toggle-slider.round .checkbox-input ~ span.is-on, .light .y-content .y-toggle-slider.round .checkbox-input ~ span.is-off {
-  background-color: var(--light-toggle-slider-off-background-color);
-  color: var(--light-toggle-slider-on-text-color);
+  background-color: var(--toggle-slider-off-background-color);
+  color: var(--toggle-slider-on-text-color);
 }
 .light .y-content .y-toggle-slider.round .checkbox-input ~ span.slider {
   border-radius: var(--toggle-slider-radius) !important;
@@ -13576,8 +13576,8 @@
   transform: translateX(calc(-1 * var(--slider-width) + 5px));
 }
 .light .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.is-on, .light .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.is-off {
-  background-color: var(--light-toggle-slider-on-background-color);
-  color: var(--light-toggle-slider-on-text-color);
+  background-color: var(--toggle-slider-on-background-color);
+  color: var(--toggle-slider-on-text-color);
 }
 .light .y-content .y-toggle-slider.round .checkbox-input:checked ~ span.slider {
   transform: translateX(calc(-2 * var(--slider-width) + 5px));
@@ -13595,7 +13595,7 @@
 .light .y-content .y-faded-small {
   font-size: 0.6rem;
   padding: 0.5rem;
-  color: var(--light-toggle-slider-text-color);
+  color: var(--toggle-slider-text-color);
 }
 .light .y-content .y-toggle-section .checkbox-input ~ span.is-on {
   display: none;
@@ -13632,7 +13632,7 @@
 }
 .light .y-content .y-toggle-select .left.on {
   --toggle-select-left-text-color: white;
-  --toggle-select-left-background-color: var(--light-color-switch-on);
+  --toggle-select-left-background-color: var(--color-switch-on);
 }
 .light .y-content .y-toggle-select .right {
   padding-top: 0.5rem;
@@ -13645,7 +13645,7 @@
 }
 .light .y-content .y-toggle-select .right.on {
   --toggle-select-right-text-color: white;
-  --toggle-select-left-background-color: var(--light-color-switch-on);
+  --toggle-select-left-background-color: var(--color-switch-on);
 }
 .light .y-content .y-toggle-select .checkbox-input ~ .left {
   color: var(--toggle-select-left-text-color);
@@ -13661,7 +13661,7 @@
 }
 .light .y-content .y-toggle-select .checkbox-input:checked ~ .right {
   color: white;
-  background-color: var(--light-color-switch-on);
+  background-color: var(--color-switch-on);
 }
 .light .y-content .y-checkable {
   display: flex;
@@ -13773,20 +13773,20 @@
   padding-right: 0.5rem !important;
 }
 .light .y-modal-info .p-dialog-header {
-  background-color: var(--light-color-info) !important;
-  color: var(--light-color-info-light) !important;
+  background-color: var(--color-info) !important;
+  color: var(--color-info-light) !important;
 }
 .light .y-modal-success .p-dialog-header {
-  background-color: var(--light-color-success) !important;
-  color: var(--light-color-success-light) !important;
+  background-color: var(--color-success) !important;
+  color: var(--color-success-light) !important;
 }
 .light .y-modal-warning .p-dialog-header {
-  background-color: var(--light-color-warning) !important;
-  color: var(--light-color-warning-light) !important;
+  background-color: var(--color-warning) !important;
+  color: var(--color-warning-light) !important;
 }
 .light .y-modal-danger .p-dialog-header {
-  background-color: var(--light-color-danger) !important;
-  color: var(--light-color-danger-light) !important;
+  background-color: var(--color-danger) !important;
+  color: var(--color-danger-light) !important;
 }
 
 /*# sourceMappingURL=theme.css.map */

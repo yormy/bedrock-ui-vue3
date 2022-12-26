@@ -92,26 +92,26 @@
 .y-tag-label {
     &.is-info-open {
         .y-tag-label--pointer {
-            color:var(--light-color-info);
+            color:var(--color-info);
         }
         .y-tag-label--content {
             border-width:2px;
-            border-color: var(--light-color-info);
+            border-color: var(--color-info);
             background-color: white;
             border-style:solid;
         }
 
         .y-tag-label--text {
-            color: var(--light-color-info);
+            color: var(--color-info);
         }
     }
 
     &.is-info-solid {
         .y-tag-label--pointer {
-            color: var(--light-color-info);
+            color: var(--color-info);
         }
         .y-tag-label--content {
-            background-color: var(--light-color-info);
+            background-color: var(--color-info);
         }
 
         .y-tag-label--text {
@@ -121,26 +121,26 @@
 
     &.is-success-open {
         .y-tag-label--pointer {
-            color:var(--light-color-success);
+            color:var(--color-success);
         }
         .y-tag-label--content {
             border-width:2px;
-            border-color: var(--light-color-success);
+            border-color: var(--color-success);
             background-color: white;
             border-style:solid;
         }
 
         .y-tag-label--text {
-            color: var(--light-color-success);
+            color: var(--color-success);
         }
     }
 
     &.is-success-solid {
         .y-tag-label--pointer {
-            color: var(--light-color-success);
+            color: var(--color-success);
         }
         .y-tag-label--content {
-            background-color: var(--light-color-success);
+            background-color: var(--color-success);
         }
 
         .y-tag-label--text {
@@ -153,26 +153,26 @@
         border-width:3px;
         border-left-style: none;
         .y-tag-label--pointer {
-            color:var(--light-color-warning);
+            color:var(--color-warning);
         }
         .y-tag-label--content {
             border-width:2px;
-            border-color: var(--light-color-warning);
+            border-color: var(--color-warning);
             background-color: white;
             border-style:solid;
         }
 
         .y-tag-label--text {
-            color: var(--light-color-warning);
+            color: var(--color-warning);
         }
     }
 
     &.is-warning-solid {
         .y-tag-label--pointer {
-            color: var(--light-color-warning);
+            color: var(--color-warning);
         }
         .y-tag-label--content {
-            background-color: var(--light-color-warning);
+            background-color: var(--color-warning);
         }
 
         .y-tag-label--text {
@@ -182,26 +182,26 @@
 
     &.is-danger-open {
         .y-tag-label--pointer {
-            color:var(--light-color-danger);
+            color:var(--color-danger);
         }
         .y-tag-label--content {
             border-width:2px;
-            border-color: var(--light-color-danger);
+            border-color: var(--color-danger);
             background-color: white;
             border-style:solid;
         }
 
         .y-tag-label--text {
-            color: var(--light-color-danger);
+            color: var(--color-danger);
         }
     }
 
     &.is-danger-solid {
         .y-tag-label--pointer {
-            color: var(--light-color-danger);
+            color: var(--color-danger);
         }
         .y-tag-label--content {
-            background-color: var(--light-color-danger);
+            background-color: var(--color-danger);
         }
 
         .y-tag-label--text {

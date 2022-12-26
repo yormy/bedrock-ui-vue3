@@ -32,25 +32,25 @@
 
         &.is-info {
             &::before {
-                color: var(--light-color-info);
+                color: var(--color-info);
             }
         }
 
         &.is-success {
             &::before {
-                color: var(--light-color-success);
+                color: var(--color-success);
             }
         }
 
         &.is-warning {
             &::before {
-                color: var(--light-color-warning);
+                color: var(--color-warning);
             }
         }
 
         &.is-danger {
             &::before {
-                color: var(--light-color-danger);
+                color: var(--color-danger);
             }
         }
     }
@@ -65,25 +65,25 @@
 
         &.is-info {
             &::marker {
-                color: var(--light-color-info);
+                color: var(--color-info);
             }
         }
 
         &.is-success {
             &::marker {
-                color: var(--light-color-success);
+                color: var(--color-success);
             }
         }
 
         &.is-warning {
             &::marker {
-                color: var(--light-color-warning);
+                color: var(--color-warning);
             }
         }
 
         &.is-danger {
             &::marker {
-                color: var(--light-color-danger);
+                color: var(--color-danger);
             }
         }
     }

@@ -9,7 +9,7 @@
         line-height:1rem;
         display: inline-flex;
         padding: 0.5rem;
-        color: var(--light-toggle-slider-text-color);
+        color: var(--toggle-slider-text-color);
         align-items: center;
         cursor: pointer;
 
@@ -31,8 +31,8 @@
             padding-right: 0.5rem;
 
             &.is-on {
-                background-color: var(--light-toggle-slider-on-background-color);
-                color: var(--light-toggle-slider-on-text-color);
+                background-color: var(--toggle-slider-on-background-color);
+                color: var(--toggle-slider-on-text-color);
 
                 width:var(--slider-width);
                 border-top-right-radius: var(--toggle-slider-radius);
@@ -41,8 +41,8 @@
             }
 
             &.is-off {
-                background-color: var(--light-toggle-slider-off-background-color);
-                color: var(--light-toggle-slider-off-text-color);
+                background-color: var(--toggle-slider-off-background-color);
+                color: var(--toggle-slider-off-text-color);
                 width:var(--slider-width);
                 border-top-left-radius: var(--toggle-slider-radius);
                 border-bottom-left-radius: var(--toggle-slider-radius);
@@ -53,7 +53,7 @@
             &.slider {
                 transform: translateX(calc(-1 * var(--slider-width)));
                 transition: 0.5s;
-                background-color: var(--light-toggle-slider-background-color);
+                background-color: var(--toggle-slider-background-color);
                 border-radius:0;
                 border-top-right-radius: calc(var(--toggle-slider-radius) - 2px);
                 border-bottom-right-radius: calc(var(--toggle-slider-radius)  - 2px);
@@ -64,37 +64,37 @@
         .checkbox-input ~span.is-off, .checkbox-input ~span.is-on, , .checkbox-input ~span.slider {
             &.green {
                 background-color: green;
-                --light-toggle-slider-background-color: green;
+                --toggle-slider-background-color: green;
             }
 
             &.red {
                 background-color: red;
-                --light-toggle-slider-background-color: red;
+                --toggle-slider-background-color: red;
             }
 
             &.purple {
                 background-color:purple;
-                --light-toggle-slider-background-color: purple;
+                --toggle-slider-background-color: purple;
             }
 
             &.yellow {
-                --light-toggle-slider-background-color: yellow;
+                --toggle-slider-background-color: yellow;
             }
         }
 
         .checkbox-input:checked ~span {
             &.is-on {
-                /*background-color: var(--light-toggle-slider-on-background-color);*/
+                /*background-color: var(--toggle-slider-on-background-color);*/
                 /*color:white;*/
             }
             &.is-off {
-                /*background-color: var(--light-toggle-slider-off-color);*/
-                /*color: var(--light-toggle-slider-off-color);*/
+                /*background-color: var(--toggle-slider-off-color);*/
+                /*color: var(--toggle-slider-off-color);*/
             }
             &.slider {
                 transform: translateX(calc(-2 * var(--slider-width)));
                 transition: 0.5s;
-                background-color: var(--light-toggle-slider-background-color);
+                background-color: var(--toggle-slider-background-color);
 
                 border-radius:0;
                 border-top-left-radius: calc( var(--toggle-slider-radius)  - 2px);
@@ -112,8 +112,8 @@
 
             .checkbox-input ~span {
                 &.is-on, &.is-off{
-                    background-color: var(--light-toggle-slider-off-background-color);
-                    color: var(--light-toggle-slider-on-text-color);
+                    background-color: var(--toggle-slider-off-background-color);
+                    color: var(--toggle-slider-on-text-color);
                 }
 
                 &.slider {
@@ -127,8 +127,8 @@
 
             .checkbox-input:checked ~span {
                 &.is-on, &.is-off{
-                    background-color: var(--light-toggle-slider-on-background-color);
-                    color: var(--light-toggle-slider-on-text-color);
+                    background-color: var(--toggle-slider-on-background-color);
+                    color: var(--toggle-slider-on-text-color);
                 }
 
                 &.slider {

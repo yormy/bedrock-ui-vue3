@@ -10,7 +10,7 @@
         white-space: nowrap;
         align-items: center;
         font-size: var(--font-size-small);
-        color: var(--light-color-disabled);
+        color: var(--color-disabled);
 
         a {
             text-decoration: none;
@@ -40,11 +40,11 @@
 
         border-style: solid;
         border-width: 1px;
-        border-color: var(--light-color-disabled);
+        border-color: var(--color-disabled);
         padding: 0;
         font-size: var(--font-size-small);
-        color: var(--light-color-disabled);
-        color: var(--light-color-disabled);
+        color: var(--color-disabled);
+        color: var(--color-disabled);
 
         a {
             text-decoration: none;
@@ -70,7 +70,7 @@
             top: 0;
             bottom: 0;
             left: -2px;
-            background-color: var(--light-color-disabled);
+            background-color: var(--color-disabled);
             width: 1rem;
             height: 2.5rem;
             clip-path: polygon(0 0, 0% 100%, 100% 50%);
@@ -88,7 +88,7 @@
             color: black;
 
             &.colored {
-                background-color: var(--light-color-disabled);
+                background-color: var(--color-disabled);
                 padding-left: 1rem;
                 color: white;
             }

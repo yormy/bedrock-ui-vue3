@@ -17,28 +17,28 @@
         /*color: inherit;*/
 
         &.is-info {
-            --checkbox-check-color: var(--light-color-info);
-            color: var(--light-color-info);
+            --checkbox-check-color: var(--color-info);
+            color: var(--color-info);
         }
 
         &.is-success {
-            --checkbox-check-color: var(--light-color-success);
-            color: var(--light-color-success);
+            --checkbox-check-color: var(--color-success);
+            color: var(--color-success);
         }
 
         &.is-warning {
-            --checkbox-check-color: var(--light-color-warning);
-            color: var(--light-color-warning);
+            --checkbox-check-color: var(--color-warning);
+            color: var(--color-warning);
         }
 
         &.is-danger {
-            --checkbox-check-color: var(--light-color-danger);
-            color: var(--light-color-danger);
+            --checkbox-check-color: var(--color-danger);
+            color: var(--color-danger);
         }
 
         &.is-error {
-            --checkbox-check-color: var(--light-color-danger);
-            color: var(--light-color-danger);
+            --checkbox-check-color: var(--color-danger);
+            color: var(--color-danger);
         }
 
         label.checkbox--label {
@@ -50,7 +50,7 @@
         }
 
         .checkbox--help {
-            color: var(--light-color-disabled);
+            color: var(--color-disabled);
             font-size: var(--font-size-small);
             line-height: var(--font-size-small-line-height);
             font-weight: 400;

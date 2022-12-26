@@ -23,7 +23,7 @@
 
             &.on {
                 --toggle-select-left-text-color : white;
-                --toggle-select-left-background-color: var(--light-color-switch-on);
+                --toggle-select-left-background-color: var(--color-switch-on);
             }
         }
 
@@ -38,7 +38,7 @@
 
             &.on {
                 --toggle-select-right-text-color : white;
-                --toggle-select-left-background-color: var(--light-color-switch-on);
+                --toggle-select-left-background-color: var(--color-switch-on);
             }
         }
 
@@ -60,7 +60,7 @@
             }
             ~.right {
                 color: white;
-                background-color: var(--light-color-switch-on);
+                background-color: var(--color-switch-on);
             }
         }
     }

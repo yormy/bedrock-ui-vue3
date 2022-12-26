@@ -88,46 +88,46 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
         &.is-info {
-            color: var(--light-color-info);
-            background-color: var(--light-color-info-light);
-            border-color: var(--light-color-info);
+            color: var(--color-info);
+            background-color: var(--color-info-light);
+            border-color: var(--color-info);
 
             &.with-header .header {
-                color: var(--light-color-info-light);
-                background-color: var(--light-color-info);
+                color: var(--color-info-light);
+                background-color: var(--color-info);
             }
         }
 
         &.is-success {
-            color: var(--light-alert-success-text-color);
-            background-color: var(--light-alert-success-color-light);
-            border-color: var(--light-alert-success-color);
+            color: var(--alert-success-text-color);
+            background-color: var(--alert-success-color-light);
+            border-color: var(--alert-success-color);
 
             &.with-header .header {
-                color: var(--light-alert-success-banner-text-color);
-                background-color: var(--light-alert-success-banner-color);
+                color: var(--alert-success-banner-text-color);
+                background-color: var(--alert-success-banner-color);
             }
         }
 
         &.is-warning {
-            color: var(--light-alert-warning-text-color);
-            background-color: var(--light-alert-warning-color-light);
-            border-color: var(--light-alert-warning-color);
+            color: var(--alert-warning-text-color);
+            background-color: var(--alert-warning-color-light);
+            border-color: var(--alert-warning-color);
 
             &.with-header .header {
-                color: var(--light-alert-warning-banner-text-color);
-                background-color: var(--light-alert-warning-banner-color);
+                color: var(--alert-warning-banner-text-color);
+                background-color: var(--alert-warning-banner-color);
             }
         }
 
         &.is-danger {
-            color: var(--light-alert-danger-text-color);
-            background-color: var(--light-alert-danger-color-light);
-            border-color: var(--light-alert-danger-color);
+            color: var(--alert-danger-text-color);
+            background-color: var(--alert-danger-color-light);
+            border-color: var(--alert-danger-color);
 
             &.with-header .header {
-                color: var(--light-alert-warning-banner-text-color);
-                background-color: var(--light-alert-danger-banner-color);
+                color: var(--alert-warning-banner-text-color);
+                background-color: var(--alert-danger-banner-color);
             }
         }
 

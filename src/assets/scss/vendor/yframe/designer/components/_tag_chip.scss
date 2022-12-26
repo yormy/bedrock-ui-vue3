@@ -105,62 +105,62 @@
 
 .y-tag-chip{
     &.is-info-open {
-        color: var(--light-color-info);
-        border-color: var(--light-color-info);
+        color: var(--color-info);
+        border-color: var(--color-info);
         background-color: transparent;
     }
 
     &.is-info-solid {
-        background-color: var(--light-color-info);
-        border-color: var(--light-color-info);
+        background-color: var(--color-info);
+        border-color: var(--color-info);
         color: white;
     }
 
     &.is-success-open {
-        color: var(--light-color-success);
-        border-color: var(--light-color-success);
+        color: var(--color-success);
+        border-color: var(--color-success);
         background-color: transparent;
     }
 
     &.is-success-solid {
-        background-color: var(--light-color-success);
-        border-color: var(--light-color-success);
+        background-color: var(--color-success);
+        border-color: var(--color-success);
         color: white;
     }
 
     &.is-warning-open {
-        color: var(--light-color-warning);
-        border-color: var(--light-color-warning);
+        color: var(--color-warning);
+        border-color: var(--color-warning);
         background-color: transparent;
     }
 
     &.is-warning-solid {
-        background-color: var(--light-color-warning);
-        border-color: var(--light-color-warning);
+        background-color: var(--color-warning);
+        border-color: var(--color-warning);
         color: white;
     }
 
     &.is-danger-open {
-        color: var(--light-color-danger);
-        border-color: var(--light-color-danger);
+        color: var(--color-danger);
+        border-color: var(--color-danger);
         background-color: transparent;
     }
 
     &.is-danger-solid {
-        background-color: var(--light-color-danger);
-        border-color: var(--light-color-danger);
+        background-color: var(--color-danger);
+        border-color: var(--color-danger);
         color: white;
     }
 
     &.is-disabled-open {
-        color: var(--light-color-disabled);
-        border-color: var(--light-color-disabled);
+        color: var(--color-disabled);
+        border-color: var(--color-disabled);
         background-color: transparent;
     }
 
     &.is-disabled-solid {
-        background-color: var(--light-color-disabled);
-        border-color: var(--light-color-disabled);
+        background-color: var(--color-disabled);
+        border-color: var(--color-disabled);
         color: white;
     }
 }

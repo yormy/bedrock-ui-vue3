@@ -65,12 +65,12 @@ body {
         }
 
         &.greyed {
-            color: var(--light-color-disabled);
+            color: var(--color-disabled);
             cursor: not-allowed;
         }
 
         &.disabled {
-            color: var(--light-color-disabled);
+            color: var(--color-disabled);
             cursor: not-allowed;
         }
     }
@@ -111,22 +111,22 @@ body {
 
 .y-content {
     .text-info {
-        color: var(--light-color-info);
+        color: var(--color-info);
     }
 
     .text-success {
-        color: var(--light-color-success);
+        color: var(--color-success);
     }
 
     .text-warning {
-        color: var(--light-color-warning);
+        color: var(--color-warning);
     }
 
     .text-danger {
-        color: var(--light-color-danger);
+        color: var(--color-danger);
     }
 
     .text-muted {
-        color: var(--light-color-disabled);
+        color: var(--color-disabled);
     }
 }

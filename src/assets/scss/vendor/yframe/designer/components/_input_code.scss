@@ -38,8 +38,8 @@
                 }
 
                 &.is-error {
-                    border-color: var(--light-color-danger);
-                    background-color: var(--light-color-danger-light);
+                    border-color: var(--color-danger);
+                    background-color: var(--color-danger-light);
                 }
             }
 
@@ -61,13 +61,13 @@
     //        }
     //
     //        input {
-    //            color: var(--light-color-text);
-    //            caret-color: var(--light-color-text);
-    //            border-color: var(--light-color-text);;
+    //            color: var(--color-text);
+    //            caret-color: var(--color-text);
+    //            border-color: var(--color-text);;
     //
     //            &:focus {
-    //                border-color: var(--light-color-text);
-    //                caret-color: var(--light-color-text);
+    //                border-color: var(--color-text);
+    //                caret-color: var(--color-text);
     //            }
     //        }
     //    }
