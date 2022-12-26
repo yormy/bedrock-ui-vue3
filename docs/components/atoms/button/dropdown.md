@@ -1,14 +1,14 @@
 <script setup>
-import ButtonDropdownWrapper from '../../../docs/.vitepress/wrappers/buttons/DropdownWrapper.vue'
+import ButtonDropdownWrapper from '../../../../docs/.vitepress/wrappers/buttons/DropdownWrapper.vue'
 </script>
 
-# Primary Button
+# Dropdown buttons Button
 
 The default button to press
 
 <DemoContainer>
   <div class="flex justify-content-between">
-      <button-dropdown-wrapper :dropdown="true" label="Primary"/>
+    <button-dropdown-wrapper :dropdown="true" label="Primary"/>
     <YButtonPrimary label="Dropdown" is-dropdown="true">
       <template v-slot:dropdown>
             <a href="#">Link 1</a>
@@ -18,16 +18,6 @@ The default button to press
     </YButtonPrimary>
   </div>
 </DemoContainer>
-
-### Usage
-The primary button on a page or form. 
-
-### Code
-::: details Code
-```js
-<YButtonPrimary label="hellso"/>
-```
-:::
 
 
 

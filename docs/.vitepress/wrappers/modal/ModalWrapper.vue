@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import YModalHelp from '../../../../src/components/Modals/Help/ModalHelp.vue';
-import YButtonPrimary from '../../../../src/components/Buttons/Primary/ButtonPrimary.vue';
+import YModalHelp from '../../../../src/components/Atoms/Modals/Help/ModalHelp.vue';
+import YButtonPrimary from '../../../../src/components/Atoms/Buttons/Primary/ButtonPrimary.vue';
 import {ref} from "vue";
 
 const showHelpModal = ref(false);

@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import YTag from '../../../../src/components/Tags/Tag/Tag.vue';
+import YTag from '../../../../src/components/Atoms/Tags/Tag/Tag.vue';
 import {computed, ref} from "vue";
 
 const open = ref(true);

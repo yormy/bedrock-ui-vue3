@@ -6,8 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import YToast from '../../../../src/components/Toasts/Toast/Toast.vue';
-import YButtonPrimary from '../../../../src/components/Buttons/Primary/ButtonPrimary.vue';
+import YToast from '../../../../src/components/Atoms/Toasts/Toast/Toast.vue';
+import YButtonPrimary from '../../../../src/components/Atoms/Buttons/Primary/ButtonPrimary.vue';
 import {ref} from "vue";
 
 const trigger = ref(true);

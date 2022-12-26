@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import YButtonPrimary from '../../../../src/components/Buttons/Primary/ButtonPrimary.vue';
+import YButtonPrimary from '../../../../src/components/Atoms/Buttons/Primary/ButtonPrimary.vue';
 
 const items = [
     {

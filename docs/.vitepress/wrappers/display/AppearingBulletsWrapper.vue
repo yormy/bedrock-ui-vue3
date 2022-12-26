@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import YAppearingBullets from '../../../../src/components/Display/AppearingBullets/AppearingBullets.vue';
+import YAppearingBullets from '../../../../src/components/Atoms/Display/AppearingBullets/AppearingBullets.vue';
 
 const messages = [
     {

@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import YTableSimple from '../../../../src/components/Tables/Simple/TableSimple.vue';
+import YTableSimple from '../../../../src/components/Atoms/Tables/Simple/TableSimple.vue';
 
 const headings = [
     {

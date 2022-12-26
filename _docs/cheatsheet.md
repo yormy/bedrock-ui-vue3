@@ -15,10 +15,7 @@ const props = defineProps({
 ```javascript
 
 const type = computed(() => {
-    if (open.value) {
-        return 'is-danger-open';
-    }
-    return 'is-danger-solid';
+    return ...
 })
 
 ```
@@ -53,3 +50,6 @@ const emits = defineEmits<{
 
 ```
 
+
+# Wrapper include json:
+    // :menuButtonProps= "{icon: 'y-icon icon icon-users'}"

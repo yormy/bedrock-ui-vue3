@@ -6,8 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import YBreadcrumb from '../../../../src/components/Misc/Breadcrumb/Breadcrumb.vue';
-import YBreadcrumbBoxed from '../../../../src/components/Misc/Breadcrumb/BreadcrumbBoxed.vue';
+import YBreadcrumb from '../../../../src/components/Atoms/Misc/Breadcrumb/Breadcrumb.vue';
+import YBreadcrumbBoxed from '../../../../src/components/Atoms/Misc/Breadcrumb/BreadcrumbBoxed.vue';
 
 const items = [
     {

@@ -34,12 +34,10 @@ fix failed tests:
 ### Checkbox
 * Color cannot be changed
 * Old for checkmark and colors
-
-# Draggable ?
-Waar is dit component gebleven
+* Checkbox icon PR is ready : https://github.com/primefaces/primevue/pull/3428/files
 
 ### Password
-Cannot make 100% - bugreport
+Cannot make 100% - bugreport : https://github.com/primefaces/primevue/issues/3414#issuecomment-1356818771
 
 ### Dropdown button
 cannot change dropdown icon from chevron to something else - bugreport

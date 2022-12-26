@@ -12,7 +12,6 @@
         <span v-if="slots.dropdown" v-show="displayDropdown"
              @mouseover="hoverDropdown = true"
              @mouseleave="hoverDropdown = false"
-
         >
             <div class="dropdown-content">
                 <slot name="dropdown"></slot>
@@ -30,7 +29,7 @@
         </span>
 
         <span v-else>
-            <button-root v-bind="$attrs"><slot></slot></button-root>
+            <button-root v-bind="$attrs"  :menuButtonProps= "dropdownIcon"><slot></slot></button-root>
         </span>
 
     </span>
@@ -80,5 +79,8 @@ const displayDropdown = computed(() => {
     return hoverButton.value || hoverDropdown.value
 })
 
+const dropdownIcon = computed(() => {
+    return {icon: 'y-icon icon icon-dropdown'}
+})
 </script>
 
