@@ -28,7 +28,8 @@ module.exports = {
         'vue/multi-word-component-names': 'off',
         "indent": [
             "error",
-            4
+            4,
+            {"SwitchCase":1},
         ],
         "linebreak-style": [
             "error",
