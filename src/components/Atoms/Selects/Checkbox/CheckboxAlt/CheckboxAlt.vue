@@ -1,30 +1,6 @@
 <template>
     <div class="field-checkbox">
         <checkbox-base-alt></checkbox-base-alt>
-        dsfdfdsfsd
-        <!--        <checkbox-base inputId="binary" v-model="checked" v-bind="$attrs" :binary="true" @click="handleInputChanged"/>-->
-
-        <!--        <y-icon-required :required="required"></y-icon-required>-->
-
-        <!--        <label for="binary">-->
-        <!--            <div class="flex flex-column">-->
-        <!--                <div>-->
-        <!--                    <y-purified-html :value="label"></y-purified-html>-->
-        <!--                    <y-icon-help-->
-        <!--                        class="ml-1"-->
-        <!--                        v-if="moreHelpDescription"-->
-        <!--                        :label="moreHelpLabel"-->
-        <!--                        :header="moreHelpHeader"-->
-        <!--                        :description="moreHelpDescription"-->
-        <!--                    >-->
-        <!--                    </y-icon-help>-->
-        <!--                </div>-->
-
-        <!--                <y-purified-html :value="labelExtended"></y-purified-html>-->
-        <!--                <y-validations :successes="successes" :warnings="warnings" :errors="errors"></y-validations>-->
-        <!--        </div>-->
-
-        <!--    </label>-->
     </div>
 </template>
 
@@ -75,17 +51,23 @@ const props = defineProps({
 
     successes: {
         type: Array,
-        default: [],
+        default() {
+            return [];
+        },
     },
 
     warnings: {
         type: Array,
-        default: [],
+        default() {
+            return [];
+        },
     },
 
     errors: {
         type: Array,
-        default: [],
+        default() {
+            return [];
+        },
     },
 });
 

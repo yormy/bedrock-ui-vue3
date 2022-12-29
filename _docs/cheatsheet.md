@@ -53,3 +53,11 @@ const emits = defineEmits<{
 
 # Wrapper include json:
     // :menuButtonProps= "{icon: 'y-icon icon icon-users'}"
+
+
+# eslint
+## Disable file
+<!--eslint-disable-->
+
+## Disable line
+// eslint-disable-line

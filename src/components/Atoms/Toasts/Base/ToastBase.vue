@@ -28,6 +28,7 @@ const dangerIcon = 'y-icon icon icon-danger';
 const props = defineProps({
     type: {
         type: String,
+        default: 'info',
         validator(value: string) {
             return ['info', 'success', 'warning', 'danger'].includes(value);
         },
@@ -35,6 +36,7 @@ const props = defineProps({
 
     position: {
         type: String,
+        default: 'top-right',
         validator(value: string) {
             return ['top-left', 'bottom-left', 'bottom-right', 'top-right'].includes(value);
         },
@@ -56,13 +58,6 @@ const props = defineProps({
     },
 });
 
-watch(
-    () => props.trigger,
-    (newValue) => {
-        showToast();
-    }
-);
-
 const getType = () => {
     if (props.type === 'danger') {
         return 'error';
@@ -83,4 +78,11 @@ const showToast = () => {
         life: 3000,
     });
 };
+
+watch(
+    () => props.trigger,
+    (newValue) => {
+        showToast();
+    }
+);
 </script>

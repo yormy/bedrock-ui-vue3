@@ -2,10 +2,13 @@
     <div class="y-content">
         <div id="y-page-loader" class="y-page-loader">
             <!-- flex container -->
-
             <div class="header flex-row">
                 <!--                        <div class="brand&#45;&#45;name">Bedrock</div>-->
-                <img class="brand--logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/500px-LEGO_logo.svg.png" />
+                <img
+                    class="brand--logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/500px-LEGO_logo.svg.png"
+                    alt="logo"
+                />
                 <div class="section--title">Login</div>
                 <div class="spin"></div>
             </div>

@@ -1,8 +1,8 @@
 export default function useValidationTranslator(
     attributeName: string,
-    translator:any,
+    translator: any,
     error: { $property: string; $params: object; $validator: string }
-    ) {
+) {
     const params: any = error.$params;
 
     if (attributeName !== '') {

@@ -39,6 +39,7 @@ const emit = defineEmits(['update:modelValue']);
 const props = defineProps({
     id: {
         type: String,
+        default: null,
     },
 
     name: {
@@ -48,6 +49,9 @@ const props = defineProps({
 
     options: {
         type: Array,
+        default() {
+            return [];
+        },
     },
 
     modelValue: {

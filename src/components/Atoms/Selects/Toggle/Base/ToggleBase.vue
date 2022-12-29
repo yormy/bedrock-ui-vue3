@@ -16,6 +16,7 @@ import useIdentifier from '../../../Hooks/useIdentifier';
 const props = defineProps({
     id: {
         type: String,
+        default: null,
     },
 
     name: {

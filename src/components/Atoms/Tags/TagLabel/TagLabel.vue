@@ -21,11 +21,12 @@ import { computed } from 'vue';
 const props = defineProps({
     label: {
         type: String,
-        default: 'dsfdsfds',
+        default: '',
     },
 
     size: {
         type: String,
+        default: 'normal',
         validator(value: string) {
             return ['tiny', 'small', 'normal', 'large', 'extra-large'].includes(value);
         },

@@ -8,7 +8,7 @@ import { computed } from 'vue';
 const props = defineProps({
     label: {
         type: String,
-        default: 'dsfdsfds',
+        default: '',
     },
 
     icon: {
@@ -18,6 +18,7 @@ const props = defineProps({
 
     shape: {
         type: String,
+        default: 'rounded',
         validator(value: string) {
             return ['rounded', 'square'].includes(value);
         },
@@ -25,6 +26,7 @@ const props = defineProps({
 
     size: {
         type: String,
+        default: 'normal',
         validator(value: string) {
             return ['tiny', 'small', 'normal', 'large', 'extra-large'].includes(value);
         },

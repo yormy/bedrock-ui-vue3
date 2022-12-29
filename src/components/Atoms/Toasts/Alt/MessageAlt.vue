@@ -50,6 +50,7 @@ const props = defineProps({
     },
     type: {
         type: String,
+        default: 'default',
         validator(value: string) {
             return ['default', 'left', 'left-with-header', 'top'].includes(value);
         },

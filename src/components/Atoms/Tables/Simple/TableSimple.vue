@@ -41,10 +41,16 @@ const props = defineProps({
 
     headings: {
         type: Array,
+        default() {
+            return [];
+        },
     },
 
     footers: {
         type: Array,
+        default() {
+            return [];
+        },
     },
 });
 </script>

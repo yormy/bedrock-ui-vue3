@@ -1,5 +1,6 @@
+<!--eslint-disable-->
 <template>
-    <div :class="containerClass" @click="onClick($event)">
+    <div :class="containerClass" @click="onClick($event)" @keydown="onClick($event)">
         <div class="p-hidden-accessible">
             <input
                 ref="input"
@@ -34,8 +35,8 @@ export default {
     name: 'Checkbox',
     emits: ['click', 'update:modelValue', 'change', 'input', 'focus', 'blur'],
     props: {
-        value: null,
-        modelValue: null,
+        value: null, // eslint-disable-line
+        modelValue: null, // eslint-disable-line
         binary: Boolean,
         name: {
             type: String,
@@ -81,11 +82,11 @@ export default {
             type: null,
             default: null,
         },
-        'aria-labelledby': {
+        'aria-labelledby': { // eslint-disable-line
             type: String,
             default: null,
         },
-        'aria-label': {
+        'aria-label': { // eslint-disable-line
             type: String,
             default: null,
         },

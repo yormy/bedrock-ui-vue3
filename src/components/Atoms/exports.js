@@ -1,5 +1,4 @@
-/* eslint-disable import/extensions */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable */
 
 // @ts-ignore
 export * from './Buttons/exports.js';
