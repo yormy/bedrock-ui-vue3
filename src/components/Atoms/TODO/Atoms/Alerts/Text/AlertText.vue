@@ -6,7 +6,6 @@
     </div>
 </template>
 
-
 <script>
 import YPurifiedHtml from '../../Display/PurifiedHtml.vue';
 
@@ -18,10 +17,6 @@ import YPurifiedHtml from '../../Display/PurifiedHtml.vue';
  */
 export default {
     inheritAttrs: false,
-
-    components: {
-        YPurifiedHtml,
-    },
 
     props: {
         /**
@@ -38,14 +33,18 @@ export default {
          */
         styling: {
             type: String,
-            default: 'is-danger'
-        }
+            default: 'is-danger',
+        },
     },
 
     computed: {
         styleClass() {
-            return this.alertBorder + ' ' + this.styling;
-        }
-    }
-}
+            return `${this.alertBorder} ${this.styling}`;
+        },
+    },
+
+    components: {
+        YPurifiedHtml,
+    },
+};
 </script>

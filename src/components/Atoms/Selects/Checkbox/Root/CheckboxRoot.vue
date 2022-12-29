@@ -39,60 +39,60 @@ export default {
         binary: Boolean,
         name: {
             type: String,
-            default: null
+            default: null,
         },
         trueValue: {
             type: null,
-            default: true
+            default: true,
         },
         falseValue: {
             type: null,
-            default: false
+            default: false,
         },
         disabled: {
             type: Boolean,
-            default: false
+            default: false,
         },
         readonly: {
             type: Boolean,
-            default: false
+            default: false,
         },
         required: {
             type: Boolean,
-            default: false
+            default: false,
         },
         tabindex: {
             type: Number,
-            default: null
+            default: null,
         },
         inputId: {
             type: String,
-            default: null
+            default: null,
         },
         inputClass: {
             type: String,
-            default: null
+            default: null,
         },
         inputStyle: {
             type: null,
-            default: null
+            default: null,
         },
         inputProps: {
             type: null,
-            default: null
+            default: null,
         },
         'aria-labelledby': {
             type: String,
-            default: null
+            default: null,
         },
         'aria-label': {
             type: String,
-            default: null
-        }
+            default: null,
+        },
     },
     data() {
         return {
-            focused: false
+            focused: false,
         };
     },
     methods: {
@@ -102,10 +102,8 @@ export default {
 
                 if (this.binary) {
                     newModelValue = this.checked ? this.falseValue : this.trueValue;
-                } else {
-                    if (this.checked) newModelValue = this.modelValue.filter((val) => !ObjectUtils.equals(val, this.value));
-                    else newModelValue = this.modelValue ? [...this.modelValue, this.value] : [this.value];
-                }
+                } else if (this.checked) newModelValue = this.modelValue.filter((val) => !ObjectUtils.equals(val, this.value));
+                else newModelValue = this.modelValue ? [...this.modelValue, this.value] : [this.value];
 
                 this.$emit('click', event);
                 this.$emit('update:modelValue', newModelValue);
@@ -121,7 +119,7 @@ export default {
         onBlur(event) {
             this.focused = false;
             this.$emit('blur', event);
-        }
+        },
     },
     computed: {
         checked() {
@@ -133,10 +131,10 @@ export default {
                 {
                     'p-checkbox-checked': this.checked,
                     'p-checkbox-disabled': this.disabled,
-                    'p-checkbox-focused': this.focused
-                }
+                    'p-checkbox-focused': this.focused,
+                },
             ];
-        }
-    }
+        },
+    },
 };
 </script>

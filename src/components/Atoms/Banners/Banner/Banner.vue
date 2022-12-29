@@ -6,27 +6,20 @@
         </p>
     </div>
 
-    <br>
-    <div class="banner2 sm:justify-between sm:items-center sm:flex sm:px-6 lg:px-8"
-    >
+    <br />
+    <div class="banner2 sm:justify-between sm:items-center sm:flex sm:px-6 lg:px-8">
         <p class="font-medium text-center sm:text-left">
             Love Alpine JS?
             <br class="sm:hidden" />
             Check out this new deep dive course!
         </p>
 
-        <a
-            class="learn-more"
-            href="/alpinejs"
-        >
-            Learn More
-        </a>
+        <a class="learn-more" href="/alpinejs"> Learn More </a>
     </div>
-    <br><br>
+    <br /><br />
 </template>
 
 <script setup lang="ts">
-
 const props = defineProps({
     title: {
         type: String,
@@ -41,7 +34,7 @@ const props = defineProps({
     padding-bottom: 0.75rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    background-color: #4F46E5;
+    background-color: #4f46e5;
     color: #ffffff;
 }
 
@@ -52,7 +45,7 @@ const props = defineProps({
     padding-left: 1rem;
     padding-right: 1rem;
     padding-right: 3.5rem;
-    background-color: #4F46E5;
+    background-color: #4f46e5;
     color: #ffffff;
 
     .text {
@@ -81,7 +74,7 @@ const props = defineProps({
         margin-top: 1rem;
         background-color: #ffffff;
         transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-        color: #4F46E5;
+        color: #4f46e5;
         font-size: 0.875rem;
         line-height: 1.25rem;
         font-weight: 500;
@@ -92,6 +85,5 @@ const props = defineProps({
             margin-top: 0;
         }
     }
-
 }
 </style>

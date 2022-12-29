@@ -1,6 +1,6 @@
 <template>
     <div class="field-checkbox">
-        <checkbox-base inputId="binary" v-model="checked" v-bind="$attrs" :binary="true" @click="handleInputChanged"/>
+        <checkbox-base v-model="checked" input-id="binary" v-bind="$attrs" :binary="true" @click="handleInputChanged" />
 
         <y-icon-required :required="required"></y-icon-required>
 
@@ -9,8 +9,8 @@
                 <span>
                     <y-purified-html :value="label"></y-purified-html>
                     <y-icon-help
-                        class="ml-1"
                         v-if="moreHelpDescription"
+                        class="ml-1"
                         :label="moreHelpLabel"
                         :header="moreHelpHeader"
                         :description="moreHelpDescription"
@@ -20,19 +20,18 @@
 
                 <y-purified-html :value="labelExtended"></y-purified-html>
                 <y-validations :successes="successes" :warnings="warnings" :errors="errors"></y-validations>
-        </span>
-
-    </label>
+            </span>
+        </label>
     </div>
 </template>
 
 <script setup lang="ts">
-import {defineProps, ref, defineEmits, watch, nextTick, reactive} from 'vue';
-import CheckboxBase from '../Base/CheckboxBase.vue'
+import { defineProps, ref, defineEmits, watch, nextTick, reactive } from 'vue';
+import CheckboxBase from '../Base/CheckboxBase.vue';
 import YIconHelp from '../../../Helpers/IconHelp.vue';
 import YIconRequired from '../../../Helpers/IconRequired.vue';
 import YPurifiedHtml from '../../../Helpers/PurifiedHtml.vue';
-import YValidations from '../../../Inputs/Partials/Validations.vue'
+import YValidations from '../../../Inputs/Partials/Validations.vue';
 
 const emit = defineEmits(['isOn', 'isOff', 'update:modelValue']);
 
@@ -87,7 +86,7 @@ const props = defineProps({
     },
 });
 
-let checked = ref(props.modelValue);
+const checked = ref(props.modelValue);
 
 watch(
     () => checked.value,
@@ -96,6 +95,7 @@ watch(
             emit('isOn');
             console.log('on');
         }
+
         if (!newValue) {
             emit('isOff');
             console.log('off');
@@ -104,9 +104,8 @@ watch(
 );
 
 async function handleInputChanged(e: Event) {
-    await nextTick()
+    await nextTick();
     emit('update:modelValue', checked.value);
     console.log('update');
-};
-
+}
 </script>

@@ -1,7 +1,4 @@
-import YMouseOver from "./MouseOver.vue"
-import YPurifiedHtml from "./PurifiedHtml.vue"
+import YMouseOver from './MouseOver.vue';
+import YPurifiedHtml from './PurifiedHtml.vue';
 
-export {
-    YMouseOver,
-    YPurifiedHtml,
-}
+export { YMouseOver, YPurifiedHtml };

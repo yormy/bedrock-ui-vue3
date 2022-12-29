@@ -1,7 +1,6 @@
 <template>
     <ValidationObserver ref="validationObserver" v-slot="{ invalid, handleSubmit }">
         <form @submit.prevent="handleSubmit(onSubmitHandler)">
-
             <slot></slot>
 
             <y-alert-text-danger :message="errors"></y-alert-text-danger>
@@ -9,17 +8,13 @@
             <div class="mt-3">
                 <y-button-primary :is-disabled="invalid" :label="submitLabel"></y-button-primary>
             </div>
-
         </form>
-
     </ValidationObserver>
-
-
 </template>
 
 <script>
-import YButtonPrimary from "../Buttons/ButtonPrimary.vue"
-import YAlertTextDanger from "../../Alerts/Text/AlertTextDanger.vue"
+import YButtonPrimary from '../Buttons/ButtonPrimary.vue';
+import YAlertTextDanger from '../../Alerts/Text/AlertTextDanger.vue';
 
 /**
  *
@@ -27,23 +22,17 @@ import YAlertTextDanger from "../../Alerts/Text/AlertTextDanger.vue"
 export default {
     inheritAttrs: false,
 
-    components: {
-        YButtonPrimary,
-        YAlertTextDanger
-    },
-
     props: {
-        errors : {},
+        errors: {},
 
-        submitLabel : {
+        submitLabel: {
             type: String,
-            required : true
-        }
+            required: true,
+        },
     },
 
     data() {
-        return {
-        }
+        return {};
     },
 
     methods: {
@@ -51,5 +40,10 @@ export default {
             this.$emit('submit');
         },
     },
-}
+
+    components: {
+        YButtonPrimary,
+        YAlertTextDanger,
+    },
+};
 </script>

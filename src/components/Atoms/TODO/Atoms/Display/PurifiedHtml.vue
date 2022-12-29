@@ -1,11 +1,8 @@
 <template>
-  <div v-html="purifiedHtml"></div>
+    <div v-html="purifiedHtml"></div>
 </template>
 
-
 <script>
-
-
 import DOMPurify from 'dompurify';
 
 /**
@@ -17,61 +14,50 @@ import DOMPurify from 'dompurify';
  * Required: npm install DOMPurify
  */
 export default {
+    inheritAttrs: false,
 
-  inheritAttrs: false,
+    props: {
+        /**
+         * The HTML string that needs to be purified and displayed
+         */
+        value: {
+            type: String,
+            default: '',
+            required: true,
+        },
 
-  props: {
-    /**
-     * The HTML string that needs to be purified and displayed
-     */
-    value: {
-      type: String,
-      default: '',
-      required: true,
+        /**
+         * The allowed tags to be displayed (default: b, i, strong, a , ul , ol, li ,'br')
+         */
+        allowedTags: {
+            type: Array,
+            default: () => ['b', 'i', 'strong', 'a', 'ul', 'ol', 'li', 'br'],
+        },
+
+        /**
+         * The allowed attributes to be displayed (default: nothing)
+         */
+        allowedAttributes: {
+            type: Array,
+            default: () => ['href', 'target', 'class'],
+        },
     },
 
-    /**
-     * The allowed tags to be displayed (default: b, i, strong, a , ul , ol, li ,'br')
-     */
-    allowedTags: {
-      type: Array,
-      default: () => [
-        'b',
-        'i', 'strong',
-        'a',
-        'ul', 'ol', 'li',
-        'br'
-      ],
+    data() {
+        return {
+            prop: {
+                value: this.value,
+            },
+        };
     },
 
-    /**
-     * The allowed attributes to be displayed (default: nothing)
-     */
-    allowedAttributes: {
-      type: Array,
-      default: () => [
-        'href',
-        'target',
-        'class'
-      ],
+    computed: {
+        purifiedHtml() {
+            return DOMPurify.sanitize(this.value, {
+                ALLOWED_TAGS: this.allowedTags,
+                ALLOWED_ATTR: this.allowedAttributes,
+            });
+        },
     },
-  },
-
-  data() {
-    return {
-      prop: {
-        value: this.value,
-      }
-    };
-  },
-
-  computed: {
-    purifiedHtml() {
-      return DOMPurify.sanitize(this.value, {
-        ALLOWED_TAGS: this.allowedTags,
-        ALLOWED_ATTR: this.allowedAttributes
-      });
-    }
-  }
-}
+};
 </script>

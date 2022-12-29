@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import ToggleBase from '../Base/ToggleBase.vue'
+import ToggleBase from '../Base/ToggleBase.vue';
 </script>

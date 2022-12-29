@@ -6,7 +6,7 @@
         </y-modal-help>
 
         <span @click="handleHelpClicked" class="p-link">
-            <span v-if="icon" :class="icon" ></span>
+            <span v-if="icon" :class="icon"></span>
             <span v-else>
                 <small>{{ label }} </small>
             </span>
@@ -15,11 +15,10 @@
 </template>
 
 <script setup lang="ts">
-import {computed, ref, PropType, defineProps} from 'vue';
+import { computed, ref, PropType, defineProps } from 'vue';
 import YPurifiedHtml from './PurifiedHtml.vue';
 
 const showHelpModal = ref();
-
 
 const props = defineProps({
     id: {
@@ -51,6 +50,4 @@ const props = defineProps({
 const handleHelpClicked = () => {
     showHelpModal.value = true;
 };
-
-
 </script>

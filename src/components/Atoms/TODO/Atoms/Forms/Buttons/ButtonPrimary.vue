@@ -1,20 +1,15 @@
 <template>
-  <y-button
-    type="primary"
-    v-bind="{...$props, ...$attrs}"
-    v-on="$listeners"
-  >
-  </y-button>
+    <y-button type="primary" v-bind="{ ...$props, ...$attrs }" v-on="$listeners"> </y-button>
 </template>
 
 <script>
-import YButton from './Button.vue'
+import YButton from './Button.vue';
 
 export default {
-  inheritAttrs: false,
+    inheritAttrs: false,
 
-  components: {
-    YButton
-  },
-}
+    components: {
+        YButton,
+    },
+};
 </script>

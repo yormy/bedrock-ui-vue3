@@ -14,8 +14,8 @@
 
 <script setup lang="ts">
 import Toast from 'primevue/toast';
-import { useToast } from "primevue/usetoast";
-import { watch } from "vue";
+import { useToast } from 'primevue/usetoast';
+import { watch } from 'vue';
 
 const toast = useToast();
 
@@ -29,24 +29,14 @@ const props = defineProps({
     type: {
         type: String,
         validator(value: string) {
-            return [
-                'info',
-                'success',
-                'warning',
-                'danger',
-            ].includes(value)
-        }
+            return ['info', 'success', 'warning', 'danger'].includes(value);
+        },
     },
 
     position: {
         type: String,
         validator(value: string) {
-            return [
-                'top-left',
-                'bottom-left',
-                'bottom-right',
-                'top-right',
-            ].includes(value)
+            return ['top-left', 'bottom-left', 'bottom-right', 'top-right'].includes(value);
         },
         required: false,
     },
@@ -74,23 +64,23 @@ watch(
 );
 
 const getType = () => {
-
     if (props.type === 'danger') {
-        return 'error'
+        return 'error';
     }
+
     if (props.type === 'warning') {
-        return 'warn'
+        return 'warn';
     }
+
     return props.type;
-}
+};
 
 const showToast = () => {
     toast.add({
         severity: getType(),
         summary: props.title,
         detail: props.description,
-        life: 3000
+        life: 3000,
     });
-}
-
+};
 </script>

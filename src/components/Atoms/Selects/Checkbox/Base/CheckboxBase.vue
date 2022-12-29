@@ -1,5 +1,5 @@
 <template>
-    <checkbox-root inputId="binary" v-bind="$attrs" :binary="true"/>
+    <checkbox-root input-id="binary" v-bind="$attrs" :binary="true" />
 </template>
 
 <script setup lang="ts">

@@ -1,7 +1,7 @@
 <template>
     <div class="text-center">
-            <h1 class="y-auth-title">{{ title }}</h1>
-            <h3 class="y-auth-subtitle">{{ subtitle }}</h3>
+        <h1 class="y-auth-title">{{ title }}</h1>
+        <h3 class="y-auth-subtitle">{{ subtitle }}</h3>
     </div>
 </template>
 
@@ -18,6 +18,4 @@ const props = defineProps({
         default: '',
     },
 });
-
 </script>
-

@@ -1,14 +1,9 @@
 <template>
-    <input-text
-        :errors="v$.username.$errors"
-        @blur="handleInputBlur"
-        v-bind="$attrs"
-        v-model="v$.username.$model"
-    ></input-text>
+    <input-text v-bind="$attrs" v-model="v$.username.$model" :errors="v$.username.$errors" @blur="handleInputBlur"></input-text>
 </template>
 
 <script setup lang="ts">
-import {reactive} from "vue";
+import { reactive } from 'vue';
 import { required, minLength } from '@vuelidate/validators';
 import { useVuelidate } from '@vuelidate/core';
 

@@ -1,7 +1,4 @@
-import YValidationInput from "./ValidationInput.vue"
-import YFormValidated from "./FormValidated.vue"
+import YValidationInput from './ValidationInput.vue';
+import YFormValidated from './FormValidated.vue';
 
-export {
-    YValidationInput,
-    YFormValidated,
-}
+export { YValidationInput, YFormValidated };

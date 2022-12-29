@@ -6,36 +6,30 @@
         <span class="flex">
             {{ label }}
             <span class="ml-1">
-                <y-icon-help
-                    v-if="moreHelpIcon"
-                    :icon="moreHelpIcon"
-                    :label="moreHelpLabel"
-                    :header="label"
-                    :description="moreHelpDescription"
-                >
+                <y-icon-help v-if="moreHelpIcon" :icon="moreHelpIcon" :label="moreHelpLabel" :header="label" :description="moreHelpDescription">
                 </y-icon-help>
             </span>
         </span>
         <div :class="isLoading ? 'blurred' : ''" class="code">
             <template v-for="index in fields" :key="`${index}`">
                 <input
-                    :id="index-1"
-                    :autoFocus="autoFocus && !isLoading && index-1 === 0"
+                    :id="index - 1"
+                    :autoFocus="autoFocus && !isLoading && index - 1 === 0"
                     :class="hasErrors() ? 'is-error' : ''"
-                    :data-id="index-1"
+                    :data-id="index - 1"
                     :disabled="isDisabled"
                     :pattern="pattern"
                     :style="{
                         width: `${fieldWidthCalc}px`,
                         height: `${fieldHeight}px`,
-                      }"
+                    }"
                     :type="type === 'number' ? 'tel' : type"
-                    :value="items[index-1]"
+                    :value="items[index - 1]"
                     maxlength="1"
-                    v-on:focus="onFocus"
-                    v-on:input="onValueChange"
-                    v-on:keydown="onKeyDown"
-                    v-on:paste="onPaste"
+                    @focus="onFocus"
+                    @input="onValueChange"
+                    @keydown="onKeyDown"
+                    @paste="onPaste"
                 />
             </template>
         </div>
@@ -44,16 +38,16 @@
 </template>
 
 <script setup lang="ts">
+import { computed, ref, defineEmits, defineProps, onMounted } from 'vue';
 import YIconHelp from '../../Helpers/IconHelp.vue';
-import {computed, ref, defineEmits, defineProps, onMounted} from "vue";
 
 const emits = defineEmits<{
-    (eventName: 'onComplete', code: string): void
-    (eventName: 'onEsc', code: any): void
-    (eventName: 'onEnter', code: any): void
-    (eventName: 'onChange', code: any): void
-    (eventName: 'onKeyUp', code: any): void
-    (eventName: 'update:modelValue', value:string): void
+    (eventName: 'onComplete', code: string): void;
+    (eventName: 'onEsc', code: any): void;
+    (eventName: 'onEnter', code: any): void;
+    (eventName: 'onChange', code: any): void;
+    (eventName: 'onKeyUp', code: any): void;
+    (eventName: 'update:modelValue', value: string): void;
 }>();
 
 const KEY_CODE = {
@@ -68,7 +62,6 @@ const KEY_CODE = {
 };
 
 const props = defineProps({
-
     id: {
         type: String,
         default: '',
@@ -92,7 +85,7 @@ const props = defineProps({
         default: '',
     },
 
-    /**--------- More Help ---------- */
+    /** --------- More Help ---------- */
     moreHelpLabel: {
         type: String,
         default: '',
@@ -136,20 +129,20 @@ const props = defineProps({
         default: true,
     },
 
-    modelValue : {
+    modelValue: {
         type: String,
-        default: ''
+        default: '',
     },
 
-    isLoading : {
+    isLoading: {
         type: Boolean,
-        default: false
+        default: false,
     },
 
-    isDisabled : {
+    isDisabled: {
         type: Boolean,
-        default: false
-    }
+        default: false,
+    },
 });
 
 const hasErrors = () => {
@@ -158,6 +151,7 @@ const hasErrors = () => {
 
 const pattern = computed<string>(() => {
     let pattern = '[0-9a-zA-Z]';
+
     if (props.type === 'number') {
         pattern = '[0-9]';
     }
@@ -186,13 +180,13 @@ const fieldId = computed(() => {
     return props.id;
 });
 
-//===============================================
+//= ==============================================
 const onChange = () => {
-    emits("onChange",  buildCode(items.value));
+    emits('onChange', buildCode(items.value));
 };
 
 const onKeyUp = () => {
-    emits("onChange", buildCode(items.value));
+    emits('onChange', buildCode(items.value));
     emits('onKeyUp', buildCode(items.value));
 };
 
@@ -206,13 +200,16 @@ const onFocus = (e) => {
 
 const onKeyDown = (e) => {
     const index = parseInt(e.target.id, 10);
+
     switch (e.keyCode) {
         case KEY_CODE.enter: {
             e.preventDefault();
             const val = items.value.join('');
+
             if (val.length >= props.fields) {
                 emits('onEnter', val);
             }
+
             break;
         }
 
@@ -222,6 +219,7 @@ const onKeyDown = (e) => {
         }
 
         case KEY_CODE.delete:
+
         case KEY_CODE.backspace: {
             e.preventDefault();
             items.value[index] = '';
@@ -251,33 +249,39 @@ const onKeyDown = (e) => {
 
 const triggerChange = () => {
     const concatValue = items.value.join('');
+
     if (concatValue.length === props.fields) {
         emits('onComplete', concatValue);
-        emits('update:modelValue', concatValue)
+        emits('update:modelValue', concatValue);
     }
 };
 
 const setFocusTo = (id: any) => {
     const element = document.getElementById(id) as HTMLInputElement;
-    element?.focus()
-    element?.select()
-}
+
+    element?.focus();
+    element?.select();
+};
 
 const setFocusToNext = (index: number) => {
-    let next = index
-    if (items.value.length >= (index + 1)) {
+    let next = index;
+
+    if (items.value.length >= index + 1) {
         next = index + 1;
     }
+
     setFocusTo(next);
-}
+};
 
 const setFocusToPrevious = (index: number) => {
-    let next = index
-    if (0 <= (index - 1)) {
+    let next = index;
+
+    if (index - 1 >= 0) {
         next = index - 1;
     }
+
     setFocusTo(next);
-}
+};
 
 const onValueChange = (e) => {
     const index = parseInt(e.target.id, 10);
@@ -285,6 +289,7 @@ const onValueChange = (e) => {
     if (props.type === 'number') {
         e.target.value = e.target.value.replace(/[^\d]/gi, '');
     }
+
     if (props.type === 'string') {
         e.target.value = e.target.value.replace(/[^0-9a-zA-Z]/g, '');
     }
@@ -300,15 +305,15 @@ const onValueChange = (e) => {
     triggerChange();
 };
 
-
 const onPaste = (event: any) => {
     event.preventDefault();
     const pastedValue = event.clipboardData.getData('Text');
+
     setCode(pastedValue);
     triggerChange();
 };
 
-const setCode = (input : string) => {
+const setCode = (input: string) => {
     for (let i = 0; i < props.fields; i += 1) {
         items.value[i] = input[i];
     }
@@ -316,6 +321,7 @@ const setCode = (input : string) => {
 
 const buildCode = (input: any) => {
     const fullCode = [];
+
     for (let i = 0; i < props.fields; i += 1) {
         fullCode[i] = input[i];
     }

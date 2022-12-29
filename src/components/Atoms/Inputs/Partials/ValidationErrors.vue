@@ -14,7 +14,8 @@
 
 <script setup lang="ts">
 import { defineProps, inject } from 'vue';
-import useValidationTranslator from "../../Helpers/validationTranslator";
+import useValidationTranslator from '../../Helpers/validationTranslator';
+
 const i18ntc: any = inject('i18ntc');
 
 const props = defineProps({
@@ -49,6 +50,5 @@ const errorMsg = (error: { $property: string; $params: object; $validator: strin
 
 const translate = (key: string) => {
     return i18ntc.t(key);
-}
-
+};
 </script>

@@ -1,18 +1,17 @@
 <template>
     <div class="y-content">
         <div class="flex justify-content-between">
-
             <div v-for="(option, index) in options" :key="option.label">
-
                 <div class="y-checkable">
-
                     <input
+                        :id="'radio-' + index"
+                        v-model="selection"
                         class="checkbox-input"
                         type="radio"
                         name="shippingOption"
                         :value="option.value"
-                        v-model="selection"
-                        :id="'radio-' + index" checked />
+                        checked
+                    />
 
                     <label class="label" :for="'radio-' + index" :title="option.mouseOver">
                         <span class="is-on">
@@ -23,27 +22,19 @@
                         </span>
                     </label>
 
-                    <y-icon-help
-                        v-if="option.moreHelpContent"
-                        :header="option.moreHelpTitle"
-                        :description="option.moreHelpContent"
-                    >
-                    </y-icon-help>
-
+                    <y-icon-help v-if="option.moreHelpContent" :header="option.moreHelpTitle" :description="option.moreHelpContent"> </y-icon-help>
                 </div>
-
             </div>
-
         </div>
     </div>
-
 </template>
 
 <script setup lang="ts">
-import { defineEmits, ref, watch} from "vue";
-const emit = defineEmits(['update:modelValue']);
+import { defineEmits, ref, watch } from 'vue';
 import YPurifiedHtml from '../../../Helpers/PurifiedHtml.vue';
-import useIdentifier from "../../../Hooks/useIdentifier";
+import useIdentifier from '../../../Hooks/useIdentifier';
+
+const emit = defineEmits(['update:modelValue']);
 
 const props = defineProps({
     id: {
@@ -52,7 +43,7 @@ const props = defineProps({
 
     name: {
         type: String,
-        required: true
+        required: true,
     },
 
     options: {
@@ -61,10 +52,9 @@ const props = defineProps({
 
     modelValue: {
         type: String,
-        required: true
+        required: true,
     },
 });
-
 
 const selection = ref(props.modelValue);
 
@@ -77,5 +67,4 @@ watch(
         emit('update:modelValue', selection.value);
     }
 );
-
 </script>

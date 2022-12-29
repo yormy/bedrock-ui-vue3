@@ -5,17 +5,11 @@
                 {{ secondaryLabel }}
             </small>
 
-            <y-icon-help
-                v-if="moreHelpIcon"
-                :icon="moreHelpIcon"
-                :label="moreHelpLabel"
-                :header="label"
-                :description="moreHelpDescription"
-            >
+            <y-icon-help v-if="moreHelpIcon" :icon="moreHelpIcon" :label="moreHelpLabel" :header="label" :description="moreHelpDescription">
             </y-icon-help>
         </div>
         <div class="field col-12">
-            <span class="p-float-label" :class="inlineIcon ? 'p-input-icon-right': ''">
+            <span class="p-float-label" :class="inlineIcon ? 'p-input-icon-right' : ''">
                 <i :class="inlineIcon" @click="handleInlineIconClicked" @KeyDown="handleInlineIconClicked" />
                 <prime-input-text
                     v-if="!isPassword"
@@ -26,7 +20,7 @@
                     @input="handleInputChanged"
                     v-bind="$attrs"
                     :class="getClass()"
-                    style="width:100%"
+                    style="width: 100%"
                 />
 
                 <prime-password
@@ -41,9 +35,7 @@
                     hide-icon="y-icon icon icon-password-hide"
                     show-icon="y-icon icon icon-password-show"
                 />
-                <label :for="fieldId">
-                    {{ label }} <y-icon-required :required="required"></y-icon-required>
-                </label>
+                <label :for="fieldId"> {{ label }} <y-icon-required :required="required"></y-icon-required> </label>
             </span>
 
             <small v-if="hintText" :id="fieldId + '-hint'" class="p-info">{{ hintText }}</small>
@@ -54,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps, defineEmits, ref, onMounted, watch, inject, computed} from 'vue';
+import { defineProps, defineEmits, ref, onMounted, watch, inject, computed } from 'vue';
 import PrimeInputText from 'primevue/inputtext';
 import PrimePassword from 'primevue/password';
 import Validations from '../Partials/Validations.vue';
@@ -66,7 +58,6 @@ const i18ntc: any = inject('i18ntc');
 
 const fieldId = ref();
 const value = ref();
-
 
 const emit = defineEmits(['secondaryLabelClicked', 'inlineIconClicked', 'update:modelValue']);
 
@@ -123,7 +114,7 @@ const props = defineProps({
         default: '',
     },
 
-    /**--------- More Help ---------- */
+    /** --------- More Help ---------- */
     moreHelpLabel: {
         type: String,
         default: '?',
@@ -170,12 +161,11 @@ onMounted(async () => {
     }
 
     if (!props.attributeName) {
-        attributeLabel = props.label
+        attributeLabel = props.label;
     }
 
     value.value = props.modelValue;
 });
-
 
 const handleSecondaryHelpClicked = () => {
     emit('secondaryLabelClicked');
@@ -190,7 +180,7 @@ const handleInputChanged = (e: Event) => {
 };
 
 const getClass = () => {
-    if (props.errors.length > 0 ) {
+    if (props.errors.length > 0) {
         return 'p-invalid';
     }
 

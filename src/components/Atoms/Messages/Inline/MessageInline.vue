@@ -2,7 +2,6 @@
     <message-inline-base v-bind="$attrs">
         <slot></slot>
     </message-inline-base>
-
 </template>
 
 <script setup lang="ts">

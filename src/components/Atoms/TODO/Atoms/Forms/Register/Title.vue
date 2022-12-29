@@ -13,8 +13,7 @@ export default {
         },
         subtitle: {
             type: String,
-        }
-    }
-}
-
+        },
+    },
+};
 </script>

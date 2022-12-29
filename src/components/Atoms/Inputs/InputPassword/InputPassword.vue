@@ -2,6 +2,8 @@
     <div class="p-fluid grid">
         <div class="col-12">
             <input-base
+                v-bind="$attrs"
+                v-model="v$.password.$model"
                 :errors="v$.password.$errors"
                 :is-password="true"
                 :is-required="true"
@@ -9,8 +11,6 @@
                 :warnings="warnings"
                 @blur="handleInputBlur"
                 @secondary-label-clicked="handleSecondaryLabelClicked"
-                v-bind="$attrs"
-                v-model="v$.password.$model"
                 :feedback="false"
             ></input-base>
         </div>
@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import {reactive, ref, defineEmits, watch, defineProps} from 'vue';
+import { reactive, ref, defineEmits, watch, defineProps } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
 import { required, minLength, sameAs } from '@vuelidate/validators';
 import InputBase from '../Base/InputBase.vue';
@@ -28,7 +28,6 @@ const emit = defineEmits(['update:modelValue']);
 const state = reactive({
     password: '',
 });
-
 
 const props = defineProps({
     confirmWith: {
@@ -41,28 +40,27 @@ const rules = {
     password: {
         required,
         minLength: minLength(8),
-        containsUppercase: function(value) {
-            return /[A-Z]/.test(value)
+        containsUppercase(value) {
+            return /[A-Z]/.test(value);
         },
-        containsLowercase: function(value) {
-            return /[a-z]/.test(value)
+        containsLowercase(value) {
+            return /[a-z]/.test(value);
         },
-        containsNumber: function(value) {
-            return /[0-9]/.test(value)
+        containsNumber(value) {
+            return /[0-9]/.test(value);
         },
-        containsSpecial: function(value) {
-            return /[#?!@$%^&*-]/.test(value)
+        containsSpecial(value) {
+            return /[#?!@$%^&*-]/.test(value);
         },
-        confirmPassword: function(value) {
+        confirmPassword(value) {
             if (props.confirmWith.length === 0) {
                 return true;
             }
-            return value === props.confirmWith
+
+            return value === props.confirmWith;
         },
-    }
+    },
 };
-
-
 
 // const warnings = [{ message: 'a warning 1' }, { message: 'a warning 2' }];
 // const successes = [{ message: 'a success 1' }, { message: 'a success 2' }];
@@ -83,5 +81,4 @@ watch(
         emit('update:modelValue', state.password);
     }
 );
-
 </script>

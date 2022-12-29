@@ -1,51 +1,50 @@
 <script>
 // import {ValidationProvider} from 'vee-validate';
 
-import YInputBase from '../Inputs/InputBase.vue'
+import YInputBase from '../Inputs/InputBase.vue';
 
 export default {
+    extends: YInputBase,
 
-  extends: YInputBase,
+    props: {
+        /**
+         * The errortext when not enabled
+         */
+        errorText: {
+            type: String,
+            default: '',
+        },
 
-  components: {
-      // ValidationProvider,
-      // translations,
-    //VueI18n
-  },
-
-  props: {
-    /**
-     * The errortext when not enabled
-     */
-    errorText: {
-      type: String,
-      default: ''
+        rules: {
+            type: String,
+            default: '',
+        },
     },
 
-    rules: {
-      type: String,
-      default: ''
+    methods: {
+        getState(dirty, errors) {
+            if (!dirty) {
+                return;
+            }
+
+            if (errors.length === 0) {
+                return 'success';
+            }
+
+            return 'error';
+        },
     },
-  },
 
-  computed: {
-    hasRules() {
-      return this.rules.length !== 0;
+    computed: {
+        hasRules() {
+            return this.rules.length !== 0;
+        },
     },
-  },
 
-  methods: {
-    getState(dirty, errors) {
-      if (!dirty) {
-        return;
-      }
-
-      if (errors.length === 0) {
-        return 'success';
-      }
-
-      return "error"
+    components: {
+        // ValidationProvider,
+        // translations,
+        // VueI18n
     },
-  }
-}
+};
 </script>

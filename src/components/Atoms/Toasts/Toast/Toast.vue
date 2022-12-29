@@ -2,7 +2,6 @@
     <toast-base v-bind="$attrs">
         <slot></slot>
     </toast-base>
-
 </template>
 
 <script setup lang="ts">

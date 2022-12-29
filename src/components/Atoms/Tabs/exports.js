@@ -1,5 +1,3 @@
-//import YTab from './Tab/Tab.vue';
+// import YTab from './Tab/Tab.vue';
 
-export {
-
-};
+export {};

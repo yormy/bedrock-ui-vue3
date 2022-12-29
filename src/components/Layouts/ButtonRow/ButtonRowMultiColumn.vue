@@ -4,7 +4,7 @@
         <div>
             <!-- empty necessary for styling-->
         </div>
-        <div class="flex flex-row-reverse ">
+        <div class="flex flex-row-reverse">
             <slot name="main"></slot>
             <slot></slot>
         </div>

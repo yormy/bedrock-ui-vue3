@@ -1,15 +1,15 @@
 <template>
     <input-text
-        :errors="v$.search.$errors"
-        @blur="handleInputBlur"
         v-bind="$attrs"
         v-model="v$.search.$model"
+        :errors="v$.search.$errors"
+        @blur="handleInputBlur"
         inline-icon="y-icon icon icon-search"
     ></input-text>
 </template>
 
 <script setup lang="ts">
-import {reactive} from "vue";
+import { reactive } from 'vue';
 import { required, minLength } from '@vuelidate/validators';
 import { useVuelidate } from '@vuelidate/core';
 
@@ -20,7 +20,7 @@ const state = reactive({
 });
 
 const rules = {
-    search: { },
+    search: {},
 };
 
 const v$ = useVuelidate(rules, state);

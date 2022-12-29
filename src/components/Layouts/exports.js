@@ -6,11 +6,4 @@ import YButtonRowMultiColumn from './ButtonRow/ButtonRowMultiColumn.vue';
 import YFooterScreen from './FooterScreen/FooterScreen.vue';
 import YLoaderScreen from './LoaderScreen/LoaderScreen.vue';
 
-export {
-    YButtonRow,
-    YButtonRowSteps,
-    YButtonRowModal,
-    YButtonRowMultiColumn,
-    YFooterScreen,
-    YLoaderScreen
-};
+export { YButtonRow, YButtonRowSteps, YButtonRowModal, YButtonRowMultiColumn, YFooterScreen, YLoaderScreen };

@@ -1,7 +1,7 @@
 <template>
     <span v-if="isDropdown">
         <button-root
-            iconPos="right"
+            icon-pos="right"
             icon="y-icon icon icon-dropdown"
             v-bind="$attrs"
             @mouseover="hoverButton = true"
@@ -9,10 +9,7 @@
         >
             <slot></slot>
         </button-root>
-        <span v-if="slots.dropdown" v-show="displayDropdown"
-             @mouseover="hoverDropdown = true"
-             @mouseleave="hoverDropdown = false"
-        >
+        <span v-if="slots.dropdown" v-show="displayDropdown" @mouseover="hoverDropdown = true" @mouseleave="hoverDropdown = false">
             <div class="dropdown-content">
                 <slot name="dropdown"></slot>
             </div>
@@ -20,30 +17,27 @@
     </span>
 
     <span v-else>
-
         <span v-if="withBanner">
-            <span class='y-button-banner' >
+            <span class="y-button-banner">
                 <button-root class="p-button-raised" v-bind="$attrs"><slot></slot></button-root>
                 <div class="ribbon" :style="`padding-left:${padding}px`">{{ bannerText }}</div>
             </span>
         </span>
 
         <span v-else>
-            <button-root v-bind="$attrs"  :menuButtonProps= "dropdownIcon"><slot></slot></button-root>
+            <button-root v-bind="$attrs" :menu-button-props="dropdownIcon"><slot></slot></button-root>
         </span>
-
     </span>
-
 </template>
 
 <script setup lang="ts">
+import { computed, defineProps, ref, useSlots } from 'vue';
 import ButtonRoot from '../Root/ButtonRoot.vue';
-import {computed, defineProps, ref, useSlots} from "vue";
 
 const hoverButton = ref(false);
 const hoverDropdown = ref(false);
 
-const slots = useSlots()
+const slots = useSlots();
 
 const props = defineProps({
     isDropdown: {
@@ -69,18 +63,17 @@ const props = defineProps({
 
 const padding = computed(() => {
     return 50 + props.bannerTextOffset;
-})
-
+});
 
 const displayDropdown = computed(() => {
     if (!slots.dropdown) {
         return false;
     }
-    return hoverButton.value || hoverDropdown.value
-})
+
+    return hoverButton.value || hoverDropdown.value;
+});
 
 const dropdownIcon = computed(() => {
-    return {icon: 'y-icon icon icon-dropdown'}
-})
+    return { icon: 'y-icon icon icon-dropdown' };
+});
 </script>
-

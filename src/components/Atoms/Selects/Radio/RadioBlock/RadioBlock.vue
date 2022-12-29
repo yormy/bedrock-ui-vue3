@@ -1,27 +1,33 @@
 <template>
     <div class="y-content">
         <div class="grid grid-cols-3 gap-8">
-
             <div v-for="(option, index) in options" :key="option.label" class="relative radio1">
-                <input class="hidden group peer radio-input" type="radio" v-model="selection" :name="name" :value="option.value" :id="'radio1-' + index" />
+                <input
+                    :id="'radio1-' + index"
+                    v-model="selection"
+                    class="hidden group peer radio-input"
+                    type="radio"
+                    :name="name"
+                    :value="option.value"
+                />
                 <label class="label" :for="'radio1-' + index">
                     <div class="flex justify-between">
-                        <div> {{ option.label }} </div>
-                        <div class="checked"> <span class="y-icon icon solid icon-checked-circle"></span> </div>
+                        <div>{{ option.label }}</div>
+                        <div class="checked"><span class="y-icon icon solid icon-checked-circle"></span></div>
                     </div>
                     <span class="price">$ 5.99</span>
                 </label>
             </div>
         </div>
     </div>
-
 </template>
 
 <script setup lang="ts">
-import { defineEmits, ref, watch} from "vue";
-const emit = defineEmits(['update:modelValue']);
+import { defineEmits, ref, watch } from 'vue';
 import YPurifiedHtml from '../../../Helpers/PurifiedHtml.vue';
-import useIdentifier from "../../../Hooks/useIdentifier";
+import useIdentifier from '../../../Hooks/useIdentifier';
+
+const emit = defineEmits(['update:modelValue']);
 
 const props = defineProps({
     id: {
@@ -30,7 +36,7 @@ const props = defineProps({
 
     name: {
         type: String,
-        required: true
+        required: true,
     },
 
     options: {
@@ -39,10 +45,9 @@ const props = defineProps({
 
     modelValue: {
         type: String,
-        required: true
+        required: true,
     },
 });
-
 
 const selection = ref(props.modelValue);
 
@@ -55,7 +60,6 @@ watch(
         emit('update:modelValue', selection.value);
     }
 );
-
 </script>
 
 <style lang="scss" scoped>
@@ -65,17 +69,17 @@ watch(
     }
 }
 
-.radio-input ~label .checked{
-    display:none;
+.radio-input ~ label .checked {
+    display: none;
 }
-.radio-input:checked ~label .checked{
-    display:block;
+.radio-input:checked ~ label .checked {
+    display: block;
 }
 
 .price {
     display: block;
     margin-top: 0.25rem;
-    color: #6B7280;
+    color: #6b7280;
     font-size: 0.75rem;
     line-height: 1rem;
 }
@@ -90,9 +94,8 @@ watch(
     border-radius: 0.5rem;
     border-width: 1px;
     border-color: navy;
-    border-style:solid;
+    border-style: solid;
     cursor: pointer;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
-
 </style>

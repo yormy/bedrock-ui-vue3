@@ -1,9 +1,7 @@
 <template>
     <div class="y-page-footer--container">
         <div class="y-page-footer--bar">
-            <p class="text-sm font-medium text-left sm:text-center">
-                fixed to bottom of screen
-            </p>
+            <p class="text-sm font-medium text-left sm:text-center">fixed to bottom of screen</p>
         </div>
     </div>
 </template>
@@ -22,7 +20,7 @@
     padding-bottom: 0.75rem;
     padding-left: 1rem;
     padding-right: 3.5rem;
-    background-color: #4F46E5;
+    background-color: #4f46e5;
     color: #ffffff;
 }
 </style>

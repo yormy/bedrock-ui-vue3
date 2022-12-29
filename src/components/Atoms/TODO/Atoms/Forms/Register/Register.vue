@@ -9,8 +9,8 @@
                 :label-help-description="$t('register.register.field.email.description')"
                 :placeholder="$t('register.register.field.email.placeholder')"
                 :rules="'required|email|min:5'"
-                fieldId="1"
-                fieldName="email"
+                field-id="1"
+                field-name="email"
             >
             </y-input-text>
 
@@ -21,8 +21,8 @@
                 :label-help-description="$t('register.register.field.password.description')"
                 :placeholder="$t('register.register.field.password.placeholder')"
                 :rules="'required|strong-password'"
-                fieldId=""
-                fieldName="password"
+                field-id=""
+                field-name="password"
             >
             </y-input-text>
 
@@ -33,8 +33,8 @@
                 :label-help-description="$t('register.register.field.password_confirm.description')"
                 :placeholder="$t('register.register.field.password_confirm.placeholder')"
                 :rules="'required|confirmed:password'"
-                fieldId="2"
-                fieldName="passwordConfirm"
+                field-id="2"
+                field-name="passwordConfirm"
             >
             </y-input-text>
 
@@ -50,7 +50,6 @@
                 </y-check-box>
             </div>
 
-
             <div class="flex justify-between">
                 <y-check-box
                     :description="$t('register.register.field.agree_marketing.description')"
@@ -63,28 +62,20 @@
                 </y-check-box>
             </div>
 
-
-            <y-button-primary
-                :label="$t('register.action.create_account')"
-                class="mt-3"
-            >
-            </y-button-primary>
+            <y-button-primary :label="$t('register.action.create_account')" class="mt-3"> </y-button-primary>
 
             <div class="mt-3 text-right">
-                <a class="is-greyed" @click="onReturnLoginHandler">{{
-                        $t('auth.navigation.to_login')
-                    }}</a>
+                <a class="is-greyed" @click="onReturnLoginHandler">{{ $t('auth.navigation.to_login') }}</a>
             </div>
-
         </div>
     </div>
 </template>
 
 <script>
-import YTitle from './Title.vue'
-import YInputText from "../Inputs/InputText.vue"
-import YCheckBox from "../Checks/CheckBox.vue"
-import YButtonPrimary from "../Buttons/ButtonPrimary.vue"
+import YTitle from './Title.vue';
+import YInputText from '../Inputs/InputText.vue';
+import YCheckBox from '../Checks/CheckBox.vue';
+import YButtonPrimary from '../Buttons/ButtonPrimary.vue';
 
 /**
  *
@@ -92,17 +83,17 @@ import YButtonPrimary from "../Buttons/ButtonPrimary.vue"
 export default {
     inheritAttrs: false,
 
+    methods: {
+        onReturnLoginHandler() {
+            this.$emit('onReturnToLoginClicked');
+        },
+    },
+
     components: {
         // YTitle,
         YInputText,
         YCheckBox,
         YButtonPrimary,
     },
-
-    methods: {
-        onReturnLoginHandler() {
-            this.$emit('onReturnToLoginClicked');
-        }
-    }
-}
+};
 </script>

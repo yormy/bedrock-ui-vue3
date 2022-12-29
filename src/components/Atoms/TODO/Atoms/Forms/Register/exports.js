@@ -1,5 +1,3 @@
-import YRegister from "./Register.vue"
+import YRegister from './Register.vue';
 
-export {
-    YRegister,
-}
+export { YRegister };

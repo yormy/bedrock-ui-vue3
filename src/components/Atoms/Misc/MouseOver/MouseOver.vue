@@ -7,13 +7,11 @@
                 <slot name="dropdown"></slot>
             </span>
         </span>
-
-
     </span>
 </template>
 
 <script setup lang="ts">
-import {computed, defineProps, ref, useSlots} from "vue";
+import { computed, defineProps, ref, useSlots } from 'vue';
 
 const hoverButton = ref(true);
 const hoverDropdown = ref(false);
@@ -31,6 +29,6 @@ const displayDropdown = computed(() => {
     // if (!slots.dropdown) {
     //     return false;
     // }
-    return hoverButton.value || hoverDropdown.value
-})
+    return hoverButton.value || hoverDropdown.value;
+});
 </script>

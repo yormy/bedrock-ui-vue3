@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps, defineEmits, onMounted, ref} from 'vue';
+import { defineProps, defineEmits, onMounted, ref } from 'vue';
 
 const props = defineProps({
     startMs: {
@@ -24,13 +24,14 @@ const props = defineProps({
 
 const emit = defineEmits(['completed']);
 
-let items = ref(props.messages);
+const items = ref(props.messages);
 
 const startAppearingBullets = () => {
     let completedTime = props.startMs;
 
     let index = 0;
-    for (let item of items.value) {
+
+    for (const item of items.value) {
         /**
          * @typedef {Object} item
          * @property {number} processingMs
@@ -42,7 +43,8 @@ const startAppearingBullets = () => {
         completedTime += item.processingMs;
         window.setTimeout(() => {
             item.completed = true;
-            if (index === items.length - 1) {
+
+            if (index === items.value.length - 1) {
                 emit('completed');
             }
         }, completedTime);
@@ -59,8 +61,6 @@ onMounted(() => {
     console.log('start');
     startAppearingBullets();
 });
-
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

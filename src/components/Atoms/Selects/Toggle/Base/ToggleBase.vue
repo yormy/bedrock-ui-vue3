@@ -1,17 +1,17 @@
 <template>
     <div class="y-content">
-        <label class="y-toggle-slider wide-slider" :class="shape" style="" :for="identifier" >
-            <input :id="identifier" type="checkbox" checked class="hidden checkbox-input">
+        <label class="y-toggle-slider wide-slider" :class="shape" style="" :for="identifier">
+            <input :id="identifier" type="checkbox" checked class="hidden checkbox-input" />
             <span class="is-off red">{{ labelOff }}</span>
-            <span class="is-on green">{{labelOn}}</span>
+            <span class="is-on green">{{ labelOn }}</span>
             <span class="slider">&nbsp;</span>
         </label>
     </div>
 </template>
 
 <script setup lang="ts">
-import {computed} from "vue";
-import useIdentifier from "../../../Hooks/useIdentifier"
+import { computed } from 'vue';
+import useIdentifier from '../../../Hooks/useIdentifier';
 
 const props = defineProps({
     id: {
@@ -20,7 +20,7 @@ const props = defineProps({
 
     name: {
         type: String,
-        required: true
+        required: true,
     },
 
     shape: {
@@ -28,11 +28,8 @@ const props = defineProps({
         default: 'round',
         required: false,
         validator(value: string) {
-            return [
-                'square',
-                'round',
-            ].includes(value)
-        }
+            return ['square', 'round'].includes(value);
+        },
     },
 
     labelOn: {
@@ -52,5 +49,4 @@ const props = defineProps({
 });
 
 const [identifier] = useIdentifier(props.id);
-
 </script>

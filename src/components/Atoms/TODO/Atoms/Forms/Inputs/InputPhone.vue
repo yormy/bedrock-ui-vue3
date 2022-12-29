@@ -12,12 +12,7 @@
         >
         </y-input-label>
 
-        <maz-phone-number-input
-            v-model="phoneNumerUnformatted"
-            :default-country-code="'NL'"
-            :required="true"
-            @update="phoneUpdated"
-        />
+        <maz-phone-number-input v-model="phoneNumerUnformatted" :default-country-code="'NL'" :required="true" @update="phoneUpdated" />
 
         <div class="y-input-help">
             <p v-if="showHint()" class="help is-info">{{ hintText }}</p>
@@ -25,71 +20,64 @@
             <!--                <p v-if="dirty && valid && validText && hasRules" class="is-success">{{ validText }}</p>-->
         </div>
 
-
         <!--        size="lg"-->
         <!--        valid-color="#459B19"-->
-<!--        error-color="#FF0000"-->
-        {{this.form.data.phone}}
-        {{this.form.data.countryCode}}
+        <!--        error-color="#FF0000"-->
+        {{ form.data.phone }}
+        {{ form.data.countryCode }}
 
-<!--        :translations="$t('bedrock-core.mazui.phone')"-->
+        <!--        :translations="$t('bedrock-core.mazui.phone')"-->
     </div>
-
 </template>
 
 <script>
-import YInputBase from "./InputBase.vue"
-import YInputLabel from "./InputLabel.vue"
-import MazPhoneNumberInput from "maz-ui/lib/maz-phone-number-input";
-
+import MazPhoneNumberInput from 'maz-ui/lib/maz-phone-number-input';
+import YInputBase from './InputBase.vue';
+import YInputLabel from './InputLabel.vue';
 
 export default {
     extends: YInputBase,
-    components: { YInputBase, YInputLabel,
-        MazPhoneNumberInput
-    },
-    data () {
+    data() {
         return {
             phoneNumerUnformatted: null,
 
-
-            form : {
+            form: {
                 data: {
                     phone: '',
-                    countryCode: ''
+                    countryCode: '',
                 },
                 state: {
                     dirty: false,
-                    phoneValid : null,
+                    phoneValid: null,
                 },
                 messages: {
                     error: '',
-                }
+                },
             },
-        }
+        };
     },
 
     methods: {
         phoneUpdated(data) {
-            this.form.state.dirty =true;
+            this.form.state.dirty = true;
             this.form.state.phoneValid = data.isValid;
 
             if (data.isValid) {
                 this.form.data.phone = data.e164;
                 this.form.data.countryCode = data.countryCode;
                 this.form.messages.error = '';
-                return
+
+                return;
             }
 
             if (data.e164) {
-                this.form.messages.error = 'invalid phonie'; //this.$t('bedrock-core.validations.phone.invalid');
+                this.form.messages.error = 'invalid phonie'; // this.$t('bedrock-core.validations.phone.invalid');
             }
         },
 
         getError() {
             return this.form.messages.error;
         },
-
 
         showHint() {
             if (this.isDisabled || this.getError() || this.form.state.phoneValid) {
@@ -103,6 +91,7 @@ export default {
 
             return true;
         },
-    }
-}
+    },
+    components: { YInputBase, YInputLabel, MazPhoneNumberInput },
+};
 </script>

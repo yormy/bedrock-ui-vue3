@@ -26,5 +26,5 @@ export {
     YToggleSelect,
     YToggleSection,
     YRadio,
-    YRadioBlock
+    YRadioBlock,
 };

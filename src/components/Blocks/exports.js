@@ -5,11 +5,4 @@ import YLoginEmailCode from './Auth/LoginEmailCode/LoginEmailCode.vue';
 import YLoginWait from './Auth/LoginWait/LoginWait.vue';
 import YResetSelector from './Auth/ResetSelector/ResetSelector.vue';
 
-export {
-    YLogin,
-    YResetPassword,
-    YResetLoginname,
-    YLoginEmailCode,
-    YLoginWait,
-    YResetSelector
-};
+export { YLogin, YResetPassword, YResetLoginname, YLoginEmailCode, YLoginWait, YResetSelector };

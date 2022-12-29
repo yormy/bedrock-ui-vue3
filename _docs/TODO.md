@@ -73,3 +73,10 @@ This can be copying js or creating some files
 
 # JEST
 https://github.com/kouts/vue3-ts-vite-starter-template
+
+
+Designer / prime:
+run the follwing before npm run serve
+```
+export NODE_OPTIONS=--openssl-legacy-provider
+```

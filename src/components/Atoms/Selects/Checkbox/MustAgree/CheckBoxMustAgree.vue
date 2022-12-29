@@ -1,9 +1,9 @@
 <template>
     <div class="field-checkbox">
-        MUST AGREE {{v$.checkedValue.$model}}
+        MUST AGREE {{ v$.checkedValue.$model }}
         <checkbox
-            inputId="binary"
             v-model="v$.checkedValue.$model"
+            input-id="binary"
             v-bind="$attrs"
             :binary="true"
             :successes="successes"
@@ -14,11 +14,11 @@
 </template>
 
 <script setup lang="ts">
-import {reactive, watch, inject} from "vue";
-import Checkbox from '../Checkbox/Checkbox.vue'
+import { reactive, watch, inject } from 'vue';
 
-import {required, sameAs } from '@vuelidate/validators';
-import {useVuelidate} from "@vuelidate/core";
+import { required, sameAs } from '@vuelidate/validators';
+import { useVuelidate } from '@vuelidate/core';
+import Checkbox from '../Checkbox/Checkbox.vue';
 
 const i18ntc: any = inject('i18ntc');
 
@@ -30,10 +30,10 @@ const state = reactive({
     checkedValue: false,
 });
 
-let tries = 0;
+const tries = 0;
 
 const rules = {
-    checkedValue: { required, sameAs: sameAs(true)},
+    checkedValue: { required, sameAs: sameAs(true) },
 };
 
 const v$ = useVuelidate(rules, state);
@@ -44,11 +44,11 @@ watch(
     () => v$.value.checkedValue.$model,
     (newValue) => {
         errors = [];
-        if (v$.value.checkedValue.$errors.length > 0) {
-                errors = [{message: 'validation.mustAgree'}];
-        }
-    }
-    ,{immediate:true}
-);
 
+        if (v$.value.checkedValue.$errors.length > 0) {
+            errors = [{ message: 'validation.mustAgree' }];
+        }
+    },
+    { immediate: true }
+);
 </script>

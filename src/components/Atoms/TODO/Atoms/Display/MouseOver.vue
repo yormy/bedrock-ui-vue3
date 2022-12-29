@@ -7,10 +7,7 @@
     </span>
 </template>
 
-
 <script>
-
-
 import DOMPurify from 'dompurify';
 
 /**
@@ -18,34 +15,33 @@ import DOMPurify from 'dompurify';
  *
  */
 export default {
+    inheritAttrs: false,
 
-  inheritAttrs: false,
-
-  props: {
-    /**
-     * The label for this button
-     */
-    label: {
-      type: String,
-      default: '',
+    props: {
+        /**
+         * The label for this button
+         */
+        label: {
+            type: String,
+            default: '',
+        },
     },
-  },
 
-  data() {
-    return {
-      prop: {
-        value: this.value,
-      }
-    };
-  },
+    data() {
+        return {
+            prop: {
+                value: this.value,
+            },
+        };
+    },
 
-  computed: {
-    purifiedHtml() {
-      return DOMPurify.sanitize(this.value, {
-        ALLOWED_TAGS: this.allowedTags,
-        ALLOWED_ATTR: this.allowedAttributes
-      });
-    }
-  }
-}
+    computed: {
+        purifiedHtml() {
+            return DOMPurify.sanitize(this.value, {
+                ALLOWED_TAGS: this.allowedTags,
+                ALLOWED_ATTR: this.allowedAttributes,
+            });
+        },
+    },
+};
 </script>

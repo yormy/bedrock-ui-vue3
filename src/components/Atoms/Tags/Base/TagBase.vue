@@ -1,11 +1,9 @@
 <template>
-    <span class="y-tag-chip" :class="labelClass">
-        <span v-if="icon" :class="icon"></span>{{ label }}
-    </span>
+    <span class="y-tag-chip" :class="labelClass"> <span v-if="icon" :class="icon"></span>{{ label }} </span>
 </template>
 
 <script setup lang="ts">
-import {computed} from "vue";
+import { computed } from 'vue';
 
 const props = defineProps({
     label: {
@@ -21,24 +19,15 @@ const props = defineProps({
     shape: {
         type: String,
         validator(value: string) {
-            return [
-                'rounded',
-                'square',
-            ].includes(value)
-        }
+            return ['rounded', 'square'].includes(value);
+        },
     },
 
     size: {
         type: String,
         validator(value: string) {
-            return [
-                'tiny',
-                'small',
-                'normal',
-                'large',
-                'extra-large',
-            ].includes(value)
-        }
+            return ['tiny', 'small', 'normal', 'large', 'extra-large'].includes(value);
+        },
     },
 
     type: {
@@ -55,18 +44,13 @@ const props = defineProps({
                 'is-danger-open',
                 'is-danger-solid',
                 'is-disabled-open',
-                'is-disabled-solid'
-            ].includes(value)
-        }
+                'is-disabled-solid',
+            ].includes(value);
+        },
     },
 });
 
 const labelClass = computed(() => {
-    return [
-        props.shape,
-        props.size,
-        props.type,
-    ];
-})
-
+    return [props.shape, props.size, props.type];
+});
 </script>

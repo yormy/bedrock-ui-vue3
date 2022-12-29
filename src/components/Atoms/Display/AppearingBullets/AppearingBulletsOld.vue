@@ -1,17 +1,14 @@
 <script>
 export default {
-
-  watch: {
-    reset() {
-      this.resetBullets();
+    watch: {
+        reset() {
+            this.resetBullets();
+        },
     },
-  },
 
-  mounted() {
-    this.resetBullets();
-    this.startAppearingBullets();
-  },
-
-
+    mounted() {
+        this.resetBullets();
+        this.startAppearingBullets();
+    },
 };
 </script>

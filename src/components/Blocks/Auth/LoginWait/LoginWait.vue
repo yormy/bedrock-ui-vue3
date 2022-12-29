@@ -1,9 +1,6 @@
 <template>
     <div>
-        <y-appearing-bullets
-            :messages="messages"
-            :start-ms="500"
-        ></y-appearing-bullets>
+        <y-appearing-bullets :messages="messages" :start-ms="500"></y-appearing-bullets>
     </div>
 </template>
 
@@ -37,4 +34,3 @@ const messages = [
     },
 ];
 </script>
-
