@@ -5,11 +5,20 @@
             icon="y-icon icon icon-dropdown"
             v-bind="$attrs"
             @mouseover="hoverButton = true"
+            @focus="hoverButton = true"
             @mouseleave="hoverButton = false"
+            @blur="hoverButton = false"
         >
             <slot></slot>
         </button-root>
-        <span v-if="slots.dropdown" v-show="displayDropdown" @mouseover="hoverDropdown = true" @mouseleave="hoverDropdown = false">
+        <span
+            v-if="slots.dropdown"
+            v-show="displayDropdown"
+            @mouseover="hoverDropdown = true"
+            @focus="hoverDropdown = true"
+            @mouseleave="hoverDropdown = false"
+            @blur="hoverDropdown = false"
+        >
             <div class="dropdown-content">
                 <slot name="dropdown"></slot>
             </div>

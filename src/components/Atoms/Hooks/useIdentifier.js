@@ -1,6 +1,6 @@
 import { computed } from 'vue';
 
-export default function useIdentifier(id) {
+export default function useIdentifier(id, name = '') {
     const identifier = computed(() => {
         if (id) {
             return id;

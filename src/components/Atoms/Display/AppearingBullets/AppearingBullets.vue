@@ -49,7 +49,7 @@ const startAppearingBullets = () => {
             }
         }, completedTime);
 
-        index++;
+        index += 1;
     }
 };
 

@@ -23,7 +23,8 @@
                         </g>
                     </g>
                 </svg>
-                <select class="select">
+                <label for="droppie">dropdown</label>
+                <select id="droppie" class="select">
                     <option>A-Z</option>
                     <option>Z-A</option>
                     <option>x</option>

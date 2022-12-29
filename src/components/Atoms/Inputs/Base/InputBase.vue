@@ -151,8 +151,9 @@ const props = defineProps({
     },
 });
 
-let attributeLabel = props.attributeName;
+const attributeLabel = ref(props.attributeName);
 
+// todo: is this still needed
 onMounted(async () => {
     fieldId.value = props.id;
 
@@ -161,7 +162,7 @@ onMounted(async () => {
     }
 
     if (!props.attributeName) {
-        attributeLabel = props.label;
+        attributeLabel.value = props.label;
     }
 
     value.value = props.modelValue;

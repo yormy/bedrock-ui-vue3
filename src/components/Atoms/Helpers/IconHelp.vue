@@ -5,7 +5,7 @@
             <y-purified-html :value="description"></y-purified-html>
         </y-modal-help>
 
-        <span @click="handleHelpClicked" class="p-link">
+        <span @click="handleHelpClicked" @keydown="handleHelpClicked" class="p-link">
             <span v-if="icon" :class="icon"></span>
             <span v-else>
                 <small>{{ label }} </small>
