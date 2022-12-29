@@ -16,6 +16,7 @@ const props = defineProps({
     type: {
         type: String,
         required: false,
+        default: 'info',
         validator(value: string) {
             return ['info', 'success', 'warning', 'danger'].includes(value);
         },

@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-wrap">
         <div class="w-1/5">
-            <button class="y-btn y-btn-secondary" @click="sort">To original order</button>
+            <button type="button" class="y-btn y-btn-secondary" @click="sort">To original order</button>
         </div>
 
         <div class="w-1/2">

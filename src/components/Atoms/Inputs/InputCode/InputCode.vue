@@ -1,3 +1,4 @@
+<!--eslint-disable vuejs-accessibility/form-control-has-label-->
 <template>
     <div class="y-input-code">
         <div v-if="isLoading" class="is-loading">
@@ -14,7 +15,6 @@
             <template v-for="index in fields" :key="`${index}`">
                 <input
                     :id="index - 1"
-                    :autoFocus="autoFocus && !isLoading && index - 1 === 0"
                     :class="hasErrors() ? 'is-error' : ''"
                     :data-id="index - 1"
                     :disabled="isDisabled"
@@ -150,27 +150,14 @@ const hasErrors = () => {
 };
 
 const pattern = computed<string>(() => {
-    let pattern = '[0-9a-zA-Z]';
+    let regex = '[0-9a-zA-Z]';
 
     if (props.type === 'number') {
-        pattern = '[0-9]';
+        regex = '[0-9]';
     }
 
-    return pattern;
+    return regex;
 });
-
-// computed
-// fieldWidthCalc() {
-//     if (screen
-//         .width < 700) {
-//         return 30;
-//     }
-//     return this.fieldWidth;
-// },
-//
-// totalCodeWidth() {
-//     return this.fields * this.fieldWidthCalc + this.fieldSpace + 20;
-// },
 
 const fieldId = computed(() => {
     if (!props.id) {
@@ -181,6 +168,48 @@ const fieldId = computed(() => {
 });
 
 //= ==============================================
+
+const setFocusTo = (id: any) => {
+    const element = document.getElementById(id) as HTMLInputElement;
+
+    element?.focus();
+    element?.select();
+};
+
+const setFocusToPrevious = (index: number) => {
+    let next = index;
+
+    if (index - 1 >= 0) {
+        next = index - 1;
+    }
+
+    setFocusTo(next);
+};
+
+const buildCode = (input: any) => {
+    const fullCode = [];
+
+    for (let i = 0; i < props.fields; i += 1) {
+        fullCode[i] = input[i];
+    }
+
+    return fullCode;
+};
+
+const items = ref(buildCode(props.modelValue));
+
+const setCode = (input: string) => {
+    for (let i = 0; i < props.fields; i += 1) {
+        items.value[i] = input[i];
+    }
+};
+
+const clear = () => {
+    for (let i = 0; i < props.fields; i += 1) {
+        items.value[i] = '';
+    }
+};
+
 const onChange = () => {
     emits('onChange', buildCode(items.value));
 };
@@ -196,6 +225,25 @@ const onEsc = () => {
 
 const onFocus = (e) => {
     setFocusTo(e.target.id);
+};
+
+const triggerChange = () => {
+    const concatValue = items.value.join('');
+
+    if (concatValue.length === props.fields) {
+        emits('onComplete', concatValue);
+        emits('update:modelValue', concatValue);
+    }
+};
+
+const setFocusToNext = (index: number) => {
+    let next = index;
+
+    if (items.value.length >= index + 1) {
+        next = index + 1;
+    }
+
+    setFocusTo(next);
 };
 
 const onKeyDown = (e) => {
@@ -247,42 +295,6 @@ const onKeyDown = (e) => {
     }
 };
 
-const triggerChange = () => {
-    const concatValue = items.value.join('');
-
-    if (concatValue.length === props.fields) {
-        emits('onComplete', concatValue);
-        emits('update:modelValue', concatValue);
-    }
-};
-
-const setFocusTo = (id: any) => {
-    const element = document.getElementById(id) as HTMLInputElement;
-
-    element?.focus();
-    element?.select();
-};
-
-const setFocusToNext = (index: number) => {
-    let next = index;
-
-    if (items.value.length >= index + 1) {
-        next = index + 1;
-    }
-
-    setFocusTo(next);
-};
-
-const setFocusToPrevious = (index: number) => {
-    let next = index;
-
-    if (index - 1 >= 0) {
-        next = index - 1;
-    }
-
-    setFocusTo(next);
-};
-
 const onValueChange = (e) => {
     const index = parseInt(e.target.id, 10);
 
@@ -311,29 +323,5 @@ const onPaste = (event: any) => {
 
     setCode(pastedValue);
     triggerChange();
-};
-
-const setCode = (input: string) => {
-    for (let i = 0; i < props.fields; i += 1) {
-        items.value[i] = input[i];
-    }
-};
-
-const buildCode = (input: any) => {
-    const fullCode = [];
-
-    for (let i = 0; i < props.fields; i += 1) {
-        fullCode[i] = input[i];
-    }
-
-    return fullCode;
-};
-
-const items = ref(buildCode(props.modelValue));
-
-const clear = () => {
-    for (let i = 0; i < props.fields; i += 1) {
-        items.value[i] = '';
-    }
 };
 </script>

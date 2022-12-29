@@ -11,6 +11,7 @@ import { computed } from 'vue';
 const props = defineProps({
     type: {
         type: String,
+        default: 'info',
         validator(value: string) {
             return ['info', 'success', 'warning', 'danger'].includes(value);
         },
@@ -47,6 +48,8 @@ const mainIcon = computed(() => {
     if (props.type === 'danger') {
         return `${iconize}icon-danger`;
     }
+
+    return `${iconize}icon-info`;
 });
 
 const closeIcon = 'y-icon icon icon-close';

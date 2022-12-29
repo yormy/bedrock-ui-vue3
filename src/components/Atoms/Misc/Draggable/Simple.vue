@@ -3,8 +3,8 @@
         <div class="w-1/5">
             <div class="mb-4">
                 <div aria-label="Basic example" class="relative inline-flex align-middle flex-col items-start justify-center buttons" role="group">
-                    <button class="y-btn y-btn-secondary" @click="add">Add</button>
-                    <button class="y-btn y-btn-secondary" @click="replace">Replace</button>
+                    <button type="button" class="y-btn y-btn-secondary" @click="add">Add</button>
+                    <button type="button" class="y-btn y-btn-secondary" @click="replace">Replace</button>
                 </div>
 
                 <div class="relative block mb-2">
@@ -62,10 +62,10 @@ export default {
     },
     methods: {
         add() {
-            this.list.push({ name: `Juan ${id}`, id: id++ });
+            this.list.push({ name: `Juan ${id}`, id: (id += 1) });
         },
         replace() {
-            this.list = [{ name: 'Edgard', id: id++ }];
+            this.list = [{ name: 'Edgard', id: (id += 1) }];
         },
         checkMove(e) {
             window.console.log(`Future index: ${e.draggedContext.futureIndex}`);

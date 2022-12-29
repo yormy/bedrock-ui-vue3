@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="y-breadcrumb--boxed" aria-label="Breadcrumb">
-            <ol role="list" class="breadcrumb--list">
+            <ol class="breadcrumb--list">
                 <div v-for="(item, index) in items" :key="item.label">
                     <li v-if="index == 0" class="breadcrumb--item">
                         <a class="breadcrumb--link colored" :href="item.url" :title="item.description">
@@ -29,6 +29,9 @@
 const props = defineProps({
     items: {
         type: Array,
+        default() {
+            return [];
+        },
     },
 });
 </script>

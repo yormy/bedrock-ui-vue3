@@ -8,7 +8,7 @@
                 <div class="checkbox">
                     <label><input v-model="editable" type="checkbox" />Enable drag and drop</label>
                 </div>
-                <button class="btn btn-default" type="button" @click="orderAllLists">Sort by original order</button>
+                <button class="btn btn-default" type="button" @click="orderAllLists" @keydown="orderAllLists">Sort by original order</button>
             </div>
         </div>
 
@@ -29,6 +29,7 @@
                         :class="selectedElementLevel1 === element ? 'selected' : ''"
                         class="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline"
                         @click="clickedLevel1(element)"
+                        @keydown="clickedLevel1(element)"
                     >
                         <span>
                             {{ index + 1 }}
@@ -54,6 +55,7 @@
                         :class="selectedElementLevel2 === element ? 'selected' : ''"
                         class="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline"
                         @click="clickedLevel2(element)"
+                        @keydown="clickedLevel2(element)"
                     >
                         <span> {{ index + 1 }} - {{ element.name }} </span>
                     </li>
@@ -75,10 +77,10 @@
                         :key="element.order"
                         class="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline"
                     >
+                        <!-- <i :class="element.fixed? 'fa fa-anchor' : 'fas fa-arrows-alt-v'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>-->
                         <span>
-                            <!--              <i :class="element.fixed? 'fa fa-anchor' : 'fas fa-arrows-alt-v'" @click=" element.fixed=! element.fixed" aria-hidden="true"></i>-->
                             {{ index + 1 }} - {{ element.name }}
-                            <i class="float-right fa fa-arrow-right" @click="clickedLevel3(element)"></i>
+                            <i class="float-right fa fa-arrow-right" @click="clickedLevel3(element)" @keydown="clickedLevel3(element)"></i>
                         </span>
                     </li>
                 </draggable>
@@ -136,7 +138,7 @@ const message = [
                         fixed: false,
                     },
                     {
-                        name: "I Still Haven't Found What I'm Looking For",
+                        name: 'I Still Haven\'t Found What I\'m Looking For', // eslint-disable-line
                         order: 2,
                         description: 'hello',
                         fixed: false,
@@ -319,7 +321,7 @@ export default {
 
             this.list.forEach((element) => {
                 if (element.items) {
-                    element.items = element.items.sort((one, two) => {
+                    element.items = element.items.sort((one, two) => { //eslint-disable-line
                         return one.order - two.order;
                     });
                 }

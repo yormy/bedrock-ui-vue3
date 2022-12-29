@@ -11,6 +11,7 @@ import { computed } from 'vue';
 const props = defineProps({
     type: {
         type: String,
+        default: 'info',
         validator(value: string) {
             return ['info', 'success', 'warning', 'danger'].includes(value);
         },

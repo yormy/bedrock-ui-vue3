@@ -72,17 +72,23 @@ const props = defineProps({
 
     successes: {
         type: Array,
-        default: [],
+        default() {
+            return [];
+        },
     },
 
     warnings: {
         type: Array,
-        default: [],
+        default() {
+            return [];
+        },
     },
 
     errors: {
         type: Array,
-        default: [],
+        default() {
+            return [];
+        },
     },
 });
 

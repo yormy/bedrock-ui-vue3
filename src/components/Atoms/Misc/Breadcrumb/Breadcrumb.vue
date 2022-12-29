@@ -16,6 +16,9 @@
 const props = defineProps({
     items: {
         type: Array,
+        default() {
+            return [];
+        },
     },
 });
 </script>

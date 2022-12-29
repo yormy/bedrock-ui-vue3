@@ -6,8 +6,8 @@
             </div>
             <div class="panel-body0">
                 <div class="flex flex-row">
-                    <input v-model="editable" type="checkbox" />
-                    <label> Enable drag and drop </label>
+                    <input id="check" v-model="editable" type="checkbox" />
+                    <label for="check">Enable drag and drop</label>
                 </div>
                 <button class="btn btn-default" type="button" @click="orderAllLists">Sort by original order</button>
             </div>
@@ -135,7 +135,7 @@ const message = [
                         fixed: false,
                     },
                     {
-                        name: "I Still Haven't Found What I'm Looking For",
+                        name: "I Still Haven't Found What I'm Looking For", // eslint-disable-line
                         order: 2,
                         description: 'hello',
                         fixed: false,
@@ -328,7 +328,7 @@ const orderAllLists = () => {
 
     list.value.forEach((element) => {
         if (element.items) {
-            element.items = element.items.sort((one, two) => {
+            element.items = element.items.sort((one, two) => {  //eslint-disable-line
                 return one.order - two.order;
             });
         }
