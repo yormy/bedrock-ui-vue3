@@ -60,7 +60,7 @@ const emits = defineEmits<{
 <!--eslint-disable-->
 
 ## Disable line
-// eslint-disable-line
+// eslint-disable-next-line
 
 
 # JEST

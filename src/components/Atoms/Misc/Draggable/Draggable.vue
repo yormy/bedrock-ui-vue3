@@ -271,7 +271,10 @@ const message = [
 
 const list = ref(message);
 const editable = ref(true);
-const isDragging = false;
+
+// eslint-disable-next-line
+let isDragging = ref(false);
+
 const delayedDragging = false;
 let selectedElementLevel1: any = null;
 let selectedElementLevel2: any = null;
