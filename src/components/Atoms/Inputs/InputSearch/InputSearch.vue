@@ -27,6 +27,5 @@ const v$ = useVuelidate(rules, state);
 
 const handleInputBlur = () => {
     v$.value.search.$touch();
-    console.log('blur');
 };
 </script>

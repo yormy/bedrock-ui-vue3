@@ -26,16 +26,18 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'vue'
+import { PropType } from 'vue';
+
 const props = defineProps({
     items: {
-        type: Array as PropType<Array<
-            {
-                icon: string,
-                url: string,
-                description: string,
-                label: string,
-            }>> ,
+        type: Array as PropType<
+            Array<{
+                icon: string;
+                url: string;
+                description: string;
+                label: string;
+            }>
+        >,
         default() {
             return [];
         },

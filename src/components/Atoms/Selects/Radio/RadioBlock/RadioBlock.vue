@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import {defineEmits, PropType, ref, watch} from 'vue';
+import { defineEmits, PropType, ref, watch } from 'vue';
 import YPurifiedHtml from '../../../Helpers/PurifiedHtml.vue';
 import useIdentifier from '../../../Hooks/useIdentifier';
 
@@ -41,16 +41,17 @@ const props = defineProps({
     },
 
     options: {
-        type: Array as PropType<Array<
-            {
-                moreHelpTitle: string,
-                moreHelpContent: string,
-                labelOff: string,
-                labelOn: string,
-                mouseOver: string,
-                value: string,
-                label: string
-            }>> ,
+        type: Array as PropType<
+            Array<{
+                moreHelpTitle: string;
+                moreHelpContent: string;
+                labelOff: string;
+                labelOn: string;
+                mouseOver: string;
+                value: string;
+                label: string;
+            }>
+        >,
         default() {
             return [];
         },
@@ -69,7 +70,6 @@ const [identifier] = useIdentifier(props.id);
 watch(
     () => selection.value,
     (newValue) => {
-        console.log('changed');
         emit('update:modelValue', selection.value);
     }
 );

@@ -68,6 +68,7 @@ export default {
             this.list = [{ name: 'Edgard', id: (id += 1) }];
         },
         checkMove(e) {
+            // eslint-disable no-console
             window.console.log(`Future index: ${e.draggedContext.futureIndex}`);
         },
     },

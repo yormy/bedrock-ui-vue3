@@ -99,12 +99,10 @@ watch(
     (newValue) => {
         if (newValue) {
             emit('isOn');
-            console.log('on');
         }
 
         if (!newValue) {
             emit('isOff');
-            console.log('off');
         }
     }
 );
@@ -112,6 +110,5 @@ watch(
 async function handleInputChanged(e: Event) {
     await nextTick();
     emit('update:modelValue', checked.value);
-    console.log('update');
 }
 </script>

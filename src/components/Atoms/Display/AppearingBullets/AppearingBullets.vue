@@ -17,13 +17,14 @@ const props = defineProps({
         default: 1000,
     },
     messages: {
-        type: Array as PropType<Array<
-            {
-                text: string,
-                loading: boolean,
-                completed: boolean,
-                processingMs: number
-            }>> ,
+        type: Array as PropType<
+            Array<{
+                text: string;
+                loading: boolean;
+                completed: boolean;
+                processingMs: number;
+            }>
+        >,
         required: true,
     },
 });
@@ -61,7 +62,6 @@ const resetBullets = () => {
 };
 
 onMounted(() => {
-    console.log('start');
     startAppearingBullets();
 });
 </script>

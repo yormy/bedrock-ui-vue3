@@ -13,17 +13,18 @@
 </template>
 
 <script setup lang="ts">
-import {PropType} from "vue";
+import { PropType } from 'vue';
 
 const props = defineProps({
     items: {
-        type: Array as PropType<Array<
-            {
-                label: string,
-                description: string,
-                icon: string,
-                url: string,
-            }>> ,
+        type: Array as PropType<
+            Array<{
+                label: string;
+                description: string;
+                icon: string;
+                url: string;
+            }>
+        >,
         default() {
             return [];
         },

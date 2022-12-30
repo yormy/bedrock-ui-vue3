@@ -21,6 +21,5 @@ const v$ = useVuelidate(rules, state);
 
 const handleInputBlur = () => {
     v$.value.username.$touch();
-    console.log('blur');
 };
 </script>

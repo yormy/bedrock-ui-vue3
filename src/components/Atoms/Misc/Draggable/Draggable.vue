@@ -317,7 +317,7 @@ const clickedLevel2 = (element: any) => {
     selectedElementLevel2 = element;
 };
 
-const clickedLevel3 = (element : any) => {
+const clickedLevel3 = (element: any) => {
     // ???
 };
 
@@ -337,7 +337,6 @@ const orderAllLists = () => {
 };
 
 const onMove = ({ relatedContext, draggedContext }: any) => {
-    console.log('onmove');
     const relatedElement = relatedContext.element;
     const draggedElement = draggedContext.element;
 

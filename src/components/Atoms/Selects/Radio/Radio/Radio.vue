@@ -48,16 +48,17 @@ const props = defineProps({
     },
 
     options: {
-        type: Array as PropType<Array<
-            {
-                label: string,
-                moreHelpTitle: string,
-                moreHelpContent: string,
-                labelOff: string,
-                labelOn: string,
-                mouseOver: string,
-                value: string,
-            }>> ,
+        type: Array as PropType<
+            Array<{
+                label: string;
+                moreHelpTitle: string;
+                moreHelpContent: string;
+                labelOff: string;
+                labelOn: string;
+                mouseOver: string;
+                value: string;
+            }>
+        >,
         default() {
             return [];
         },
@@ -76,7 +77,6 @@ const [identifier] = useIdentifier(props.id);
 watch(
     () => selection.value,
     (newValue) => {
-        console.log('changed');
         emit('update:modelValue', selection.value);
     }
 );

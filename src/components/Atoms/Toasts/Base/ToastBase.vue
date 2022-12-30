@@ -72,7 +72,7 @@ const getType = () => {
 
 const positionType: any = computed(() => {
     return props.position;
-})
+});
 
 const showToast = () => {
     toast.add({

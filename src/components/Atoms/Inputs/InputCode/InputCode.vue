@@ -147,7 +147,7 @@ const props = defineProps({
 
 const fieldWidthCalc = computed(() => {
     return props.fieldWidth;
-})
+});
 
 const hasErrors = () => {
     return false;

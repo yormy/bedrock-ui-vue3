@@ -4,7 +4,7 @@
             <table class="y-table--table">
                 <thead>
                     <tr class="y-table--header">
-                        <th id="header" v-for="(heading, indexheading) in headings" :key="indexheading">
+                        <th v-for="(heading, indexheading) in headings" :key="indexheading" id="header">
                             {{ heading.name }}
                         </th>
                     </tr>
@@ -20,7 +20,7 @@
 
                 <tfoot>
                     <tr class="y-table--footer">
-                        <th id="footer" v-for="(footer, indexFooter) in footers" :key="indexFooter">
+                        <th v-for="(footer, indexFooter) in footers" :key="indexFooter" id="footer">
                             {{ footer.name }}
                         </th>
                     </tr>
@@ -40,20 +40,22 @@ const props = defineProps({
     },
 
     headings: {
-        type: Array as PropType<Array<
-            {
-                name: string,
-            }>> ,
+        type: Array as PropType<
+            Array<{
+                name: string;
+            }>
+        >,
         default() {
             return [];
         },
     },
 
     footers: {
-        type: Array as PropType<Array<
-            {
-                name: string,
-            }>> ,
+        type: Array as PropType<
+            Array<{
+                name: string;
+            }>
+        >,
         default() {
             return [];
         },
