@@ -18,7 +18,7 @@ const props = defineProps({
     },
 });
 
-const severity = computed(() => {
+const severity: any = computed(() => {
     if (props.type === 'danger') {
         return 'error';
     }

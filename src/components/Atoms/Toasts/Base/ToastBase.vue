@@ -6,7 +6,7 @@
             :success-icon="successIcon"
             :warn-icon="warningIcon"
             :error-icon="dangerIcon"
-            :position="position"
+            :position="positionType"
             v-bind="$attrs"
         />
     </div>
@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import Toast from 'primevue/toast';
 import { useToast } from 'primevue/usetoast';
-import { watch } from 'vue';
+import { watch, computed } from 'vue';
 
 const toast = useToast();
 
@@ -69,6 +69,10 @@ const getType = () => {
 
     return props.type;
 };
+
+const positionType: any = computed(() => {
+    return props.position;
+})
 
 const showToast = () => {
     toast.add({
