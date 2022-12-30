@@ -32,16 +32,12 @@ const startAppearingBullets = () => {
     let index = 0;
 
     for (const item of items.value) {
-        /**
-         * @typedef {Object} item
-         * @property {number} processingMs
-         */
         window.setTimeout(() => {
             item.loading = true;
         }, completedTime);
 
         completedTime += item.processingMs;
-        window.setTimeout(() => {
+        window.setTimeout(() => { // eslint-disable-line
             item.completed = true;
 
             if (index === items.value.length - 1) {

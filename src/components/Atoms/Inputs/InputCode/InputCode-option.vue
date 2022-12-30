@@ -61,6 +61,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import YInputBase from './InputBase.vue';
 import YInputLabel from './InputLabel.vue';
 

@@ -48,6 +48,7 @@ module.exports = {
         'no-debugger': process. env. NODE_ENV ===  'production' ?  'warn' :  'off',  //The production default does not allow the use of debugger
         'no-fallthrough': 'off',
         'vue/this-in-template': ['error', 'never'],
+        "no-restricted-syntax": "off",
         'vue/component-tags-order': [
             'error',
             {
