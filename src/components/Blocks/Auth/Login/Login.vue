@@ -27,7 +27,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, watch } from 'vue';
 import YInputUsername from '../../../Atoms/Inputs/InputUsername/InputUsername.vue';
 import YInputPassword from '../../../Atoms/Inputs/InputPassword/InputPassword.vue';
 import YCheckbox from '../../../Atoms/Selects/Checkbox/Checkbox/Checkbox.vue';

@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, inject } from 'vue';
+import { inject } from 'vue';
 import useValidationTranslator from '../../Helpers/validationTranslator'; //eslint-disable-line
 
 const i18ntc: any = inject('i18ntc');

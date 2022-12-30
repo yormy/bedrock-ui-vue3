@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, defineEmits, defineProps, onMounted } from 'vue';
+import { computed, ref, defineEmits } from 'vue';
 import YIconHelp from '../../Helpers/IconHelp.vue';
 
 const emits = defineEmits<{

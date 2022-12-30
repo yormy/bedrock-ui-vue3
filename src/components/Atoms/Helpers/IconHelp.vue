@@ -15,8 +15,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, PropType, defineProps } from 'vue';
+import { ref } from 'vue';
 import YPurifiedHtml from './PurifiedHtml.vue';
+import YModalHelp from '../Modals/Help/ModalHelp.vue';
 
 const showHelpModal = ref();
 

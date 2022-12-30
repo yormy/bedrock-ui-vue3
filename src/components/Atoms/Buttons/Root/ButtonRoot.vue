@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import PrimeButton from 'primevue/button';
 import PrimeSplitButton from 'primevue/splitbutton';
-import { computed, defineProps, watch } from 'vue';
+import { computed, watch } from 'vue';
 import useButtonTypes from '../useButtonTypes';
 import useBadgeTypes from '../useBadgeTypes';
 import useButtonSizes from '../useButtonSizes';

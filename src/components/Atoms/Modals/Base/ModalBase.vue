@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import PrimeDialog from 'primevue/dialog';
-import { defineProps, ref, onMounted, watch, computed } from 'vue';
+import { ref, computed } from 'vue';
 
 const display = ref(false);
 

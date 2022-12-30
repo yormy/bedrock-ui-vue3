@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps, ref, useSlots } from 'vue';
+import { computed, ref, useSlots } from 'vue';
 
 const hoverButton = ref(true);
 const hoverDropdown = ref(false);

@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import PrimeMenubar from 'primevue/menubar';
-import { defineProps, defineEmits, computed } from 'vue';
+import { defineEmits, computed } from 'vue';
 
 const emit = defineEmits(['languageChanged', 'update:modelValue']);
 

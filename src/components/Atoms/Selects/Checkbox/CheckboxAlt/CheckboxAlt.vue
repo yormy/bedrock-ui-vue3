@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, ref, defineEmits, watch, nextTick, reactive } from 'vue';
+import { ref, defineEmits, watch, nextTick } from 'vue';
 import CheckboxBaseAlt from '../Base/CheckboxBaseAlt.vue';
 import YIconHelp from '../../../Helpers/IconHelp.vue';
 import YIconRequired from '../../../Helpers/IconRequired.vue';

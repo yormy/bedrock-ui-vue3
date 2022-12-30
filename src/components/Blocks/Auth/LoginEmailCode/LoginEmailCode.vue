@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineProps, reactive, watch } from 'vue';
+import { ref } from 'vue';
 import YButtonPrimary from '../../../Atoms/Buttons/Primary/ButtonPrimary.vue';
 import YAuthTitle from '../Helpers/Title.vue';
 

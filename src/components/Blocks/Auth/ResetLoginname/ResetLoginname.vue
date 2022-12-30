@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineProps, reactive, watch } from 'vue';
+import { ref } from 'vue';
 import YInputUsername from '../../../Atoms/Inputs/InputUsername/InputUsername.vue';
 import YInputEmail from '../../../Atoms/Inputs/InputEmail/InputEmail.vue';
 
