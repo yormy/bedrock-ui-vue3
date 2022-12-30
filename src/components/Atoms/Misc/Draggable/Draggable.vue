@@ -1,6 +1,6 @@
 <template>
-    needs reimplmentation, this breaks import in master application
-    Error: 'default' is not exported by node_modules/vue/dist/vue.runtime.esm-bundler.js
+    <div>needs reimplmentation, this breaks import in master application :</div>
+    <div>Error: 'default' is not exported by node_modules/vue/dist/vue.runtime.esm-bundler.js</div>
 </template>
 <!--<template>-->
 <!--    <div class="container1">-->
