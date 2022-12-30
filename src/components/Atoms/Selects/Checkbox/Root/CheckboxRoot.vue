@@ -82,11 +82,15 @@ export default {
             type: null,
             default: null,
         },
-        'aria-labelledby': { // eslint-disable-line
+
+        // eslint-disable-next-line
+        'aria-labelledby': {
             type: String,
             default: null,
         },
-        'aria-label': { // eslint-disable-line
+
+        // eslint-disable-next-line
+        'aria-label': {
             type: String,
             default: null,
         },

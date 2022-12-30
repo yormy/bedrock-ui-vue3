@@ -37,7 +37,8 @@ const startAppearingBullets = () => {
         }, completedTime);
 
         completedTime += item.processingMs;
-        window.setTimeout(() => { // eslint-disable-line
+        // eslint-disable-next-line
+        window.setTimeout(() => {
             item.completed = true;
 
             if (index === items.value.length - 1) {

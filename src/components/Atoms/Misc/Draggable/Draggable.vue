@@ -328,7 +328,8 @@ const orderAllLists = () => {
 
     list.value.forEach((element) => {
         if (element.items) {
-            element.items = element.items.sort((one, two) => {  //eslint-disable-line
+            // eslint-disable-next-line
+            element.items = element.items.sort((one, two) => {
                 return one.order - two.order;
             });
         }

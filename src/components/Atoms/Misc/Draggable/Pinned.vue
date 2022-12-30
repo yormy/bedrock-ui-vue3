@@ -138,7 +138,7 @@ const message = [
                         fixed: false,
                     },
                     {
-                        name: 'I Still Haven\'t Found What I\'m Looking For', // eslint-disable-line
+                        name: "I Still Haven't Found What I'm Looking For", // eslint-disable-line
                         order: 2,
                         description: 'hello',
                         fixed: false,
@@ -321,7 +321,8 @@ export default {
 
             this.list.forEach((element) => {
                 if (element.items) {
-                    element.items = element.items.sort((one, two) => { //eslint-disable-line
+                    // eslint-disable-next-line
+                    element.items = element.items.sort((one, two) => {
                         return one.order - two.order;
                     });
                 }
