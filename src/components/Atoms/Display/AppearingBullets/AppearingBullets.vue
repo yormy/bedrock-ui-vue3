@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits, onMounted, ref, PropType } from 'vue';
+import { onMounted, ref, PropType } from 'vue';
 
 const props = defineProps({
     startMs: {

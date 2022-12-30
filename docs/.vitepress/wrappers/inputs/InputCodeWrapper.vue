@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import {computed, ref, defineEmits, defineProps} from "vue";
+import { ref } from "vue";
 import YInputCode from '../../../../src/components/Atoms/Inputs/InputCode/InputCode.vue';
 
 const defaultValue = ref('123456');

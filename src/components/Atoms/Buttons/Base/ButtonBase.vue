@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps, ref, useSlots } from 'vue';
+import { computed, ref, useSlots } from 'vue';
 import ButtonRoot from '../Root/ButtonRoot.vue';
 
 const hoverButton = ref(false);

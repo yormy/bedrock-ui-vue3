@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits, ref, onMounted, watch, inject } from 'vue';
+import { ref, onMounted, watch, inject } from 'vue';
 import PrimeInputText from 'primevue/inputtext';
 import PrimePassword from 'primevue/password';
 import Validations from '../Partials/Validations.vue';

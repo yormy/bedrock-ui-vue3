@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref, defineEmits, watch, defineProps } from 'vue';
+import { reactive, ref, watch } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
 import { required, minLength, sameAs } from '@vuelidate/validators';
 import InputBase from '../Base/InputBase.vue';

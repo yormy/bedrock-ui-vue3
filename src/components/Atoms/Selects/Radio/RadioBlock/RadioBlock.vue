@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits, PropType, ref, watch } from 'vue';
+import { PropType, ref, watch } from 'vue';
 import YPurifiedHtml from '../../../Helpers/PurifiedHtml.vue';
 import useIdentifier from '../../../Hooks/useIdentifier';
 

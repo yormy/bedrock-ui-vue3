@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineEmits, watch, nextTick } from 'vue';
+import { ref, watch, nextTick } from 'vue';
 import CheckboxBase from '../Base/CheckboxBase.vue';
 import YIconHelp from '../../../Helpers/IconHelp.vue';
 import YIconRequired from '../../../Helpers/IconRequired.vue';
