@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits, ref, watch } from 'vue';
+import { defineEmits, ref, watch, PropType } from 'vue';
 import YPurifiedHtml from '../../../Helpers/PurifiedHtml.vue';
 import useIdentifier from '../../../Hooks/useIdentifier';
 
@@ -48,7 +48,16 @@ const props = defineProps({
     },
 
     options: {
-        type: Array,
+        type: Array as PropType<Array<
+            {
+                label: string,
+                moreHelpTitle: string,
+                moreHelpContent: string,
+                labelOff: string,
+                labelOn: string,
+                mouseOver: string,
+                value: string,
+            }>> ,
         default() {
             return [];
         },

@@ -273,8 +273,8 @@ const list = ref(message);
 const editable = ref(true);
 const isDragging = false;
 const delayedDragging = false;
-let selectedElementLevel1 = null;
-let selectedElementLevel2 = null;
+let selectedElementLevel1: any = null;
+let selectedElementLevel2: any = null;
 
 const dragOptions = computed(() => {
     return {
@@ -308,16 +308,16 @@ const listString = computed(() => {
 //     }
 // }
 
-const clickedLevel1 = (element) => {
+const clickedLevel1 = (element: any) => {
     selectedElementLevel1 = element;
     selectedElementLevel2 = null;
 };
 
-const clickedLevel2 = (element) => {
+const clickedLevel2 = (element: any) => {
     selectedElementLevel2 = element;
 };
 
-const clickedLevel3 = (element) => {
+const clickedLevel3 = (element : any) => {
     // ???
 };
 
@@ -336,7 +336,7 @@ const orderAllLists = () => {
     });
 };
 
-const onMove = ({ relatedContext, draggedContext }) => {
+const onMove = ({ relatedContext, draggedContext }: any) => {
     console.log('onmove');
     const relatedElement = relatedContext.element;
     const draggedElement = draggedContext.element;

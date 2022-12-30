@@ -22,9 +22,9 @@ import Checkbox from '../Checkbox/Checkbox.vue';
 
 const i18ntc: any = inject('i18ntc');
 
-let errors = [];
-// const warnings = [{ message: 'a success 1' }, { message: 'a success 2' }];
-// const successes = [{ message: 'a success 1' }, { message: 'a success 2' }];
+let errors: Array<{message:string}> = [];
+const warnings: Array<{message:string}> = [];
+const successes: Array<{message:string}> = [];
 
 const state = reactive({
     checkedValue: false,

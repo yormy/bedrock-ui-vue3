@@ -7,8 +7,6 @@
                 :errors="v$.password.$errors"
                 :is-password="true"
                 :is-required="true"
-                :successes="successes"
-                :warnings="warnings"
                 @blur="handleInputBlur"
                 @secondary-label-clicked="handleSecondaryLabelClicked"
                 :feedback="false"
@@ -40,19 +38,20 @@ const rules = {
     password: {
         required,
         minLength: minLength(8),
-        containsUppercase(value) {
+        containsUppercase(value: string) {
             return /[A-Z]/.test(value);
         },
-        containsLowercase(value) {
+        containsLowercase(value: string) {
             return /[a-z]/.test(value);
         },
-        containsNumber(value) {
+        containsNumber(value: string) {
             return /[0-9]/.test(value);
         },
-        containsSpecial(value) {
+        containsSpecial(value: string) {
             return /[#?!@$%^&*-]/.test(value);
         },
-        confirmPassword(value) {
+
+        confirmPassword(value: string) {
             if (props.confirmWith.length === 0) {
                 return true;
             }

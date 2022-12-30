@@ -4,7 +4,7 @@
             <table class="y-table--table">
                 <thead>
                     <tr class="y-table--header">
-                        <th v-for="(heading, indexheading) in headings" :key="indexheading">
+                        <th id="header" v-for="(heading, indexheading) in headings" :key="indexheading">
                             {{ heading.name }}
                         </th>
                     </tr>
@@ -20,7 +20,7 @@
 
                 <tfoot>
                     <tr class="y-table--footer">
-                        <th v-for="(footer, indexFooter) in footers" :key="indexFooter">
+                        <th id="footer" v-for="(footer, indexFooter) in footers" :key="indexFooter">
                             {{ footer.name }}
                         </th>
                     </tr>
@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { PropType } from 'vue';
 
 const props = defineProps({
     rows: {
@@ -40,14 +40,20 @@ const props = defineProps({
     },
 
     headings: {
-        type: Array,
+        type: Array as PropType<Array<
+            {
+                name: string,
+            }>> ,
         default() {
             return [];
         },
     },
 
     footers: {
-        type: Array,
+        type: Array as PropType<Array<
+            {
+                name: string,
+            }>> ,
         default() {
             return [];
         },

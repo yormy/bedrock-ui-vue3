@@ -14,7 +14,7 @@
         <div :class="isLoading ? 'blurred' : ''" class="code">
             <template v-for="index in fields" :key="`${index}`">
                 <input
-                    :id="index - 1"
+                    :id="(index - 1).toString()"
                     :class="hasErrors() ? 'is-error' : ''"
                     :data-id="index - 1"
                     :disabled="isDisabled"
@@ -109,14 +109,14 @@ const props = defineProps({
         default: 6,
     },
 
-    fieldWidth: {
-        type: Number,
-        default: 48,
-    },
-
     fieldSpace: {
         type: Number,
         default: 10,
+    },
+
+    fieldWidth: {
+        type: Number,
+        default: 48,
     },
 
     fieldHeight: {
@@ -144,6 +144,10 @@ const props = defineProps({
         default: false,
     },
 });
+
+const fieldWidthCalc = computed(() => {
+    return props.fieldWidth;
+})
 
 const hasErrors = () => {
     return false;
@@ -223,7 +227,7 @@ const onEsc = () => {
     emits('onEsc', buildCode(items.value));
 };
 
-const onFocus = (e) => {
+const onFocus = (e: any) => {
     setFocusTo(e.target.id);
 };
 
@@ -246,7 +250,7 @@ const setFocusToNext = (index: number) => {
     setFocusTo(next);
 };
 
-const onKeyDown = (e) => {
+const onKeyDown = (e: any) => {
     const index = parseInt(e.target.id, 10);
 
     switch (e.keyCode) {
@@ -295,7 +299,7 @@ const onKeyDown = (e) => {
     }
 };
 
-const onValueChange = (e) => {
+const onValueChange = (e: any) => {
     const index = parseInt(e.target.id, 10);
 
     if (props.type === 'number') {

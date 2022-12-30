@@ -6,8 +6,9 @@
 
 <script setup lang="ts">
 import YAppearingBullets from '../../../Atoms/Display/AppearingBullets/AppearingBullets.vue';
+import {PropType} from "vue";
 
-const messages = [
+const messages [
     {
         text: 'aaaaaa',
         loading: false,
