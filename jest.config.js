@@ -6,12 +6,12 @@ module.exports = {
         '^.+\\.vue$': '@vue/vue3-jest',
         '^.+\\js$': 'babel-jest',
         // https://kulshekhar.github.io/ts-jest/docs/getting-started/options/tsconfig/#examples
-        '^.+\\.tsx?$': [
-            'ts-jest',
-            {
-                tsconfig: 'tsconfig.jest.json'
-            }
-        ]
+        // '^.+\\.tsx?$': [
+        //     'ts-jest',
+        //     {
+        //         tsconfig: 'tsconfig.jest.json'
+        //     }
+        // ]
     },
     testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)$',
     moduleFileExtensions: ['vue', 'js', 'ts'],

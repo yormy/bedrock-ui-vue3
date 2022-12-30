@@ -6,7 +6,7 @@
         :badge-class="badgeClass"
         :icon="isExternal ? 'y-icon icon icon-link-external icon-small' : ''"
         :icon-pos="isExternal ? 'right' : 'left'"
-        @click.stop="'';"
+        @click.stop="true"
     >
         <slot></slot>
     </prime-button>

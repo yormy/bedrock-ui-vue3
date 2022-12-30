@@ -62,3 +62,6 @@ const emits = defineEmits<{
 ## Disable line
 // eslint-disable-line
 
+
+# JEST
+// expect(wrapper.html()).toBe('<button class="p-button p-component p-button-danger" type="button"><span class=""></span></button>');

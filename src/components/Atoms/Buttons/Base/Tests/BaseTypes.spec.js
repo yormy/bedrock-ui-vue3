@@ -14,7 +14,7 @@ describe('Button.vue', () => {
             },
         });
 
-        expect(wrapper.html()).toBe('<button class="p-button p-component p-button-info" type="button"><span class=""></span></button>');
+        expect(wrapper.html()).toContain('p-button-info');
     });
 });
 
@@ -29,7 +29,7 @@ describe('Button.vue', () => {
             },
         });
 
-        expect(wrapper.html()).toBe('<button class="p-button p-component p-button-warning" type="button"><span class=""></span></button>');
+        expect(wrapper.html()).toContain('p-button-warning');
     });
 });
 
@@ -44,7 +44,7 @@ describe('Button.vue', () => {
             },
         });
 
-        expect(wrapper.html()).toBe('<button class="p-button p-component p-button-success" type="button"><span class=""></span></button>');
+        expect(wrapper.html()).toContain('p-button-success');
     });
 });
 
@@ -59,6 +59,6 @@ describe('Button.vue', () => {
             },
         });
 
-        expect(wrapper.html()).toBe('<button class="p-button p-component p-button-danger" type="button"><span class=""></span></button>');
+        expect(wrapper.html()).toContain('p-button-danger');
     });
 });
