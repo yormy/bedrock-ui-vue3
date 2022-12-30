@@ -87,6 +87,7 @@
         "./dist/style.css": "./dist/style.css",
         "./config/config.js": "./dist/config/config.js",
         "./lang/translations.js": "./dist/lang/translations.js",
+        "./resources/themes/ds-indigo/theme.css": "./dist/resources/themes/ds-indigo/theme.css",
         "./resources/themes/bedrock-indigo/dark.css": "./dist/resources/themes/bedrock-indigo/dark.css",
         "./resources/themes/bedrock-indigo/light.css": "./dist/resources/themes/bedrock-indigo/light.css",
         "./resources/themes/bedrock-indigo/theme.css": "./dist/resources/themes/bedrock-indigo/theme.css",
