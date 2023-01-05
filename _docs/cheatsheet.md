@@ -26,14 +26,7 @@ const type = computed(() => {
 watch(
     () => checked.value,
     (newValue) => {
-        if (newValue) {
-            emit('isOn');
-            console.log('on');
-        }
-        if (!newValue) {
-            emit('isOff');
-            console.log('off');
-        }
+
     }
 );
 

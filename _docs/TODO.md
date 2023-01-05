@@ -11,6 +11,8 @@ vue3:
 - check group
 a group of multi selectable checkboxes, values as array
 
+Todo
+- flags to package
 
 # Loginwrapper
 - appearingbullets redirects on async completed

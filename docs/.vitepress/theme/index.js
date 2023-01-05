@@ -10,13 +10,13 @@ import Layout from '../components/Layout.vue'
 import ViteTheme from './vite-theme.css'
 
 
-import '../../../src/assets/css/vendor/flags/css/flag-icon.min.css';
+import '../../../src/assets/scss/vendor/flags/css/flag-icon.min.css';
 import '../../../resources/icons/fontawesome-pro6/css/all.css';
 import '../../../resources/public/shared/css/icons/icons.css';
 
 
 // import '../../../src/assets/scss/vendor/yframe/themes/dark/theme.css';
-import '../../../src/assets/themes/ds-indigo/theme.css';
+import '../../../src/assets/scss/themes/ds-indigo/theme.css';
 
 export { ViteTheme }
 
