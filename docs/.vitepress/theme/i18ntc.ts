@@ -1,6 +1,6 @@
 import {createI18n} from "vue-i18n";
 
-import messages from '../../../src/lang/translations.js'
+import messages from '../../../src/assets/lang/translations.js'
 
 const i18n = createI18n({
     allowComposition: true,

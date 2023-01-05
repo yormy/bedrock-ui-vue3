@@ -10,7 +10,7 @@ import Layout from '../components/Layout.vue'
 import ViteTheme from './vite-theme.css'
 
 
-import '../../../src/assets/scss/vendor/flags/css/flag-icon.min.css';
+import '../../../resources/scss/vendor/flags/css/flag-icon.min.css';
 import '../../../resources/icons/fontawesome-pro6/css/all.css';
 import '../../../resources/public/shared/css/icons/icons.css';
 

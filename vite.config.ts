@@ -30,7 +30,7 @@ module.exports = defineConfig({
                 dest: 'config'
             },
             {
-                src: 'src/lang/*',
+                src: 'src/assets/lang/*',
                 dest: 'lang'
             }
         ]
