@@ -18,7 +18,7 @@ import '../../../resources/public/shared/css/icons/icons.css';
 
 
 // import '../../../src/assets/scss/vendor/yframe/themes/dark/theme.css';
-import '../../../src/assets/scss/themes/ds-indigo/theme.css';
+import '../../../src/assets/scss/themes/bcmp/theme.css';
 
 export { ViteTheme }
 
