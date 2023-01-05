@@ -3,7 +3,9 @@ import PrimeVue from 'primevue/config'
 import DemoContainer from '../components/DemoContainer.vue'
 import BedrockUiVue3 from 'bedrock-ui-vue3'
 // import 'primeicons/primeicons.css'
-// import '../../../src/assets/themes/core/core.min.css';
+
+import '../../../src/assets/scss/themes/core/primevue.min.css';
+
 import 'primeflex/primeflex.css'
 
 import Layout from '../components/Layout.vue'

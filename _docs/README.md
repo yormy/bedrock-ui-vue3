@@ -1,4 +1,7 @@
 # Startup
+There is a docs server, run that by 
+```npm run docs:dev```
+and you will see all components
 
 # Create build
 After making changes you need to build the package
